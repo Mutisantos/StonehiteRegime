@@ -1,0 +1,179 @@
+~@1
+▼ モジュール
+Vocab
+Sound
+Cache
+DataManager
+SceneManager
+BattleManager
+~@2
+▼ ゲームオブジェクト
+Game_Temp
+Game_System
+Game_Timer
+Game_Message
+Game_Switches
+Game_Variables
+Game_SelfSwitches
+Game_Screen
+Game_Picture
+Game_Pictures
+Game_BaseItem
+Game_Action
+Game_ActionResult
+Game_BattlerBase
+Game_Battler
+Game_Actor
+Game_Enemy
+Game_Actors
+Game_Unit
+Game_Party
+Game_Troop
+Game_Map
+Game_CommonEvent
+Game_CharacterBase
+Game_Character
+Game_Player
+Game_Follower
+Game_Followers
+Game_Vehicle
+Game_Event
+Game_Interpreter
+~@3
+▼ スプライト
+Sprite_Base
+Sprite_Character
+Sprite_Battler
+Sprite_Picture
+Sprite_Timer
+Spriteset_Weather
+Spriteset_Map
+Spriteset_Battle
+~@4
+▼ ウィンドウ
+Window_Base
+Window_Selectable
+Window_Command
+Window_HorzCommand
+Window_Help
+Window_Gold
+Window_MenuCommand
+Window_MenuStatus
+Window_MenuActor
+Window_ItemCategory
+Window_ItemList
+Window_SkillCommand
+Window_SkillStatus
+Window_SkillList
+Window_EquipStatus
+Window_EquipCommand
+Window_EquipSlot
+Window_EquipItem
+Window_Status
+Window_SaveFile
+Window_ShopCommand
+Window_ShopBuy
+Window_ShopSell
+Window_ShopNumber
+Window_ShopStatus
+Window_NameEdit
+Window_NameInput
+Window_ChoiceList
+Window_NumberInput
+Window_KeyItem
+Window_Message
+Window_ScrollText
+Window_MapName
+Window_BattleLog
+Window_PartyCommand
+Window_ActorCommand
+Window_BattleStatus
+Window_BattleActor
+Window_BattleEnemy
+Window_BattleSkill
+Window_BattleItem
+Window_TitleCommand
+Window_GameEnd
+Window_DebugLeft
+Window_DebugRight
+~@5
+▼ シーン
+Scene_Base
+Scene_Title
+Scene_Map
+Scene_MenuBase
+Scene_Menu
+Scene_ItemBase
+Scene_Item
+Scene_Skill
+Scene_Equip
+Scene_Status
+Scene_File
+Scene_Save
+Scene_Load
+Scene_End
+Scene_Shop
+Scene_Name
+Scene_Debug
+Scene_Battle
+Scene_Gameover
+~@6
+~@7
+------Scripts Custom-----
+------Yanfly Engine Ace
+▼ YEA - Ace Core Engine v1
+▼ YEA - Ace Save Engine v
+▼ YEA - Ace Battle Engin
+▼ YEA - System Options v1.
+▼ YEA - Element Absorb v1.
+▼ YEA - Target Manager
+▼ YEA - Ace Shop Options 
+▼ YEA - Battle Engine Add-
+▼ YEA - Ace Status Menu v1
+▼ YEA - Victory Aftermath
+▼ YEA - Ace Equip Engine
+▼ YEA - Enemy Target Info 
+-Tanketai
+VXAce_SP1
+SideView- Action Setup
+SideView - Battle Setup
+Sideview
+Sprite_Sideview
+Battle_Camera
+Redefining Aliases
+Test Faster Game
+Fomar ATB + Yanfly
+Parch1
+Parch2
+~@8
+Day - Night System
+~@9
+V - Basic Module
+V - Followers Control
+V - Followers Options
+~@10
+Active Battle Skill
+~@11
+TTM Tinys Travel Map
+TTM Names in Map
+TTM Map Effects
+TTM Fadein&out
+~@12
+FA Interactive System 2.0
+Fa Patch
+~@13
+~@14
+~@15
+Script Exporter
+Main
+Testing
+~@16
+~@17
+~@18
+~@19
+~@20
+~@21
+~@22
+~@23
+~@24
+~@25
