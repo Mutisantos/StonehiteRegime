@@ -131,28 +131,45 @@ module TINY # Do not touch
     # Target id    # Data packs  #  "Target name"
       :tatama => {:text         => "Tatama",
                                  # [ Target x, Target y, "graphicname in map folder", icon id ] 
-                  :graphic      => [350, 750,"orb", 232],
+                  :graphic      => [350, 750,"orb", 2428],
                                  # [ Mapid, Mapx, Mapy ]
                   :teleportdest => [13, 16, 6]
           }, # Don't forget comma if another target follows    
                     
-      :tundra =>  {:text         =>  "Tundra",
-                   :graphic      =>  [500, 1100,"tundra", 232],
+      :chunsua =>  {:text         =>  "Chunsua",
+                   :graphic      =>  [540, 960,"orb", 2428],
                    :teleportdest =>  [15, 8, 0]
                    
           },
-      :grassland =>{:text         =>  "Grasland",
-                    :graphic      =>  [1200, 1100,"wiese", 232],
+      :frocteres =>{:text         =>  "Frocteres",
+                    :graphic      =>  [680, 1160,"orb", 2428],
                     :teleportdest =>  [16, 8, 12]
                   
           },
-      :mountain => { :text         => "Mountain",
-                     :graphic      => [1200, 1000,"berge", 232],
+      :guacari => { :text         => "Guacari",
+                     :graphic      => [660, 1260,"orb", 2428],
                      :teleportdest => [2, 0, 6]
                   
-          } # Don't put a comma if it is the last target 
-                                   
-                                   
+          }, # Don't put a comma if it is the last target 
+      :luzpel => { :text         => "Luzpel",
+                     :graphic      => [800, 970,"orb", 2428],
+                     :teleportdest => [2, 0, 6]
+                  
+       },                             
+
+      :grandos => { :text         => "grandos",
+                     :graphic      => [800, 970,"orb", 2428],
+                     :teleportdest => [2, 0, 6]
+                  
+       },
+
+      :olmoteptl => { :text         => "Olmoteptl",
+                     :graphic      => [820, 740,"orb", 2428],
+                     :teleportdest => [2, 0, 6]
+                  
+       },
+
+
      #█ OWN TARGETS                   
                                    
                                    
@@ -197,7 +214,7 @@ module TINY # Do not touch
   # Defining width/height of target list window; dont forget the brackets []
   LISTSIZE  = [144, 200]
   # Defining the Windowskin of your target list window; => system folder  
-  LSKIN     = "Window"
+  LSKIN     = "window1"
   # Defining the font which should be used in target list window
   LISTFONT  = "VL Gothic"
   # Defines the fonts size in target list window
