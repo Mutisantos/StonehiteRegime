@@ -24,10 +24,10 @@ class SideView
     when  1 # Flamrose
       return [ 3, 4]
     when -1 # Enemigos 
-      return [ 3, 2]
+      return [ 3, 4]
     else # Ranged ID Check
       return [ 3, 4] if id > 0 # Cada Actor
-      return [ 3, 2] if id < 0 # Cada Enemigo
+      return [ 3, 4] if id < 0 # Cada Enemigo
     end
   end 
   #--------------------------------------------------------------------------
@@ -265,27 +265,31 @@ class SideView
     when -1 # Coboot Prueba
       return 64 
     when -2 #Tzimitl
-      return 1
-    when -5 #Guerrero Escorpion
-      return 14
-    when -6 #Sawntis
+        return 1 #Lanza Tzimitil
+    when -3 #Inspil Bloque
+        return 67 #Mordizco
+    when -4 #Inspil Bloque
+        return 67 #Mordizco    
+    when -5 #Guerrera Araña
+      return 14 #Cerbatana simple
+    when -6 #Cynspil
+      return 67 #Mordizco
+    when -7 #StonebotT1
+      return 62 #Taladro Robot
+    when -8 #Bizzer
+      return 12 #Rasguño
+    when -9 #Sirakuri
+      return 9 #Dardo Venenoso
+    when -10 #Sirakiru
+        return 9 #Dardo venenoso
+    when -11 # Stonebot R1
+      return 63 #llave
+    when -12 # Stonebot Mono1
+        return 68 #llave
+    when -13 # Lancero Tatama
       return 12
-    when -7 #Scintis
-      return 11
-    when -9 #Tanjertal
-      return 9
-    when -10 #Tanjerrock
-      return 9
-    when -11 # Stonebot AG1
-      return 61
-    when -18 # Guerrero Mantis
-      return 12
-    when -13 # Stonebot TG1
-      return 62 
-    when -14 # Stonebot RG1
-      return 63 
-    when -19 #Hippocratos
-      return 65
+    when -14 #Rhysorog
+      return 65 #Gran Martillo
     else
       return 10
     end
@@ -386,9 +390,11 @@ class SideView
     when 93
       return "GolpeFlama"
     when 139
-      return "GolpeFlama"
+      return "Skill Attack" 
+    when 140
+      return "Skill Attack" 
     when 141
-      return "Derribo"
+      return "Skill Attack" 
     when 172
       return "Directo"
     when 173

@@ -11,9 +11,9 @@ $imported["Muti-ActiveSkill"] = true
 
 module CommandSkill
   #Define input keys for combinations
-  A = Input::A # keyboard: Z
+  A = Input::C # keyboard: Z
   B = Input::B # Keyboard: X
-  C = Input::C # keyboard: C
+  C = Input::A # keyboard: C
   X = Input::X # keyboard: A
   Y = Input::Y # keyboard: S
   Z = Input::Z # keyboard: D
@@ -54,13 +54,16 @@ module CommandSkill
 
   # Character spacing at the time of the command display
   TEXT_W = 25
+  
+  # Damage multiplier game variable
+  DAMAGE_MULTIPLIER = 102
 
   # Skill set
   T_SKILL = {
   # SkillID => [[key 1, key 2,...], Failure of power (%) (]
         7  => [[UP, DOWN], 50],
         8  => [[X, A, Z], 50],
-        9  => [[RKEY,RKEY,RKEY,RKEY], 50],  #Puño de fuego
+        9  => [[DIR, RKEY, DIR], 50],  #Puño de fuego
         #10 => [[LEFT, UP], 50],       #Danza de Fuego
         11 => [[RKEY, DIR, RKEY], 50],#Plumas dardo
         12 => [[LEFT, UP, RIGHT, DOWN], 50], #Salto Elevado
@@ -109,13 +112,13 @@ module CommandSkill
         80 => [[C, C, Z, RIGHT], 50]
   }
   #Global variable for multiplying in case of success or failure
-  $multiplier = 1
-
+  $multiplier = 1.0
+  
 # ================================================= =============================
 # □ customize END
 # ================================================= =============================
   R_KEYS = [A, B, C, X, Y, Z, L, R, UP, DOWN, LEFT, RIGHT] # key sequence to use for the random key
-  ALT_KEYS = [A,B,X,Y] #Solo los botones basicos
+  ALT_KEYS = [C,B,X,Y] #Solo los botones basicos
   D_KEYS = [UP,DOWN,LEFT,RIGHT] #Direccionales unicamente
   # ------------------------------------------------- -------------------------
   # ● key list acquisition
@@ -185,7 +188,7 @@ module Input
     UP => "↑", DOWN => "↓", LEFT => "←", RIGHT => "→"
   }
   KB_KEY = {# conversion table for the keyboard
-    A => "Z", B => "X", C => "C", X => "A", Y => "S", Z => "D", L => "Q", R => "W",
+    A => "C", B => "X", C => "Z", X => "A", Y => "S", Z => "D", L => "Q", R => "W",
     UP => "↑", DOWN => "↓", LEFT => "←", RIGHT => "→"
   }
   def key_converter (key)
@@ -344,7 +347,9 @@ class Game_Battler
     value = apply_critical(value) if @result.critical
     value = apply_variance(value, item.damage.variance)
     value = apply_guard(value)
-    value = value * $multiplier
+    # p(value.to_s + '*' + $multiplier.to_s + '*' + $game_variables[CommandSkill::DAMAGE_MULTIPLIER].to_s + "=")
+    value = value * $multiplier * $game_variables[CommandSkill::DAMAGE_MULTIPLIER] 
+    # p(value.to_s)
     @result.make_damage(value.to_i, item)
     #---For effectiveness popup from Yanfly's Battle Engine
     if($imported["YEA-BattleEngine"] == true)
@@ -369,6 +374,7 @@ class Scene_Battle
     lactor.cmd_miss_flag = false
     @cmd_skill_ok = false
     @cmd_skill_miss_flag = false
+    $game_variables[CommandSkill::DAMAGE_MULTIPLIER] = 1.0
   end
   # ------------------------------------------------- -------------------------
   # ● CMD Skill can be performed?

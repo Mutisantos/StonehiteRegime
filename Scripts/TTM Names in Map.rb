@@ -41,12 +41,12 @@ module TINY # Do not touch
     WINDOW_TARGETS = true
     
     # Font Type
-    TARGET_FONT_NAME = "VL Gothic" 
+    TARGET_FONT_NAME = "Tahoma" 
     # Font Size of Name in map
-    TARGET_FONT_SIZE = 18
+    TARGET_FONT_SIZE = 24
     # Properties
     TARGET_FONT_BOLD = false
-    TARGET_FONT_SHADOW = false
+    TARGET_FONT_SHADOW = true
     
     # Adjustment needed for the Y Pos of the Name in map?
     TARGET_NAME_Y_POS = -25

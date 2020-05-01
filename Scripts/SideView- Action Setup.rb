@@ -19,7 +19,7 @@ module N03
   # Actor Initial Start Position 
   #　                       1st          2nd          3rd          4th
   #                     X   Y   H    X   Y   H    X   Y   H    X   Y   H
-  ACTOR_POSITION   = [[425,270, 0],[460,210, 0],[440,320, 0],[500,270, 0]]
+  ACTOR_POSITION   = [[405,265,0],[440,210, 0],[450,320, 0],[500,280, 0]]
   # Wait time after the end of each action in frames
   ACTION_END_WAIT = 20
   # Wait time after the end of each turn in frames
@@ -155,9 +155,11 @@ module N03
   "Fallen"           => ["motion", "_1",    0,   0,   0,   12,   0, true,false, "" ],
   "Right"            => ["motion",   "",    2,   0,   4,   12,   0, true, true, "" ],
   # Movement
-  # -Action Name-        Type    Index  Vert Horz  Pattern Speed  Z  Wait Shadow Weapon
+  # -Action Name-        Type    Index     Vert Horz  Pattern Speed  Z  Wait Shadow Weapon
   "Move Left"       => ["motion",   "",    1,   0,   4,     6,    10, true, true,  "" ],
   "Move Right"      => ["motion",   "",    2,   0,   4,     6,    10, true, true,  "" ],
+  #Cell Rotate
+  "Front Rotate"    => ["motion",   "",    0 ,   0,   4,     6,    10, true, true,  "" ],
   # Pause
   # -Action Name-      Type   Index   Vert  Horz  Pattern Speed  Z  Wait Shadow Weapon
   "Wpn Raised"      => ["motion",   "",    1,   0,   1,    2, 200,false, true, "Raised" ],
@@ -212,7 +214,7 @@ module N03
   "Command Input"          => ["move",-7, -20,   0, nil,-10,   0, [  0,  0], "Move Left"],
   "Damage Pull"            => ["move", 0,  20,   0, nil,-10,   0, [  0,  0], ""],
   "Damage Levantamiento"   => ["move", 0, 150,   0, nil,-15,   0, [  0, 40], ""],
-  
+  "Move to Field Center"   => ["move", 4,  10,   0, nil,-15,   0, [  0,  0], ""],
   "Large Damage Pull"      => ["move", 0,  60,   0, nil,-10,   0, [  0,  0], ""],
   
   # -Action Name-               Type  Target X    Y   H  Speed Curve Jump      Anime
@@ -242,7 +244,7 @@ module N03
   "Move Enemy Fast"     => ["move", 1,   0,   0,   0,-10,   0, [  0,  0], "Move Left"],
   #Trayectoria parabolica del salto
   "Before Jump Slam"    => ["move",-1,   0,   0, 100,-20,   0, [ 40,-20], "Wpn Raised"],
-  "Before salto"       => ["move",-1,   0,   0, 100,-20,   0, [ 40,-20], ""],
+  "Before salto"        => ["move",-1,   0,   0, 100,-20,   0, [ 40,-20], ""],
   "Slammed"             => ["move",-1,   0,   0,   0,-10,   0, [  0,  0], "Wpn Swing R"],
   
  #--------------------------------------------------------------------------
@@ -250,33 +252,33 @@ module N03
  #--------------------------------------------------------------------------
   # This is where all weapon actions lie.
   #
-  # Animation Type    - Type of graphic used.
+  # 1 Animation Type    - Type of graphic used.
   #                     [ 0: Iconset ]
   #                     [ 1: Single Image ]
   #                     [ 2: Animation Cell / 2k3 Style ]
   #                     NOTE: 1 & 2 refers an image on the "Characters" folder
-  # Move              - Distance to move the image. [X, Y]
-  # Adjustment        - Adjustment of the initial coordinates. [X, Y]
-  # Start Angle       - Starting angle of the weapon. Value runs on 0~360.
+  # 2 Move              - Distance to move the image. [X, Y]
+  # 3 Adjustment        - Adjustment of the initial coordinates. [X, Y]
+  # 4 Start Angle       - Starting angle of the weapon. Value runs on 0~360.
   #                     Positive will move it counter-clockwise.
   #                     Negative will move it clockwise.  
-  # End Angle         - Ending angle of the weapon.
-  # Origin            - Origin of the image.
+  # 5 End Angle         - Ending angle of the weapon.
+  # 6 Origin            - Origin of the image.
   #                     [ 0: Center ]
   #                     [ 1: Upper Left ]
   #                     [ 2: Upper Right ]
   #                     [ 3: Lower Left ]
   #                     [ 4: Lower Right ]
   #                     [ 5: Same as Battler (Under image w/ vertical half) ]
-  # Invert            - Invert the weapon display.
-  # Zoom              - Image Zoom [X, Y] Also accepts decimal values.
-  # Z                 - Set to true to display the weapon in front.
-  # Secondary         - Display the second weapon or shield.
+  # 7 Invert            - Invert the weapon display.
+  # 8 Zoom              - Image Zoom [X, Y] Also accepts decimal values.
+  # 9 Z                 - Set to true to display the weapon in front.
+  # 10 Secondary         - Display the second weapon or shield.
   #                     If you don't want to use the icon, setup the icon at
   #                     Battler Setup.
-  # Update            - Set -1 to sync with the battler.
+  # 11 Update            - Set -1 to sync with the battler.
   #                     [Update Interval, Pattern Number , Loop?]
-  # Index             - Even if the shield refers to a graphics file, if there
+  # 12 Index             - Even if the shield refers to a graphics file, if there
   #                     is an index used. The graphics of the shield file +
   #                     plus the index will be used.
   #                     It's only used when a weapon has multiple images.
@@ -284,12 +286,14 @@ module N03
   #                           The index of "VertSwing2" is "_1" => IconSet_1
   #                     For Cell and Image, use the Characters folder.
   #                     For Icons, use the System folder.
-  # Image             - If you ignore the image file was set in the weapons,
+  # 13 Image             - If you ignore the image file was set in the weapons,
   #                     shields and the index, to directly specify the weapon
   #                     image, set the graphics' file name used here.
   #                     The file should be in Characters.
   
-  # -Action Name-              Type Anim  Move     Adjust Start End Orig Invert  Zoom    Z    2nd   Update Index Image   
+  # -Action Name-              Type Anim  Move     Adjust Start End Orig Invert  Zoom    Z    2nd   Update Index Image   Item
+  #Items
+  "ItemShow"               => ["wp", 0,[  0, 9],[  0,  0],  0, 360,  5,   true, [1.2,1.2], true, false,  -1,   "",    "", false],
   # Armas Generales 
   "Vert Swing"             => ["wp", 0,[  6, 0],[ -4,-20], -45,  45,  4, false, [1,1], true, false,   -1,   "",    ""],
    #Escudo 
@@ -311,7 +315,7 @@ module N03
   #Arco
   "Bow"                    => ["wp", 2,[  0, 0],[  0,  0],   0,   0,  5, false, [1,1],  true, false,   -1,   "",    ""],
   #Flecha
-  "Arrow"                 => ["wp", 0,[  0, 0],[  0,  0],   0,  45,  0, false, [1,1],  true, false,[2,6,false],   "",    "arrow01"],
+  "Arrow"                  => ["wp", 0,[  0, 0],[  0,  0],   0,  45,  0, false, [1,1],  true, false,[2,6,false],   "",    "arrow01"],
   "Rotation"               => ["wp", 0,[  0, 0],[  0,  0],   0, 360,  0, false, [1,1],  true, false,[1,8, true],   "",    ""],
   #Bala
   "Bullet"                 => ["wp", 0,[ 0, 0],[ 0, 0], 0, 60, 0, false, [1,1], true, false,[2,6,false], "",  "Bullet"],
@@ -327,11 +331,11 @@ module N03
  #--------------------------------------------------------------------------
   # This section controls the movement for animations and weapons. e.g. Missile
   #
-  # ID - Animation ID [Move Animation, Hit Animation]
+  # 1 ID - Animation ID [Move Animation, Hit Animation]
   #       0 - Hide Animation, -1 - Use Weapon Animation
   #
-  # Start - Start target of the movement.
-  # End   - End target of the movement.
+  # 2 Start - Start target of the movement.
+  # 3 End   - End target of the movement.
   #         FOR START AND END:
   #         If negative is used, the animation will play on multiple targets.
   #          [  0: Current Position ]
@@ -342,26 +346,26 @@ module N03
   #          [  5: Second / Next Target  ]
   #          [  6: Screen; (0,0) is at upper-left of screen ]
   #
-  # Start Position - Position from start target. [X, Y]
-  # End Position   - Position from end target. [X, Y]
+  # 4 Start Position - Position from start target. [X, Y]
+  # 5 End Position   - Position from end target. [X, Y]
   #                X is automatically flipped for the enemy.
-  # Speed - Postive no. sets the number of X pixels to move in 1 frame.
+  # 6 Speed - Postive no. sets the number of X pixels to move in 1 frame.
   #       - Negative no. sets it to the time and speed depends on the distance.
-  # End Type - What happens after the animation hits.
+  # 7 End Type - What happens after the animation hits.
   #             [ 0: Disappears (Sets to pass-through on miss) ]
   #             [ 1: Pass-through ]
   #             [ 2: Disappears (Regardless of miss) ]
-  # Orbit - Movement trajectory. [From the start to the trajectory then back to
+  # 8 Orbit - Movement trajectory. [From the start to the trajectory then back to
   #                               the end.]
-  # Z - Set to true to display the animation in front.
-  # Wait - Wait for the animation to end before changing.
+  # 9 Z - Set to true to display the animation in front.
+  # 10 Wait - Wait for the animation to end before changing.
   #        [ Wait for the move animation, wait for the hit animation ]
-  # Damage - Apply damage calculation on hit if set to true.
-  # Homing/Follow - Homes/follows the target on a moving target.
-  # Camera - Set the scale of the animation to match the zoom of the camera.
-  # Loop - Loop the animation after it ends.
-  # NoFlip - Does not flip the animation under any circumstances.
-  # Weapon - Use weapon action. Leave "" if not used.
+  # 11 Damage - Apply damage calculation on hit if set to true.
+  # 12 Homing/Follow - Homes/follows the target on a moving target.
+  # 13 Camera - Set the scale of the animation to match the zoom of the camera.
+  # 14 Loop - Loop the animation after it ends.
+  # 15 NoFlip - Does not flip the animation under any circumstances.
+  # 16 Weapon - Use weapon action. Leave "" if not used.
   
   # -Action Name-            Type   ID   Start End StartPos EndPos Speed EType Orbit   Z     Wait         Damage  Homing Camera Loop  NoFlip Weapon
   "Arrow Fire WT"      => ["m_a",[ 0,-1], 0,  1, [ 0, 0], [ 0, 0], 10,  2, [-3,-3], true, [ true, true],  true,  true,  true, false, false,  "Arrow"],
@@ -382,6 +386,7 @@ module N03
   "CerbWT"             => ["m_a",[ 0,-1], 0, 1, [ 0, 0], [ 0, 0], 10, 2, [0,0], true, [ true, true], true, true, true, false, false, "Cerb"],
   "RocketWT"           => ["m_a",[ 0,-1], 0, 1, [ 0, 0], [ 0, 0], 10, 2, [0,0], true, [ true, true], true, true, true, false, false, "Rocket"],
   "HammerWT"           => ["m_a",[ 0,-1], 0, 0, [ 0, 0], [ 0, 0], 10, 2, [0,0], true, [ true, true], true, true, true, false, false, "Martillo"],
+  "ItemWT"             => ["m_a",[ 0, 0], 0, 1, [ 0,-6], [ 0,-6], 2, 2, [-3,-3], true, [ true,false],  true,  true,  true, false, false,  "Rotation"],
  
 #--------------------------------------------------------------------------
  # ● Battle Animation
@@ -719,9 +724,8 @@ module N03
   # Cost - Perform even if the cost of the skill is not enough.
   # ID - Skill ID used.
   
-  # -Action Name-     Type    Learned Cost    ID
+  # -Action Name-                   Type    Learned Cost    ID
   "Derive Multi-Stage Attack"   => ["der",  true,  false,   1],
-
  #--------------------------------------------------------------------------
  # ● Play Sound/Music
  #--------------------------------------------------------------------------
@@ -740,6 +744,8 @@ module N03
   "Gun1"   => ["sound", "se", 100, 80, "Gun1"],
   "Cerb1"          => ["sound",  "se", 100,  80, "Bow1"],
   "Rocket1"        => ["sound",  "se", 100,  80, "rocket_launcher0"],
+  "throw_se"        => ["sound",  "se", 100,  80, "smrpg_enemy_throw"],
+  
   
  #--------------------------------------------------------------------------
  # ● Play Movie
@@ -803,8 +809,11 @@ module N03
   #             [ 1: The next action is cancelled ]
   #             [ 2: The FULL ACTION is exited ]
   
-  # -Action Name-          Type    ID    Cond  Branch
+  # -Action Name-            Type    ID    Cond  Branch
   "Run at Switch No1=ON" => ["n_1",   1,   true,   0],
+  "If Timed Hit"         => ["n_1",  101,  true,   0],
+  "If Blocked Hit"       => ["n_1",  103,  true,   0],
+  
   
  #--------------------------------------------------------------------------
  # ● Conditional Branch (Variable)
@@ -873,7 +882,7 @@ module N03
   #             [ 1: The next action is cancelled ]
   #             [ 2: The FULL ACTION is exited ]
   
-  # -Action Name-          Type  Target ID   Cond   No. Branch
+  # -Action Name-                   Type  Target ID   Cond   No. Branch
   "Strong Attack Confirm"       => ["n_4",  0,   80,    0,    1,   0],
  
  #--------------------------------------------------------------------------
@@ -937,9 +946,11 @@ module N03
   "Fist Limit"          => ["n_6",  0,    0,   [-2],    0,    1,   0],
   "Fist Exclude"        => ["n_6",  0,    0,   [-2],    0,    1,   1],
   "Bow Limit"           => ["n_6",  0,    0,   [-6],    0,    1,   0],
-  "Bow Exclude"               => ["n_6",  0,    0,   [-6],    0,    1,   1],
-  "Fist + Bow Exclude"        => ["n_6",  0,    0,[-2,-6],    0,    1,   1],
-  
+  "Bow Exclude"         => ["n_6",  0,    0,   [-6],    0,    1,   1],
+  "Fist + Bow Exclude"  => ["n_6",  0,    0,[-2,-6],    0,    1,   1],
+  "Guns Exclude"        => ["n_6",  0,    0,[-10,-11],  0,    1,   1],
+  "Cerbatana Exclude"   => ["n_6",  0,    0,    [-7],   0,    1,   1],
+  "Throw Exclude"       => ["n_6",  0,    0,    [-18],  0,    1,   1],
  #--------------------------------------------------------------------------
  # ● Conditional Branch (Script)
  #--------------------------------------------------------------------------
@@ -958,6 +969,7 @@ module N03
   "Actor ID6 Limit"      => ["n_7",   0,  "@battler.actor? && @battler.actor_id == 6"],
   "Actor ID7 Limit"      => ["n_7",   0,  "@battler.actor? && @battler.actor_id == 7"],
   "Enemy Limit"         => ["n_7",   0,  "!@battler.actor?"],
+  "Enemy Exclude"         => ["n_7",  1,  "!@battler.actor?"],
   "Enemy Abort"         => ["n_7",   2,  "!@battler.actor?"],
   "Dual Wield Limit"    => ["n_7",   0,  "@battler.dual_wield?"],
   
@@ -1034,8 +1046,15 @@ module N03
   # Wait - Stop the action while executing the event.
   # 
   
-  # -Action Name-          Type    ID    Wait
-  "Common No1"       => ["common",  1,  true], 
+  # -Action Name-                Type    ID    Wait
+  "Timer Hit Starter"         => ["common",  1,  true], 
+  "Timer Hit Stopper"         => ["common",  2,  true], 
+  "Timer Hit Flow"            => ["common",  3,  true], 
+  "Timer Block Flow"          => ["common",  6,  true], 
+  "Reduce Damage Multiplier"  => ["common",  7,  true], 
+  "Increase Damage Multiplier"=> ["common",  8,  true], 
+  
+  
   
  #--------------------------------------------------------------------------
  # ● Script Control
@@ -1162,8 +1181,6 @@ module N03
   "Poison Stance"          => ["Abnormal State/Generic","Poison Tone","Wait","Wait","Enemy Limit","80"],
   "Quemadura"       => ["Abnormal State/Generic","BurningColor","Wait","Wait","Enemy Limit","80"],
   "Congelado"       => ["Abnormal State/Generic","FreezeColor","Wait","Wait","Enemy Limit","80"],
-  
-  
   "Sleep Stance"        => ["Abnormal State/Sleep","Enemy Limit","40","Enemy Abort","Fallen","Fallen"],
   "General Abnormal Stance"=> ["Abnormal State/Generic","Generic Status Abnormal Tone","Wait","Wait","Enemy Limit","80"],
   "Standby"          => ["Wait","60"],
@@ -1182,6 +1199,7 @@ module N03
   "Command Skill"  => ["Wait(Fixed)","Skill Prepare"],
   "Defend"            => ["Skill Anim","Wait(Fixed) WT"],
   "Evade"            => ["Actor Limit","Rotate Right Once","One Step After Jump","10","Coordinate Reset Left"],
+  "Weapon Block"        => ["Front Rotate","se('Evasion2')","Wpn Swing R"],
   "Shield Guard"        => ["se('Evasion2')","Shield Defense","60"],
   "Substitute Start"    => ["Move Enemy Fast","Change Base Position"],
   "Substitute End"    => ["Reset Base Position","Coordinate Reset Left"],
@@ -1190,7 +1208,15 @@ module N03
   "Victory Pose"  => ["Erase Battle Anim","Victory Jump Weapon","Victory Jump Land","120"],
   "Victory Backward Somersault"=> ["Erase Battle Anim","Rotate Right Once","Victory Jump","Fist Limit","Thrust Fist Weapon","Fist Exclude","Wpn Swing R","200"],
   "Flash Self"            => ["anime_me(119)","20"],
-  
+   # Where the action starts and finishes. Tilt a hint of the timed hit
+  "Timer Hit Init"        => ["anime_me(111,false)", 
+                              "Timer Hit Starter",
+                              "Enemy Exclude",
+                              "Timer Hit Flow",
+                              "Enemy Limit" ,
+                              "Timer Block Flow"
+                            ],
+  "Block Timed"      => ["Reduce Damage Multiplier","target('Weapon Block')" ],
   # Secuencia de daño
   "Damage"      => ["Damage Pull","Coordinate Reset Left"],
   "Big Damage"    => ["Medium Shake","Large Damage Pull" ,"Coordinate Reset Left"],
@@ -1199,11 +1225,58 @@ module N03
   
   # Secuencias de Ataques
   "Slash"            => ["Wpn Swing R","Weapon Anim","10"],
-  "Fist"              => ["Thrust Fist Weapon","Weapon Anim","10"],
+  "Fist"             => ["Thrust Fist Weapon","Weapon Anim","10"],
   "Bow"              => ["Bow1","Bow Shot","Arrow Fire","9"],
-  "Attack"            => ["Fist Limit","Fist","Bow Limit","Bow","Fist + Bow Exclude","Slash"],
-  "Normal Attack Start"    => ["Move Before Enemy","Don't Collapse","Solo Start","Dual Wield Limit","Slash Left"],
-  "Normal Attack End"  => ["Death Confirm","Weapon Anim WT","Solo End","Collapse","Next Battler","Coordinate Reset Curve"],
+  "Attack"           => ["Fist Limit","Fist","Bow Limit","Bow","Fist + Bow Exclude","Slash"],
+  "Skill Timed Hit"  => ["Wpn Swing R","Skill Anim","10"],
+
+  # Timed Hits  
+  "Normal Attack Start"    => [ "Move Before Enemy",
+                                "Timer Hit Init",
+                                "Don't Collapse",
+                                # "If Timed Hit",
+                                # "Increase Damage Multiplier",
+                                "Solo Start",
+                                "Dual Wield Limit",
+                                "Slash Left",
+                                "If Blocked Hit",
+                                "Block Timed"],
+
+  "Normal Attack End"  => ["Death Confirm",
+                            "Weapon Anim WT",
+                            "Solo End",
+                            "If Timed Hit",
+                            "Attack",
+                            "Collapse",
+                            "Next Battler",
+                            "Coordinate Reset Curve"],
+                            
+    # Ranged Timed Hit
+    "Ranged Attack Start"  => [ "One Step Before Move",
+                                "Timer Hit Init",
+                                "Don't Collapse",
+                                # "If Timed Hit",
+                                # "Increase Damage Multiplier",
+                                "Solo Start"
+                                ],
+
+    "Ranged Attack End"  => [ "Solo End",
+                              "If Timed Hit",
+                              "Attack",
+                              "Collapse",
+                              "Coordinate Reset"],
+
+    "Skill Attack End"  => ["Death Confirm",
+                            "Skill Anim WT",
+                            "Solo End",
+                            "If Timed Hit",
+                            "Skill Anim",
+                            "Collapse",
+                            "Next Battler",
+                            "Coordinate Reset Curve"],
+    
+    "Looped Special Attack" => [],
+
   "Slash Left"          => ["Wpn Swing L","Weapon Anim LWT"],
   "Skill Motion"        => ["One Step Before Move","Wpn Raised","Skill Active Anim"],
   "Magic Motion"        => ["One Step Before Move","Wpn Raised","Magic Active Anim"],
@@ -1218,21 +1291,28 @@ module N03
   # Ataques Normales Base
   "Normal Attack"        => ["Normal Attack Start","Wait(Fixed)","Normal Attack End"],
   
-  "Slash Attack"        => ["Normal Attack Start","Death Confirm","Wpn Swing R","Normal Attack End"],
+  "Slash Attack"         => ["Normal Attack Start","Death Confirm","Wpn Swing R","Normal Attack End"],
   
   "Fist Attack"          => ["Normal Attack Start","Thrust Fist Weapon","Normal Attack End"],
   
   "Thrust Attack"        => ["Normal Attack Start","Thrust Weapon","Normal Attack End"],
+
+  "Hamr"                 => ["Normal Attack Start","Hammer","Normal Attack End"],
+
+  "Skill Attack"         => ["Normal Attack Start","Wait(Fixed)","Skill Attack End"],
+
+
+
+
+  "Bow Attack"          => ["Ranged Attack Start","Bow1","Bow Shot","Arrow Fire WT","Ranged Attack End"],
   
-  "Bow Attack"          => ["One Step Before Move","Don't Collapse","Solo Start","Bow1","Bow Shot","Arrow Fire WT","Solo End","Collapse","Coordinate Reset"],
+  "Gun"   => ["Ranged Attack Start","Gun1","GunPoint","BullerWT","Ranged Attack End"],
   
-  "Gun"   => ["One Step Before Move","Don't Collapse","Solo Start","Gun1","GunPoint","BullerWT","Solo End","20","Coordinate Reset","Collapse"],
+  "Rckt"   => ["Ranged Attack Start","Rocket1","RocketPoint","RocketWT","Ranged Attack End"],
   
-  "Rckt"   => ["One Step Before Move","Don't Collapse","Solo Start","Rocket1","RocketPoint","RocketWT","Solo End","Collapse","Coordinate Reset"],
+  "Cerb"   => ["Ranged Attack Start","Cerb1","Cerbatana","CerbWT","Ranged Attack End"],
   
-  "Cerb"   => ["One Step Before Move","Don't Collapse","Solo Start","Cerb1","Cerbatana","CerbWT","Solo End","Collapse","Coordinate Reset"],
-  
-  "Hamr"   => ["Normal Attack Start","Hammer","Normal Attack End"],
+
   
   "Multi Attack" => ["Skill Motion","Don't Collapse","Attack","Attack","Attack","Collapse","Coordinate Reset"],
 
@@ -1285,7 +1365,8 @@ module N03
                         "Wpn Swing R","20","Hue Default","Collapse","Coordinate Reset"], 
                         
   
-  "Directo" => ["Don't Collapse","Skill Motion","Move Before Enemy","Skill Anim","One Step After Jump","20","Coordinate Reset","Collapse"],
+  "Directo"           => ["Don't Collapse","Skill Motion","Move Before Enemy","Skill Anim",
+                          "One Step After Jump","20","Coordinate Reset","Collapse"],
   
   "Air Attack"        => ["Skill Motion","Bow1","One Step Before Jump","Before Jump Slam",
                         "Wait(Fixed)","Rotate Left Once","10","anime(117,false)","Slammed",
@@ -1364,7 +1445,7 @@ module N03
  
  "BalaEsp"   => ["Skill Motion","Wpn Swing R","6","Wait(Fixed)","Wpn Throw Start","Coordinate Reset"],
                 
-  "Use Item"     => ["Move Before Enemy","Wait(Fixed)","Skill Anim WT","Coordinate Reset Left"],
+ "Use Item"  => ["Wait", "throw_se", "ItemWT","6","Wait(Fixed)","Skill Anim WT","Coordinate Reset Left"],
   
   
   

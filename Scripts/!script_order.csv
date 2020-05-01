@@ -120,6 +120,7 @@ Scene_Gameover
 ~@6
 ~@7
 ------Scripts Custom-----
+Galv's Character Effects 2.0
 ------Yanfly Engine Ace
 ▼ YEA - Ace Core Engine v1
 ▼ YEA - Ace Save Engine v
@@ -161,14 +162,17 @@ TTM Fadein&out
 ~@12
 FA Interactive System 2.0
 Fa Patch
+FA Fogs
 ~@13
+Himeworks Shop Manager
+Himeworks Stock
 ~@14
 ~@15
+~@16
+~@17
 Script Exporter
 Main
 Testing
-~@16
-~@17
 ~@18
 ~@19
 ~@20
@@ -177,3 +181,5 @@ Testing
 ~@23
 ~@24
 ~@25
+~@26
+~@27

@@ -851,7 +851,6 @@ class SideView
     starters = N03.get_targets(@action_data[2], @battler)
     targets = N03.get_targets(@action_data[3], @battler)
     return if starters == [] or targets == []
-
     single_start = true if starters != nil && @action_data[2] < 0
     single_start = true if @action_data[1][0] != 0 && $data_animations[N03.get_attack_anime_id(@action_data[1][0], @battler)].position == 3
     starters = [starters[0]] if single_start

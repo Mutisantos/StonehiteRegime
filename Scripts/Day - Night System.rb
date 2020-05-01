@@ -77,7 +77,7 @@ module GameTime
  
   #Include the ids of any maps not to be tinted based on time
   # Usually reserved for indoor maps
-  NOTINTMAPS = [3,11,10,13]
+  NOTINTMAPS = [3,11,10,13,18]
  
   #Store current time in a variable?
   USE_VARIABLE = true

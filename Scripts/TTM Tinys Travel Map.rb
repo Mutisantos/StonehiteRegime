@@ -157,7 +157,7 @@ module TINY # Do not touch
                   
        },                             
 
-      :grandos => { :text         => "grandos",
+      :grandos => { :text         => "Grandos",
                      :graphic      => [800, 970,"orb", 2428],
                      :teleportdest => [2, 0, 6]
                   

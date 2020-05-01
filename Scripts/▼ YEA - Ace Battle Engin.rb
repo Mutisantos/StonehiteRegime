@@ -370,7 +370,7 @@ module YEA
     MSG_CRITICAL_HIT   = false  # Show attack was a critical hit.
     MSG_HIT_MISSED     = false  # Show attack missed the target.
     MSG_EVASION        = false  # Show attack was evaded by the target.
-    MSG_HP_DAMAGE      = false  # Show HP damage to target.
+    MSG_HP_DAMAGE      = true  # Show HP damage to target.
     MSG_MP_DAMAGE      = false  # Show MP damage to target.
     MSG_TP_DAMAGE      = false  # Show TP damage to target.
     MSG_ADDED_STATES   = false  # Show target's added states.
