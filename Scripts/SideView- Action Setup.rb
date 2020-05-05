@@ -1052,7 +1052,7 @@ module N03
   "Timer Hit Flow"            => ["common",  3,  true], 
   "Timer Block Flow"          => ["common",  6,  true], 
   "Reduce Damage Multiplier"  => ["common",  7,  true], 
-  "Increase Damage Multiplier"=> ["common",  8,  true], 
+  "Increase Damage Multiplier"=> ["common",  9,  true], 
   
   
   
@@ -1255,14 +1255,14 @@ module N03
     "Ranged Attack Start"  => [ "One Step Before Move",
                                 "Timer Hit Init",
                                 "Don't Collapse",
-                                # "If Timed Hit",
-                                # "Increase Damage Multiplier",
-                                "Solo Start"
+                                "Solo Start",
+                                "If Timed Hit",
+                                "Increase Damage Multiplier"
                                 ],
 
     "Ranged Attack End"  => [ "Solo End",
-                              "If Timed Hit",
-                              "Attack",
+                              # "If Timed Hit",
+                              # "Attack",
                               "Collapse",
                               "Coordinate Reset"],
 
