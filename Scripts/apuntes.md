@@ -21,10 +21,4 @@ Se usa If Time Hit para evaluar si no se sobrepaso el timeout del golpe activo, 
 -> Se evita usar "Attack" y en su lugar se llama un evento comun que incrementa el daño entre Solo Start y Solo End
 
 
-### Prueba 1: Simular fire orb
-
-1. Iniciar el Timeout de ataque
-
-2. Iniciar un Ciclo, cada que se oprima el boton de acción, realizar la accion especial. Establecer el limite por medio de una variable (que podria irse mejorando con el tiempo)
-
-2. 
+### Prueba 1: Oprimir un boton durante un periodo de tiempo hasta alcanzar un limite o acabarse el tiempo
