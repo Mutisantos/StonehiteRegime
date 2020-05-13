@@ -33,7 +33,7 @@ module CommandSkill
   KEY_SEC = 1.0
 
   # Bar of the file name to be displayed when the key input
-  T_BAR_NAME = "Graphics/System/bar.png"
+  T_BAR_NAME = "Graphics/System/note_bar.png"
 
   # Command display type
   # True: game pad type e.g. A = Z
@@ -63,9 +63,6 @@ module CommandSkill
   # SkillID => [[key 1, key 2,...], Failure of power (%) (]
         7  => [[UP, DOWN], 50],
         8  => [[X, A, Z], 50],
-        9  => [[DIR, RKEY, DIR], 50],  #Puño de fuego
-        #10 => [[LEFT, UP], 50],       #Danza de Fuego
-        11 => [[RKEY, DIR, RKEY], 50],#Plumas dardo
         12 => [[LEFT, UP, RIGHT, DOWN], 50], #Salto Elevado
         13 => [[UP, RIGHT], 50],
         14 => [[L, Z, A], 50],
@@ -82,34 +79,7 @@ module CommandSkill
         25 => [[LEFT, RIGHT], 50],
         26 => [[X, L, B], 50],
         28 => [[LEFT, DOWN], 50],
-        29 => [[DOWN, DOWN, DOWN, Z], 50], #Barrido Nevado
-        30 => [[LEFT, RIGHT,LEFT, RIGHT,UP], 50], #Ventisca Oscilante
-        31 => [[UP, DOWN, UP, DOWN, UP, DOWN], 0],
-        32 => [[LEFT, RIGHT, L, R], 50],
-        57 => [[RAND, RAND], 10],
-        58 => [[C, X, UP], 50],
-        59 => [[A, UP, RIGHT, A], 50],
-        60 => [[Z, C, A, B], 50],
-        61 => [[X, RAND], 50],
-        62 => [[UP, X, DOWN], 50],
-        63 => [[LEFT, C, Y, A], 50],
-        64 => [[X, C, Y, A], 50],
-        65 => [[Y, A], 50],
-        66 => [[RIGHT, B, A], 50],
-        67 => [[LEFT, UP, Z, A], 50],
-        68 => [[Y, B, Y, A], 50],
-        69 => [[LEFT, A], 50],
-        70 => [[A, C, A], 50],
-        71 => [[B, B, A, A], 50],
-        72 => [[A, B, X, Y], 50],
-        73 => [[X, A], 50],
-        74 => [[Y, A, B], 50],
-        75 => [[LEFT, RIGHT, Y, A], 50],
-        76 => [[A, C, L, A], 50],
-        77 => [[R, X], 50],
-        78 => [[L, C, R], 50],
-        79 => [[LEFT, L, RIGHT, R], 50],
-        80 => [[C, C, Z, RIGHT], 50]
+        57 => [[RAND, RAND], 10]
   }
   #Global variable for multiplying in case of success or failure
   $multiplier = 1.0

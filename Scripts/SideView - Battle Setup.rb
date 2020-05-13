@@ -385,7 +385,7 @@ class SideView
       return "Multi Attack"
     when 27
       return "Salto"
-    when 29
+    when 29 #barrido nevado
       return "Derrape"
     when 93
       return "GolpeFlama"
