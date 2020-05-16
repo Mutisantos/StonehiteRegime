@@ -152,7 +152,7 @@ module N03
    "Wait"             => ["motion",   "",    1,   0,   4,   12,   0, true, true, "" ],
    "Wait(Fixed) WT"   => ["motion",   "",    1,   1,   0,   12,   0, true, true, "" ],
    "Wait(Fixed)"      => ["motion",   "",    1,   1,   0,   12,   0,false, true, "" ],
-   "Fallen"           => ["motion", "_1",    0,   0,   0,   12,   0, true,false, "" ],
+   "Fallen"           => ["motion",   "_1",    0,   0,   0,   12,   0, true,false, "" ],
    "Right"            => ["motion",   "",    2,   0,   4,   12,   0, true, true, "" ],
    # Movement
    # -Action Name-        Type    Index     Vert Horz  Pattern Speed  Z  Wait Shadow Weapon
@@ -160,6 +160,9 @@ module N03
    "Move Right"      => ["motion",   "",    2,   0,   4,     6,    10, true, true,  "" ],
    #Cell Rotate
    "Front Rotate"    => ["motion",   "",    0 ,   0,   4,     6,    10, true, true,  "" ],
+   "Left Rotate"     => ["motion",   "",    1 ,   0,   4,     6,    10, true, true,  "" ],
+   "Back Rotate"     => ["motion",   "",    3 ,   0,   4,     6,    10, true, true,  "" ],
+   "Right Rotate"    => ["motion",   "",    2 ,   0,   4,     6,    10, true, true,  "" ],
    # Pause
    # -Action Name-      Type   Index   Vert  Horz  Pattern Speed  Z  Wait Shadow Weapon
    "Wpn Raised"      => ["motion",   "",    1,   0,   1,    2, 200,false, true, "Raised" ],
@@ -416,15 +419,15 @@ module N03
    # Z - Set to true to display the animation in front.
    
    # Damage Based
-   # -Action Name-         Type     ID Target Homing Wait   Damage Camera NoFlip  Flip     Z
-   "Weapon Anim"      => ["anime",  -1,  1, false, false,  true,  true, false,  false,  true], 
-   "Weapon Anim WT"    => ["anime",  -1,  1, false,  true,  true,  true, false,  false,  true], 
-   "Weapon Anim LWT"   => ["anime",  -2,  1, false,  true,  true,  true, false,  false,  true], 
-   "Skill Anim"          => ["anime",  -3,  1, false, false,  true,  true, false,  false,  true], 
-   "Skill Anim WT"        => ["anime",  -3,  1, false,  true,  true,  true, false,  false,  true], 
+   # -Action Name-              Type     ID Target Homing Wait   Damage Camera NoFlip  Flip     Z
+   "Weapon Anim"           => ["anime",  -1,  1, false, false,  true,  true, false,  false,  true], 
+   "Weapon Anim WT"        => ["anime",  -1,  1, false,  true,  true,  true, false,  false,  true], 
+   "Weapon Anim LWT"       => ["anime",  -2,  1, false,  true,  true,  true, false,  false,  true], 
+   "Skill Anim"            => ["anime",  -3,  1, false, false,  true,  true, false,  false,  true], 
+   "Skill Anim WT"         => ["anime",  -3,  1, false,  true,  true,  true, false,  false,  true], 
    # Actor Based
-   # -Action Name-         Type     ID Target Homing Wait   Damage Camera NoFlip  Flip     Z
-   "Magic Chant"          => ["anime", 113,  0,  true,  true, false,  true, false,  false,  true], 
+   # -Action Name-               Type     ID Target Homing Wait   Damage Camera NoFlip  Flip     Z
+   "Magic Chant"            => ["anime", 113,  0,  true,  true, false,  true, false,  false,  true], 
    "Skill Prepare"          => ["anime", 114,  0,  true,  true, false,  true, false,  false,  true], 
    "Magic Active Anim"      => ["anime", 115,  0, false,  true, false,  true, false,  false, false], 
    "Skill Active Anim"      => ["anime", 116,  0, false,  true, false,  true, false,  false, false], 
@@ -463,10 +466,10 @@ module N03
    # Time - How long the shake will take. The distance gets weaker over time.
    # Wait - Wait until the shake ends.
    
-   # -Action Name-      Type  Direction Speed Time   Wait
-   "Small Shake"     => ["shake", [  0, 4],  2,    16, false],
+   # -Action Name-          Type  Direction Speed Time   Wait
+   "Small Shake"      => ["shake", [  0, 4],  2,    16, false],
    "Medium Shake"     => ["shake", [  0, 6],  3,    30, false],
-   "Hard Shake"     => ["shake", [  0,12],  3,    40, false],
+   "Hard Shake"       => ["shake", [  0,12],  3,    40, false],
    
   #--------------------------------------------------------------------------
   # ● Screen Color Change
@@ -491,12 +494,12 @@ module N03
    #                      done. 0 to not return to original color.
    # Wait - Wait until change is done.
    
-   # -Action Name-                           Type   Target   R    G    B    A   CT    RT  Wait
+   # -Action Name-                         Type   Target   R    G    B    A   CT    RT  Wait
    "Hue Default"                      => ["color",  10, [   0,   0,   0,   0,  30,   0], false],
    "Danger Tone"                      => ["color",   0, [ 255,  50,  50, 100,  40,  40], false],
    "Poison Tone"                      => ["color",   0, [ 170,  50, 255, 170,  30,  30], false],
-   "BurningColor"                     => ["color",   0, [ 250,  50, 0, 170,  30,  30], false],  
-   "FreezeColor"                     => ["color",   0,  [ 200, 240, 255, 170,  30,  30], false],  
+   "BurningColor"                     => ["color",   0, [ 250,  50, 0,   170,  30,  30], false],  
+   "FreezeColor"                      => ["color",   0, [ 200, 240, 255, 170,  30,  30], false],  
    "Generic Status Abnormal Tone"     => ["color",   0, [ 255, 255,  50, 170,  40,  40], false],
    "Dim Background"                   => ["color",   6, [   0,   0,   0, 255,  30,   0], false],
    "Dim All Except Target"            => ["color",   9, [   0,   0,   0, 255,  30,   0], false],
@@ -513,9 +516,9 @@ module N03
    #            "Pictures" folder.
    
    # -Action Name-     Type  Bounds Time Filename
-   "Circle"         => ["ts",  40,   60,  "circle"],
+   "Circle"          => ["ts",  40,   60,  "circle"],
    "Diamond"         => ["ts",  40,   60,  "diamond"],
-   "Brick"         => ["ts",  40,   60,  "brick"],
+   "Brick"           => ["ts",  40,   60,  "brick"],
    
   #--------------------------------------------------------------------------
   # ● Afterimage Control
@@ -1237,8 +1240,6 @@ module N03
    "Normal Attack Start"    => [ "Move Before Enemy",
                                  "Timer Hit Init",
                                  "Don't Collapse",
-                                 # "If Timed Hit",
-                                 # "Increase Damage Multiplier",
                                  "Solo Start",
                                  "Dual Wield Limit",
                                  "Slash Left",
@@ -1247,9 +1248,11 @@ module N03
  
    "Normal Attack End"  => ["Death Confirm",
                              "Weapon Anim WT",
-                             "Solo End",
                              "If Timed Hit",
-                             "Attack",
+                             "Increase Damage Multiplier",
+                             "Solo End",
+                            #  "If Timed Hit",
+                            #  "Attack",
                              "Collapse",
                              "Next Battler",
                              "Coordinate Reset Curve"],
@@ -1259,14 +1262,13 @@ module N03
                                  "Timer Hit Init",
                                  "Don't Collapse",
                                  "Solo Start",
-                                 "30",
                                  "If Timed Hit",
                                  "Increase Damage Multiplier"
                                  ],
  
      "Ranged Attack End"  => [ "Solo End",
-                               "If Timed Hit",
-                               "Attack",
+                              #  "If Timed Hit",
+                              #  "Attack",
                                "Collapse",
                                "Coordinate Reset"],
  
