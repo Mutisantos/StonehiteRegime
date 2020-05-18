@@ -159,10 +159,10 @@ module N03
    "Move Left"       => ["motion",   "",    1,   0,   4,     6,    10, true, true,  "" ],
    "Move Right"      => ["motion",   "",    2,   0,   4,     6,    10, true, true,  "" ],
    #Cell Rotate
-   "Front Rotate"    => ["motion",   "",    0 ,   0,   4,     6,    10, true, true,  "" ],
-   "Left Rotate"     => ["motion",   "",    1 ,   0,   4,     6,    10, true, true,  "" ],
-   "Back Rotate"     => ["motion",   "",    3 ,   0,   4,     6,    10, true, true,  "" ],
-   "Right Rotate"    => ["motion",   "",    2 ,   0,   4,     6,    10, true, true,  "" ],
+   "Front Rotate"    => ["motion",   "",    0 ,   0,   4,     6,    10, false, true,  "" ],
+   "Left Rotate"     => ["motion",   "",    1 ,   0,   4,     6,    10, false, true,  "" ],
+   "Back Rotate"     => ["motion",   "",    3 ,   0,   4,     6,    10, false, true,  "" ],
+   "Right Rotate"    => ["motion",   "",    2 ,   0,   4,     6,    10, false, true,  "" ],
    # Pause
    # -Action Name-      Type   Index   Vert  Horz  Pattern Speed  Z  Wait Shadow Weapon
    "Wpn Raised"      => ["motion",   "",    1,   0,   1,    2, 200,false, true, "Raised" ],
@@ -1058,8 +1058,8 @@ module N03
    "Increase Damage Multiplier"=> ["common",  9,   true], 
    "Timed Charge Bar 4x20"     => ["common",  10,  true], 
    "Timed Charge Stages"       => ["common",  11,  true], 
-   
-   
+   "Timed Charge Bar XY"       => ["common",  12,  true],   
+   "Timed Charge Bar Rotate"   => ["common",  13,  false],  
    
    
   #--------------------------------------------------------------------------
@@ -1223,6 +1223,8 @@ module N03
                                "Timer Block Flow"
                              ],
    "Block Timed"      => ["Reduce Damage Multiplier","target('Weapon Block')" ],
+   "Self Spin"        => ["Front Rotate", "20" , "Left Rotate" , "20" , "Back Rotate" , "20", "Right Rotate", "20"],
+   
    # Secuencia de daño
    "Damage"      => ["Damage Pull","Coordinate Reset Left"],
    "Big Damage"    => ["Medium Shake","Large Damage Pull" ,"Coordinate Reset Left"],
@@ -1272,7 +1274,9 @@ module N03
                                "Collapse",
                                "Coordinate Reset"],
  
-     "Skill Attack End"  => ["Death Confirm",
+     "Skill Attack End"  => ["If Timed Hit",
+                             "Increase Damage Multiplier",
+                             "Death Confirm",
                              "Skill Anim WT",
                              "Solo End",
                              "If Timed Hit",
@@ -1383,6 +1387,7 @@ module N03
                          "Wait(Fixed)","Rotate Left Once","10","Slammed",
                          "Skill Anim","Hard Shake","Force Action","Hard Shake","Pitching","20",
                          "One Step After Jump","Hard Shake","Coordinate Reset"],
+
    "Salto invertido"       => ["Skill Motion","One Step Before Jump","Before Jump Slam",
                          "Wait(Fixed)","Rotate Left Once","10","Slammed",
                          "Skill Anim","Small Shake","Force Action","Pitching","20",
@@ -1430,13 +1435,14 @@ module N03
                   "Move Before Enemy","Move After Enemy","Skill Anim","Medium Shake",     
                  "One Step After Jump","Afterimage OFF","Coordinate Reset"], 
                  
-   "Placaje" => ["Skill Motion","Move to Enemy","target('Damage Levantamiento')","6","Skill Anim",
+  "Placaje" => ["Skill Motion","Move to Enemy","target('Damage Levantamiento')","6","Skill Anim",
                  "One Step After Jump","Coordinate Reset","target('Coordinate Reset')"],     
                  
   "NadoRapido" => [
                    "Don't Collapse",
                    "Skill Motion",
                    "One Step After Jump",
+                   "Timed Charge Bar XY",
                    "Rotar 90",
                    "SwiftNado",
                    "Move to Enemy",
@@ -1454,7 +1460,7 @@ module N03
                  
   "Use Item"  => ["Wait", "throw_se", "ItemWT","6","Wait(Fixed)","Skill Anim WT","Coordinate Reset Left"],
    
-   
+  "Ventisca"  => ["Don't Collapse","Zoom Out","Wpn Swing R","Timed Charge Bar Rotate","Loop Start","Self Spin", "If Timed Hit", "Loop End" ,"Skill Motion","Reset Camera", "Damage Animation", "Collapse", "Coordinate Reset"]
    
    }
    

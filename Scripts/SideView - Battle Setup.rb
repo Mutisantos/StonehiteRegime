@@ -371,67 +371,67 @@ class SideView
       return escape
     when 7 # Skill ID 7 (Wait)
       return "Standby"
-    when 9
+    when 9 # Puño Fuego
       return "GolpeFlama"
-    when 12
+    when 12 # Salto Elevado
       return "Salto invertido"
-    when 18
+    when 18 # Nado Rapido
       return "NadoRapido"
-    when 19
+    when 19 # Patada Hidraulica
       return "Directo"
-    when 20
+    when 20 # Acuasfera
       return "Acuasphere"
-    when 21
+    when 21 # Disparo Oculto
       return "Multi Attack"
-    when 27
+    when 27 # Cabezazo Casco
       return "Salto"
-    when 29 #barrido nevado
+    when 29 # Barrido nevado
       return "Derrape"
-    when 93
+    when 30 # Ventisca Oscilante
+      return "Ventisca"
+    when 93 # Rastreo Ancestral
       return "GolpeFlama"
-    when 139
+    when 139 # Corte Lateral (Flamrose)
       return "Skill Attack" 
-    when 140
+    when 140 # Golpe Resorte (Hutch)
       return "Skill Attack" 
-    when 141
+    when 141 # Lanza Ski (Pengralle)
       return "Skill Attack" 
-    when 172
+    when 172 # Doble Cuchillada
       return "Directo"
-    when 173
+    when 173 # Mordida Insecta
       return "Directo"
-    when 178
-      return "Derribo"
-    when 180
-      return "Directo"
-    when 182
-      return "Derribo"
-    when 140
-      return "GolpeFlama"
-    when 176        
+    when 176 # Dardo Venenoso       
       return "BalaEsp"
-    when 128
+    when 178 #Derribo Insecto
+      return "Derribo"
+    when 180 #Protocolo Reparador
+      return "Directo"
+    when 182 #Protocolo Explosivo
+      return "Derribo"
+    when 128 #System 
       return "Water Gun"
-    when 129
+    when 129 #System 
       return "Throw Weapon"
-    when 130
+    when 130 #System 
       return "Attack 5 Times"
     when 131
       return "Cut-in Attack"
-    when 132
+    when 132 #System 
       return "Movie Attack"
-    when 133
+    when 133 #System 
       return "Wolf Transformation"
-    when 134
+    when 134 #System 
       return "Derived Skill"
-    when 135
+    when 135 #System 
       return "Dim Attack"
-    when 136
+    when 136 #System 
       return "Air Attack"
-    when 194
+    when 194 #Impacto Paleoceno
       return "Placaje"
-    when 195
+    when 195 #Taladro Radiactivo
       return "Directo"
-    when 196
+    when 196 #Pisoton Paleoceno
       return "Salto Pesado"
     
     end
