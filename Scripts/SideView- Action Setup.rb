@@ -375,6 +375,7 @@ module N03
    "Arrow Fire"         => ["m_a",[ 0,-1], 0,  1, [ 0, 0], [ 0, 0], 10,  2, [-3,-3], true, [false,false],  true,  true,  true, false, false,  "Arrow"],
    "Water Gun Fire"     => ["m_a",[69,69], 0,  1, [ 0, 0], [ 0, 0], 10,  0, [ 0, 0], true, [ true, true],  true,  true,  true,  true, false,  ""],
    "Acuaesfera Fire"    => ["m_a",[144,120], 0,  1, [ 0, 0], [ 0, 0], 10,  0, [ 0, 0], true, [ true, true],  true,  true,  true,  true, false,  ""],
+   "Feather Fire"       => ["m_a",[126,116], 0,  1, [ 0, 0], [ 0, 0], 20,  0, [ 0, 0], true, [ true, true],  true,  true,  true,  true, false,  ""],
    
    
    
@@ -1338,7 +1339,9 @@ module N03
    
    "Water Gun"     => ["Skill Motion","Wpn Swing R","Water Gun Fire","Wait","Coordinate Reset"],
    
-   "Acuasphere"     => ["Skill Motion","Wpn Swing R","anime_me(146,false)","Wait", "Acuaesfera Fire","Coordinate Reset"],
+   "Acuasphere"     => ["Skill Motion","Wpn Swing R","anime_me(146,false)","Wait", "Acuaesfera Fire","Coordinate Reset"],   
+
+   "Dardo Pluma"     => ["Skill Motion","Wpn Swing R","Feather Fire","Coordinate Reset"],
        
    "Throw Weapon"        => ["Skill Motion","Wpn Swing R","6","Wait(Fixed)","Wpn Throw Start","Wpn Throw Return","Coordinate Reset"],  
    
@@ -1351,14 +1354,6 @@ module N03
    "Wolf Transformation"    => ["Skill Motion","anime(110,false)","Wolf Transform","Wait(Fixed)","120","Coordinate Reset"],
    
    "Attack 5 Times"         => ["Skill Motion","Don't Collapse","Bow Exclude","Attack","Attack","Attack","Collapse","Coordinate Reset"],
-   
-   # "Skill Motion" Iniciar habilidad hacia el enemigo
-   # "Don't Collapse" Prohibir Colapso, obliga al enemigo aguantar la secuencia de golpes
-   # "Bow Exclude"
-   # "Move Before Enemy" Ir al frente del enemigo
-   # "Attack" Impacto/Ataque
-   # "Collapse" Permitir el colapso al final
-   # "Coordinate Reset" Reiniciar posicion
  
    "Derived Skill"      => ["Throw Weapon","Derive Multi-Stage Attack","Slash Attack"],
   
