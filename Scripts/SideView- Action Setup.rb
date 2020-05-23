@@ -231,6 +231,7 @@ module N03
    "One Step After Move"   => ["move", 0,  20,   0,   0,-10,   0, [  0,  0], "Move Left"],
    "One Step Before Jump"  => ["move", 0, -30,   0,   0,-10,   0, [ 20,-20], "Move Left"],
    "One Step After Jump"   => ["move", 0,  30,   0,   0,-10,   0, [ 20,-20], "Move Left"],
+   "Simple Jump"           => ["move", 0,   0,   0,   0,-25,   0, [ 20,-20], "Wait(Fixed)"],
    "Victory Jump"          => ["move", 0,  10,   0,   0,-25,   0, [ 30,-30], "Wait(Fixed)"],
    "Victory Jump Weapon"   => ["move", 0,   0,   0,   0,-15,   0, [ 20,  0], "Wpn Raised"],
    "Victory Jump Land"     => ["move",-7,   0,   0,   0,-10,   0, [  0,  0], "Wpn Swing R"],
@@ -242,6 +243,7 @@ module N03
    "Move to Enemy"       => ["move", 1,  10,   2,   0,  -20,   0, [  0,  0], "Move Left"],  
    "Move near Enemy"     => ["move", 1,  70,   2,   0,  -20,   0, [  0,  0], "Move Left"],  
    "Move After Enemy"    => ["move", 1, -60,   0,   0,  -20,   0, [  0,  0], "Move Left"],
+   "Move Front Enemy"    => ["move", 1, 140,   0,   0,  -20,   0, [  0,  0], "Move Left"],
    
    #Barrido
    "Move Enemy Fast"     => ["move", 1,   0,   0,   0,-10,   0, [  0,  0], "Move Left"],
@@ -374,8 +376,9 @@ module N03
    "Arrow Fire WT"      => ["m_a",[ 0,-1], 0,  1, [ 0, 0], [ 0, 0], 10,  2, [-3,-3], true, [ true, true],  true,  true,  true, false, false,  "Arrow"],
    "Arrow Fire"         => ["m_a",[ 0,-1], 0,  1, [ 0, 0], [ 0, 0], 10,  2, [-3,-3], true, [false,false],  true,  true,  true, false, false,  "Arrow"],
    "Water Gun Fire"     => ["m_a",[69,69], 0,  1, [ 0, 0], [ 0, 0], 10,  0, [ 0, 0], true, [ true, true],  true,  true,  true,  true, false,  ""],
-   "Acuaesfera Fire"    => ["m_a",[144,120], 0,  1, [ 0, 0], [ 0, 0], 10,  0, [ 0, 0], true, [ true, true],  true,  true,  true,  true, false,  ""],
-   "Feather Fire"       => ["m_a",[126,116], 0,  1, [ 0, 0], [ 0, 0], 20,  0, [ 0, 0], true, [ true, true],  true,  true,  true,  true, false,  ""],
+   "Acuaesfera Fire"    => ["m_a",[144,120], 0,  1, [ 0, 0], [ 0, 0], 10,  2, [ 0, 0], true, [ true, true],  true,  true,  false,  true, false,  ""],
+   "Acuaesfera Load"    => ["m_a",[0,146], 0,  0, [ 0, 0], [ 0, 0], 10,  2, [ 0, 0], true, [ false, false],  false,  true,  false,  true, false,  ""],
+   "Feather Fire"       => ["m_a",[126,178], 0,  1, [0, -4], [ 10,-4], 20,  2, [ 0, 0], true, [ false, false],  true,  true,  false,  false, false,  ""],
    
    
    
@@ -799,7 +802,7 @@ module N03
    
    # -Action Name-           Type        ID  Operation Operand
    "Variable No1 /+1"     => ["variable",   1,     1,     1],
-   
+   "Variable No1 /+1"     => ["variable",   1,     1,     1],
   #--------------------------------------------------------------------------
   # ● Conditional Branch (Switch)
   #--------------------------------------------------------------------------
@@ -817,7 +820,7 @@ module N03
    "Run at Switch No1=ON" => ["n_1",   1,   true,   0],
    "If Timed Hit"         => ["n_1",  101,  true,   0],
    "If Blocked Hit"       => ["n_1",  103,  true,   0],
-   
+   "If Indicator A"       => ["n_1",  105,  true,   0],
    
   #--------------------------------------------------------------------------
   # ● Conditional Branch (Variable)
@@ -1060,7 +1063,12 @@ module N03
    "Timed Charge Bar 4x20"     => ["common",  10,  true], 
    "Timed Charge Stages"       => ["common",  11,  true], 
    "Timed Charge Bar XY"       => ["common",  12,  true],   
+   "Timed Charge Bar XY Loop"  => ["common",  12,  false],
    "Timed Charge Bar Rotate"   => ["common",  13,  false],  
+   "Multistrike Attack"        => ["common",  14,  false],  
+   "Timed Charge Stages A"     => ["common",  15,  true], 
+   "Timed Charge Bar LR Loop"  => ["common",  16,  false],
+   
    
    
   #--------------------------------------------------------------------------
@@ -1225,7 +1233,10 @@ module N03
                              ],
    "Block Timed"      => ["Reduce Damage Multiplier","target('Weapon Block')" ],
    "Self Spin"        => ["Front Rotate", "20" , "Left Rotate" , "20" , "Back Rotate" , "20", "Right Rotate", "20"],
+   "Fast Spin"        => ["Left Rotate", "3" , "Front Rotate" , "3" , "Right Rotate" , "3", "Back Rotate", "3"],
    
+   "Fast Flap"   => ["Front Rotate", "4" , "Left Rotate", "4"],
+
    # Secuencia de daño
    "Damage"      => ["Damage Pull","Coordinate Reset Left"],
    "Big Damage"    => ["Medium Shake","Large Damage Pull" ,"Coordinate Reset Left"],
@@ -1286,7 +1297,6 @@ module N03
                              "Next Battler",
                              "Coordinate Reset Curve"],
      
-     "Looped Special Attack" => [],
  
    "Slash Left"          => ["Wpn Swing L","Weapon Anim LWT"],
    "Skill Motion"        => ["One Step Before Move","Wpn Raised","Skill Active Anim"],
@@ -1312,9 +1322,6 @@ module N03
  
    "Skill Attack"         => ["Normal Attack Start","Wait(Fixed)","Skill Attack End"],
  
- 
- 
- 
    "Bow Attack"          => ["Ranged Attack Start","Bow1","Bow Shot","Arrow Fire WT","Ranged Attack End"],
    
    "Gun"   => ["Ranged Attack Start","Gun1","GunPoint","BullerWT","Ranged Attack End"],
@@ -1323,13 +1330,7 @@ module N03
    
    "Cerb"   => ["Ranged Attack Start","Cerb1","Cerbatana","CerbWT","Ranged Attack End"],
    
- 
-   
    "Multi Attack" => ["Skill Motion","Don't Collapse","Attack","Attack","Attack","Collapse","Coordinate Reset"],
- 
-   
-   
-  
  
    # Habiliades personalizadas
    
@@ -1339,10 +1340,6 @@ module N03
    
    "Water Gun"     => ["Skill Motion","Wpn Swing R","Water Gun Fire","Wait","Coordinate Reset"],
    
-   "Acuasphere"     => ["Skill Motion","Wpn Swing R","anime_me(146,false)","Wait", "Acuaesfera Fire","Coordinate Reset"],   
-
-   "Dardo Pluma"     => ["Skill Motion","Wpn Swing R","Feather Fire","Coordinate Reset"],
-       
    "Throw Weapon"        => ["Skill Motion","Wpn Swing R","6","Wait(Fixed)","Wpn Throw Start","Wpn Throw Return","Coordinate Reset"],  
    
    "Arrojadiza"        => ["Skill Motion","Wpn Swing R","6","Wait(Fixed)","Wpn Throw Start","Coordinate Reset"],  
@@ -1360,7 +1357,7 @@ module N03
    "Background Change Attack"    => ["Magic Motion","Wpn Swing R","Space Background","Damage Animation","Space Background Release","Coordinate Reset"],
    
    "Picture Attack"     => ["Magic Motion","Magic Square Display","Wpn Swing R","anime(80,false)","60","Hard Shake","Skill Anim","Magic Square Erase","Coordinate Reset"],
-  
+
    "Dim Attack"        => ["Skill Motion","Dim All Except Target","se('Laser',150)",
                          "Afterimage ON","Move Before Enemy","anime(35,false)","Move After Enemy","Skill Anim",
                          "Wpn Swing R","20","Hue Default","Coordinate Reset","Afterimage OFF"],
@@ -1368,11 +1365,19 @@ module N03
    "GolpeFlama"        => ["Skill Motion","Don't Collapse",
                          "Move Before Enemy", "Timed Charge Stages" , "Move After Enemy","Skill Anim",
                          "Wpn Swing R","20","Hue Default","Collapse","Coordinate Reset"], 
-                         
+
+   "DanzaFlama"        => ["Skill Motion","Fast Spin","Wpn Swing R" ,"One Step After Jump","5", "One Step Before Jump",
+                          "Wpn Swing LR","Skill Anim","Coordinate Reset"],                       
    
+   "Impulso"        => ["Skill Motion","One Step After Jump","5", "One Step Before Jump","One Step After Jump","5", "One Step Before Jump",
+                            "Wpn Swing LR","Skill Anim","Coordinate Reset"],  
+
    "Directo"           => ["Don't Collapse","Skill Motion","Move Before Enemy","Skill Anim",
                            "One Step After Jump","20","Coordinate Reset","Collapse"],
    
+   "Patada Hidraulica" => ["Don't Collapse","Skill Motion","Move Before Enemy","Timed Charge Stages A","Skill Anim",
+                            "One Step After Jump","20","Coordinate Reset","Collapse"],
+
    "Air Attack"        => ["Skill Motion","Bow1","One Step Before Jump","Before Jump Slam",
                          "Wait(Fixed)","Rotate Left Once","10","anime(117,false)","Slammed",
                          "Skill Anim","Medium Shake","Force Action","Pitching","20",
@@ -1384,6 +1389,7 @@ module N03
                          "One Step After Jump","Hard Shake","Coordinate Reset"],
 
    "Salto invertido"       => ["Skill Motion","One Step Before Jump","Before Jump Slam",
+                         "Timed Charge Bar XY",
                          "Wait(Fixed)","Rotate Left Once","10","Slammed",
                          "Skill Anim","Small Shake","Force Action","Pitching","20",
                          "One Step After Jump","Coordinate Reset"],
@@ -1455,8 +1461,16 @@ module N03
                  
   "Use Item"  => ["Wait", "throw_se", "ItemWT","6","Wait(Fixed)","Skill Anim WT","Coordinate Reset Left"],
    
-  "Ventisca"  => ["Don't Collapse","Zoom Out","Wpn Swing R","Timed Charge Bar Rotate","Loop Start","Self Spin", "If Timed Hit", "Loop End" ,"Skill Motion","Reset Camera", "Damage Animation", "Collapse", "Coordinate Reset"]
+  "Ventisca"  => ["Don't Collapse","Zoom Out","Wpn Swing R","Timed Charge Bar Rotate","Loop Start","Self Spin", "If Timed Hit", "Loop End" ,"Skill Motion","Reset Camera", "Damage Animation", "Collapse", "Coordinate Reset"],
+  
+  "Flujo Subterraneo"  => ["Don't Collapse","Zoom Out","Wpn Swing R","Timed Charge Bar LR Loop","Loop Start","Simple Jump", "If Timed Hit", "Loop End" ,"Skill Motion","Reset Camera", "Damage Animation", "Collapse", "Coordinate Reset"],
    
+  "Acuasphere"  => ["Don't Collapse","Skill Motion","Wpn Swing R","Timed Charge Bar XY Loop","Loop Start","anime_me(146,false)","20","If Timed Hit", "Loop End","Wait" ,"Acuaesfera Fire","Coordinate Reset", "Collapse"],   
+
+  "Feather Damage"  => ["Feather Fire","Damage Animation"],
+
+  "Dardo Pluma"     => ["Don't Collapse","Move Front Enemy","One Step After Jump","Multistrike Attack","5","Loop Start","If Indicator A","Feather Damage","If Timed Hit","Loop End","Wait","Collapse","Coordinate Reset"],
+
    }
    
   #==============================================================================

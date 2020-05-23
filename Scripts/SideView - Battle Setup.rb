@@ -373,22 +373,30 @@ class SideView
       return "Standby"
     when 9 # Puño Fuego
       return "GolpeFlama"
+    when 10 # Danza Llamas
+      return "DanzaFlama"
+    when 11 # Dardos Pluma
+      return "Dardo Pluma" 
     when 12 # Salto Elevado
       return "Salto invertido"
     when 18 # Nado Rapido
       return "NadoRapido"
     when 19 # Patada Hidraulica
-      return "Directo"
+      return "Patada Hidraulica"
     when 20 # Acuasfera
       return "Acuasphere"
     when 21 # Disparo Oculto
       return "Multi Attack"
+    when 23 # Flujo Subterraneo
+      return "Flujo Subterraneo"
     when 27 # Cabezazo Casco
       return "Salto"
     when 29 # Barrido nevado
       return "Derrape"
     when 30 # Ventisca Oscilante
       return "Ventisca"
+    when 31 # Ventisca Oscilante
+      return "Impulso"
     when 93 # Rastreo Ancestral
       return "GolpeFlama"
     when 139 # Corte Lateral (Flamrose)
