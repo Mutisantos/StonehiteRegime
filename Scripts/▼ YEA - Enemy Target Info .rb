@@ -159,6 +159,7 @@ module YEA
     PAGE_ORDER =[
       :parameters,
       :elements,
+      :attacks,
       :states,
     ] # Do not remove this.
     
@@ -173,11 +174,11 @@ module YEA
     
     # This is the text displayed to let the player know how to activate and
     # show the info windows.
-    HELP_INFO_SHOW = "\e}Oprime \eC[4]SHIFT\eC[0] para mostrar informacion."
+    HELP_INFO_SHOW = "\e}Oprime \eC[2]SHIFT\eC[0] para mostrar informacion."
     
     # This is the text displayed to let the player know how to switch between
     # pages for the info windows.
-    HELP_INFO_SWITCH = "\e}Oprime \eC[4]Q\eC[0] or \eC[4]W\eC[0] para mostrar mas."
+    HELP_INFO_SWITCH = "\e}Oprime \eC[2]Q\eC[0] or \eC[2]W\eC[0] para mostrar mas."
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - General Page Settings -
@@ -202,7 +203,8 @@ module YEA
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     ELE_FONT_SIZE   = 20       # Font size used for element resistances.
     HIDDEN_ELE_TEXT = "???"    # Text used if element resistances are hidden.
-    SHOWN_ELEMENTS  = [3..10]  # Elements shown. Maximum of 8 can be shown.
+    SHOWN_ATTACKS   = [1,16]
+    SHOWN_ELEMENTS  = [3,4,5,6,7,8,9,10]  # Elements shown. Maximum of 8 can be shown.
     ELEMENT_ICONS   ={         # Contains element icon information.
     # Element ID => Icon,
                3 =>  104, # Fire
@@ -213,7 +215,8 @@ module YEA
                8 =>  109, # Wind
                9 =>  110, # Holy
               10 =>  111, # Dark
-              
+              1 =>    3, # CQC
+              16 =>   16, # Ranged  
     } # Do not remove this.
     
     # Show the elemental resistances by default? If false, a skill with the
@@ -234,7 +237,7 @@ module YEA
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     STATE_FONT_SIZE   = 20     # Font size used for state resistances.
     HIDDEN_STATE_TEXT = "???"  # Text used if state resistances are hidden.
-    SHOWN_STATES = [2..9]     # States shown. Maximum of 8 can be shown.
+    SHOWN_STATES = [3,4,5,6,7,8,26,29]     # States shown. Maximum of 8 can be shown.
     
     # Show the state resistances by default? If false, a skill with the
     # specific state must be used on the enemy to reveal the element data if
@@ -275,6 +278,7 @@ module YEA
     #--------------------------------------------------------------------------
     # converted_contants
     #--------------------------------------------------------------------------
+    SHOWN_ATTACKS = convert_integer_array(SHOWN_ATTACKS)
     SHOWN_ELEMENTS = convert_integer_array(SHOWN_ELEMENTS)
     SHOWN_STATES = convert_integer_array(SHOWN_STATES)
   end # ENEMY_INFO
@@ -830,6 +834,10 @@ class Window_Comparison < Window_Base
     when :parameters
       @battler = actor if @type == :actor
       draw_parameters
+    when :attacks
+      @battler = enemy if @type == :actor
+      draw_parameters if @type == :actor
+      draw_attacks if @type == :enemy      
     when :elements
       @battler = enemy if @type == :actor
       draw_parameters if @type == :actor
@@ -901,6 +909,40 @@ class Window_Comparison < Window_Base
     change_color(normal_color)
     if @battler.show_info_element?(ele_id)
       text = sprintf("%d%%", (@battler.element_rate(ele_id) * 100).to_i)
+    else
+      text = YEA::ENEMY_INFO::HIDDEN_ELE_TEXT
+    end
+    draw_text(dx+4, dy, dw-8, line_height, text, 2)
+  end
+
+  #--------------------------------------------------------------------------
+  # draw_attacks
+  #--------------------------------------------------------------------------
+  def draw_attacks
+    dx = 0; dy = 0
+    contents.font.size = YEA::ENEMY_INFO::ELE_FONT_SIZE
+    for atk_id in YEA::ENEMY_INFO::SHOWN_ATTACKS
+      draw_attack_info(atk_id, dx, dy)
+      dx = dx == 0 ? contents.width / 2 : 0
+      dy += dx == 0 ? line_height : 0
+    end
+  end
+  
+  #--------------------------------------------------------------------------
+  # draw_element_info
+  #--------------------------------------------------------------------------
+  def draw_attack_info(atk_id, dx, dy)
+    dw = contents.width / 2
+    colour = Color.new(0, 0, 0, translucent_alpha/2)
+    rect = Rect.new(dx+1, dy+1, dw - 2, line_height - 2)
+    contents.fill_rect(rect, colour)
+    #---
+    draw_icon(Icon.element(atk_id), dx, dy)
+    change_color(system_color)
+    draw_text(dx+24, dy, dw-24, line_height, $data_system.elements[atk_id])
+    change_color(normal_color)
+    if @battler.show_info_element?(atk_id)
+      text = sprintf("%d%%", (@battler.element_rate(atk_id) * 100).to_i)
     else
       text = YEA::ENEMY_INFO::HIDDEN_ELE_TEXT
     end

@@ -319,6 +319,10 @@ class Game_Battler
     value = apply_guard(value)
     # p(value.to_s + '*' + $multiplier.to_s + '*' + $game_variables[CommandSkill::DAMAGE_MULTIPLIER].to_s + "=")
     value = value * $multiplier * $game_variables[CommandSkill::DAMAGE_MULTIPLIER] 
+    if ($game_variables[CommandSkill::DAMAGE_MULTIPLIER] >= 1)
+      @result.missed = false
+      @result.evaded = false
+    end
     # p(value.to_s)
     @result.make_damage(value.to_i, item)
     #---For effectiveness popup from Yanfly's Battle Engine
