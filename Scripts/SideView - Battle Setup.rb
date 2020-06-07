@@ -371,8 +371,8 @@ class SideView
       return escape
     when 7 # Skill ID 7 (Wait)
       return "Standby"
-    when 9 # Puño Fuego
-      return "GolpeFlama"
+    when 9 # Llama Soplete
+      return "SopleteLlama"
     when 10 # Danza Llamas
       return "DanzaFlama"
     when 11 # Dardos Pluma

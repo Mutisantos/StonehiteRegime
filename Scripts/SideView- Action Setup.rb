@@ -1361,6 +1361,10 @@ module N03
    "Dim Attack"        => ["Skill Motion","Dim All Except Target","se('Laser',150)",
                          "Afterimage ON","Move Before Enemy","anime(35,false)","Move After Enemy","Skill Anim",
                          "Wpn Swing R","20","Hue Default","Coordinate Reset","Afterimage OFF"],
+
+   "SopleteLlama"      => ["Skill Motion","Don't Collapse",
+                          "Move near Enemy", "Timed Charge Stages" , "Wpn Swing R","Skill Anim",
+                          "Wpn Swing L","20","Hue Default","Collapse","Coordinate Reset"],                         
                          
    "GolpeFlama"        => ["Skill Motion","Don't Collapse",
                          "Move Before Enemy", "Timed Charge Stages" , "Move After Enemy","Skill Anim",
