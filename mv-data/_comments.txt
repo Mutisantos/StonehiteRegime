@@ -1,0 +1,357 @@
+Common Event 1 Timed Hit Starter Line 1:  - Comment: Inicializar Ataque Activo.
+Common Event 1 Timed Hit Starter Line 2:  - Comment: El Timeout es el momento limite del ataque activo, si se oprime la 
+Common Event 1 Timed Hit Starter Line 3:  - Comment: tecla de ataque antes de superar el tiempo, el ataque activo se 
+Common Event 1 Timed Hit Starter Line 4:  - Comment: produce.
+Common Event 2 Timed Hit Stopper Line 1:  - Comment: Detener el timeout poniendo el instante actual.
+Common Event 3 Timed Hit Flow Line 6:  - Comment: Flujo base
+Common Event 3 Timed Hit Flow Line 8:  - Comment: Si el instante en el que se oprime la tecla de ataque 
+Common Event 3 Timed Hit Flow Line 9:  - Comment: no se ha sobrepasado el timeout definido en 002, 
+Common Event 3 Timed Hit Flow Line 10:  - Comment: se ejecuta un segundo ataque con el script de SVBSystem
+Common Event 6 Timed Block Flow Line 6:  - Comment: Flujo principal de Defensa activa
+Common Event 7 Reduce Timed Damage Line 1:  - Comment: Defensa activa. Ataques normales pueden ser bloqueados.
+Common Event 8 Tutorial Block Hit Line 1:  - Comment: Solo para usarse en el combate de tutorial.
+Common Event 9 Increase Timed Damage Line 1:  - Comment: Ataque activo. Aumenta el daño final en un 25%
+Map 2 Terreno de Rituales - Event 7 Flancorose (17,8) - Page 1 Line 1:  - Comment: <reflect>
+Map 2 Terreno de Rituales - Event 7 Flancorose (17,8) - Page 2 Line 1:  - Comment: <reflect>
+Map 2 Terreno de Rituales - Event 7 Flancorose (17,8) - Page 3 Line 1:  - Comment: <reflect>
+Map 2 Terreno de Rituales - Event 7 Flancorose (17,8) - Page 4 Line 1:  - Comment: <reflect>
+Map 2 Terreno de Rituales - Event 7 Flancorose (17,8) - Page 5 Line 1:  - Comment: <reflect>
+Map 2 Terreno de Rituales - Event 7 Flancorose (17,8) - Page 6 Line 1:  - Comment: <reflect>
+Map 2 Terreno de Rituales - Event 12 TZIMITL (23,6) - Page 1 Line 1:  - Comment: <reflect>
+Map 2 Terreno de Rituales - Event 12 TZIMITL (23,6) - Page 2 Line 1:  - Comment: <reflect>
+Map 2 Terreno de Rituales - Event 13 Antorcha Centro (11,7) - Page 1 Line 1:  - Comment: <loop animation: 142>
+Map 4 Poblado Superior - Event 14 Bichotuto (30,32) - Page 1 Line 1:  - Comment: Validar que no se hayan vendido o desequipado las armas
+Map 4 Poblado Superior - Event 14 Bichotuto (30,32) - Page 1 Line 2:  - Comment: y accesorios antes del combate
+Map 4 Poblado Superior - Event 26 TZIMITLRage (6,11) - Page 1 Line 3:  - Comment: <control follower: 1>
+Map 4 Poblado Superior - Event 26 TZIMITLRage (6,11) - Page 1 Line 41:  - Comment: <follower actor: 2>
+Map 4 Poblado Superior - Event 26 TZIMITLRage (6,11) - Page 1 Line 83:  - Comment: <gather followers>
+Map 4 Poblado Superior - Event 32   (24,5) - Page 2 Line 10:  - Comment: <control follower: 2>
+Map 4 Poblado Superior - Event 32   (24,5) - Page 2 Line 50:  - Comment: <control follower: 2>
+Map 4 Poblado Superior - Event 32   (24,5) - Page 2 Line 53:  - Comment: <control follower: 1>
+Map 4 Poblado Superior - Event 32   (24,5) - Page 2 Line 56:  - Comment: <control follower: 3>
+Map 4 Poblado Superior - Event 32   (24,5) - Page 2 Line 143:  - Comment: <control follower: 3>
+Map 4 Poblado Superior - Event 32   (24,5) - Page 2 Line 155:  - Comment: <control follower: 2>
+Map 4 Poblado Superior - Event 32   (24,5) - Page 2 Line 165:  - Comment: <control follower: 3>
+Map 4 Poblado Superior - Event 53 EV053 (1,10) - Page 1 Line 1:  - Comment: FLAME START
+Map 4 Poblado Superior - Event 55 EV055 (1,11) - Page 1 Line 1:  - Comment: FLAME START
+Map 4 Poblado Superior - Event 56 EV056 (1,12) - Page 1 Line 1:  - Comment: FLAME START
+Map 4 Poblado Superior - Event 66 EV066 (19,30) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 4 Poblado Superior - Event 66 EV066 (19,30) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 4 Poblado Superior - Event 67 EV067 (21,30) - Page 1 Line 1:  - Comment: PUSHABLE
+Map 4 Poblado Superior - Event 67 EV067 (21,30) - Page 1 Line 2:  - Comment: PICK UP
+Map 4 Poblado Superior - Event 68 EV068 (17,30) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 4 Poblado Superior - Event 68 EV068 (17,30) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 4 Poblado Superior - Event 73 EV073 (21,4) - Page 1 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 4 Poblado Superior - Event 73 EV073 (21,4) - Page 1 Line 2:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 4 Poblado Superior - Event 74 EV074 (31,4) - Page 1 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 4 Poblado Superior - Event 74 EV074 (31,4) - Page 1 Line 2:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 4 Poblado Superior - Event 77 EV077 (3,27) - Page 1 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 4 Poblado Superior - Event 77 EV077 (3,27) - Page 1 Line 2:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 4 Poblado Superior - Event 78 EV078 (23,27) - Page 1 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 4 Poblado Superior - Event 78 EV078 (23,27) - Page 1 Line 2:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 5 Poblado Central - Event 37 EV037 (2,24) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 3
+Map 5 Poblado Central - Event 40 EV040 (29,4) - Page 1 Line 1:  - Comment: <reflect>
+Map 5 Poblado Central - Event 42 MAP SETTINGS (39,0) - Page 1 Line 1:  - Comment: Turn on reflections and icons only for this map
+Map 5 Poblado Central - Event 43 EV043 (12,26) - Page 1 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 5 Poblado Central - Event 43 EV043 (12,26) - Page 1 Line 2:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 5 Poblado Central - Event 45 EV045 (16,12) - Page 1 Line 1:  - Comment: LIGHT EFFECT DIRECTION 8
+Map 5 Poblado Central - Event 45 EV045 (16,12) - Page 1 Line 2:  - Comment: LIGHT EFFECT INTENCITY 2
+Map 5 Poblado Central - Event 46 EV046 (25,12) - Page 1 Line 1:  - Comment: LIGHT EFFECT DIRECTION 8
+Map 5 Poblado Central - Event 46 EV046 (25,12) - Page 1 Line 2:  - Comment: LIGHT EFFECT INTENCITY 2
+Map 5 Poblado Central - Event 60 EV060 (20,25) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 3
+Map 6 Bosque de Niebla (Primer Piso) - Event 2 EV002 (25,24) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 6 Bosque de Niebla (Primer Piso) - Event 2 EV002 (25,24) - Page 1 Line 3:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 6 Bosque de Niebla (Primer Piso) - Event 3 A (4,25) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 3 A (4,25) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 3 A (4,25) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 5 A (21,8) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 5 A (21,8) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 5 A (21,8) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 7 A (24,8) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 7 A (24,8) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 7 A (24,8) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 15 A (13,17) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 15 A (13,17) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 6 Bosque de Niebla (Primer Piso) - Event 15 A (13,17) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 2 EV002 (11,15) - Page 1 Line 1:  - Comment: WATER START
+Map 7 BattleBackTester - Event 4 EV004 (1,17) - Page 1 Line 1:  - Comment: FLAME START
+Map 7 BattleBackTester - Event 4 EV004 (1,17) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 7 BattleBackTester - Event 4 EV004 (1,17) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 7 BattleBackTester - Event 4 EV004 (1,17) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 7 BattleBackTester - Event 4 EV004 (1,17) - Page 2 Line 2:  - Comment: WATER START
+Map 7 BattleBackTester - Event 5 EV005 (11,16) - Page 1 Line 1:  - Comment: GUN START
+Map 7 BattleBackTester - Event 7 MAP SETTINGS (2,3) - Page 1 Line 1:  - Comment: Turn on reflections and icons only for this map
+Map 7 BattleBackTester - Event 7 MAP SETTINGS (2,3) - Page 1 Line 4:  - Comment: Event 5 is a vampire so her reflection is removed here
+Map 7 BattleBackTester - Event 19 A (8,5) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 19 A (8,5) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 19 A (8,5) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 20 A (11,12) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 20 A (11,12) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 20 A (11,12) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 21 A (11,13) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 21 A (11,13) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 21 A (11,13) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 22 A (11,14) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 22 A (11,14) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 7 BattleBackTester - Event 22 A (11,14) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 8 Bosque de Niebla (Segundo Piso) - Event 1 EV001 (7,22) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 8 Bosque de Niebla (Segundo Piso) - Event 1 EV001 (7,22) - Page 1 Line 2:  - Comment: TARGET SWITCH 27
+Map 8 Bosque de Niebla (Segundo Piso) - Event 1 EV001 (7,22) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 8 Bosque de Niebla (Segundo Piso) - Event 1 EV001 (7,22) - Page 2 Line 2:  - Comment: TARGET SWITCH 27
+Map 8 Bosque de Niebla (Segundo Piso) - Event 9 EV009 (11,11) - Page 1 Line 1:  - Comment: FLAME START
+Map 8 Bosque de Niebla (Segundo Piso) - Event 9 EV009 (11,11) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 8 Bosque de Niebla (Segundo Piso) - Event 9 EV009 (11,11) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 8 Bosque de Niebla (Segundo Piso) - Event 9 EV009 (11,11) - Page 2 Line 1:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 8 Bosque de Niebla (Segundo Piso) - Event 9 EV009 (11,11) - Page 2 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 8 Bosque de Niebla (Segundo Piso) - Event 10 EV010 (18,22) - Page 1 Line 1:  - Comment: FLAME START
+Map 8 Bosque de Niebla (Segundo Piso) - Event 11 EV011 (9,22) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 8 Bosque de Niebla (Segundo Piso) - Event 11 EV011 (9,22) - Page 1 Line 2:  - Comment: TARGET SWITCH 27
+Map 8 Bosque de Niebla (Segundo Piso) - Event 11 EV011 (9,22) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 8 Bosque de Niebla (Segundo Piso) - Event 11 EV011 (9,22) - Page 2 Line 2:  - Comment: TARGET SWITCH 27
+Map 8 Bosque de Niebla (Segundo Piso) - Event 12 EV012 (17,11) - Page 1 Line 1:  - Comment: FLAME START
+Map 8 Bosque de Niebla (Segundo Piso) - Event 12 EV012 (17,11) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 8 Bosque de Niebla (Segundo Piso) - Event 12 EV012 (17,11) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 8 Bosque de Niebla (Segundo Piso) - Event 12 EV012 (17,11) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 8 Bosque de Niebla (Segundo Piso) - Event 12 EV012 (17,11) - Page 2 Line 2:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 8 Bosque de Niebla (Segundo Piso) - Event 14 EV014 (15,2) - Page 1 Line 1:  - Comment: FLAME START
+Map 8 Bosque de Niebla (Segundo Piso) - Event 14 EV014 (15,2) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 8 Bosque de Niebla (Segundo Piso) - Event 14 EV014 (15,2) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 8 Bosque de Niebla (Segundo Piso) - Event 14 EV014 (15,2) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 8 Bosque de Niebla (Segundo Piso) - Event 17 EV017 (4,3) - Page 1 Line 1:  - Comment: FLAME START
+Map 8 Bosque de Niebla (Segundo Piso) - Event 17 EV017 (4,3) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 8 Bosque de Niebla (Segundo Piso) - Event 17 EV017 (4,3) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 8 Bosque de Niebla (Segundo Piso) - Event 17 EV017 (4,3) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 8 Bosque de Niebla (Segundo Piso) - Event 17 EV017 (4,3) - Page 2 Line 2:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 8 Bosque de Niebla (Segundo Piso) - Event 18 EV018 (24,3) - Page 1 Line 1:  - Comment: FLAME START
+Map 8 Bosque de Niebla (Segundo Piso) - Event 18 EV018 (24,3) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 8 Bosque de Niebla (Segundo Piso) - Event 18 EV018 (24,3) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 8 Bosque de Niebla (Segundo Piso) - Event 18 EV018 (24,3) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 8 Bosque de Niebla (Segundo Piso) - Event 18 EV018 (24,3) - Page 2 Line 2:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 8 Bosque de Niebla (Segundo Piso) - Event 19 EV019 (17,3) - Page 1 Line 1:  - Comment: PUSHABLE
+Map 8 Bosque de Niebla (Segundo Piso) - Event 20 EV020 (18,3) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 8 Bosque de Niebla (Segundo Piso) - Event 20 EV020 (18,3) - Page 1 Line 2:  - Comment: TARGET SWITCH 9
+Map 8 Bosque de Niebla (Segundo Piso) - Event 20 EV020 (18,3) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 8 Bosque de Niebla (Segundo Piso) - Event 20 EV020 (18,3) - Page 2 Line 2:  - Comment: TARGET SWITCH 9
+Map 8 Bosque de Niebla (Segundo Piso) - Event 21 A (22,4) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 8 Bosque de Niebla (Segundo Piso) - Event 21 A (22,4) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 8 Bosque de Niebla (Segundo Piso) - Event 21 A (22,4) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 8 Bosque de Niebla (Segundo Piso) - Event 22 A (6,4) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 8 Bosque de Niebla (Segundo Piso) - Event 22 A (6,4) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 8 Bosque de Niebla (Segundo Piso) - Event 22 A (6,4) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 8 Bosque de Niebla (Segundo Piso) - Event 24 EV024 (13,21) - Page 1 Line 1:  - Comment: PUSHABLE
+Map 8 Bosque de Niebla (Segundo Piso) - Event 24 EV024 (13,21) - Page 1 Line 2:  - Comment: PICK UP
+Map 9 Bosque de Niebla (Tercer Piso) - Event 3 A (15,32) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 9 Bosque de Niebla (Tercer Piso) - Event 3 A (15,32) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 9 Bosque de Niebla (Tercer Piso) - Event 3 A (15,32) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 9 Bosque de Niebla (Tercer Piso) - Event 5 EV005 (11,32) - Page 1 Line 1:  - Comment: FLAME START
+Map 9 Bosque de Niebla (Tercer Piso) - Event 5 EV005 (11,32) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 9 Bosque de Niebla (Tercer Piso) - Event 5 EV005 (11,32) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 9 Bosque de Niebla (Tercer Piso) - Event 5 EV005 (11,32) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 9 Bosque de Niebla (Tercer Piso) - Event 5 EV005 (11,32) - Page 2 Line 2:  - Comment: LIGHT EFFECT INTENCITY 3
+Map 9 Bosque de Niebla (Tercer Piso) - Event 15 Q (4,33) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 9 Bosque de Niebla (Tercer Piso) - Event 15 Q (4,33) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 9 Bosque de Niebla (Tercer Piso) - Event 15 Q (4,33) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 9 Bosque de Niebla (Tercer Piso) - Event 19 EV019 (17,5) - Page 1 Line 1:  - Comment: GUN START
+Map 9 Bosque de Niebla (Tercer Piso) - Event 20 Escorpion (11,24) - Page 1 Line 100:  - Comment: <gather followers>
+Map 9 Bosque de Niebla (Tercer Piso) - Event 36 EV036 (9,12) - Page 1 Line 5:  - Comment: WATER START
+Map 9 Bosque de Niebla (Tercer Piso) - Event 37 EV037 (8,12) - Page 1 Line 5:  - Comment: WATER START
+Map 9 Bosque de Niebla (Tercer Piso) - Event 38 EV038 (10,12) - Page 1 Line 5:  - Comment: WATER START
+Map 9 Bosque de Niebla (Tercer Piso) - Event 39 EV039 (16,5) - Page 1 Line 1:  - Comment: GUN START
+Map 10 Poblado Uhl - Event 2 EV002 (10,33) - Page 1 Line 16:  - Comment: <control follower: 1>
+Map 10 Poblado Uhl - Event 2 EV002 (10,33) - Page 1 Line 20:  - Comment: <control follower: 2>
+Map 10 Poblado Uhl - Event 2 EV002 (10,33) - Page 1 Line 46:  - Comment: <gather followers>
+Map 10 Poblado Uhl - Event 20 EV020 (28,31) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 21 EV021 (29,33) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 22 EV022 (35,35) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 23 EV023 (27,7) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 24 EV024 (17,7) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 25 EV025 (25,21) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 26 EV026 (36,31) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 27 EV027 (11,25) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 30 EV030 (30,16) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 31 EV031 (32,15) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 35 EV035 (12,31) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 46 EV046 (16,2) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 47 EV047 (31,2) - Page 1 Line 1:  - Comment: WATER START
+Map 10 Poblado Uhl - Event 48 Flancorose (18,13) - Page 1 Line 1:  - Comment: <reflect>
+Map 11 Templo Solar - Event 1 EV001 (3,8) - Page 1 Line 1:  - Comment: <loop animation: 142>
+Map 11 Templo Solar - Event 2 EV002 (6,8) - Page 1 Line 1:  - Comment: <loop animation: 142>
+Map 11 Templo Solar - Event 3 EV003 (10,8) - Page 1 Line 1:  - Comment: <loop animation: 142>
+Map 11 Templo Solar - Event 4 EV004 (13,8) - Page 1 Line 1:  - Comment: <loop animation: 142>
+Map 11 Templo Solar - Event 5 EV005 (4,19) - Page 1 Line 1:  - Comment: <loop animation: 142>
+Map 11 Templo Solar - Event 6 EV006 (4,17) - Page 1 Line 1:  - Comment: <loop animation: 142>
+Map 11 Templo Solar - Event 10 EV010 (15,13) - Page 1 Line 20:  - Comment: <control follower: 1>
+Map 11 Templo Solar - Event 11 EV011 (12,17) - Page 1 Line 1:  - Comment: <loop animation: 142>
+Map 11 Templo Solar - Event 12 EV012 (12,19) - Page 1 Line 1:  - Comment: <loop animation: 142>
+Map 12 Frocteres y Guacari - Event 4 EV004 (29,7) - Page 1 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 4 EV004 (29,7) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 4 EV004 (29,7) - Page 1 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 4 EV004 (29,7) - Page 1 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 4 EV004 (29,7) - Page 2 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 4 EV004 (29,7) - Page 2 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 4 EV004 (29,7) - Page 2 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 4 EV004 (29,7) - Page 2 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 5 EV005 (22,7) - Page 1 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 5 EV005 (22,7) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 5 EV005 (22,7) - Page 1 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 5 EV005 (22,7) - Page 1 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 5 EV005 (22,7) - Page 2 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 5 EV005 (22,7) - Page 2 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 5 EV005 (22,7) - Page 2 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 5 EV005 (22,7) - Page 2 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 6 MAP SETTINGS (49,0) - Page 1 Line 1:  - Comment: Turn on reflections and icons only for this map
+Map 12 Frocteres y Guacari - Event 6 MAP SETTINGS (49,0) - Page 1 Line 4:  - Comment: Event 5 is a vampire so her reflection is removed here
+Map 12 Frocteres y Guacari - Event 13 EV013 (13,7) - Page 1 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 13 EV013 (13,7) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 13 EV013 (13,7) - Page 1 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 13 EV013 (13,7) - Page 1 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 13 EV013 (13,7) - Page 2 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 13 EV013 (13,7) - Page 2 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 13 EV013 (13,7) - Page 2 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 13 EV013 (13,7) - Page 2 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 14 EV014 (13,15) - Page 1 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 14 EV014 (13,15) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 14 EV014 (13,15) - Page 1 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 14 EV014 (13,15) - Page 1 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 14 EV014 (13,15) - Page 2 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 14 EV014 (13,15) - Page 2 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 14 EV014 (13,15) - Page 2 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 14 EV014 (13,15) - Page 2 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 15 EV015 (16,15) - Page 1 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 15 EV015 (16,15) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 15 EV015 (16,15) - Page 1 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 15 EV015 (16,15) - Page 1 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 15 EV015 (16,15) - Page 2 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 15 EV015 (16,15) - Page 2 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 15 EV015 (16,15) - Page 2 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 15 EV015 (16,15) - Page 2 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 27 EV027 (7,7) - Page 1 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 27 EV027 (7,7) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 27 EV027 (7,7) - Page 1 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 27 EV027 (7,7) - Page 1 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 12 Frocteres y Guacari - Event 27 EV027 (7,7) - Page 2 Line 1:  - Comment: FLAME START
+Map 12 Frocteres y Guacari - Event 27 EV027 (7,7) - Page 2 Line 2:  - Comment: LIGHT EFFECT DIRECTION 6
+Map 12 Frocteres y Guacari - Event 27 EV027 (7,7) - Page 2 Line 3:  - Comment: LIGHT EFFECT INTENCITY 5
+Map 12 Frocteres y Guacari - Event 27 EV027 (7,7) - Page 2 Line 4:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 13 Group Manager Testing - Event 1 MAP SETTINGS (23,0) - Page 1 Line 1:  - Comment: Turn on reflections and icons only for this map
+Map 13 Group Manager Testing - Event 1 MAP SETTINGS (23,0) - Page 1 Line 4:  - Comment: Event 5 is a vampire so her reflection is removed here
+Map 14 Templo Lunar - Event 1 Hippocratos (10,11) - Page 2 Line 1:  - Comment: <loop animation:175>
+Map 14 Templo Lunar - Event 2 EV002 (7,17) - Page 1 Line 6:  - Comment: <control follower: 1>
+Map 14 Templo Lunar - Event 2 EV002 (7,17) - Page 1 Line 11:  - Comment: <control follower: 2>
+Map 14 Templo Lunar - Event 2 EV002 (7,17) - Page 1 Line 38:  - Comment: <follower actor: 7>
+Map 14 Templo Lunar - Event 2 EV002 (7,17) - Page 2 Line 15:  - Comment: <control follower: 1>
+Map 14 Templo Lunar - Event 2 EV002 (7,17) - Page 2 Line 18:  - Comment: <control follower: 2>
+Map 14 Templo Lunar - Event 2 EV002 (7,17) - Page 2 Line 21:  - Comment: <control follower: 3>
+Map 16 Destino 2 - Event 3 EV003 (1,0) - Page 1 Line 6:  - Comment: ___________________________
+Map 16 Destino 2 - Event 3 EV003 (1,0) - Page 1 Line 8:  - Comment: ¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Map 17 Poblado Agricola - Event 4 EV004 (21,4) - Page 1 Line 1:  - Comment: LIGHT EFFECT DIRECTION 8
+Map 17 Poblado Agricola - Event 4 EV004 (21,4) - Page 1 Line 2:  - Comment: LIGHT EFFECT INTENCITY 2
+Map 17 Poblado Agricola - Event 18 EV018 (13,5) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 17 Poblado Agricola - Event 18 EV018 (13,5) - Page 1 Line 2:  - Comment: TARGET SWITCH 8
+Map 17 Poblado Agricola - Event 19 Bola1 (13,6) - Page 1 Line 1:  - Comment: PUSHABLE
+Map 17 Poblado Agricola - Event 20 EV020 (10,5) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 17 Poblado Agricola - Event 20 EV020 (10,5) - Page 1 Line 2:  - Comment: TARGET SWITCH 7
+Map 17 Poblado Agricola - Event 21 EV021 (10,6) - Page 1 Line 1:  - Comment: PUSHABLE
+Map 17 Poblado Agricola - Event 36 MAP SETTINGS (12,34) - Page 1 Line 1:  - Comment: Turn on reflections and icons only for this map
+Map 17 Poblado Agricola - Event 36 MAP SETTINGS (12,34) - Page 1 Line 4:  - Comment: Event 5 is a vampire so her reflection is removed here
+Map 17 Poblado Agricola - Event 37 EV037 (8,32) - Page 1 Line 1:  - Comment: <reflect>
+Map 17 Poblado Agricola - Event 39 EV039 (10,19) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 17 Poblado Agricola - Event 39 EV039 (10,19) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 19 Bosque de Niebla (Cuarto Piso) - Event 4 EV004 (26,12) - Page 1 Line 1:  - Comment: FLAME START
+Map 19 Bosque de Niebla (Cuarto Piso) - Event 5 EV005 (25,9) - Page 1 Line 5:  - Comment: WATER START
+Map 19 Bosque de Niebla (Cuarto Piso) - Event 21 EV021 (17,11) - Page 1 Line 1:  - Comment: FLAME START
+Map 19 Bosque de Niebla (Cuarto Piso) - Event 21 EV021 (17,11) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 19 Bosque de Niebla (Cuarto Piso) - Event 21 EV021 (17,11) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 19 Bosque de Niebla (Cuarto Piso) - Event 21 EV021 (17,11) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 20 Bosque de Niebla (4B) - Event 2 Rojo 1 (5,34) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 2 Rojo 1 (5,34) - Page 1 Line 2:  - Comment: TARGET SWITCH 21
+Map 20 Bosque de Niebla (4B) - Event 2 Rojo 1 (5,34) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 3 Rojo 1 (11,23) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 3 Rojo 1 (11,23) - Page 1 Line 2:  - Comment: TARGET SWITCH 21
+Map 20 Bosque de Niebla (4B) - Event 3 Rojo 1 (11,23) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 5 Rojo 1 (23,21) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 5 Rojo 1 (23,21) - Page 1 Line 2:  - Comment: TARGET SWITCH 21
+Map 20 Bosque de Niebla (4B) - Event 5 Rojo 1 (23,21) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 6 Blanco 1 (11,30) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 6 Blanco 1 (11,30) - Page 1 Line 2:  - Comment: TARGET SWITCH 22
+Map 20 Bosque de Niebla (4B) - Event 6 Blanco 1 (11,30) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 9 Blanco 1 (14,16) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 9 Blanco 1 (14,16) - Page 1 Line 2:  - Comment: TARGET SWITCH 22
+Map 20 Bosque de Niebla (4B) - Event 9 Blanco 1 (14,16) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 10 Rojo 1 (2,15) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 10 Rojo 1 (2,15) - Page 1 Line 2:  - Comment: TARGET SWITCH 21
+Map 20 Bosque de Niebla (4B) - Event 10 Rojo 1 (2,15) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 12 Blanco 1 (2,9) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 12 Blanco 1 (2,9) - Page 1 Line 2:  - Comment: TARGET SWITCH 22
+Map 20 Bosque de Niebla (4B) - Event 12 Blanco 1 (2,9) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 29 Rojo 1 (10,36) - Page 1 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 29 Rojo 1 (10,36) - Page 1 Line 2:  - Comment: TARGET SWITCH 21
+Map 20 Bosque de Niebla (4B) - Event 29 Rojo 1 (10,36) - Page 2 Line 1:  - Comment: TARGET SELF SWITCH A
+Map 20 Bosque de Niebla (4B) - Event 38 A (5,22) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 20 Bosque de Niebla (4B) - Event 38 A (5,22) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 20 Bosque de Niebla (4B) - Event 39 A (4,3) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 20 Bosque de Niebla (4B) - Event 39 A (4,3) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 20 Bosque de Niebla (4B) - Event 42 EV042 (4,2) - Page 1 Line 1:  - Comment: FLAME START
+Map 20 Bosque de Niebla (4B) - Event 42 EV042 (4,2) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 20 Bosque de Niebla (4B) - Event 42 EV042 (4,2) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 20 Bosque de Niebla (4B) - Event 42 EV042 (4,2) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 20 Bosque de Niebla (4B) - Event 43 EV043 (10,2) - Page 1 Line 1:  - Comment: FLAME START
+Map 20 Bosque de Niebla (4B) - Event 43 EV043 (10,2) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 20 Bosque de Niebla (4B) - Event 43 EV043 (10,2) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 20 Bosque de Niebla (4B) - Event 43 EV043 (10,2) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 20 Bosque de Niebla (4B) - Event 44 A (14,9) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 20 Bosque de Niebla (4B) - Event 44 A (14,9) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 21 Bosque de Niebla (4D) - Event 1 EV001 (5,8) - Page 1 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 21 Bosque de Niebla (4D) - Event 1 EV001 (5,8) - Page 1 Line 2:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 21 Bosque de Niebla (4D) - Event 1 EV001 (5,8) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 21 Bosque de Niebla (4D) - Event 2 EV002 (5,6) - Page 1 Line 1:  - Comment: GUN START
+Map 21 Bosque de Niebla (4D) - Event 3 EV003 (8,8) - Page 1 Line 1:  - Comment: FLAME START
+Map 21 Bosque de Niebla (4D) - Event 3 EV003 (8,8) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 21 Bosque de Niebla (4D) - Event 3 EV003 (8,8) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 21 Bosque de Niebla (4D) - Event 3 EV003 (8,8) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 21 Bosque de Niebla (4D) - Event 4 EV004 (11,8) - Page 1 Line 1:  - Comment: FLAME START
+Map 21 Bosque de Niebla (4D) - Event 4 EV004 (11,8) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 21 Bosque de Niebla (4D) - Event 4 EV004 (11,8) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 21 Bosque de Niebla (4D) - Event 4 EV004 (11,8) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 21 Bosque de Niebla (4D) - Event 5 EV005 (14,8) - Page 1 Line 1:  - Comment: FLAME START
+Map 21 Bosque de Niebla (4D) - Event 5 EV005 (14,8) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 21 Bosque de Niebla (4D) - Event 5 EV005 (14,8) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 21 Bosque de Niebla (4D) - Event 5 EV005 (14,8) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 21 Bosque de Niebla (4D) - Event 6 4 (8,6) - Page 1 Line 1:  - Comment: GUN START
+Map 21 Bosque de Niebla (4D) - Event 7 EV007 (11,6) - Page 1 Line 1:  - Comment: GUN START
+Map 21 Bosque de Niebla (4D) - Event 8 EV008 (14,6) - Page 1 Line 1:  - Comment: GUN START
+Map 23 Bosque de Niebla (4C) - Event 1 EV001 (12,22) - Page 1 Line 1:  - Comment: WATER START
+Map 23 Bosque de Niebla (4C) - Event 2 EV002 (6,24) - Page 1 Line 1:  - Comment: WATER START
+Map 23 Bosque de Niebla (4C) - Event 3 EV003 (7,16) - Page 1 Line 1:  - Comment: FLAME START
+Map 23 Bosque de Niebla (4C) - Event 4 EV004 (14,13) - Page 1 Line 1:  - Comment: FLAME START
+Map 23 Bosque de Niebla (4C) - Event 5 EV005 (19,6) - Page 1 Line 1:  - Comment: WATER START
+Map 23 Bosque de Niebla (4C) - Event 6 EV006 (20,6) - Page 1 Line 1:  - Comment: WATER START
+Map 23 Bosque de Niebla (4C) - Event 7 EV007 (13,7) - Page 1 Line 1:  - Comment: FLAME START
+Map 23 Bosque de Niebla (4C) - Event 8 EV008 (5,9) - Page 1 Line 1:  - Comment: WATER START
+Map 23 Bosque de Niebla (4C) - Event 9 EV009 (4,9) - Page 1 Line 1:  - Comment: WATER START
+Map 23 Bosque de Niebla (4C) - Event 10 EV010 (3,11) - Page 1 Line 1:  - Comment: WATER START
+Map 23 Bosque de Niebla (4C) - Event 11 EV011 (25,19) - Page 1 Line 1:  - Comment: FLAME START
+Map 23 Bosque de Niebla (4C) - Event 12 EV012 (17,22) - Page 1 Line 1:  - Comment: WATER START
+Map 23 Bosque de Niebla (4C) - Event 13 EV013 (21,14) - Page 1 Line 1:  - Comment: FLAME START
+Map 23 Bosque de Niebla (4C) - Event 14 EV014 (12,14) - Page 1 Line 1:  - Comment: FLAME START
+Map 23 Bosque de Niebla (4C) - Event 14 EV014 (12,14) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 23 Bosque de Niebla (4C) - Event 14 EV014 (12,14) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 23 Bosque de Niebla (4C) - Event 14 EV014 (12,14) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 23 Bosque de Niebla (4C) - Event 15 EV015 (24,11) - Page 1 Line 1:  - Comment: FLAME START
+Map 23 Bosque de Niebla (4C) - Event 15 EV015 (24,11) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 23 Bosque de Niebla (4C) - Event 15 EV015 (24,11) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 23 Bosque de Niebla (4C) - Event 15 EV015 (24,11) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 23 Bosque de Niebla (4C) - Event 16 EV016 (16,23) - Page 1 Line 1:  - Comment: FLAME START
+Map 23 Bosque de Niebla (4C) - Event 16 EV016 (16,23) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 23 Bosque de Niebla (4C) - Event 16 EV016 (16,23) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 23 Bosque de Niebla (4C) - Event 16 EV016 (16,23) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 23 Bosque de Niebla (4C) - Event 17 EV017 (24,23) - Page 1 Line 1:  - Comment: FLAME START
+Map 23 Bosque de Niebla (4C) - Event 17 EV017 (24,23) - Page 1 Line 2:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 23 Bosque de Niebla (4C) - Event 17 EV017 (24,23) - Page 1 Line 3:  - Comment: LIGHT EFFECT REQUIRE FLAME
+Map 23 Bosque de Niebla (4C) - Event 17 EV017 (24,23) - Page 2 Line 1:  - Comment: LIGHT EFFECT DIRECTION 2
+Map 23 Bosque de Niebla (4C) - Event 22 A (25,7) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 23 Bosque de Niebla (4C) - Event 22 A (25,7) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 2
+Map 23 Bosque de Niebla (4C) - Event 22 A (25,7) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 2
+Map 23 Bosque de Niebla (4C) - Event 29 A (4,13) - Page 1 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 23 Bosque de Niebla (4C) - Event 29 A (4,13) - Page 2 Line 1:  - Comment: SENSOR VISION RANGE 4
+Map 23 Bosque de Niebla (4C) - Event 29 A (4,13) - Page 3 Line 1:  - Comment: SENSOR VISION RANGE 4
