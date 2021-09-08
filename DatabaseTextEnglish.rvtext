@@ -1,46 +1,46 @@
 # LFS DATABASE VERSION 13
 
 <<maps/2/display_name>>
-Terreno de Rituales
+Ritual Grounds
 
 <<maps/3/display_name>>
 Flamrose House
 
 <<maps/5/display_name>>
-Poblado Central
+Central Village
 
 <<maps/11/display_name>>
-Templo Solar
+Solar Temple
 
 <<maps/13/display_name>>
-Templo de la Luna
+Lunar Temple
 
 <<maps/14/display_name>>
-Templo Lunar
+Lunar Temple
 
 <<maps/15/display_name>>
-Templo de la Luna
+Lunar Temple
 
 <<maps/16/display_name>>
-Aldea Guacarí
+Guacarí Village
 
 <<maps/20/display_name>>
-Bosque de Niebla (4B)
+Foggy Forest (4B)
 
 <<maps/21/display_name>>
-Bosque de Niebla (4D)
+Foggy Forest (4D)
 
 <<maps/22/display_name>>
-Saloon de Frocteres
+Frocteres' Saloon
 
 <<maps/23/display_name>>
-Bosque de Niebla (4C)
+Foggy Forest (4C)
 
 <<maps/33/display_name>>
-Aldea Guacarí
+Guacarí Village
 
 <<actors/1/name>>
-Flamarosa
+Flamrose
 
 <<actors/1/note>>
 <battler icon: 216>
@@ -102,7 +102,7 @@ Hutch
 <win quotes>
 "This was really easy."
 [new quote]
-"And that was it?."
+"And that was all of it?."
 </win quotes>
 
 <drops quotes>
@@ -126,17 +126,17 @@ Dana
 
 <<actors/4/note>>
 <win quotes>
-"Estremezcanse con mis solos."
+"Tremble with my riffs."
 [new quote]
-"No pueden negarse a mi talento"
+"They couldn't deny my talent"
 </win quotes>
 
 <drops quotes>
-"Más recursos para la próxima gira."
+"Great, more money for the next tour."
 </drops quotes>
 
 <level quotes>
-"Y la banda sigue, tocando."
+"And the band keeps playing."
 </level quotes>
 
 <<actors/4/description>>
@@ -149,55 +149,55 @@ Akane
 <<actors/5/note>>
 <element absorb: 12>
 <win quotes>
-"Sientan el poder de la magia."
+"Feel the power of magic."
 [new quote]
-"Todo de acuerdo a mis cálculos."
+"Hehe, all according to my calculations."
 [new quote]
-"Nada que el libro correcto no pueda solucionar."
+"Nothing the right book can't fix."
 [new quote]
-"No me subestimen por ser bajita."
+"Don't underestimate me just for being short."
 </win quotes>
 
 <drops quotes>
-"Ingredientes para hechizos nuevos!"
+"Look: materials for new spells!"
 [new quote]
-"Un intercambio equivalente."
+"An equivalent exchange."
 </drops quotes>
 
 <level quotes>
-"Creciendo en el conocimiento."
+"Growing in knowledge."
 [new quote]
-"Incluso los pequeños tambien crecen."
+"Small ones also have room for growing up."
 </level quotes>
 
 <<actors/5/description>>
-Pequeña y curiosa maga, que pese a su corta
-edad posee un inmeso conocimiento.
+Little and curious magician, who despite her short
+age, possesses immense knowledge.
 
 <<actors/6/name>>
 Farrock
 
 <<actors/6/note>>
 <win quotes>
-"Nada puede callar la voz del alma."
+"Nothing can silence the voice of the soul."
 [new quote]
-"Fin del espectaculo muchachos."
+"Showtime is over, thank you!."
 </win quotes>
 
 <drops quotes>
-"El publico arroja lo que puede!."
+"The audience throws what they got!."
 [new quote]
-"Un recuerdo de esta gira.
+"A nice souvenir for this tour"
 </drops quotes>
 <level quotes>
-"Que la musica llegue a todos los fanaticos."
+"Let the music reach more people."
 [new quote]
-"No me detengan ahora"
+"Don't stop me now"
 </level quotes>
 
 <<actors/6/description>>
-Legendario vocalista que vuelve al escenario
-para deslumbrar a todos.
+Legendary vocalist returning to the stage
+to dazzle everyone.
 
 <<actors/7/name>>
 Muti
@@ -215,7 +215,7 @@ Muti
 [new quote]
 "Interesting, Interesting"
 [new quote]
-"¿Se van a comer esto?"
+"Are you gonna eat this?"
 </drops quotes>
 
 <level quotes>
@@ -233,26 +233,26 @@ Koortesh
 
 <<actors/8/note>>
 <win quotes>
-"Te habeis metido con el caballero equivocado"
+"You hast messed with the wrong gentleman"
 [new quote]
-"En el nombre de la Reina"
+"In thy name of the queen"
 [new quote]
-"Luchad por los que no pueden"
+"Fight for those whom canst not"
 </win quotes>
 
 <drops quotes>
-"Un digno tributo para el reino."
+"A worthy tribute to the kingdom."
 </drops quotes>
 
 <level quotes>
-"Luchare hasta el ultimo instante."
+"I shall fight till the last instant. "
 [new quote]
-"Forjad el camino a la victoria!"
+"Forge the way to victory!"
 </level quotes>
 
 <<actors/8/description>>
-Caballero en Jefe de la Orden de la Ceniza.
-Elegante y chapado a la antigua.
+Knight-in-Chief of the Ashen Order.
+Elegant and old-fashioned.
 
 <<actors/9/name>>
 Byel
@@ -347,7 +347,7 @@ Guitarist
 Dimensional Mage
 
 <<classes/6/name>>
-Vocalista
+Lead Singer
 
 <<classes/7/name>>
 Gunman
@@ -356,28 +356,28 @@ Gunman
 Volcanic Knight
 
 <<classes/9/name>>
-Tecnomante
+Technomancer
 
 <<classes/10/name>>
-Espectro Oseo
+Rennoirian
 
 <<classes/11/name>>
 Mochilero
 
 <<classes/12/name>>
-Caballero Sacro
+Sacred Knight
 
 <<classes/13/name>>
 Catacrocker
 
 <<classes/14/name>>
-Robot Helado
+Frozen Robot
 
 <<classes/15/name>>
-Asistente Artificial
+AI Assistant
 
 <<classes/16/name>>
-Dragon Eléctrico
+Thunder Dragon
 
 <<classes/17/name>>
 ???
@@ -389,7 +389,7 @@ Damages the enemy.
 Attack
 
 <<skills/1/message1>>
- ataca!
+ attacks!
 
 <<skills/2/description>>
 Protects user and reduces damage taken.
@@ -398,7 +398,7 @@ Protects user and reduces damage taken.
 Guard
 
 <<skills/2/message1>>
- se defiende
+ defends!
 
 <<skills/2/note>>
 Skill #2 will be used when you select
@@ -411,7 +411,7 @@ Hits an enemy twice!
 Dual Attack
 
 <<skills/3/message1>>
- ataca!
+ attacks!
 
 <<skills/4/description>>
 Attacks two random enemies.
@@ -420,7 +420,7 @@ Attacks two random enemies.
 Double Attack
 
 <<skills/4/message1>>
- ataca!
+ attacks!
 
 <<skills/5/description>>
 Attacks three random enemies.
@@ -429,7 +429,7 @@ Attacks three random enemies.
 Triple Attack
 
 <<skills/5/message1>>
-  ataca!
+ attacks!
 
 <<skills/6/description>>
 Enemy action. Causes enemy to flee from battle.
@@ -438,7 +438,7 @@ Enemy action. Causes enemy to flee from battle.
 Escape
 
 <<skills/6/message1>>
- escapa!
+ escapes!
 
 <<skills/7/description>>
 Does nothing.
@@ -447,7 +447,7 @@ Does nothing.
 Wait
 
 <<skills/7/message1>>
- espera.
+ waits.
 
 <<skills/8/name>>
 -----Flamrose
@@ -520,7 +520,7 @@ Hurricane Dance
  does Hurricane Dance!
 
 <<skills/15/description>>
-Summons the power of Kusikuy, lighting up a flame
+Summons the power of Kusikuy, lighting up a flaming
 spiderweb to all enemies.
 
 <<skills/15/name>>
@@ -544,7 +544,6 @@ Tribal Winds
 
 <<skills/18/description>>
 Surrounded by water, hits the opponent
-
 at high speed.
 
 <<skills/18/name>>
@@ -558,8 +557,7 @@ Swift Swim
 
 <<skills/19/description>>
 Using the water pressure, casts a stream
-so 
-powerful that can stun the opponent.
+so powerful that can stun the opponent.
 
 <<skills/19/name>>
 Hydraulic Strike
@@ -572,7 +570,6 @@ Hydraulic Strike
 
 <<skills/20/description>>
 A concentrated sphere of aqueous energy.
-
 Increases as more damage is received.
 
 <<skills/20/name>>
@@ -583,7 +580,6 @@ Aquasphere
 
 <<skills/21/description>>
 He uses his mechanical arm to increase the
-
 number of shots fired.
 
 <<skills/21/name>>
@@ -594,7 +590,6 @@ Hidden Shot
 
 <<skills/22/description>>
 It uses the power of its fangs and water pressure to
-
 bite the enemy. It can stun.
 
 <<skills/22/name>>
@@ -605,7 +600,6 @@ Water Bite
 
 <<skills/23/description>>
 Stream explodes beneath the floor, removing various
-
 positive effects of all enemies.
 
 <<skills/23/name>>
@@ -636,14 +630,13 @@ Chemical Explosion
 
 <<skills/26/description>>
 Cuts with the blade attached to the main weapon.
-The skill increases its damage 
-with the level
+The skill increases its damage with the level
 
 <<skills/26/name>>
 Side Slash
 
 <<skills/26/message1>>
- uses Side Slice!
+ uses Side Slash!
 
 <<skills/27/description>>
 Gives a powerful headbutt with the helmet
@@ -660,7 +653,6 @@ Helmet Bash
 
 <<skills/29/description>>
 Performs a snow slide against the enemy.
-
 Damage increases with Pengralle's speed.
 
 <<skills/29/name>>
@@ -671,7 +663,6 @@ Snowy Sweep
 
 <<skills/30/description>>
 Use a portable air conditioner to generate a
-
 light blizzard against all enemies
 
 <<skills/30/name>>
@@ -682,7 +673,6 @@ Oscillating Blizzard
 
 <<skills/31/description>>
 Pengralle takes pent-up momentum to increase
-
 her speed for 3 turns.
 
 <<skills/31/name>>
@@ -692,8 +682,7 @@ Increased Slide
  does Increased Slide!
 
 <<skills/32/description>>
-From the portable fridge, 
-Pengralle generates an 
+From the portable fridge, Pengralle generates an 
 ice block to hit the enemy
 
 <<skills/32/name>>
@@ -715,7 +704,6 @@ Iceberg Barrier
 
 <<skills/34/description>>
 Uses the ice blocks to attack the enemies,
-
 breaking their defenses on impact.
 
 <<skills/34/name>>
@@ -726,7 +714,6 @@ Fridge Barrage
 
 <<skills/35/description>>
 Icy wind that slows the opponent and can
-
 obstruct their visibility due to ice.
 
 <<skills/35/name>>
@@ -747,7 +734,6 @@ Ice Grenade
 
 <<skills/37/description>>
 Explosive used mainly for
-
 obstruct vision on the battlefield.
 
 <<skills/37/name>>
@@ -764,7 +750,6 @@ Blizzeroth
 
 <<skills/40/description>>
 Using a lasso, hits the opponent and can also
-
 tie it down to prevent it from moving.
 
 <<skills/40/name>>
@@ -785,7 +770,6 @@ Nature Healing
 
 <<skills/42/description>>
 Throw a large piece of soil at the enemy,
-
 causing a contusion that breaks defenses.
 
 <<skills/42/name>>
@@ -902,8 +886,7 @@ Prisioneros
 
 <<skills/53/description>>
 Rebel riff that breaks defenses 
-and frightens
-the opponents with a demolishing power
+and frightens the opponents with a demolishing power
 
 <<skills/53/name>>
 Demoliendo Hoteles
@@ -955,7 +938,7 @@ hard one to overcome several ailment statuses.
 El Salmon
 
 <<skills/57/message1>>
- tocó Flor Rockera!
+ plays El Salmon!
 
 <<skills/58/description>>
 With every sound of high fidelity, creates a dimension
@@ -965,7 +948,7 @@ where the spirits are uncertain, damaging the enemy
 Disco Eterno
 
 <<skills/58/message1>>
- tocó Flor Rockera!
+ plays Disco Eterno!
 
 <<skills/59/name>>
 -----Akane
@@ -978,7 +961,7 @@ some enemies and poisons them.
 Beeleto
 
 <<skills/60/message1>>
- ha llamado a Beeleto!
+ summons Beeleto!
 
 <<skills/60/note>>
 Akane invoca a su familiar insectoide que 
@@ -992,40 +975,39 @@ an enemy ignoring defenses.
 Flouret
 
 <<skills/61/message1>>
- invocó a Solflo!
+ summons Flouret!
 
 <<skills/61/note>>
 Akane invoca a su familiar de pez espada,
 el cual atacará rompiendo las defensas enemigas.
 
 <<skills/62/description>>
-Akane her sacred cactus familiar, that throws 
+Akane summons her sacred cactus familiar, that throws 
 edible seeds to all allies.
 
 <<skills/62/name>>
 Fonflo
 
 <<skills/62/message1>>
- invocó a Flouret!
+ summons Fonflo!
 
 <<skills/62/note>>
-Akane invoca a su familiar cactus regia,
-que lanza semillas comestibles a los aliados
+Akane summons her sacred cactus familiar, that throws 
+edible seeds to all allies.
 
 <<skills/63/description>>
-A condensation of pure energy that
- is thrown and 
+A condensation of pure energy that is thrown and 
 explodes doing physical damage.
 
 <<skills/63/name>>
 Magic Blast
 
 <<skills/63/message1>>
- usó Explosión Mágica!
+ uses Magic Blast!
 
 <<skills/63/note>>
-Una condensación de energia pura que 
-se arroja y explota haciendo daño fisico.
+A condensation of pure energy that is thrown and 
+explodes doing physical damage.
 
 <<skills/64/description>>
 An spell that emits a weirding energy that leaves
@@ -1035,11 +1017,11 @@ an enemy paralized.
 Binding Spell
 
 <<skills/64/message1>>
- uso Conjuro Retenedor!
+ uses Binding Spell
 
 <<skills/64/note>>
-Un hechizo que emite una energia que hace
-que el enemigo quede paralizado
+An spell that emits a weirding energy that leaves
+an enemy paralized.
 
 <<skills/65/description>>
 Altering the magic circuits of an ally and herself,
@@ -1049,7 +1031,7 @@ Akane can reduce the energy usage for an ally.
 Magic Amplifier
 
 <<skills/65/message1>>
- uso Amplitud Magica!
+ uses Magic Amplifier!
 
 <<skills/65/note>>
 Con su amplio conocimiento en magia, 
@@ -1063,11 +1045,11 @@ brings magical support to an ally.
 Matz
 
 <<skills/66/message1>>
- uso Ligereza Magica!
+ summons Matz
 
 <<skills/66/note>>
-Con un conjuro, invoca a su familiar acolchonado
-para dar soporte magico a quien se le acerque
+Akane summons her cushioned familiar that 
+brings magical support to an ally.
 
 <<skills/67/description>>
 Akane opens and spatial veil that reduces the 
@@ -1077,7 +1059,7 @@ damage of magical and energy-based attacks.
 Arcane Curtain
 
 <<skills/67/message1>>
- usa Cortina Magica!
+ uses Arcane Curtain!
 
 <<skills/68/description>>
 Using an antique tome, reduces the amount of energy
@@ -1087,21 +1069,21 @@ and provokes ailment effects on an enemy.
 Philosophical Tome
 
 <<skills/68/message1>>
- uso uno de sus Tomos!
+ uso The Philosophical Tome!
 
 <<skills/69/description>>
-Akane opens a portal to outer space, making 
+Akane opens a portal from outer space, making 
 diverse celestial bodies to crash on the field.
 
 <<skills/69/name>>
 Spacial Onslaught
 
 <<skills/69/message1>>
- usa Embate Dimensional!
+ uses Spacial Onslaught
 
 <<skills/69/note>>
-Akane abre el velo del espacio exterior, 
-cayendo cuerpos astrales al campo.
+Akane opens a portal to outer space, making 
+diverse celestial bodies to crash on the field.
 
 <<skills/70/description>>
 Summons a deity from outer space, whose sacred
@@ -1111,80 +1093,80 @@ light produces massive damage.
 Orusius
 
 <<skills/70/message1>>
- invocó a Orusius!
+ summons Orusius!
 
 <<skills/70/note>>
-Se invoca a la deidad del espacio exterior
-que con su iluminacion, causa un daño masivo.
+Summons a deity from outer space, whose sacred
+light produces massive damage.
 
 <<skills/71/name>>
 -----Farrock
 
 <<skills/72/description>>
-Farrock prepara sus cuerdas vocales, 
-dandole los puntos de furia para cantar.
+Farrock prepares his vocal cords, 
+increasing the accumulated adrenaline.
 
 <<skills/72/name>>
-Entonación Inicial
+Initial Entonation
 
 <<skills/72/message1>>
- a comenzado el Espectaculo!
+ is starting the show!
 
 <<skills/73/description>>
-Con su estilo iconico, toca el piano con
-tal velocidad que marea a los rivales.
+With his iconic style, plays the piano
+with such speed that confuses opponents.
 
 <<skills/73/name>>
-Los Siete Mares
+Seven Seas of Rhye 
 
 <<skills/74/description>>
-Con su voz haciendo eco por distintos lugares,
-haciendolo imposible de golpear
+Uses his voice and special effects to conceal his
+real position, landing an unavoidable hit.
 
 <<skills/74/name>>
-Ahora estoy aqui
+Now I'm here
 
 <<skills/75/description>>
-Genera daños electricos y luminosos
-a todos los enemigos
+A might that generates lightning damage to
+all opponents. 
 
 <<skills/75/name>>
-Destello
+Flash
 
 <<skills/76/description>>
-Bicicletas en oposicion corren a toda velocidad
-arrasando con el rival
+Bicycle races coming the way that hits
+all enemies and sentence completions. 
 
 <<skills/76/name>>
-Carrera de Bicletas
+Bicycle Races
 
 <<skills/77/description>>
-Usa efectos especiales para 
-hacer caer notas como martillos
+Special effects that make notes 
+falling as hammers
 
 <<skills/77/name>>
-Martillo al Caer
+Hammer to fall
 
 <<skills/78/description>>
-Concentra todos los reflectores en un solo punto, 
-haciendo un daño critico al enemigo 
+Focuses all spotlights and sights in a single point,
+producing a high damage at the opponent.
 
 <<skills/78/name>>
-Unica Vision
+One Vision
 
 <<skills/79/description>>
-Aumenta elaque fisico, magico y
-velocidad de Farrock al doble por 5 turnos 
+Increases speed, physical and magical attack
+of Farrock for 5 turns.
 
 <<skills/79/name>>
-No me detengan
+Don't stop me now
 
 <<skills/80/description>>
-Remueve los efectos adversos y el estrés
-de sus aliados con este canto.
+Removes the adverse effects and stress
+from all alies with his voice.
 
 <<skills/80/name>>
-Bajo Presion
+Under Pressure
 
 <<skills/81/description>>
 La declamación hecha canto revive a un 

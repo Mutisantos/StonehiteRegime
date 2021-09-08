@@ -4,7 +4,7 @@
 Terreno de Rituales
 
 <<maps/3/display_name>>
-Flamrose House
+Casa de Flamrose
 
 <<maps/5/display_name>>
 Poblado Central
@@ -13,7 +13,7 @@ Poblado Central
 Templo Solar
 
 <<maps/13/display_name>>
-Templo de la Luna
+Templo Lunar
 
 <<maps/14/display_name>>
 Templo Lunar
@@ -45,26 +45,26 @@ Flamrose
 <<actors/1/note>>
 <battler icon: 216>
 <win quotes>
-"One more victory for our benefit."
+"Una victoria mas para nuestro beneficio."
 [new quote]
-"They should think it better after this fight."
+"Deben pensarlo mejor despues de pelear."
 </win quotes>
 
 <drops quotes>
-"I'll take this as a prize."
+"Me llevare esto de premio."
 </drops quotes>
 
 <level quotes>
-"This is all thanks to the great flame of Tatama."
+"Todo ha sido gracias a la gran flama de Tatama."
 [new quote]
-"The flame inside me will blind the darkness"
+"La flama dentro de mi cegara a la oscuridad"
 [new quote]
-"A renewed wind pushes us forward."
+"Un viento renovado sopla con nosotros."
 </level quotes>
 
 <<actors/1/description>>
-A inhabitant from Tatama Domains with latent
-mysterious powers.
+Habitante del Poblado Tatama dotada con 
+misticos dones.
 
 <<actors/2/name>>
 Pengralle 
@@ -72,27 +72,26 @@ Pengralle
 <<actors/2/note>>
 <battler icon: 217>
 <win quotes>
-"A deserved result... I guess"
+"Un resultado merecido, creo"
 [new quote]
-"T-t-the next one we will win faster"
+"A-a-a la proxima ganaré más rápido"
 </win quotes>
 
 <drops quotes>
-"I-i-i hope you don't mind that I take this with me."
+"Espero que no les moleste que me lleve esto."
 [new quote]
-"S-s-surely they won't need this"
+"S-s-seguro no les hará falta esto"
 </drops quotes>
 
 <level quotes>
-"I'll keep training hard."
+"Seguire entrenando duro."
 [new quote]
-"Let's keep moving forward on the right track"
+"Sigamos avanzando por buen camino"
 </level quotes>
 
 <<actors/2/description>>
-Penguin with great aim and resistance to cold,
-
-her nervousness does not affect her combat skills
+Pinguina con gran punteria y resistencia al frio,
+su nerviosismo no afecta su combate
 
 <<actors/3/name>>
 Hutch
@@ -100,26 +99,26 @@ Hutch
 <<actors/3/note>>
 <battler icon: 218>
 <win quotes>
-"This was really easy."
+"Esto si que fue facil."
 [new quote]
-"And that was it?."
+"¿Eso fue todo?."
 </win quotes>
 
 <drops quotes>
-"This serves me better than you."
+"Esto me sirve mas a mi que a ustedes."
 [new quote]
-"Now this is my property."
+"Ahora esto es de mi propiedad."
 </drops quotes>
 
 <level quotes>
-"Behold the might of the great Hutch."
+"Contemplen el poder del gran Hutch."
 [new quote]
-"The reward for my head sure will be raised."
+"Mi recompensa subirá de precio ."
 </level quotes>
 
 <<actors/3/description>>
-Notorious Outlaw Raccoon with great synergy with
-nature and earth. 
+Mapache forajido con un gran sinergia con la
+naturaleza. 
 
 <<actors/4/name>>
 Dana
@@ -140,8 +139,7 @@ Dana
 </level quotes>
 
 <<actors/4/description>>
-Wandering and talented guitarist with a 
-passion for rock.
+Guitarrista errante y talentosa apasionada al rock.
 
 <<actors/5/name>>
 Akane
@@ -151,11 +149,11 @@ Akane
 <win quotes>
 "Sientan el poder de la magia."
 [new quote]
-"Todo de acuerdo a mis cálculos."
+"Jeje, todo de acuerdo a mis cálculos."
 [new quote]
 "Nada que el libro correcto no pueda solucionar."
 [new quote]
-"No me subestimen por ser bajita."
+"No me subestimen por solo ser bajita."
 </win quotes>
 
 <drops quotes>
@@ -205,28 +203,28 @@ Muti
 <<actors/7/note>>
 <battler icon: 219>
 <win quotes>
-"Next time sure will be easier"
+"A la proxima será más fácil"
 [new quote]
-"Don't mess with the walrus."
+"No se metan con el morso."
 </win quotes>
 
 <drops quotes>
-"¿Only this?, Okay..."
+"¿Solo esto?, Bueh..."
 [new quote]
-"Interesting, Interesting"
+"Interesante, Interesante"
 [new quote]
 "¿Se van a comer esto?"
 </drops quotes>
 
 <level quotes>
-"The power keeps growing on me."
+"El poder sigue creciendo en mi."
 [new quote]
-"The effort had to show its results, right?"
+"Tenia que notarse tanto esfuerzo, ¿no?"
 </level quotes>
 
 <<actors/7/description>>
-Gunman and researcher from Mietchieng, with
-a quirky personality.
+Pistolero e investigador de Mietchieng, con
+una personalidad peculiar.
 
 <<actors/8/name>>
 Koortesh
@@ -323,7 +321,7 @@ Eirenjhar
 Ghalimb
 
 <<classes/1/name>>
-Tatama Warrior
+Guerrera Tatama
 
 <<classes/1/note>>
 <equip slots>
@@ -335,25 +333,25 @@ Tatama Warrior
 </equip slots>
 
 <<classes/2/name>>
-Sniper
+Francotiradora
 
 <<classes/3/name>>
-Outlaw
+Forajido
 
 <<classes/4/name>>
-Guitarist 
+Guitarrista
 
 <<classes/5/name>>
-Dimensional Mage
+Maga Dimensional
 
 <<classes/6/name>>
 Vocalista
 
 <<classes/7/name>>
-Gunman
+Pistolero
 
 <<classes/8/name>>
-Volcanic Knight
+Caballero Volcanico
 
 <<classes/9/name>>
 Tecnomante
@@ -453,308 +451,274 @@ Wait
 -----Flamrose
 
 <<skills/9/description>>
-Stream of fire concentrated through a blowpipe.
-It can cause burns on target
+Corriente de fuego concentrada a través
+de una cerbatana. Puede provocar quemaduras.
 
 <<skills/9/name>>
-Blowtorch Flame
+Llama Soplete
 
 <<skills/9/message1>>
- uses Blowtorch Flame!
+ ha usado Llama Soplete!
 
 <<skills/10/description>>
-Dance that brings the elemental force of fire for
-basic attacks.
+Danza que impulsa la fuerza de fuego elemental
+de todos los disparos.
 
 <<skills/10/name>>
-Flame Dance
+Danza de Llamas
 
 <<skills/10/message1>>
- does Flame Dance!
+ ha usado Danza de Llamas
 
 <<skills/10/note>>
 Incremento de poder de Flamrose con ataques de fuego.
 
 <<skills/11/description>>
-Thrown Feathers that hit enemies multiple times
-at the speed of wind.
+Plumas que salen para golpear a
+varios enemigos a la velocidad del viento
 
 <<skills/11/name>>
-Feather Darts
+Plumas Dardo
 
 <<skills/11/message1>>
- uses Feather Darts!
+ ha usado Plumas Dardo!
 
 <<skills/12/description>>
-Free fall from a height that can generate a 
-considerable damage to the target.
+Caida desde la altura que daña bastante
+al rival.
 
 <<skills/12/name>>
-High Jump
+Salto Elevado
 
 <<skills/12/message1>>
- does a High Jump!
+ha usado Salto Elevado!
 
 <<skills/13/description>>
-Raises a wall of fire that breaks through the enemy
-lines, with high changes of leaving them burned.
-
-<<skills/13/name>>
-Igneous Wall
-
-<<skills/13/message1>>
- uses Igneous Wall!
-
-<<skills/13/note>>
 Una barrera de fuego pasa por todos los 
 enemigos, con altas chances de quemarlos
 
+<<skills/13/name>>
+Muro Igneo
+
+<<skills/13/message1>>
+ha lanzado llamas!
+
 <<skills/14/description>>
-A trival dance that calls a powerful wind current.
-Raises the damage by the remaining energy. 
+Baile que invoca un tifon de aire.
+A mayor energia disponible, mayor daño
 
 <<skills/14/name>>
-Hurricane Dance
+Danza Huracanada
 
 <<skills/14/message1>>
- does Hurricane Dance!
+ha invocado un huracan!
 
 <<skills/15/description>>
-Summons the power of Kusikuy, lighting up a flame
-spiderweb to all enemies.
+Una red de araña en llamas atrapa
+a todos los enemigos. 
 
 <<skills/15/name>>
-Tatama Web
+Red Tatama
 
 <<skills/15/message1>>
- uses Tatama Web!
+ha usado Plumeo Tatama!
 
 <<skills/16/description>>
-Mystical wind current with the power to leave
-the enemy several effects.
+Corriente de viento mistica que hace 
+que el enemigo sufra diferentes estados.
 
 <<skills/16/name>>
-Tribal Winds
+Viento Tribal
 
 <<skills/16/message1>>
- casts Tribal Winds!
+ usó Viento Tribal!
 
 <<skills/17/name>>
 -------Muti
 
 <<skills/18/description>>
-Surrounded by water, hits the opponent
-
-at high speed.
+Rodeado de agua, impacta contra el oponente
+a gran velocidad.
 
 <<skills/18/name>>
-Swift Swim
+Nado Rapido
 
 <<skills/18/message1>>
- uses Swift Swim!
+ha usado Nado Rapido!
 
 <<skills/18/note>>
 <ctb change: +50%>
 
 <<skills/19/description>>
-Using the water pressure, casts a stream
-so 
-powerful that can stun the opponent.
+Usando la presión del agua, arroja una corriente
+potente que puede aturdir al rival.
 
 <<skills/19/name>>
-Hydraulic Strike
+Golpe Hidraulico
 
 <<skills/19/message1>>
- uses Hydraulic Strike!
+ usó Patada Hidraulica!
 
 <<skills/19/note>>
 <ctb cost: 150%>
 
 <<skills/20/description>>
-A concentrated sphere of aqueous energy.
-
-Increases as more damage is received.
+Esfera concentrada de energia acuosa.
+Aumenta a medida que se recibe mas daño
 
 <<skills/20/name>>
-Aquasphere
+Acuasfera
 
 <<skills/20/message1>>
- uses Aquasphere!
+ usó Acuasfera!
 
 <<skills/21/description>>
-He uses his mechanical arm to increase the
-
-number of shots fired.
+Usa su brazo mecanico para aumentar la
+cantidad de disparos efectuados.
 
 <<skills/21/name>>
-Hidden Shot
+Disparo Oculto
 
 <<skills/21/message1>>
- uses Hidden Shot!
+ usó Disparo Oculto!
 
 <<skills/22/description>>
-It uses the power of its fangs and water pressure to
-
-bite the enemy. It can stun.
+Utiliza el poder de sus colmillos para 
+morder al enemigo. Puede aturdir.
 
 <<skills/22/name>>
-Water Bite
+Mordida Acuosa
 
 <<skills/22/message1>>
- does Water Bite!
+ usó Mordida Acuosa!
 
 <<skills/23/description>>
-Stream explodes beneath the floor, removing various
-
-positive effects of all enemies.
+Corriente que sale del piso, quitando varios
+efectos positivos del rival.
 
 <<skills/23/name>>
-Geyser Bomb
+Bomba Geiser
 
 <<skills/23/message1>>
- casts Geyser Bomb!
+ usó Flujo Subterraneo!
 
 <<skills/24/description>>
-Generates a block of water that increases defense.
-It also reduces fire damage.
+Genera un cubo de agua que promueve la defensa.
+Tambien reduce los daños de fuego.
 
 <<skills/24/name>>
-Hydraulic Block
+Bloque Hidraulico
 
 <<skills/24/message1>>
- uses Hydraulic Block!
+ usó Bloque Hidraulico!
 
 <<skills/25/description>>
-Manipulates the chemical structure of liquid
-components to produce a massive explosion.
+Por medio de la separacion de Oxigeno e 
+Hidrogeno genera una explosion masiva.
 
 <<skills/25/name>>
-Chemical Explosion
+Explosion Quimica
 
 <<skills/25/message1>>
- does Chemical Explosion!
+ usó Explosion Quimica!
 
 <<skills/26/description>>
-Cuts with the blade attached to the main weapon.
-The skill increases its damage 
-with the level
+Corta con la cuchilla, la habilidad incrementa 
+con el nivel
 
 <<skills/26/name>>
-Side Slash
+Corte Lateral
 
 <<skills/26/message1>>
- uses Side Slice!
+ ha usado Corte Lateral!
 
 <<skills/27/description>>
-Gives a powerful headbutt with the helmet
-with horns.
+Da un cabezaco potente con el casco 
+con cuernos.
 
 <<skills/27/name>>
-Helmet Bash
+Cabezazo Casco
 
 <<skills/27/message1>>
- uses Helmet Bash!
+ ha dado un Cabezazo!
 
 <<skills/28/name>>
 ------Pengralle
 
 <<skills/29/description>>
-Performs a snow slide against the enemy.
-
-Damage increases with Pengralle's speed.
+Realiza un deslizo de nieve contra el enemigo. 
+El daño aumenta con la velocidad de Pengralle.
 
 <<skills/29/name>>
-Snowy Sweep
+Barrido Nevado
 
 <<skills/29/message1>>
- uses Snowy Sweep!
+ usó Barrido Nevado!
 
 <<skills/30/description>>
-Use a portable air conditioner to generate a
-
-light blizzard against all enemies
+Utiliza el aire acondicionado para generar una 
+leve ventisca contra sus enemigos
 
 <<skills/30/name>>
-Oscillating Blizzard
+Ventisca Oscilante
 
 <<skills/30/message1>>
- casts Oscillating Blizzard!
+ usó Ventisca Oscilante!
 
 <<skills/31/description>>
-Pengralle takes pent-up momentum to increase
-
-her speed for 3 turns.
+Pengralle toma impulso acumulado para aumentar
+su velocidad durante 3 turnos.
 
 <<skills/31/name>>
-Increased Slide
+Deslizo Aumentado
 
 <<skills/31/message1>>
- does Increased Slide!
+ usó Deslizo de Colina!
 
 <<skills/32/description>>
-From the portable fridge, 
-Pengralle generates an 
-ice block to hit the enemy
+De la nevera portatil, Pengralle genera un 
+bloque de hielo para golpear al enemigo
 
 <<skills/32/name>>
-Icebreaker
+Rompehielos
 
 <<skills/32/message1>>
- uses Icebreaker!
+ usó Bloque Pulido!
 
 <<skills/33/description>>
-From the portable fridge, Pengralle generates blocks
-
-of ice to protect the allies.
+De la nevera portatil, Pengralle genera bloques
+de hielo para proteger a los aliados.
 
 <<skills/33/name>>
-Iceberg Barrier
-
-<<skills/33/message1>>
- uses Iceberg Barrier!
+Barrera Tempano
 
 <<skills/34/description>>
-Uses the ice blocks to attack the enemies,
-
-breaking their defenses on impact.
+Usa los bloques de hielo para atacar a los enemigos,
+rompiendo sus defensas por el impacto.
 
 <<skills/34/name>>
-Fridge Barrage
-
-<<skills/34/message1>>
- does Fridge Barrage!
+Bombardeo Nevera
 
 <<skills/35/description>>
-Icy wind that slows the opponent and can
-
-obstruct their visibility due to ice.
+Viento gelido que ralentiza al rival y puede
+dificultar su visibilidad por el hielo.
 
 <<skills/35/name>>
-Winter Fury
-
-<<skills/35/message1>>
- casts Winter Fury!
+Furia Invernal
 
 <<skills/36/description>>
-Explosives that freeze some enemies when they 
-explode. Careful with the fuze.
+Explosivos que dejan congelado a algunos
+enemigos en la explosion.
 
 <<skills/36/name>>
-Ice Grenade
-
-<<skills/36/message1>>
- uses Ice Grenade!
+Granada de Hielo
 
 <<skills/37/description>>
-Explosive used mainly for
-
-obstruct vision on the battlefield.
+Explosivo utilizado principalmente para 
+dificultar la vision en el campo de batalla.
 
 <<skills/37/name>>
-Mist Grenade
-
-<<skills/37/message1>>
- uses Mist Grenade!
+Granada Neblina
 
 <<skills/38/name>>
 Blizzeroth
@@ -763,193 +727,179 @@ Blizzeroth
 -----Hutch
 
 <<skills/40/description>>
-Using a lasso, hits the opponent and can also
-
-tie it down to prevent it from moving.
+Usando su lazo, golpea al rival y ademas puede
+amarrarlo para evitar que se mueva.
 
 <<skills/40/name>>
-Lasso Binding
+Lazo Atadura
 
 <<skills/40/message1>>
- uses Lasso Binding!
+ usó Lazo Atadura!
 
 <<skills/41/description>>
-Create healing plants using all the saved energy
-points for making them grow.
+Crea plantas curativas usando toda la energía 
+mágica que tengas guardada. 
 
 <<skills/41/name>>
-Nature Healing
+Curacion Natural
 
 <<skills/41/message1>>
- casts Nature Healing!
+ usa Curacion Natural
 
 <<skills/42/description>>
-Throw a large piece of soil at the enemy,
-
-causing a contusion that breaks defenses.
+Lanza un gran trozo de suelo contra el enemigo,
+provocando una contusión que rompe defensas.
 
 <<skills/42/name>>
-Rocky Impact
+Impacto Rocoso
 
 <<skills/42/message1>>
- uses Rocky Impact!
+ usó Impacto Rocoso!
 
 <<skills/43/description>>
-Rotating like a drill, digs underground and impacts
-the enemy by surprise, ignoring defenses.
+Con su taladro oculto, lo envia bajo tierra al
+enemigo por sorpresa, ignorando defensas
 
 <<skills/43/name>>
-Excavation Drill
+Taladro Excavador
 
 <<skills/43/message1>>
- uses Excavation Drill!
+ usó Taladro Excavador!
 
 <<skills/43/note>>
 <ctb cost: 150%>
 
 <<skills/44/description>>
-Raises a barrier made of cacti, protecting allies
-and hurting enemies that attack directly.
+Hutch levanta una barrera de cactus, 
+lo que causa a los atacantes herirse al atacar.
 
 <<skills/44/name>>
-Cactus Wall
+Muro Cactus
 
 <<skills/44/message1>>
- casts Cactus Wall!
+ uso Muro Cactus!
 
 <<skills/45/description>>
-Kicks a tumbleweed with several rocks and
-dust attached to it.
+Se patea una bola rodadora a gran 
+velocidad, trayendo polvo tambien.
 
 <<skills/45/name>>
-Desert Ball
+Bola Desertica
 
 <<skills/45/message1>>
- uses Desert Ball!
+ usó Bola Desertica!
 
 <<skills/46/description>>
-With magical seed, makes huge cacti grow from
-beneath all enemies, making massive damage.
+Con semillas magicas, salen grandes cactus
+enormes que golpean a los enemigos
 
 <<skills/46/name>>
-Cactus Slam
-
-<<skills/46/message1>>
- casts Cactus Slam!
+Embate Cactus
 
 <<skills/47/description>>
-Magical seed that grow making sharp roots that
-pierce all enemies.
+Grandes raices crecen a los pies de los enemigos,
+perforandolos con sus puntas.
 
 <<skills/47/name>>
-Frenzy Plant
-
-<<skills/47/message1>>
- casts Frenzy Plant!
+Frenezí Plantular
 
 <<skills/48/description>>
-Hutch releases an enormous amount of adrenaline
-to attack twice per turn.
+Hutch usa todo su impetu para atacar a
+ambas manos durante varios turnos.
 
 <<skills/48/name>>
-Dual Wield
-
-<<skills/48/message1>>
- uses Dual Wield!
+Doble Empuñadura
 
 <<skills/49/name>>
 -----Dana
 
 <<skills/50/description>>
-A fast, sharp guitar picking to
- provoke the enemy by
-waking up your passion.
-
+Un punteo de guitarra rápido y afilado para provocar 
+al enemigo despertando tu pasión.
 <<skills/50/name>>
 Florecita Rockera
 
 <<skills/50/message1>>
- plays Florecita Rockera!
+ toca Florecita Rockera!
 
 <<skills/50/note>>
 Atercipelados
 
 <<skills/51/description>>
-Chords like wind that dismantles the enemy without
-hesitation from the inside. Removes several buffs.
+Acordes como el viento que desbarata al enemigo sin
+dudarlo desde adentro. Elimina varias potenciaciones.
 
 <<skills/51/name>>
 Afuera
 
 <<skills/51/message1>>
- plays Afuera!
+ toca Afuera!
 
 <<skills/51/note>>
 Caifanes
 
 <<skills/52/description>>
-Chords evoking being at winter, avoiding dreaming,
-faking your identity and being stupid to love.
+Acordes que evocan estar en invierno, evitando soñar,
+falseando tu identidad y siendo estúpido para amar.
 
 <<skills/52/name>>
 Paramar
 
 <<skills/52/message1>>
- plays Paramar!
+ toca Paramar!
 
 <<skills/52/note>>
 Prisioneros
 
 <<skills/53/description>>
-Rebel riff that breaks defenses 
-and frightens
-the opponents with a demolishing power
+Riff rebelde y psicotico que rompe las defensas
+y asusta a los oponentes con un poder demoledor
 
 <<skills/53/name>>
 Demoliendo Hoteles
 
 <<skills/53/message1>>
- plays Demoliendo Hoteles!
+toca Demoliendo Hoteles!
 
 <<skills/54/description>>
-Plays a sad song to feel better so from the pain a new
-sunrise comes, reviving a fallen ally.
+Toca una cancion triste para que del mismo dolor
+venga un nuevo amancer, reviviendo un aliado.  
 
 <<skills/54/name>>
 Adios
 
 <<skills/54/message1>>
- plays Adios!
+ toca Adios!
 
 <<skills/54/note>>
 Cerati
 
 <<skills/55/description>>
-Uses the might of the guitar to make the opponent
-wear it as a hat.
+Usa su propia fuerza para hacer que el oponente
+use la guitarra de sombrero.
 
 <<skills/55/name>>
 La Guitarra
 
 <<skills/55/message1>>
- plays La Guitarra!
+ toca La Guitarra!
 
 <<skills/55/note>>
 Autenticos Decadentes
 
 <<skills/56/description>>
-Standing above the wall that divides, all that was from 
-what it will be, looking how the wounds heal. 
+Evoca estar en la muralla que divide lo que fué de lo 
+que será, mirando como las heridas se cerraron.
 
 <<skills/56/name>>
 Muralla Verde
 
 <<skills/56/message1>>
- plays Muralla Verde!
+ toca Muralla Verde!
 
 <<skills/57/description>>
-Rhythm that makes all follow the same path, the
-hard one to overcome several ailment statuses.
+Ritmo que hace seguir el mismo camino, el más dificil
+para superar varios estados alterados.
 
 <<skills/57/name>>
 El Salmon
@@ -958,164 +908,126 @@ El Salmon
  tocó Flor Rockera!
 
 <<skills/58/description>>
-With every sound of high fidelity, creates a dimension
-where the spirits are uncertain, damaging the enemy
+Con cada sonido de alta fidelidad, crea una dimensión donde los
+espíritus son inciertos, dañando al enemigo.
 
 <<skills/58/name>>
 Disco Eterno
 
 <<skills/58/message1>>
- tocó Flor Rockera!
-
+ tocó Disco Eterno!
 <<skills/59/name>>
 -----Akane
 
 <<skills/60/description>>
-Akane summons her insectoid familiar that bites
-some enemies and poisons them.
+Akane invoca a su familiar insectoide que 
+muerde a varios enemigos y los envenena. 
 
 <<skills/60/name>>
-Beeleto
+Invocacion:Beeleto
 
 <<skills/60/message1>>
  ha llamado a Beeleto!
 
-<<skills/60/note>>
-Akane invoca a su familiar insectoide que 
-muerde a varios enemigos y los envenena. 
-
 <<skills/61/description>>
-Akane summons her swordfish familiar, attacking
-an enemy ignoring defenses.
+Akane invoca a su familiar de pez espada,
+el cual atacará rompiendo las defensas enemigas.
 
 <<skills/61/name>>
-Flouret
+Invocacion:Flouret
 
 <<skills/61/message1>>
  invocó a Solflo!
 
-<<skills/61/note>>
-Akane invoca a su familiar de pez espada,
-el cual atacará rompiendo las defensas enemigas.
-
 <<skills/62/description>>
-Akane her sacred cactus familiar, that throws 
-edible seeds to all allies.
+Akane invoca a su familiar cactus regia,
+que lanza semillas comestibles a los aliados
 
 <<skills/62/name>>
-Fonflo
+Invocacion:Fonflo
 
 <<skills/62/message1>>
  invocó a Flouret!
 
-<<skills/62/note>>
-Akane invoca a su familiar cactus regia,
-que lanza semillas comestibles a los aliados
-
 <<skills/63/description>>
-A condensation of pure energy that
- is thrown and 
-explodes doing physical damage.
+Una condensación de energia pura que 
+se arroja y explota haciendo daño fisico.
 
 <<skills/63/name>>
-Magic Blast
+Explosión Magica
 
 <<skills/63/message1>>
  usó Explosión Mágica!
 
-<<skills/63/note>>
-Una condensación de energia pura que 
-se arroja y explota haciendo daño fisico.
-
 <<skills/64/description>>
-An spell that emits a weirding energy that leaves
-an enemy paralized.
+Un hechizo que emite una energia que hace
+que el enemigo quede paralizado
 
 <<skills/64/name>>
-Binding Spell
+Conjuro Retenedor
 
 <<skills/64/message1>>
  uso Conjuro Retenedor!
 
-<<skills/64/note>>
-Un hechizo que emite una energia que hace
-que el enemigo quede paralizado
-
 <<skills/65/description>>
-Altering the magic circuits of an ally and herself,
-Akane can reduce the energy usage for an ally.
+Con su amplio conocimiento en magia, 
+se reduce el costo de las habilidades.
 
 <<skills/65/name>>
-Magic Amplifier
+Amplitud Magica
 
 <<skills/65/message1>>
  uso Amplitud Magica!
 
-<<skills/65/note>>
-Con su amplio conocimiento en magia, 
-se reduce el costo de las habilidades.
-
 <<skills/66/description>>
-Akane summons her cushioned familiar that 
-brings magical support to an ally.
+Con un conjuro, invoca a su familiar acolchonado
+para dar soporte magico a quien se le acerque
 
 <<skills/66/name>>
-Matz
+Invocacion: Mazt
 
 <<skills/66/message1>>
  uso Ligereza Magica!
 
-<<skills/66/note>>
-Con un conjuro, invoca a su familiar acolchonado
-para dar soporte magico a quien se le acerque
-
 <<skills/67/description>>
-Akane opens and spatial veil that reduces the 
-damage of magical and energy-based attacks.
+Akane abre un velo especial que reduce
+la efectividad de energia e impactos magicos
 
 <<skills/67/name>>
-Arcane Curtain
+Cortina Arcana
 
 <<skills/67/message1>>
  usa Cortina Magica!
 
 <<skills/68/description>>
-Using an antique tome, reduces the amount of energy
-and provokes ailment effects on an enemy.
+Usando un tomo de conocimientos antiguos,
+afecta al rival con varios efectos adversos.
 
 <<skills/68/name>>
-Philosophical Tome
+Tomo Filosofal
 
 <<skills/68/message1>>
  uso uno de sus Tomos!
 
 <<skills/69/description>>
-Akane opens a portal to outer space, making 
-diverse celestial bodies to crash on the field.
+Akane abre el velo del espacio exterior, 
+cayendo cuerpos astrales al campo.
 
 <<skills/69/name>>
-Spacial Onslaught
+Embate Dimensional
 
 <<skills/69/message1>>
  usa Embate Dimensional!
 
-<<skills/69/note>>
-Akane abre el velo del espacio exterior, 
-cayendo cuerpos astrales al campo.
-
 <<skills/70/description>>
-Summons a deity from outer space, whose sacred
-light produces massive damage.
+Se invoca a la deidad del espacio exterior
+que con su iluminacion, causa un daño masivo.
 
 <<skills/70/name>>
-Orusius
+Invocacion:Orusius
 
 <<skills/70/message1>>
  invocó a Orusius!
-
-<<skills/70/note>>
-Se invoca a la deidad del espacio exterior
-que con su iluminacion, causa un daño masivo.
 
 <<skills/71/name>>
 -----Farrock
@@ -1128,21 +1040,21 @@ dandole los puntos de furia para cantar.
 Entonación Inicial
 
 <<skills/72/message1>>
- a comenzado el Espectaculo!
+ ha comenzado el Espectaculo!
 
 <<skills/73/description>>
 Con su estilo iconico, toca el piano con
 tal velocidad que marea a los rivales.
 
 <<skills/73/name>>
-Los Siete Mares
+Seven Seas of Rhye 
 
 <<skills/74/description>>
-Con su voz haciendo eco por distintos lugares,
-haciendolo imposible de golpear
+Con efectos especiales y su voz oculta su posicion
+verdadera, acertando un golpe inevadible.
 
 <<skills/74/name>>
-Ahora estoy aqui
+Now I'm here
 
 <<skills/75/description>>
 Genera daños electricos y luminosos
@@ -1152,18 +1064,18 @@ a todos los enemigos
 Destello
 
 <<skills/76/description>>
-Bicicletas en oposicion corren a toda velocidad
-arrasando con el rival
+Una carrera de bicicletas entrante que atropella
+a todos los enemigos y su completación de frases.
 
 <<skills/76/name>>
-Carrera de Bicletas
+Bicycle Races
 
 <<skills/77/description>>
 Usa efectos especiales para 
 hacer caer notas como martillos
 
 <<skills/77/name>>
-Martillo al Caer
+Hammer to fall
 
 <<skills/78/description>>
 Concentra todos los reflectores en un solo punto, 
@@ -1173,18 +1085,18 @@ haciendo un daño critico al enemigo
 Unica Vision
 
 <<skills/79/description>>
-Aumenta elaque fisico, magico y
-velocidad de Farrock al doble por 5 turnos 
+Aumenta el ataque fisico, magico y
+velocidad de Farrock por 5 turnos 
 
 <<skills/79/name>>
-No me detengan
+Don't stop me now
 
 <<skills/80/description>>
 Remueve los efectos adversos y el estrés
 de sus aliados con este canto.
 
 <<skills/80/name>>
-Bajo Presion
+Under Pressure
 
 <<skills/81/description>>
 La declamación hecha canto revive a un 
@@ -1473,15 +1385,14 @@ Attack Pictures Sample
 uses Special!
 
 <<skills/139/description>>
-Cuts with the blade attached to the main weapon.
-The skill increases its damage 
-with the level.
+Corta con la cuchilla, la habilidad incrementa 
+con el nivel del usuario
 
 <<skills/139/name>>
-Side Slash
+Corte Lateral
 
 <<skills/139/message1>>
- uses Side Slice!
+ ha usado Corte Lateral!
 
 <<skills/140/description>>
 Golpea usando un guante con resorte. 
@@ -1494,26 +1405,21 @@ Golpe Resorte
  ha usado Golpe Resorte!
 
 <<skills/141/description>>
-Pierces the enemy with ski sticks.
-The skill increases its damage 
-with the level.
+Golpea usando un guante con resorte. 
+El efecto aumenta con el nivel del usuario.
 
 <<skills/141/name>>
-Ski Lance
+Lanza Ski
 
 <<skills/141/message1>>
  ha usado su Ski como Lanza!
 
-<<skills/141/note>>
-Golpea usando un guante con resorte. 
-El efecto aumenta con el nivel del usuario.
-
 <<skills/142/description>>
-Tracks all know information of an enemy using
-Kusikuy's webs of knowledge.
+Rastrea la información del enemigo usando
+el conocimiento ancestral de Kusikuy.
 
 <<skills/142/name>>
-Ancient Trace
+Rastreo Ancestral
 
 <<skills/142/message1>>
  lee al enemigo.
@@ -1525,181 +1431,181 @@ Ancient Trace
 ---Skills Enemigos
 
 <<skills/171/name>>
-Stone Throw
+Empedrada
 
 <<skills/171/message1>>
- does Stone Throw!
+ ha lanzado una piedra
 
 <<skills/172/name>>
-Double Slash
+Doble Cuchillada
 
 <<skills/172/message1>>
- does Double Slash!
+ usa Doble Cuchilla!
 
 <<skills/173/name>>
-Insect Bite
+Mordida Insecta
 
 <<skills/173/message1>>
- does Insect Bite!
+ muerde!
 
 <<skills/174/name>>
-Reinforcements
+Refuerzos!
 
 <<skills/174/message1>>
- calls Reinforcements!
+ ha llamado refuerzos!
 
 <<skills/175/name>>
-Healing Spore
+Espora Curativa
 
 <<skills/175/message1>>
- uses Healing Spore!
+ usa Espora Curativa.
 
 <<skills/176/name>>
-Poison Darts
+Dardos Venenosos
 
 <<skills/176/message1>>
- throws Poison Darts!
+ lanza Dardos Venenosos
 
 <<skills/177/name>>
-Spinning Leaf
+Hoja rotatoria
 
 <<skills/177/message1>>
- uses Spinning Leaf!
+ usa Hoja rotatoria!
 
 <<skills/178/name>>
-Insect Tackle
+Derribo Insecto
 
 <<skills/178/message1>>
- uses Insect Tackle!
+ usa Derribo Insecto!.
 
 <<skills/179/name>>
-Bug Reinforcements
+Refuerzo Insectivo
 
 <<skills/179/message1>>
- uses Bug Reinforcements!
+ llama refuerzos!
 
 <<skills/180/description>>
 Reparacion G1
 
 <<skills/180/name>>
-Repair Protocol
+Protocolo Repar.
 
 <<skills/180/message1>>
- uses Repair Protocol!
+ ejecuta el Protocolo de Reparacion!
 
 <<skills/181/description>>
 Fuego G1 Daño constante
 
 <<skills/181/name>>
-Igneous Protocol
+Protocolo Igneo
 
 <<skills/181/message1>>
- uses Igneous Protocol!
+ ejecuta Protocolo Igneo!
 
 <<skills/182/description>>
 Explosion G1
 
 <<skills/182/name>>
-Explosive Protocol
+Protocolo Explosivo
 
 <<skills/182/message1>>
- uses Explosive Protocol!
+ ejecuta Protocolo Explosivo
 
 <<skills/183/name>>
-Laser Protocol
+Protocolo Laser
 
 <<skills/183/message1>>
- uses Laser Protocol!
+ ejecuta Protocolo Laser
 
 <<skills/184/name>>
-Frost Protocol
+Protocolo Frio
 
 <<skills/184/message1>>
- uses Frost Protocol!
+ ejecuta Protocolo Frio!
 
 <<skills/185/name>>
-Evolutive Protocol
+Protocolo Evolutivo
 
 <<skills/185/message1>>
- uses Evolutive Protocol!
+ ejecutra Protocolo Evolutivo
 
 <<skills/186/name>>
-Magical Protocol
+Protocolo Magico
 
 <<skills/186/message1>>
- uses Magical Protocol!
+ ejecuta Protocolo Magico!
 
 <<skills/187/name>>
-Bliding Protocol
+Protocolo Cegador
 
 <<skills/187/message1>>
- uses Bliding Protocol!
+ ejecuta Protocolo Cegador!
 
 <<skills/188/name>>
-Radioactive Protocol
+Protocolo Radiactivo
 
 <<skills/188/message1>>
- uses Radioactive Protocol!
+ ejecuta Protocolo Radiactivo
 
 <<skills/189/name>>
-Static Protocol
+Protocolo Estatico
 
 <<skills/189/message1>>
- uses Static Protocol!
+ ejecuta Protocolo Estatico!
 
 <<skills/190/name>>
-Beam Protocol
+Protocolo Laser
 
 <<skills/190/message1>>
- uses Beam Protocol!
+ ejecuta Protocolo Laser
 
 <<skills/191/name>>
-Rhythm Protocol
+Protocolo Ritmico
 
 <<skills/191/message1>>
- uses Rhythm Protocol!
+ ejecuta Protocolo Ritmico!
 
 <<skills/192/name>>
-Sonic Protocol
+Protocolo Sonico
 
 <<skills/192/message1>>
- uses Sonic Protocol!
+ ejecuta Protocolo Sónico!
 
 <<skills/193/name>>
-Noise Protocol
+Protocolo Ruidoso
 
 <<skills/193/message1>>
- uses Noise Protocol!
+ ejecuta Protocolo Ruidoso!
 
 <<skills/194/name>>
-Paleocene Impact
+Impacto Paleoceno
 
 <<skills/194/message1>>
- does Paleocene Impact!
+ usó Impacto Paleoceno!
 
 <<skills/195/name>>
-Radioactive Drill
+Taladro Radiactivo
 
 <<skills/195/message1>>
- uses Radioactive Drill!
+ usó Taladro Radiactivo!
 
 <<skills/196/name>>
-Prehistoric Stomp
+Pisoton Prehistorico
 
 <<skills/196/message1>>
- does Prehistoric Stomp!
+ usó Pisoton Prehistorico!
 
 <<skills/197/name>>
-Paleocene Bomb
+Bomba Paleocena
 
 <<skills/197/message1>>
- uses Paleocene Bomb!
+ explotó con toda su energía!
 
 <<skills/198/name>>
-Evolution Beam
+Rayo Evolucionador
 
 <<skills/198/message1>>
- uses Evolution Beam!
+ usa Rayo Evolucionador!
 
 <<skills/198/note>>
 Solo para efectos escenicos
@@ -1708,494 +1614,469 @@ Solo para efectos escenicos
 Disparo de pistolas viejas de forajidos de poca monta
 
 <<skills/199/name>>
-Oxide Shot
+Disparo Oxidado
 
 <<skills/199/message1>>
- does Oxide Shot!
+ da un Disparo Oxidado!
 
 <<skills/200/description>>
 Puño que va y viene. 
 
 <<skills/200/name>>
-Reverse Punch
+Puño Reverso
 
 <<skills/200/message1>>
- does Reverse Punch!
+ ataca con puños.
 
 <<skills/201/description>>
 Puño con puas incluidas
 
 <<skills/201/name>>
-Spiked Uppercut
+Gancho Picudo
 
 <<skills/201/message1>>
- does Spiked Uppercut!
+ hizo un Gancho Picudo!
 
 <<skills/202/name>>
-Sand Cyclone
+Ciclon Arenisco
 
 <<skills/202/message1>>
- uses Sand Cyclone!
+ hizo Ciclon Arenisco!
 
 <<skills/203/name>>
-Spike Rain
+Lluvia Puas
 
 <<skills/203/message1>>
- does Spike Rain!
+ hace Llover Puas!
 
 <<skills/204/description>>
 Poderes de absorcion de las plantas
 
 <<skills/204/name>>
-Absorbing Spores
+Espora Absorbente
 
 <<skills/204/message1>>
- uses Absorbing Spores!
+ usa Esporas Absorbentes!
 
 <<skills/205/name>>
-Thunderous Roar
+Rugido Atronador
 
 <<skills/205/message1>>
- does Thunderous Roar!
+ ruge atronadoramente!
 
 <<skills/206/name>>
-Beast Claw
+Garra Bestial
 
 <<skills/206/message1>>
- uses Beast Claw!
+ usa su garra bestial!
 
 <<skills/207/name>>
-Mocking Whinny
+Relincho Burlón
 
 <<skills/207/message1>>
- does Mocking Whinny!
+ se burla con su relincho!
 
 <<skills/208/name>>
-Dig
+Excavar
 
 <<skills/208/message1>>
- uses Dig!
+ se esconde bajo tierra!
 
 <<skills/209/name>>
-Fusillade Protocol
+Protocolo Fusilamiento
 
 <<skills/209/message1>>
- uses Fusillade Protocol!
+ ejecuta Protocolo Fusilamiento
 
 <<skills/210/name>>
-Sandstone Protocol
+Protocolo Arenizca
 
 <<skills/210/message1>>
- uses Sandstone Protocol!
+ ejecuta Protocolo Arenizca
 
 <<skills/211/name>>
-Beating Protocol
+Protocolo Apaleador
 
 <<skills/211/message1>>
- uses Beating Protocol!
+ ejecuta Protocolo Apaleador!
 
 <<skills/212/name>>
-Bullfight Protocol
+Protocolo Corrida
 
 <<skills/212/message1>>
- uses Bullfight Protocol!
+ ejecuta Protocolo Corrida
 
 <<skills/213/name>>
-Quick Shot
+Disparo Rapido
 
 <<skills/213/message1>>
- does Quick Shot!
+ usa Disparo Rápido!
 
 <<skills/214/name>>
-Avalanche Protocol
+Protocolo Alud
 
 <<skills/214/message1>>
- uses Avalanche Protocol!
+ ejecuta Protocolo Alud!
 
 <<skills/215/name>>
-Demolition Protocol
+Protocolo Demoledor
 
 <<skills/215/message1>>
- uses Demolition Protocol!
+ ejecuta Protocolo Demoledor!
 
 <<skills/216/description>>
 Mordizco Brutal
 
 <<skills/216/name>>
-Prehistoric Jaws.
+Fauces Prehistoricas
 
 <<skills/216/message1>>
- uses Prehistoric Jaws.!
+ usó Fauces Prehistoricas!
 
 <<items/1/description>>
-A small piece of bread that can recover 30 HP.
-Be careful with your teeth!
+Pequeña cantidad de pan que recupera 30
+puntos vitales. Cuidado con los dientes.
 
 <<items/1/name>>
-Hard Bread
+Pan Duro
 
 <<items/2/description>>
-Freshly baked bread that can recover 80 HP. 
-Eat it while it's still hot!
+Pan fresco que recupera 80 puntos vitales,
+aprovecha mientras esta caliente!
 
 <<items/2/name>>
-Hot Bread
+Pan Caliente
 
 <<items/3/description>>
-It's delicious taste can recover 200 HP by eating it.
-Absolute crunchiness. 
+Su delicioso sabor recupera 200 puntos de
+vida al comerse. Crocancia absoluta.
 
 <<items/3/name>>
-Crunchy Bread
+Pan Crugiente
 
 <<items/4/description>>
-Berries Juice filled (or consumed) by the half. 
-Drink it to recover 20 energy points.
+Jugo de bayas llenado (o consumido) hasta 
+la mitad. Recupera 20 puntos de energía.
 
 <<items/4/name>>
-Half Juice
+Medio Jugo
 
 <<items/5/description>>
-Dense (and full) juice of berries that can recover
-60 energy points.
-
-<<items/5/name>>
-Berry Juice
-
-<<items/5/note>>
 Jugo espeso (y completo) que recupera 60 
 puntos magicos. 
 
+<<items/5/name>>
+Jugo de Bayas
+
 <<items/6/description>>
-Juice from a mysterious blue fruit that is half filled
-(or half consumed) and recovers 112 energy points.
+De misterioso fruto azul a medio llenar (o medio 
+consumir) que recupera 112 puntos de energía.
 
 <<items/6/name>>
-Half Blue
+Medio Azul
 
 <<items/7/description>>
-Its intense fragrance and bitter taste raises any 
-fallen ally (even if they don't want to). 
-
-<<items/7/name>>
-Restorative Herb
-
-<<items/7/note>>
 Su fuerte aroma y amargo sabor levanta a los aliados
 caidos (aunque algunos preferirían seguir caidos).
 
+<<items/7/name>>
+Hierba Restauradora
+
 <<items/8/description>>
-Weird fruits that are repellent to scorpions,
-its enzymes stop the effects of the poisoning.
-
-<<items/8/name>>
-Antidote Fruit
-
-<<items/8/note>>
 Frutos repelentes a los escorpiones,
 sus enzimas detienen los efectos del veneno.
 
+<<items/8/name>>
+Fruto Antidoto
+
 <<items/9/description>>
-Heals states of paralysis and stuns thanks to
-their nutrients and chewyness.
+Cura estados de paralisis y aturdimiento 
+con sus nutrientes y chiclosidad.
 
 <<items/9/name>>
-Elastic Berries
+Bayas Elasticas
 
 <<items/10/description>>
-Apply them on your eyes only, please. 
-Cures blidness.
+Apliquese solo en los ojos (por favor).
+Cura la ceguera temporal.
 
 <<items/10/name>>
-Eye drops
+Gotas Oculares
 
 <<items/11/description>>
-Loosens the vocal cords to eliminate 
-the silence of those who drink it.
+Desata las cuerdas vocales para eliminar
+el silencio de quien lo consume.
 
 <<items/11/name>>
-Honey Tea
+Tecito de Miel
 
 <<items/12/description>>
-Highly beneficial food whose properties can
-permanently increase defense.
+Alimento altamente benefico que 
+aumenta permanentemente la defensa.
 
 <<items/12/name>>
-Nourishing Mushroom
+Seta Nutritiva
 
 <<items/13/description>>
-Fruit with such an intense flavor that estimulates
-
-the magic attack of the one who consumes it.
+Fruta con suficiente sabor para aumentar
+el ataque magico de quien lo consume.
 
 <<items/13/name>>
-Nourishing Peach
+Durazno Nutritivo
 
 <<items/14/description>>
-Not as sweet as normal Strawberries, but it can
-give a permanent push in magical resistance.
+Aunque no tan dulce como una fresa comun,
+puede subir la resistencia magica.
 
 <<items/14/name>>
-Nourishing Strawberry
+Fresa Nutritiva
 
 <<items/15/description>>
-With its healthy dose of potassium, can improve
-the mobility of the consumer (and not by its peels).
+Con dosis adicional de potasio, aumenta
+la movilidad de su consumidor (y no por las cascaras)
 
 <<items/15/name>>
-Nourishing Plantain
+Platano Nutritivo
 
 <<items/16/description>>
-Incredibly edible! Someone ate it and said that they 
-got luckier (Sounds doubious but it's up to you).
+¡Increiblemente comestible! Dicen que aumenta
+la suerte al comerse (pero no me consta).
 
 <<items/16/name>>
-Nourishing Clover
+Trebol Nutritivo
 
 <<items/17/description>>
-A mystical vine (yeah, right) that it's known to 
-increase the lifespan of its consumers.
-
-<<items/17/name>>
-Nourishin Herb
-
-<<items/17/note>>
 Enredadera misteriosa (si claro) que se dice incre-
 mentar la vitalidad y longevidad de sus consumidores.
 
+<<items/17/name>>
+Hierba Nutritiva
+
 <<items/18/description>>
-Fruit of a peculiar tree deep in the Cobeltian jungle,
-that increases the strength permanently.
+Proveniente de un arbol unico en la selva,
+su consumo aumenta la fuerza al comerse.
 
 <<items/18/name>>
-Nourishing Pear
+Pera Nutritiva
 
 <<items/19/description>>
-Fruits that are shared in the group to recover
-a slight percentage of energy points.
+Frutos para compartir que pueden recobrar 
+la energia al comerse. 
 
 <<items/19/name>>
-Energizing Berries
+Bayas Energeticas
 
 <<items/20/description>>
-Fruits that are shared in the group to recover
-a slight percentage of health points.
+Frutos para compartir que pueden recobrar 
+los puntos vitales de quienes lo coman.
 
 <<items/20/name>>
-Healthy Berries
+Bayas Saludables
 
 <<items/21/description>>
-A even bitter herb that can raise any ally that 
-was defeated and give more health after that.
+Revive a un compañero caido y adicionalmente
+lo deja con puntos vitales.
 
 <<items/21/name>>
-Mid Restorative
+Restaurador Medio
 
 <<items/22/description>>
-Raises a fallen ally and recovers all of their 
-health points. Use it wisely.
+Revive a un compañero caido y le recupera
+todos sus puntos vitales. Usalo con sabiduría.
 
 <<items/22/name>>
-Total Restorative
+Restaurador Total
 
 <<items/23/description>>
-Nevermelting crystal used for treating burns.
-(No, don't use it for your drinks).
+Cristal de hielo utilizado para curar las
+quemaduras. (No lo uses en bebidas)
 
 <<items/23/name>>
-Polar Ice
+Hielo Polar
 
 <<items/24/description>>
-Chemical that seems to hone your senses to the
-point of being able to counterattack.
-
-<<items/24/name>>
-Sensory Serum
-
-<<items/24/note>>
 Liquido que parece agudizar los sentidos.
 Permite contraatacar durante cierto tiempo.
 
+<<items/24/name>>
+Suero Sensorial
+
 <<items/25/description>>
-Its disgusting smell can even induce poisoning.
-These are even forbidden by International Treaties.
-
-<<items/25/name>>
-Stinky Bomb
-
-<<items/25/note>>
 Su olor fétido puede producir incluso intoxicación.
 Contraindicado incluso en tratados internacionales.
 
+<<items/25/name>>
+Bomba Apestosa
+
 <<items/26/description>>
-An explosive of light that is quite effective in 
-disorienting and disabling enemies for a while.
+Explosivo que se puede utilizar para cegar o 
+aturdir a los enemigos
 
 <<items/26/name>>
-Stun Bomb
+Bomba de Choque
 
 <<items/27/description>>
-Rare Fruits that are shared in the group whose
-properties recover health and energy.
+Frutos para compartir que pueden recobrar 
+que recobran vitalidad y energia
 
 <<items/27/name>>
-Mixed Berries
+Bayas Mixtas
 
 <<items/28/description>>
-Its first-rate cooking fills the stomach
-
-of anyone who eats it.
+Su cocción de primer nivel llena el estomago
+de cualquiera que lo consuma
 
 <<items/28/name>>
-Gourmet Bread
+Pan Gourmet
 
 <<items/29/description>>
-Miraculously full. Drink it completely and recover
-284 energy points.
+Misteriosamente lleno, beberlo en su totalidad
+recupera hasta 284 puntos de energía.
 
 <<items/29/name>>
-Blue Juice
+Jugo Azul
 
 <<items/30/description>>
-Favorite fruit of Fog Forest scorpions. Not edible
-for other species but can be sold for a good price.
+Fruta favorita de los escorpiones, aunque
+no es comestible, puede venderse.
 
 <<items/30/name>>
-Scorpion Fruit
+Fruto Escorpion
 
 <<items/31/description>>
-Medicine composed by Potassium and Iodine. 
-Neutralizes the effects of radiation.
+Medicamento compuesto mayormente de Yodo. 
+Neutraliza los efectos de la radiación.
 
 <<items/31/name>>
-KI Pill
+Pildora KI
 
 <<items/32/description>>
-Used as a powerful condiment that can push the
-accumulated rage from the spiciness.
+Alimento usado como fuerte condimento que sirve
+para impulsar algo la furia acumulada por el ardor.
 
 <<items/32/name>>
-Spicy Pepper
+Chile Picante
 
 <<items/33/description>>
-An special condiment that can push the even further
-the accumulated rage from the spiciness.
+Alimento usado como fuerte condimento que sirve
+para impulsar algo bastante acumulada por el ardor.
 
 <<items/33/name>>
-UltraSpicy Pepper
+Chile Ultrapicante
 
 <<items/34/description>>
-Merciless pepper from Qruetzaltenango. Produces an
-adrenaline boost, with "adverse effects".
+Inmisericorde chile de Qruetzaltenango. Produce un
+aumento de adrenalina, con "efectos adversos".
 
 <<items/34/name>>
-Radioactive Pepper
+Chile Radiactivo
 
 <<items/35/description>>
-Wine of rather dubious quality but that recovers 
-vitality slightly. Not suitable for minors (seriously!)
+Vino de calidad bastante dudosa pero que da cierta
+vitalidad. No apto para menores de edad (¡en serio!)
 
 <<items/35/name>>
 Moscatelo
 
 <<items/36/description>>
-Stonehite's machines power cell.
-
-It releases a -Very- slight shock when thrown.
+Celda de energía de las máquinas de Stonehite.
+Suelta una -MUY- leve descarga al arrojarse.
 
 <<items/36/name>>
-Ordinary Battery
+Bateria Ordinaria
 
 <<items/37/description>>
-Power cell from a well-known brand whose 
-advertisements ensure their power is the best.
+Celda de energía de una marca conocida cuyos anun-
+cios aseguran que sus descargas son las mejores.
 
 <<items/37/name>>
-Durable Batery
+Bateria Duradera
 
 <<items/38/description>>
-Power cell of a brand with advertising as
-aggressive as the discharges it causes.
+Celda de energía de una marca con publicidad tan
+agresiva con las descargas que propicia.
 
 <<items/38/name>>
-Energized Battery
+Bateria Energizada
 
 <<items/39/description>>
-Precious mineral found mostly in Frocteres' Mines.
-It can be sold to the unwary for a high price.
+Mineral precioso encontrado mayormente en
+las minas de Frocteres. Puede venderse a un incauto.
 
 <<items/39/name>>
-Red Gem
+Gema Roja
 
 <<items/40/description>>
-Mysterious and well-preserved fossil taken from
-Excarmole. ADN traces are still on it.
-
-<<items/40/name>>
-Fossilized Sample
-
-<<items/40/note>>
 Fosil misterioso y muy bien preservado arrebatado de
 Excarmole, que mantiene todavía trazas de ADN.
 
+<<items/40/name>>
+Muestra Fosilizada
+
 <<items/41/description>>
-A single use puff of this instrument and its sound
-can pull anyone together.
+Un soplido de único uso y puede hacer volver
+en sí cualquier personaje.
 
 <<items/41/name>>
-Correcting Trombone
+Trombon Corrector
 
 <<items/42/description>>
-Guacarí fruit juice, known for its stimulating capacity.
-
-Also recover 35 magic points.
+Jugo del fruto de Guacarí, conocido por capacidad
+estimulante. Recupera tambien 35 puntos mágicos.
 
 <<items/42/name>>
-Guaraná Juice
+Jugo de Guaraná
 
 <<items/43/description>>
-Medicine used as a wild card by
- various doctors. 
-Cures various ailments.
+Medicamento utilizado como comodín por
+varios doctores. Cura varias dolencias.
 
 <<items/43/name>>
 Paracetamol
+
+<<items/44/description>>
+Embutido sazonado dentro de un pan crujiente. 
+(Cuidado con los herbíboros).
+
+<<items/44/name>>
+Pancho Simple
 
 <<weapons/1/description>>
 Arma especial de Tzmitl
 
 <<weapons/1/name>>
-Tzimitil Spear
+Lanza de Tzimitl
 
 <<weapons/2/description>>
-CEOE rifle with ice rounds.
+Rifle de las CEOE con caracteristicas de frio.
+
 
 <<weapons/2/name>>
-Frost Rifle F64
+Rifle Helado F64
 
 <<weapons/4/description>>
-Water rounds pistol prototype. Since it's not finished,
-its accuracy wasn't tested enough.
+Prototipo de pistola de agua, puede fallar con 
+frecuencia
 
 <<weapons/4/name>>
-H20.22 Pistol
+Pistola H20.22
 
 <<weapons/6/description>>
 Arte hecha magia, solo para las manos mas
 inspiradas.
 
 <<weapons/6/name>>
-Magical Brush
+Pincel Magico
 
 <<weapons/7/name>>
-CL-58 Carabine
+Fusil CL-58
 
 <<weapons/8/description>>
-Advanced model from the water round pistol with
-mercury.
+Modelo avanzado de la pistola de 
+agua potenciada con mercurio 
 
 <<weapons/8/name>>
-mmHg.22 Pistol
+Pistola mmHg.22
 
 <<weapons/9/name>>
 Dardo Escorpion
@@ -2219,151 +2100,150 @@ Arma Enemiga
 Sierra Insectiva
 
 <<weapons/13/description>>
-Water rounds pistol prototype. Since it's not finished,
-its accuracy wasn't tested enough.
+Prototipo de pistola de agua, puede fallar con 
+frecuencia
 
 <<weapons/13/name>>
-H20.22 Pistol
+Pistola H20.22
 
 <<weapons/14/description>>
-Simple weapon that shoots darts from a tube. 
-Breathe properly!
+Arma basica que lanza dardos al oponente
+desde lejos.
 
 <<weapons/14/name>>
-Simple Blowgun
+Cerbatana Simple
 
 <<weapons/14/note>>
 [Naturaleza]
 
 <<weapons/15/description>>
-Blowgun made to imitate the power of the Fog 
-Forest scorpions.
+Cerbatana hecha para imitar el poder
+de los escorpiones Tanjer.
 
 <<weapons/15/name>>
-Siraku Blowgun
+Cerbatana Tanjer
 
 <<weapons/16/description>>
-Blowgun made with the heavy, yet resistant 
-wood. 
+La madera de Guacari parece ser
+bastante pesada, pero resistente
 
 <<weapons/16/name>>
-Guacari Blowgun
+Cerbatana Guacari
 
 <<weapons/17/description>>
-From the warriors of the former Swakar empire.
-Some even consider it as a legendary weapon.
+De las guerreras del antiguo imperio de Swakar.
+De alta predileccion por sus leyendas.
 
 <<weapons/17/name>>
-Swakar Bow
+Arco Swakar
 
 <<weapons/18/description>>
-Made from the corals of the underwater city. 
-Can leave some dust while shooting, though.
+La madera subterranea parece que 
+lo ha llenado de polvo.
 
 <<weapons/18/name>>
-Epiwuin Blowgun
+Cerbatana Epiwuin
 
 <<weapons/19/description>>
-The goldsmith technique used for creating this
-blowgun gives the best impact output
+Acabado de orfebrería que le da durabilidad
+y maniobrabilidad mayor.
 
 <<weapons/19/name>>
-Chunsua Blowgun
+Cerbatana Chunsua
 
 <<weapons/20/description>>
-A favorite weapon among hunters in the frost
-mountains in Balcca.
+Arco utilizado para la caceria en los montes
+helados de Balcca.
 
 <<weapons/20/name>>
-Balcca Bow
+Arco Balcca
 
 <<weapons/21/description>>
-An enchanted blowgun that is said to have
-the powers of fire guardians of Mogtorion.
+Cerbatana encantada con un ser ancestral
+de fuego. 
 
 <<weapons/21/name>>
-Vanterran Blowgun
+Cerbatana Swakar
 
 <<weapons/22/description>>
-Created with the finest filaments from volcanic
-minerals, that leaves burns with its shoots.
+Creado con filamento de minerales volcanicos,
+puede quemar de solo dispararlo
 
 <<weapons/22/name>>
-Mogtorion Bow
+Arco Mogtorion
 
 <<weapons/23/description>>
-A legendary weapon forged by Kusikuy and
-the Creation Flames itself. Tatama's sacred treasure.
+Arma forjada a partir de los dones del gran
+guardian Kusikuy.
 
 <<weapons/23/name>>
-Kusikuy Blowgun
+Cerbatana Kusikuy
 
 <<weapons/24/description>>
-Alternative model of the first CEOE's ice rounds
-rifle. 
+Modelo paralelo de rifle de carga helada de
+la CEOE.
 
 <<weapons/24/name>>
-Frost Rifle E32
+Rifle Helado E32
 
 <<weapons/25/description>>
-Improved version of CEOE's ice rounds
-rifle in terms of accuracy and power.
+Version Mejorada del rifle de cargas congeladas
+de la CEOE
 
 <<weapons/25/name>>
-Frost Rifle D128
+Rifle Helado D128
 
 <<weapons/26/description>>
-An even more improved version of the CEOE's
-ice rounds rifle with a new scope.
+Version mejorada del rifle helado de la CEOE,
+con un rango de exactitud mayor.
 
 <<weapons/26/name>>
-Frost Rifle C256
+Rifle Helado C256
 
 <<weapons/27/description>>
-A rudimentary sniper rifle made and used by the
-Flame Legion forces.
+Modelo de fusil francotirador utilizado por la
+resistencia de la Flama Roja.
 
 <<weapons/27/name>>
 G32-RB
 
 <<weapons/28/description>>
-Foreign-made Sniper Rifle that supports
-ice rounds with extra firepower.
+Rifle Francotirador de fabricacion extranjera,
+que mantiene su capacidad de congelar.
 
 <<weapons/28/name>>
 Reinz .50Cal
 
 <<weapons/29/description>>
-Current version of Improved Battle Rifle.
-Used by most regular armies in Zorthos.
+Version Actual del Rifle de Batalla Mejorada, 
+utilizado por ejercitos regulares en el mundo.
 
 <<weapons/29/name>>
-G40-IBR
+G40-RBM
 
 <<weapons/30/description>>
-Preferred Rifle of best Sniper Units. A model that
-doesn't get old after 5 years from its creation.
+Rifle de Batalla predilecto de unidades francotiradoras.
+Un modelo que no pasa de moda despues de 5 años.
 
 <<weapons/30/name>>
 GB-5740
 
 <<weapons/31/description>>
-Silenced and Ice Rounds-based version of the 
-GB-5740. Trade-off applied.
+Modificación Silenciada del Rifle de Batalla
+GB-5740. Menos poder, más sigilo.
 
 <<weapons/31/name>>
 GB-5740-S
 
 <<weapons/32/description>>
-A common gun preferred by outlaws and bandits 
-alike.
+Revolver predilecto para los forajidos.
 
 <<weapons/32/name>>
-Classic Magnum
+Magnum Clásica
 
 <<weapons/33/description>>
-Light and short-ranged pistol but pretty efficient
-in fire rate terms.
+Pistola ligera y de corto alcance pero
+bastante eficiente.
 
 <<weapons/33/name>>
 Barrinten
@@ -2497,134 +2377,132 @@ Pistola Pesada
 ---Flamrose
 
 <<armors/2/description>>
-Typical clothing from Tatameans, which seems that
-was used during years.
+Vestido típico de los tatamenses pero muy
+desgastada por el uso repetido.
 
 <<armors/2/name>>
-Worn-out Tunic
+Tunica Desgastada
 
 <<armors/2/note>>
 <ge: 1, $Flamrose, 0>
 
 <<armors/3/description>>
-Warm and cozy handmade Tatamean hat.  
-Also an amazing souvenir. 
+Gorrito calido y artesanal típico de Tatama
 
 <<armors/3/name>>
-Common Chuyo
+Chuyo Comun
 
 <<armors/4/description>>
-Tatamean Tunic which is used mostly during rituals
-and special events.
+Tunica tatamense peculiar utilizada mayormente para
+rituales y eventos especiales
 
 <<armors/4/name>>
-Tatamean Tunic
+Tunica Tatama
 
 <<armors/4/note>>
 <ge: 1, $Flamrose, 0>
 
 <<armors/5/description>>
-Amulet that was embued with a particular magic that
-reduces the stuns for their bearer.
+Amuleto embuido con una peculiar magia que reduce
+la probabilidad de calambres y aturdimiento.
 
 <<armors/5/name>>
-Flexible Amulet
+Amuleto Flexible
 
 <<armors/6/description>>
-Amulet that was embued with a particular magic that
-increases the adrenaline of the bearer.
+Amuleto embuido con una peculiar magia
+que permite acumular adrenalina más rapido.
 
 <<armors/6/name>>
-Fury Amulet
+Amuleto Furia
 
 <<armors/7/description>>
-Tunic that was approved by the CEOE committee. Not
-too fashionable but pretty functional.
+Tunica aprobada por el comité de la CEOE. No es el 
+último hito de la moda, pero es bastante funcional.
 
 <<armors/7/name>>
-Militar Tunic
+Tunica Militar
 
 <<armors/7/note>>
 <ge: 1, $Flamrose_AN, 0>
 
 <<armors/8/description>>
-Handmade hat done by CEOE's Supply Company.
-Not so warm, but optimized for mobility.
+Gorrito tejido por la compañía de suministros de la
+CEOE. No abriga mucho para optimizar la movilidad
 
 <<armors/8/name>>
-Militar Hat
+Chuyo Militar
 
 <<armors/9/description>>
-Amulet that was embued with a particular magic that
-improves the energy usage for magic.
+Amuleto embuido con una peculiar magia que 
+mejora la eficiencia en el uso de objetos.
 
 <<armors/9/name>>
-Efficient Amulet
+Amuleto Eficiente
 
 <<armors/10/description>>
-Recursive accesory for blowguns that enable
-the chance close-quarters combat.
+Agregado a la cerbatana para realizar ataques
+cuerpo a cuerpo como Corte Lateral.
 
 <<armors/10/name>>
-Auxiliar Knife
+Cuchilla Lateral
 
 <<armors/30/name>>
 ---Pengralle
 
 <<armors/31/description>>
-Helmet used for CEOE agents in training.
+Casco usado por agentes de la CEOE 
+en entrenamiento
 
 <<armors/31/name>>
-B64 Helmet
+Casco B64
 
 <<armors/32/description>>
-All-terrain boots with retractable skies. Well
-combined with ski sticks.
+Calzado con skies incluidos, faciles de manipular.
 
 <<armors/32/name>>
-Lv1 Ski Boots
+Botas Ski nv. 1
 
 <<armors/33/description>>
-Prepared mostly for cold environments. 
-Extra small size for extra small agents.
+Para soportar el frio levemente. Talla XS
 
 <<armors/33/name>>
-B64 Winter Coat
+Abrigo Invernal B64
 
 <<armors/34/description>>
-Ski Sticks that can be used for activities beyond
-sports, with melee capabilities as well.
+Palos para esquiar para deportistas
+principiantes. Puede picar hielo.
 
 <<armors/34/name>>
-Ski Sticks
+Palos Ski
 
 <<armors/35/description>>
-Amulet developed by college students to remain 
-awake during the final terms.
+Amuleto desarrollado por universitarios para estar
+despierto el mayor tiempo que sea posible
 
 <<armors/35/name>>
-Caffeine Amulet
+Amuleto Cafeina
 
 <<armors/36/description>>
-Manufactured for professional soldiers. Reduces the
-chances of being stunned and getting a headshot.
+Casco fabricado para soldados profesionales
+del a CEOE. Mayor proteccion ante contusiones.
 
 <<armors/36/name>>
-E32 Helmet
+Casco E32
 
 <<armors/37/description>>
-All-terrain boots with retractable skies with
-improved maneuverability.
+Botas con sus skies retractiles incluidos con 
+leves mejoras.
 
 <<armors/37/name>>
-Lv2 Ski Boots
+Botas Ski Nv. 2
 
 <<armors/38/description>>
-Manufactured by CEOE specialist that implemented 
-speed holes for temperture regulation.
+Fabricacion especial de la CEOE con autodenominadas
+aeroventilas para la velocidad y discipar el calor.
 
 <<armors/38/name>>
-E32 Desert Coat
+Abrigo Desertico E32
 
 <<armors/52/name>>
 --Akane
@@ -2661,48 +2539,46 @@ Botas Epiwuin
 --Hutch
 
 <<armors/75/description>>
-Versatile garment for desertic climates.
-Seems like it needs a good wash.
+Prenda versatil para los climas del desierto.
+Puede que necesite una buena lavada.
 
 <<armors/75/name>>
-Outlaw Poncho
+Poncho Forajido
 
 <<armors/76/description>>
-Typical among cowboys and outlaws alike.
-
-This one, in particular, has a certain sentimental value.
+Tipico entre vaqueros y forajidos por igual.
+Este en particular guarda cierto valor sentimental.
 
 <<armors/76/name>>
-Classic Hat
+Sombrero Clasico
 
 <<armors/77/description>>
-Catch livestock or people alike. It can also be 
-used to reach far away places.
+Además de ganado, permite atrapar personas
+o alcanzar lugares lejanos (si sabes hacer nudos).
 
 <<armors/77/name>>
-Cattle Lazzo
+Lazo de Ganado
 
 <<armors/78/description>>
-Since guns cannot solve all your problems, you 
-can rely on cutting the problem from the root.
+Util cuando las pistolas no solucionan tus problemas
+y se necesita recurrir a los golpes.
 
 <<armors/78/name>>
-Auxiliar Machete
+Machete Auxiliar
 
 <<armors/79/description>>
-Of considerable weight but can take for 
-surprise
-other gunmen. A absolute classic.
+De peso considerable pero puede tomar por
+sorpresa a otros pistoleros. Un clásico.
 
 <<armors/79/name>>
-Iron Vest
+Chaleco Metalico
 
 <<armors/80/description>>
-Inexplicable bracelet that drains the defensive 
-capabilites to slightly improve the strength.
+Sus peculiares propiedades redistribuyen la fuerza
+a costa de la defensa de manera ligera.
 
 <<armors/80/name>>
-Aggresive Bracelet
+Brazalete Agresivo
 
 <<armors/92/name>>
 --Dana
@@ -2717,47 +2593,47 @@ Aggresive Bracelet
 --Muti
 
 <<armors/145/description>>
-Fashionable waterproof jacket 
+Abrigo que da resistencia y esta de moda
 
 <<armors/145/name>>
-Walrus Jacket
+Chaqueta Morsa
 
 <<armors/146/description>>
-Clearly used for giving headbutts to the enemies.
+Para darle cabezazos al rival
 
 <<armors/146/name>>
-Horned Helmet
+Casco Cornudo
 
 <<armors/147/description>>
-Metallic reinforcement coat for a mechanical arm.
-[Electrical Conductor]
+Refuerzo Metalico para un brazo mecanico.
+[Conductor de electricidad]
 
 <<armors/147/name>>
-Metallic Alloy
+Aleacion Metalica
 
 <<armors/148/description>>
-Lens that improves the capabilities to breathe
-underwater and overall sight.
+Lente amplio que permite la respiración bajo
+el agua y aumenta la punteria.
 
 <<armors/148/name>>
-Underwater Lens
+Lente Subacuatico
 
 <<armors/149/description>>
-Approved by the CEOE committee. Seems like blue
-it's not a color for everyone...
+Abrigo aprobado por la CEOE. El azul no es un 
+color para todo el mundo...
 
 <<armors/149/name>>
-CEOE Jacket
+Chaqueta CEOE
 
 <<armors/149/note>>
 <ge: 7, $Muti_AN, 0>
 
 <<armors/150/description>>
-Prismatic amulet that reduces the effects from
-UV rays and other lights that can leave you blinded.
+Amuleto prismático que protege la visión
+de los rayos UV y demás cosas que te dejan ciego.
 
 <<armors/150/name>>
-Visual Amulet
+Amuleto Visual
 
 <<enemies/1/name>>
 Blizzeroth
@@ -2772,23 +2648,23 @@ Blizzeroth
 Tzimitl 
 
 <<enemies/3/name>>
-Block Inspil
+Inspil Bloque 
 
 <<enemies/3/note>>
 <show info : all>
 <show info: all>
 
 <<enemies/4/name>>
-Bush Inspil
+Inspil Arbusto
 
 <<enemies/4/note>>
 <show info: all>
 
 <<enemies/5/name>>
-Spider Warrior
+Guerrera Araña
 
 <<enemies/6/name>>
-Bone Cynspil
+Cynspil Oseo
 
 <<enemies/7/name>>
 Stonebot-T
@@ -2824,7 +2700,7 @@ Stonbot
 
 
 <<enemies/13/name>>
-Tatama Lancer
+Lancero Tatama
 
 <<enemies/14/name>>
 Rhysorog
@@ -2857,10 +2733,10 @@ Perilecti
 Guacitarra
 
 <<enemies/23/name>>
-Opposum Bandit
+Bandido Musaraña
 
 <<enemies/24/name>>
-Opposum Outlaw
+Forajido Musaraña
 
 <<enemies/25/name>>
 El Sangrenegra
@@ -2875,19 +2751,19 @@ Cavalkuje
 3X-CAR-M0L3
 
 <<enemies/29/name>>
-Mutated Sangrenegra
+Sangrenegra Mutado
 
 <<enemies/199/name>>
 tEST B
 
 <<states/1/message2>>
- was defeated!
+ no puede continuar!
 
 <<states/1/name>>
-Defeat
+Derrota
 
 <<states/1/message1>>
- was defeated!
+ ha caido!
 
 <<states/1/message4>>
  revive!
@@ -2897,115 +2773,115 @@ State #1 will be automatically added when
 HP reaches 0.
 
 <<states/2/message2>>
- is poisoned
+ esta envenenado
 
 <<states/2/name>>
-Poison
+Veneno
 
 <<states/2/message1>>
- is poisoned
+ esta envenenado
 
 <<states/2/message4>>
- was cured from poisoning
+ se ha librado del veneno
 
 <<states/2/message3>>
- is still poisoned
+ sufre por el veneno
 
 <<states/3/message2>>
- was blinded!
+ ha sido cegado!
 
 <<states/3/name>>
-Blindness
+Ceguera
 
 <<states/3/message1>>
- was blinded!
+ ha sido cegado!
 
 <<states/3/message4>>
- was cured from blindness!
+ se recupero de la ceguera
 
 <<states/4/message2>>
- cannot cast special skills.
+ no puede usar magia!
 
 <<states/4/name>>
-Silence
+Silencio
 
 <<states/4/message1>>
- cannot cast special skills.
+ no puede usar magia!
 
 <<states/4/message4>>
- can cast special skills again.
+ ya puede volver a usar magia!
 
 <<states/5/message2>>
- is confused.
+ ha sido confundido!
 
 <<states/5/name>>
 Confusion
 
 <<states/5/message1>>
- is confused.
+ ha sido confundido!
 
 <<states/5/message4>>
- snapped out from confusion.
+ se ha librado de la confusion!
 
 <<states/6/message2>>
- has fallen asleep...
+ se ha quedado dormido...
 
 <<states/6/name>>
-Sleep
+Sueño
 
 <<states/6/message1>>
- has fallen asleep...
+ se ha quedado dormido...
 
 <<states/6/message4>>
- woke up.
+ se ha despertado
 
 <<states/6/message3>>
- is sleeping (Do not disturb)......
+ esta durmiendo (No molestar)......
 
 <<states/7/message2>>
- is paralyzed!
+ ha sido paralizado!
 
 <<states/7/name>>
-Paralysis
+Paralisis
 
 <<states/7/message1>>
- is paralyzed!
+ ha sido paralizado!
 
 <<states/7/message4>>
- is no longer paralyzed.
+ ya no esta paralizado
 
 <<states/7/message3>>
- is paralyzed and cannot move.
+ no se puede mover por la paralisis
 
 <<states/8/message2>>
- lost the balance.
+ ha perdido el equilibrio
 
 <<states/8/name>>
-Stun
+Aturdimiento
 
 <<states/8/message1>>
- is stunned.
+ esta aturdido
 
 <<states/8/message4>>
- recovered the balance.
+ ha recuperado el equilibrio
 
 <<states/8/message3>>
- is still stunned
+ sigue aturdido......
 
 <<states/9/name>>
-Defense
+Defensa
 
 <<states/10/name>>
 Immortal
 
 <<states/11/name>>
-Protection
+Proteccion
 
 <<states/12/name>>
-Provoked
+Provocacion
 
 <<states/13/name>>
-Cammo
+Camuflaje
 
 <<states/14/name>>
 HP Regen
@@ -3017,10 +2893,10 @@ MP Regen
 TP再生
 
 <<states/17/name>>
-Iron Body
+Cuerpo de Hierro
 
 <<states/18/name>>
-Counter
+Contrataque
 
 <<states/19/name>>
 Magic Evade
@@ -3062,134 +2938,134 @@ Obtiene el poder de trueno!
 Ailment Guard
 
 <<states/25/name>>
-MP Reduction
+Reduccion de MP
 
 <<states/26/message2>>
- suffer from the burns.
+ sufre de quemaduras!
 
 <<states/26/name>>
-Burn
+Quemadura
 
 <<states/26/message1>>
- is burned!
+ ha sido quemado!
 
 <<states/26/message4>>
- is no longer burned.
+ ya no esta quemado!
 
 <<states/26/message3>>
- is suffering from the burning.
+ esta sufriendo por las quemaduras!
 
 <<states/27/name>>
-Hydro Block
+Bloqueo Acuatico
 
 <<states/27/message1>>
- has a water block.
+tiene un bloque de agua!
 
 <<states/28/message2>>
- was exposed to radiation
+ es afectado por la radiacion.
 
 <<states/28/name>>
-Radiation
+Radiacion
 
 <<states/28/message1>>
- was exposed to radiation
+ es afectado por la radiacion.
 
 <<states/28/message4>>
- got recovered from the radiation
+ se recupero de la radiacion.
 
 <<states/28/message3>>
- was affected from the radiation
+ es herido por la radiacion.
 
 <<states/28/note>>
 La radiacion afecta cuando se usan ataques
 de energia, el daño recibido por estos ataques. Solo se puede curar con el paso del tiempo, caminando o con una camara contra la radiacion.
 
 <<states/29/message2>>
- is affected by the hail.
+ sufre del efecto del granizo!
 
 <<states/29/name>>
-Hail Effect
+Efecto Granizo
 
 <<states/29/message1>>
- is affected by the hail.
+ sufre del efecto del granizo!
 
 <<states/29/message4>>
- overcame the cold from the hail.
+ ya no sufre más por el frio!
 
 <<states/29/message3>>
- feels cold due to the hail.
+ se mantiene con frio del hielo!
 
 <<states/30/message2>>
- was frigthened
+ ha sido aterrado!
 
 <<states/30/name>>
-Fear
+Miedo
 
 <<states/30/message1>>
- has fear from insects
+ está aterrado por los insectos!
 
 <<states/30/message4>>
- overcame the fear (for now)
+ supero el terror(Por ahora)!
 
 <<states/30/message3>>
- is still frightened
+ sigue aterrado!
 
 <<states/30/note>>
 Terror por insectos
 
 <<states/31/message2>>
- was frigthened
+ ha sido aterrado!
 
 <<states/31/name>>
-Fear
+Miedo
 
 <<states/31/message1>>
- has fear from darkness
+ está aterrado por los insectos!
 
 <<states/31/message4>>
- overcame the fear (for now)
+ supero el terror(Por ahora)!
 
 <<states/31/message3>>
- is still frightened
+ sigue aterrado!
 
 <<states/31/note>>
-Terror por insectos
+Terror por Oscuridad
 
 <<states/32/message2>>
- has increased their speed
+ ha aumentado su velocidad!
 
 <<states/32/name>>
-Haste
+Rapidez
 
 <<states/32/message1>>
- has increased their speed
+ ha aumentado su velocidad!
 
 <<states/32/message4>>
- came back to normal speed.
+ ha vuelto a velocidad normal.
 
 <<states/33/name>>
-Cactus Shield
+Proteccion de Cactus
 
 <<states/33/note>>
 <eff: reflect_damage 0.4>
 
 <<states/34/name>>
-Doble Attack
+Doble Ataque
 
 <<states/34/message1>>
- will attack twice.
+ ataca el doble!
 
 <<states/34/message4>>
- will attack once only.
+ deja de atacar el doble...
 
 <<states/35/name>>
 Velo Energetico
 
 <<states/35/message1>>
- has a Magic Veil.
+ tiene un Velo Magico!
 
 <<states/35/message4>>
- the Magic Veil vanished.
+ el velo se ha desvanecido...
 
 <<states/36/name>>
 Obligar Armas
@@ -3201,349 +3077,358 @@ Obligar Ataque
 Obligar Especial
 
 <<states/39/name>>
-Rage
+Furia
 
 <<states/40/message2>>
- hides.
+ se ha escondido
 
 <<states/40/name>>
-Hidden
+Escondido
 
 <<states/40/message1>>
- hides.
+ se ha escondido
 
 <<states/40/message4>>
- is visible again.
+ es visible nuevamente
 
 <<states/40/message3>>
- cannot be targeted
+ no se puede ver
 
 <<states/41/name>>
-Involution
-
-<<states/41/message1>>
- is now a prehistoric creature!
-
-<<states/41/message4>>
- is now part of an evolved species.
+Involución
 
 <<states/42/message2>>
- is scared
+ ha sido aterrado!
 
 <<states/42/name>>
 Terror
 
 <<states/42/message1>>
- is scared and disoriented
+ está aterrado y confundido!
 
 <<states/42/message4>>
- overcame terror (for now)
+ supero el terror(Por ahora)!
 
 <<states/42/message3>>
- is still scared
+ sigue aterrado!
 
 <<states/42/note>>
 Miedo y Debilidad
 
+<<states/43/message2>>
+ está intoxicado.
+
+<<states/43/name>>
+Intoxicación
+
+<<states/43/message1>>
+ ha comido algo que no debía...
+
+<<states/43/message4>>
+ ha superado la intoxicación.
+
+<<states/43/message3>>
+ sufre por el dolor de estomago.
+
 <<system/game_title>>
-Stonehite Regime
+El Regimen de Stonehite
 
 <<system/currency_unit>>
-Coins
+Monedas
 
 <<types/elements/1>>
-Melee
+Fisico
 
 <<types/elements/2>>
-Absorb
+Absorcion
 
 <<types/elements/3>>
-Fire
+Fuego
 
 <<types/elements/4>>
-Ice
+Hielo
 
 <<types/elements/5>>
-Thunder
+Trueno
 
 <<types/elements/6>>
-Water
+Agua
 
 <<types/elements/7>>
-Earth
+Tierra
 
 <<types/elements/8>>
-Wind
+Viento
 
 <<types/elements/9>>
-Light
+Luz
 
 <<types/elements/10>>
-Dark
+Oscuridad
 
 <<types/elements/11>>
-Magic
+Magia
 
 <<types/elements/12>>
-Energy
+Energia
 
 <<types/elements/13>>
-Sound
+Sonido
 
 <<types/elements/14>>
-Radiation
+Radiactividad
 
 <<types/elements/15>>
-Nature
+Naturaleza
 
 <<types/elements/16>>
-Ranged
+A distancia
 
 <<types/skill_types/1>>
-Special
+Especial
 
 <<types/skill_types/2>>
-Melee
+Armas
 
 <<types/skill_types/3>>
-Magic
+Magia
 
 <<types/skill_types/4>>
-Compose
+Composicion
 
 <<types/skill_types/5>>
-Technique 
+Tecnica 
 
 <<types/skill_types/6>>
-Summon
+Invocacion
 
 <<types/weapon_types/1>>
-Axe
+Hacha
 
 <<types/weapon_types/2>>
-Club
+Mazo
 
 <<types/weapon_types/3>>
-Lance
+Lanza
 
 <<types/weapon_types/4>>
-Sword
+Espada
 
 <<types/weapon_types/5>>
-Saber
+Sable
 
 <<types/weapon_types/6>>
-Bow
+Arco
 
 <<types/weapon_types/7>>
-Dagger
+Daga
 
 <<types/weapon_types/8>>
-Hammer
+Martillo
 
 <<types/weapon_types/9>>
-Staff
+Baston
 
 <<types/weapon_types/10>>
-Pistol
+Pistola
 
 <<types/weapon_types/11>>
-Rifle
+Rifle 
 
 <<types/weapon_types/12>>
-Glove
+Guante
 
 <<types/weapon_types/13>>
-Helmet
+Casco
 
 <<types/weapon_types/14>>
-Guitar
+Guitarra
 
 <<types/weapon_types/15>>
-Microphone
+Microfono
 
 <<types/weapon_types/16>>
 Machete
 
 <<types/weapon_types/17>>
-Blowgun
+Cerbatana
 
 <<types/weapon_types/18>>
-Throwable
+Arrojadizo
 
 <<types/weapon_types/19>>
-Rocket
+Misil
 
 <<types/weapon_types/20>>
 Laser
 
 <<types/weapon_types/21>>
-Magnum
+Revolver
 
 <<types/armor_types/1>>
-Birdly
+Pajaril
 
 <<types/armor_types/2>>
-Walrusy
+Morsil
 
 <<types/armor_types/3>>
-Reptile
+Reptil
 
 <<types/armor_types/4>>
-Penguinly
+Pinguinil
 
 <<types/armor_types/5>>
-Magical
+Magica
 
 <<types/armor_types/6>>
-Common
+Comun
 
 <<types/armor_types/7>>
-Raccoonly
+Mapache
 
 <<types/armor_types/8>>
-Warrior
+Guerrero
 
 <<types/armor_types/9>>
-Antelopely
+Antilopil
 
 <<types/armor_types/10>>
-Rabbitly
+Conejil
 
 <<types/armor_types/11>>
-Catacrocker
+Rocosil
 
 <<types/armor_types/12>>
-Other
+Morsa
 
 <<terms/basic/0>>
-Level
+Nivel
 
 <<terms/basic/1>>
 Lv
 
 <<terms/basic/2>>
-Health Points
+Puntos Vitales
 
 <<terms/basic/3>>
-HP
+PV
 
 <<terms/basic/4>>
-Energy
+Energia
 
 <<terms/basic/5>>
-EP
+PE
 
 <<terms/basic/6>>
-Rage
+Furia
 
 <<terms/basic/7>>
-RG
+PF
 
 <<terms/params/0>>
-MaxHP
+MaxPv
 
 <<terms/params/1>>
-MaxEP
+MaxEn
 
 <<terms/params/2>>
-Attack
+Ataque
 
 <<terms/params/3>>
-Defense
+Defensa
 
 <<terms/params/4>>
-Magic
+At.Especial
 
 <<terms/params/5>>
-Spirit
+Df.Especial
 
 <<terms/params/6>>
-Speed
+Velocidad
 
 <<terms/params/7>>
-Luck
+Suerte
 
 <<terms/etypes/0>>
-Weapon
+Arma
 
 <<terms/etypes/1>>
-Shield/Weapon
+Arma/Escudo
 
 <<terms/etypes/2>>
-Head
+Cabeza
 
 <<terms/etypes/3>>
-Armor
+Armadura
 
 <<terms/etypes/4>>
-Accessory
+Accesorio
 
 <<terms/commands/0>>
-Fight
+Luchar
 
 <<terms/commands/1>>
-Escape
+Escapar
 
 <<terms/commands/2>>
-Attack
+Atacar
 
 <<terms/commands/3>>
-Defend
+Defender
 
 <<terms/commands/4>>
-Items
+Objetos
 
 <<terms/commands/5>>
-Skills
+Especial
 
 <<terms/commands/6>>
-Team
+Equipo
 
 <<terms/commands/7>>
-Status
+Estado
 
 <<terms/commands/8>>
-Formation
+Formacion
 
 <<terms/commands/9>>
-Save
+Guardar
 
 <<terms/commands/10>>
-Exit
+Salir
 
 <<terms/commands/12>>
-Weapon
+Arma
 
 <<terms/commands/13>>
-Armor
+Armadura
 
 <<terms/commands/14>>
-Key Items
+Objetos Clave
 
 <<terms/commands/15>>
-Equip
+Equipado
 
 <<terms/commands/16>>
-Optimize
+Optimizar
 
 <<terms/commands/17>>
-Clear
+Quitar Todo
 
 <<terms/commands/18>>
-New Game
+Nueva Partida
 
 <<terms/commands/19>>
-Continue
+Continuar
 
 <<terms/commands/20>>
-Exit
+Salir
 
 <<terms/commands/21>>
-Go to Title
+Ir al titulo
 
 <<terms/commands/22>>
-Cancel
+Cancelar
 
 <<constants/Vocab/ShopBuy>>
 Comprar

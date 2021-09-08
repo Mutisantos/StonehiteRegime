@@ -224,74 +224,75 @@ la misma dedicación que a Kusikuy. Nuestros
 guardianes son todo lo que nos define como pueblo
 de Tatama.
 
-<<003:Flamrose /001:EV001/Page 01/001>>
+<<003:Casa de F/001:EV001/Page 01/001>>
 Flamrose....
 
-<<003:Flamrose /001:EV001/Page 01/002>>
-Flamrose...Wake Up, It's getting late...
+<<003:Casa de F/001:EV001/Page 01/002>>
+Flamrose...Despierta, ya se te hizo tarde...
 
-<<003:Flamrose /001:EV001/Page 01/003>>
-Flamrose...move your feathers once and for all,
-don't make me get angrier!
+<<003:Casa de F/001:EV001/Page 01/003>>
+Flamrose...Mueve el plumero de una vez
+por todas, no me hagas enojar!
 
-<<003:Flamrose /001:EV001/Page 01/004>>
+<<003:Casa de F/001:EV001/Page 01/004>>
 <<face: flamarosa, 2>>
-\C[2]\P[1]\C[0]: Eh... What happened?... 
-¿What's all this racket, father? 
+\C[2]\P[1]\C[0]: Eh... ¿Que Pasa?... 
+¿Que es todo ese escandalo, padre? 
 
-<<003:Flamrose /001:EV001/Page 01/005>>
-\C[2]Flancorose:\C[0] For the love of Tatama, Flamrose,
-the fact I'm the main shaman of our people won't make
-you save you from your duties, and that includes our rituals.
+<<003:Casa de F/001:EV001/Page 01/005>>
+\C[2]Flancorose:\C[0] Por el amor a Tatama, Flamrose,
+que yo sea el chaman del Reino no te salva de 
+hacer lo debido, y eso incluye nuestros rituales.
 
-<<003:Flamrose /001:EV001/Page 01/006>>
-\C[2]Flancorose:\C[0] And you already know that this 
-one is the most important of them. Today, the great flame of 
-of Tatama will choose your destined work for the future.
+<<003:Casa de F/001:EV001/Page 01/006>>
+\C[2]Flancorose:\C[0] Y sabes que este 
+es el mas importante de todos.
+La gran flama de Tatama te 
+dara tu labor destinada.
 
-<<003:Flamrose /001:EV001/Page 01/007>>
+<<003:Casa de F/001:EV001/Page 01/007>>
 <<face: flamarosa, 6>>
-\C[2]Flamrose:\C[0] I know, I know, it's just that
-I got anxious and didn't go to sleep early for that,
-so I end up waking up late... hehehe...
+\C[2]Flamrose:\C[0] Si, si lo se, solo que me 
+por los nervios no habia logrado dormir temprano,
+así que terminé por despertarme tarde, jeje...
 
-<<003:Flamrose /001:EV001/Page 01/008>>
-\C[2]Flancorose:\C[0] Well, I'll wait you outside,
-get ready and then follow me to the holy grounds.
+<<003:Casa de F/001:EV001/Page 01/008>>
+\C[2]Flancorose:\C[0] Te espero afuera, 
+termina de despertarte y vamos al templo
 
-<<003:Flamrose /001:EV001/Page 01/009>>
+<<003:Casa de F/001:EV001/Page 01/009>>
 <<face: flamarosa, 1>>
-\C[2]Flamrose:\C[0]Sure, I'm on my way!
+\C[2]Flamrose:\C[0]Claro, voy para allá
 
-<<003:Flamrose /005:EV005/Page 01/001>>
+<<003:Casa de F/005:EV005/Page 01/001>>
 <<face: flamarosa, 1>>
-\C[2]Flamrose\C[0]: (Alright, let's get, this ritual will finally
-give me my destined vocation and powers!).
+\C[2]Flamrose\C[0]: (Bien, en marcha, este ritual
+me va a dar mi vocación por fin!).
 
-<<003:Flamrose /006:EV006/Page 01/001>>
-Do you want to rest a little bit and restore your
-strength and energy?
-
-<<003:Flamrose /006:EV006/Page 01/002>>
-Si
-
-<<003:Flamrose /006:EV006/Page 01/003>>
-No
-
-<<003:Flamrose /006:EV006/Page 01/004>>
-You don't have enough money.
-
-<<003:Flamrose /008:EV008/Page 01/001>>
+<<003:Casa de F/006:EV006/Page 01/001>>
 ¿Deseas descansar un rato y reponer 
 fuerzas y energia?
 
-<<003:Flamrose /008:EV008/Page 01/002>>
+<<003:Casa de F/006:EV006/Page 01/002>>
 Si
 
-<<003:Flamrose /008:EV008/Page 01/003>>
+<<003:Casa de F/006:EV006/Page 01/003>>
 No
 
-<<003:Flamrose /008:EV008/Page 01/004>>
+<<003:Casa de F/006:EV006/Page 01/004>>
+You don't have enough money.
+
+<<003:Casa de F/008:EV008/Page 01/001>>
+¿Deseas descansar un rato y reponer 
+fuerzas y energia?
+
+<<003:Casa de F/008:EV008/Page 01/002>>
+Si
+
+<<003:Casa de F/008:EV008/Page 01/003>>
+No
+
+<<003:Casa de F/008:EV008/Page 01/004>>
 You don't have enough money.
 
 <<004:Poblado S/010:EV010/Page 01/001>>
@@ -1381,9 +1382,6 @@ Oprime Z multiples veces hasta llenar la barra
 
 <<007:BattleBac/013: /Page 01/002>>
 Multiplicador en \V[105]
-
-<<007:BattleBac/41: /Page 01/001>>
-El idioma ahora es Español
 
 <<008:Bosque de/004:EV004/Page 01/001>>
 <<background: dim>>
@@ -2617,249 +2615,249 @@ Chill my mannered friend.
 <<016:Destino 2/016: /Page 01/001>>
 
 
-<<017:Farming T/007:EV007/Page 01/001>>
+<<017:Poblado A/007:EV007/Page 01/001>>
 Cuidado con los hornos! Ya sea para cocinar o para
 orfebrería, sin cuidado vas a terminar quemandote.
 
-<<017:Farming T/008:EV008/Page 01/001>>
+<<017:Poblado A/008:EV008/Page 01/001>>
 <<position: top>>
-\C[2]Flancorose:\C[0] Everything is ready? Then follow me
+\C[2]Flancorose:\C[0] Preparada? Sigueme!
 
-<<017:Farming T/008:EV008/Page 01/002>>
-\C[2]Flancorose:\C[0] Alright Flamrose, remember
-how our security system works: Push those stones 
-to the switches to lift the doors, so we can go to the
-main terrace.
+<<017:Poblado A/008:EV008/Page 01/002>>
+\C[2]Flancorose:\C[0] Bien Flamrose, recuerda 
+nuestro sistema de seguridad. Empuja esas piedras
+a los interruptores para levantar las puertas.
 
-<<017:Farming T/005:EV005/Page 01/001>>
-If you want to run as fast as us, a little of \C[25]Shift\C[0] 
-while moving does not fall badly.
+<<017:Poblado A/005:EV005/Page 01/001>>
+Si quieres correr tan rapido como nosotros, un poco
+de \C[25]Shift\C[0] al moverte no cae nada mal.
 
-<<017:Farming T/006:EV006/Page 01/001>>
-My last card up to my sleeve will always be USING
-MY LEGS!
+<<017:Poblado A/006:EV006/Page 01/001>>
+Mi plan de respaldo siempre será USAR LAS PIERNAS!
 
-<<017:Farming T/010:EV010/Page 01/001>>
-Hi Flamrose, I'm checking inventory.
-Oh right, pressing \C[25]X Key\C[0] is a good way for it.
+<<017:Poblado A/010:EV010/Page 01/001>>
+Hola Flamrose, estoy revisando el inventario. 
+Ah claro, oprimiendo la \C[25]X\C[0] es una manera de hacerlo
 
-<<017:Farming T/012:EV012/Page 01/001>>
+<<017:Poblado A/012:EV012/Page 01/001>>
 Flamrose, sabes sobre la llamas místicas de Tatama?
 
-<<017:Farming T/012:EV012/Page 01/002>>
+<<017:Poblado A/012:EV012/Page 01/002>>
 Si
 
-<<017:Farming T/012:EV012/Page 01/003>>
+<<017:Poblado A/012:EV012/Page 01/003>>
 No
 
-<<017:Farming T/012:EV012/Page 01/004>>
+<<017:Poblado A/012:EV012/Page 01/004>>
 No esperaba menos de la hija de nuestro lider
 espiritual. Cuando tengas incertidumbre al futuro,
 siempre puedes recurrir a estas flamas.
 
-<<017:Farming T/012:EV012/Page 01/005>>
+<<017:Poblado A/012:EV012/Page 01/005>>
 El fuego siempre nos protege y en el depositamos
 nuestros saberes. Cada vez que veas una flama 
 de estos colores, podrás guardar tus experiencias
 de tu aventura aquí. 
 
-<<017:Farming T/012:EV012/Page 01/006>>
+<<017:Poblado A/012:EV012/Page 01/006>>
 Una vez que deposites tus vivencias, la flama
 te recordará el lugar donde estas para proseguir
 tu aventura.
 
-<<017:Farming T/012:EV012/Page 01/007>>
+<<017:Poblado A/012:EV012/Page 01/007>>
 La red de conocimientos de Tatama siempre 
 servirá para guardar y cargar tu aventura.
 
-<<017:Farming T/013:EV013/Page 01/001>>
+<<017:Poblado A/013:EV013/Page 01/001>>
 Estas flamas no son tan místicas como las de
 al lado, pero si que nos llenan de luz y calor.
 
-<<017:Farming T/022:EV022/Page 01/001>>
+<<017:Poblado A/022:EV022/Page 01/001>>
 <<position: top>>
-\C[2]Flancorose:\C[0] Well, my child, go on
+\C[2]Flancorose:\C[0] Bien Hija, prosigue
 
-<<017:Farming T/022:EV022/Page 02/001>>
+<<017:Poblado A/022:EV022/Page 02/001>>
 <<position: top>>
-\C[2]Flancorose:\C[0] Excelent, follow me then to
-our holy grounds
+\C[2]Flancorose:\C[0] Excelente, sigueme entonces
+al terreno de rituales.
 
-<<017:Farming T/027:EV027/Page 01/001>>
-These fruits are good... \.
-these are green\. We have to be careful!
-
-<<017:Farming T/027:EV027/Page 02/001>>
-No importa lo que pase, Kusikuy y la Emperatriz
-nos protegerán y encontraran solución. Nosotros
-seguiremos trabajando duro.
-
-<<017:Farming T/027:EV027/Page 03/001>>
-No importa lo que pase, Kusikuy y la Emperatriz
-nos protegerán y encontraran solución. Nosotros
-seguiremos trabajando duro.
-
-<<017:Farming T/027:EV027/Page 04/001>>
-No importa lo que pase, Kusikuy y la Emperatriz
-nos protegerán y encontraran solución. Nosotros
-seguiremos trabajando duro.
-
-<<017:Farming T/028:EV028/Page 01/001>>
+<<017:Poblado A/027:EV027/Page 01/001>>
 Estos frutos no estan maduros... \.
 estos otros si\. hay que recolectar con cuidado!
 
-<<017:Farming T/028:EV028/Page 02/001>>
+<<017:Poblado A/027:EV027/Page 02/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Farming T/028:EV028/Page 03/001>>
+<<017:Poblado A/027:EV027/Page 03/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Farming T/028:EV028/Page 04/001>>
+<<017:Poblado A/027:EV027/Page 04/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Farming T/029:EV029/Page 01/001>>
-Today we are teaching the kids how to distinguish
-between ripe and green fruits and vegetables. Also
-to learn how to pick the best ones for cooking.
+<<017:Poblado A/028:EV028/Page 01/001>>
+Estos frutos no estan maduros... \.
+estos otros si\. hay que recolectar con cuidado!
 
-<<017:Farming T/030:EV030/Page 01/001>>
+<<017:Poblado A/028:EV028/Page 02/001>>
+No importa lo que pase, Kusikuy y la Emperatriz
+nos protegerán y encontraran solución. Nosotros
+seguiremos trabajando duro.
+
+<<017:Poblado A/028:EV028/Page 03/001>>
+No importa lo que pase, Kusikuy y la Emperatriz
+nos protegerán y encontraran solución. Nosotros
+seguiremos trabajando duro.
+
+<<017:Poblado A/028:EV028/Page 04/001>>
+No importa lo que pase, Kusikuy y la Emperatriz
+nos protegerán y encontraran solución. Nosotros
+seguiremos trabajando duro.
+
+<<017:Poblado A/029:EV029/Page 01/001>>
+Hoy vamos a ver como los niños aprenden a 
+diferenciar que frutas y verduras estan maduras
+y listas para comer y cuales no.
+
+<<017:Poblado A/030:EV030/Page 01/001>>
 Bueno, estas patatas parecen estar listas para
 arrancar.
 
-<<017:Farming T/030:EV030/Page 02/001>>
+<<017:Poblado A/030:EV030/Page 02/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/030:EV030/Page 03/001>>
+<<017:Poblado A/030:EV030/Page 03/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/030:EV030/Page 04/001>>
+<<017:Poblado A/030:EV030/Page 04/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/031:EV031/Page 01/001>>
+<<017:Poblado A/031:EV031/Page 01/001>>
 Bueno, estas patatas parecen estar listas para
 arrancar.
 
-<<017:Farming T/031:EV031/Page 02/001>>
+<<017:Poblado A/031:EV031/Page 02/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/031:EV031/Page 03/001>>
+<<017:Poblado A/031:EV031/Page 03/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/031:EV031/Page 04/001>>
+<<017:Poblado A/031:EV031/Page 04/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/032:EV032/Page 01/001>>
+<<017:Poblado A/032:EV032/Page 01/001>>
 Bueno, estas patatas parecen estar listas para
 arrancar.
 
-<<017:Farming T/032:EV032/Page 02/001>>
+<<017:Poblado A/032:EV032/Page 02/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/032:EV032/Page 03/001>>
+<<017:Poblado A/032:EV032/Page 03/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/032:EV032/Page 04/001>>
+<<017:Poblado A/032:EV032/Page 04/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/033:EV033/Page 01/001>>
+<<017:Poblado A/033:EV033/Page 01/001>>
 Bueno, estas patatas parecen estar listas para
 arrancar.
 
-<<017:Farming T/033:EV033/Page 02/001>>
+<<017:Poblado A/033:EV033/Page 02/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/033:EV033/Page 03/001>>
+<<017:Poblado A/033:EV033/Page 03/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/033:EV033/Page 04/001>>
+<<017:Poblado A/033:EV033/Page 04/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Farming T/034:EV034/Page 01/001>>
+<<017:Poblado A/034:EV034/Page 01/001>>
 No, definitivamente estos hongos me matarian
 si me los como!
 
-<<017:Farming T/034:EV034/Page 02/001>>
+<<017:Poblado A/034:EV034/Page 02/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Farming T/034:EV034/Page 03/001>>
+<<017:Poblado A/034:EV034/Page 03/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Farming T/034:EV034/Page 04/001>>
+<<017:Poblado A/034:EV034/Page 04/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Farming T/035:EV035/Page 01/001>>
+<<017:Poblado A/035:EV035/Page 01/001>>
 Estos frutos no estan maduros... \.
 estos otros si\. hay que recolectar con cuidado!
 
-<<017:Farming T/035:EV035/Page 02/001>>
+<<017:Poblado A/035:EV035/Page 02/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Farming T/035:EV035/Page 03/001>>
+<<017:Poblado A/035:EV035/Page 03/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Farming T/035:EV035/Page 04/001>>
+<<017:Poblado A/035:EV035/Page 04/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Farming T/037:EV037/Page 01/001>>
+<<017:Poblado A/037:EV037/Page 01/001>>
 Es asombrosa como de limpia queda el agua por
 los canales y filtros de nuestros muros. Hasta
 puedes ver tu reflejo y todo aquí.
 
-<<017:Farming T/038:Interrupt/Page 01/001>>
-These switches sure are peculiar. How can they
-make stuff happen when you only step on them?
+<<017:Poblado A/038:Interrupt/Page 01/001>>
+Estos interruptores son bastante curiosos.
+¿Como harán para que activen cosas con solo
+pisarlos?
 
 <<018:Zorthos/001:EV001/Page 01/001>>
 <<background: dim>>
 <<position: top>>
-The Universe...\. with its arduous and infinite corridors, full of
-possibilities to amaze anyone. Gigantic the mysteries 
-that it hides. Numerous the stories that it keeps.
+El universo...\. con sus arduos e infintos corredores,
+lleno de posibilidades para asombrar a cualquiera.
+Gigantescos los misterios que esconde.
+Numerosas las historias que guarda.
 
 <<018:Zorthos/001:EV001/Page 01/002>>
 <<background: dim>>
 <<position: top>>
-In one of the many corners of the creation ... \. 
-An idle planet,  \c[9]Zorthos\c[0], is the cradle of innumerable 
-stories, full of heroism, intrigue, suspense and passion.
+En uno de los tantos confines de la creación...\.
+Un ocioso planeta, \c[9] Zorthos \c[0], es la cuna
+de innumerables relatos, llenos de heroismo,
+intriga, suspenso y pasión.
 
 <<018:Zorthos/001:EV001/Page 01/003>>
 <<background: dim>>
 <<position: top>>
-Such a tiny point in the universe has so much
- to tell us, 
-like this, the story of
- \c[9] The Stonehite Regime \c[0].\!
+Un punto tan diminuto en el universo tiene tanto
+para contarnos, como esta, la historia de
+\c[9]El Régimen de Stonehite\c[0].\!
 
 <<019:Bosque de/005:EV005/Page 01/001>>
 <<face: FMuti1, 6>>
@@ -3490,9 +3488,9 @@ a romperla para poder sacar lo de dentro.
 
 
 <<033:Poblado G/005: /Page 01/001>>
-Personalmente, me quedaré aquí viendo este
-hueco por si vuelven a salir más de esas 
-cosas. Así me tenga que desvelar para ello.
+En lo personal, yo me quedaré viendo si esos
+metalizados garcas vuelven a venir por aquí.
+Ahre que si. 
 
 <<033:Poblado G/014:Jaguar Un/Page 01/001>>
 Que... me ha... pasado..... aarrrrghhhhh
@@ -3508,8 +3506,8 @@ Que... me ha... pasado..... aarrrrghhhhh
 
 <<033:Poblado G/010:EV010/Page 01/001>>
 <<position: top>>
-\C[17]Martina:\C[0] Eh, no me ha pasado nada, pero
-esto ha sido terrorífico!
+\C[17]Martina:\C[0] Eh, pues no me ha pasado nada,
+pero mirá lo terrorífico que es!
 
 <<033:Poblado G/010:EV010/Page 01/002>>
 <<face: FHutch, 4>>
@@ -3520,15 +3518,15 @@ como con el que peleé en Frocteres!
 
 <<033:Poblado G/010:EV010/Page 01/003>>
 <<position: top>>
-\C[17]Martina:\C[0]Señor mapache, menos 
-mal que ha llegado, ¡estas maquinas empezaron
-a salir del suelo!
+\C[17]Martina:\C[0]Jefe mapache, menos mal llegó,
+llegaron estos ortivas a armar un quilombo bárbaro.
 
 <<033:Poblado G/010:EV010/Page 01/004>>
 <<position: top>>
-\C[17]Martina:\C[0] Aunque habian llegado
-otros extranjeros hace un par de días aquí
-y nos han ayudado, pero son demasiados!
+\C[17]Martina:\C[0] Y eso que hace unos días
+unos tipos del extranjero vinieron aquí y son 
+grosos repartiendo piñas. Pero aun así es una
+bocha de enemigos. 
 
 <<033:Poblado G/010:EV010/Page 01/005>>
 <<face: FHutch, 2>>
@@ -3602,15 +3600,15 @@ los militares? A diferencia de ustedes, yo si he
 sido aceptado por el guardían de Guacarí.
 
 <<033:Poblado G/010:EV010/Page 01/015>>
-\C[17]Martina:\C[0]Si, el señor mapache es un
+\C[17]Martina:\C[0]Si, el jefe mapache es un
 invitado grato aquí. Incluso nuestro guardian 
-le ha concedido su favor para que pueda usar 
-su magia y todo!
+se lo banca y le da de sus dones y sus enseñanzas.
 
 <<033:Poblado G/010:EV010/Page 01/016>>
-\C[17]Martina:\C[0]E igual Kovurumbe nos 
-dejó aceptar que se quedaran luego que los
-encontraramos deambulando en las dunas.
+\C[17]Martina:\C[0]E igual Kovurumbe dejó
+que se quedaran aquí al saber que los hallamos
+deambulando por el desierto. Re-copado el
+cactus guardian.
 
 <<033:Poblado G/010:EV010/Page 01/017>>
 <<face: FHutch, 3>>
@@ -3620,26 +3618,28 @@ el, si no es mucha molestia!
 
 <<033:Poblado G/010:EV010/Page 01/018>>
 <<position: top>>
-\C[17]Martina:\C[0]Señor mapache, espere!
-Tenemos que seguir el protocolo, más ahora
-que hemos estado bajo ataque.
+\C[17]Martina:\C[0] Jefe mapache, esperá!
+Tenés que seguir el protocolo por más 
+aprobación que tengás, el guardian se nos
+puede enojar!
 
 <<033:Poblado G/007:Panico 2/Page 01/001>>
 Esto es terrible, esas cosas salieron de la tierra
 y empezaron a atacar sin piedad!
 
 <<033:Poblado G/024: /Page 01/001>>
-Esto es terrible, esas cosas salieron de la tierra
-y empezaron a atacar sin piedad!
+Pero re-zarpados estos tipos, loco. Salieron sin
+más a venir a cargarnos y a volarnos con sus 
+rashos láser.
 
 <<033:Poblado G/024: /Page 02/001>>
-Ha sido todo tan sorpresivo, por fortuna que 
-contamos con quienes nos defiendan para 
-no terminar transformados todos
+Pero re-zarpados estos tipos, loco. Salieron sin
+más a venir a cargarnos y a volarnos con sus 
+rashos láser.
 
 <<033:Poblado G/025: /Page 01/001>>
-Ughharrrg... es dificil... mantener mis pensamientos
-en esta forma...
+Andate... porque me los puedo terminar morfando...
+mantener mis pensamientos es... dificil...
 
 <<033:Poblado G/025: /Page 02/001>>
 Ughharrrg... es dificil... mantener mis pensamientos
@@ -3653,7 +3653,7 @@ Esto es terrible, esas cosas salieron de la tierra
 y empezaron a atacar sin piedad!
 
 <<033:Poblado G/032: /Page 02/001>>
-\.No \.puedo \.hablar. \.Necesito \.mucha
+\.No \.puedo \.hablar. \.Necesito \.alta
 \.concentración \.para \.pescar.
 
 <<035:Desierto /004:A/Page 03/001>>
@@ -3699,8 +3699,8 @@ aquí todo el dia!
 <<036:Poblado G/001: /Page 01/001>>
 Siempre nos tomará por sorpresa que vengan
 extraños a nuestros territorios. Desde la llegada
-de los pioneros y colonos a esta region ya hace
-unas decadas, se ha tornado algo complejo el tema.
+de los pioneros region ya hace unas decadas 
+el tema es tremendo quilombo
 
 <<036:Poblado G/004: /Page 01/001>>
 Confiaremos siempre en el gran criterio de nuestro
@@ -3709,13 +3709,13 @@ sea designado como lider de la aldea. Gracias a
 ello hemos logrado mantenernos en el tiempo
 
 <<036:Poblado G/005: /Page 01/001>>
-Si quieres descansar, este es el lugar.
+Si querés descansar, este es el lugar.
 
 <<036:Poblado G/007: /Page 01/001>>
 No se, a veces cuestiono un poco el alcance de
 las decisiones de Kovurumbe o Tambuku. Digo,
 darle su magia a gente de afuera antes que a
-nosotros no se me hace muy sabio.
+nosotros se me hace un garrón.
 
 <<036:Poblado G/007: /Page 01/002>>
 Aunque no me puedo quejar tampoco, eso tambien
@@ -3740,19 +3740,19 @@ Por fortuna, el joven Takinohara tiene un potencial
 increible que fue reconocido por nuestro pueblo.
 
 <<036:Poblado G/009:Kovurumbe/Page 01/001>>
-\C[11]Kovurumbe:\C[0] Joven Mapache, espero
-que sigas tu entrenamiento mágico. Se que 
+\C[11]Kovurumbe:\C[0] Pibe Mapache, espero
+que sigás tu entrenamiento mágico. Se que 
 hay habilidades que todavía consumen toda 
-tu energía, pero no te rindas.
+tu energía, pero no te rindás.
 
 <<036:Poblado G/009:Kovurumbe/Page 01/002>>
 \C[11]Kovurumbe:\C[0] Jovenes de las tierras
-lejanas, si hablan con el joven mapache, diganle
-que le mando saludos.
+lejanas, si hablan con el pibito mapache, denle
+mis saludos de mi parte. 
 
 <<036:Poblado G/009:Kovurumbe/Page 02/001>>
-\C[11]Kovurumbe:\C[0] Apresúrate para ir a 
-Frocteres. Pero eso si, tengan cuidado con el
+\C[11]Kovurumbe:\C[0] Apresurate para ir a 
+Frocteres. Pero eso si, tené cuidado con el
 transito por el desierto, incluso si yo deambulara
 por el, muy seguramente me extraviaría.
 
@@ -3760,13 +3760,13 @@ por el, muy seguramente me extraviaría.
 La magia de tierra es muy diversa. Tanto así que 
 puedes usar la energia mágica de tu cuerpo para
 dar vida a las plantas, como la furia alimentada
-de tu adrenalina para sacudir el suelo.
+de tu adrenalina para sacudir el piso.
 
 <<036:Poblado G/015: /Page 01/001>>
 La filosofía de Guacarí se mantiene en una constante
 relación entre la quietud y el movimiento. Entre
 el silencio y el ruido, entre la danza y la meditación,
-entre los rios y el desierto.
+entre rios y desierto. 
 
 <<036:Poblado G/016: /Page 01/001>>
 Seguirle el ritmo a la magia que nos enseña
@@ -3781,13 +3781,13 @@ dignos de sus dotes.
 
 <<036:Poblado G/012:EV012/Page 01/002>>
 <<position: top>>
-\C[17]Martina:\C[0] Señor Mapache, Señores
+\C[17]Martina:\C[0] Jefe Mapache, Señores
 extranjeros, esperen, no hemos pedido permiso
 todavía para una audiencia con el lider Tambuku
 ni con el gran Kovurumbe!
 
 <<036:Poblado G/012:EV012/Page 02/001>>
-\C[16]Tambuku:\C[0] Joven Takinohara, te 
+\C[16]Tambuku:\C[0] Pibe Takinohara, te 
 estabamos esperando. Supusimos que en
 el momento que llegaras aquí terminarías 
 pasando de todos los protocolos.
@@ -3801,7 +3801,7 @@ Y dos, ¿Cómo se les ocurre acoger a estos
 inmundos de los militares aquí?
 
 <<036:Poblado G/012:EV012/Page 02/003>>
-\C[11]Kovurumbe:\C[0] Joven mapache, tranquilo,
+\C[11]Kovurumbe:\C[0]Joven mapache, tranquilizate
 que estén en este lugar es porque yo lo he permitido.
 Supuse que sería conveniente hablar con todos aquí
 reunidos de una vez.
@@ -3931,7 +3931,7 @@ esa gente ingrata ni nada
 Kovurumbe puede sentir la energía de los seres 
 vivos y saber cuando se aproximan. Sin embargo,
 cosas como las que nos atacaron pueden pasar
-inadvertidas incluso para su poder.
+de queruza incluso con su poder.
 
 <<036:Poblado G/017: /Page 01/001>>
 Nos mantendremos siempre vigías para evitar
@@ -3941,14 +3941,14 @@ sin ellos perdemos su poder y sabiduría.
 
 <<036:Poblado G/019:Martina/Page 01/001>>
 <<position: top>>
-\C[17]Martina:\C[0] Señor Mapache, tenemos
+\C[17]Martina:\C[0] Jefe Mapache, tenemos
 una variedad de productos que no encontrarás
-en otro lugar!
+en otro lugar! Mirá!
 
 <<036:Poblado G/019:Martina/Page 01/002>>
 <<position: top>>
 \C[17]Martina:\C[0] Hola hola, les ayudaré 
-en su aventura con esos productos buenisimos
+en su aventura con esos productos buenardos
 
 <<037:Desierto /001:EV001/Page 01/001>>
 Haz encontrado Restaurador Total(1).
@@ -4030,7 +4030,7 @@ camino correcto!
 
 <<043:Descansad/001:EV001/Page 01/001>>
 Hola, tenemos esta choza provisional para que 
-puedas reposar. Por unas 10 \G puedes quedarte.
+podás reposar. Por unas 10 \G podés quedarte.
 ¿Te interesa?\$
 
 <<043:Descansad/001:EV001/Page 01/002>>
@@ -4607,69 +4607,66 @@ esta cosa va a provocar un derrume si nos
 quedamos aquí!
 
 <<Common Events/004:Tutorial /Page 01/001>>
-\C[4]Tzimitl:\C[0] STOP RIGHT THERE!
+\C[4]Tzimitl:\C[0] ALTO JUSTO AHÍ 
 
 <<Common Events/004:Tutorial /Page 01/002>>
 <<face: flamarosa, 2>>
-\C[2]Flamrose:\C[0] B-but I was just going to 
-attack it!
+\C[2]Flamrose:\C[0] P-pero si ya estaba a punto de 
+golpearlo!
 
 <<Common Events/004:Tutorial /Page 01/003>>
-\C[4]Tzimitl:\C[0] That's the thing, just in that moment
-you can make a follow-up attack. Press the Z key just
-before the impact, when you see a slight blink. This 
-techinique will give you a huge advantage.
+\C[4]Tzimitl:\C[0] Pues a eso voy, justo en este 
+momento vas a atacar nuevamente. Presiona "Z"
+justo en el momento que veas un pequeño 
+"destello", esto te dará una ventaja importante!
 
 <<Common Events/008:Tutorial /Page 01/001>>
-\C[4]Tzimitl:\C[0] NOW STOP RIGHT THERE, MONSTER
+\C[4]Tzimitl:\C[0] AHORA ALTO AHI MONSTRUO!
 
 <<Common Events/008:Tutorial /Page 01/002>>
 <<face: flamarosa, 6>>
-\C[2]Flamrose:\C[0] Whoa, it actually stopped...
+\C[2]Flamrose:\C[0] Vaya, si se detuvo...
 
 <<Common Events/008:Tutorial /Page 01/003>>
-\C[4]Tzimitl:\C[0] You also have a chance to block
-the attacks of the enemies right before the send the
-blow. Press the Z Key when the enemy blinks, and
-yo can reduce the damage they can do to you.
+\C[4]Tzimitl:\C[0] Tambien tienes oportunidad de
+tomar ventaja cuando los enemigos "destellen", 
+Presiona "Z" en ese momento y podrás reducir el
+daño que te hagan. Intentalo!
 
 <<Common Events/010:Timed Cha/Page 01/001>>
 <<background: dim>>
-Press Z repeatedly until the bar is filled.
+Oprime Z multiples veces hasta llenar la barra
 
 <<Common Events/011:Timed Cha/Page 01/001>>
 <<background: dim>>
-Keep the Z key pressed until all the lights are
-in blue.
+Manten presionada la tecla Z hasta que todos
+los indicadores sean azules.
 
 <<Common Events/012:Timed Cha/Page 01/001>>
 <<background: dim>>
-Oprime las teclas X y Z de de manera alternada
-hasta que la barra se llene
+Oprime Z y X intercaladamente hasta llenar la barra.
 
 <<Common Events/013:Timed Cha/Page 01/001>>
 <<background: dim>>
-Rotate with the directional keys clockwise until 
-the bar is filled.
+Gira con las teclas direccionales con las manecillas
+del reloj.
 
 <<Common Events/014:Multi Att/Page 01/001>>
 <<background: dim>>
-Press the Z key multiple times
+Oprime Z multiples veces.
 
 <<Common Events/015:Timed Sta/Page 01/001>>
 <<background: dim>>
-Keep the A key pressed until all the lights are
-in blue.
+Manten presionada la tecla A hasta que todos
+los indicadores sean azules.
 
 <<Common Events/016:Timed Izq/Page 01/001>>
 <<background: dim>>
-Press the keyes ← and → alternately until the bar
-is filled
+Oprime ← y → intercaladamente hasta llenar la barra.
 
 <<Common Events/018:Timed Cha/Page 01/001>>
 <<background: dim>>
-Press the Up key multiple times until the bar 
-is filled
+Oprime Arriba multiples veces hasta llenar la barra
 
 <<Common Events/019:Colored T/Page 01/001>>
 \C[1]Azul
@@ -4721,23 +4718,22 @@ is filled
 
 <<Common Events/020:Timed Cha/Page 01/001>>
 <<background: dim>>
-Press the correct button the moment that is
-revealed.
+Oprime la el botón en el momento en el que 
+se revele
 
 <<Common Events/023:Timed Cha/Page 01/001>>
 <<background: dim>>
-Rotate with the directional keys counter-clockwise
-until the bar is filled.
+Gira con las teclas direccionales en contra
+de las manecillas del reloj.
 
 <<Common Events/024:Timed Sta/Page 01/001>>
 <<background: dim>>
-Keep the → key pressed until all the lights are
-in blue.
+Manten presionada la tecla → hasta que todos
+los indicadores sean azules.
 
 <<Common Events/025:Timed Cha/Page 01/001>>
 <<background: dim>>
-Press the A and S keys alternately until the bar is
-filled
+Oprime A y S intercaladamente hasta llenar la barra.
 
 <<Battle Events/001:Tutorial/Page 01/001>>
 \C[1]Tzimitl:\C[0] Cada que te encuentres con un 
