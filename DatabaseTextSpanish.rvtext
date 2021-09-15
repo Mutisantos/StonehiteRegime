@@ -1061,7 +1061,7 @@ Genera daños electricos y luminosos
 a todos los enemigos
 
 <<skills/75/name>>
-Destello
+Flash
 
 <<skills/76/description>>
 Una carrera de bicicletas entrante que atropella
@@ -1082,7 +1082,7 @@ Concentra todos los reflectores en un solo punto,
 haciendo un daño critico al enemigo 
 
 <<skills/78/name>>
-Unica Vision
+One Vision
 
 <<skills/79/description>>
 Aumenta el ataque fisico, magico y
@@ -1107,7 +1107,7 @@ Salvame
 
 <<skills/82/description>>
 Un canto tan concentrado que distorsiona 
-el espacio para traer un dragon al atauqe
+el espacio para traer un dragon al ataque
 
 <<skills/82/name>>
 Ataque Dragon
@@ -1116,7 +1116,7 @@ Ataque Dragon
 ---Koortesh
 
 <<skills/84/name>>
-Cruz Inclinada
+Onda Sacra
 
 <<skills/85/name>>
 Giro Flameante
@@ -1134,7 +1134,7 @@ Cuarto Creciente
 Temple de Hidalgo
 
 <<skills/90/name>>
-Eclipse Lunar
+Sol Profano
 
 <<skills/91/name>>
 Erupcion Caotica

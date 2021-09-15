@@ -2,7 +2,7 @@
 <<002:Terreno d/002:Pajaro2/Page 01/001>>
 El fuego de la llama de la creación vivirá
 mientras, Inti, el sol en nuestros cielos 
-siga brillando en el cielo.
+siga brillando sobre nosotros.
 
 <<002:Terreno d/003:Pajaro4/Page 01/001>>
 La danza de llamas mantendrá siempre viva 
@@ -130,20 +130,20 @@ eso no es lo importante aqui.
 
 <<002:Terreno d/007:Flancoros/Page 02/019>>
 <<position: top>>
-\C[1]Tzimitl:\C[0] Flamrose, si vas a 
-demostrar que vales para este pueblo,
-tendras que mostrarmelo.
+\C[1]Tzimitl:\C[0] Flamrose, tienes que demostrarme
+tu valor para nuestro pueblo y dioses. Así, que para
+que lo hagas...
 
 <<002:Terreno d/007:Flancoros/Page 02/020>>
 <<position: top>>
-\C[1]Tzimitl:\C[0] Tienes que ir al fondo del
+\C[1]Tzimitl:\C[0] Tendrás que ir al fondo del
 bosque de niebla, y traer el fruto escorpion.
 Si lo traes, tendras tu audiencia con el gran
 Kusikuy.
 
 <<002:Terreno d/007:Flancoros/Page 02/021>>
 <<position: top>>
-\C[2]Flancorose:\C[0] Pero el bosque de 
+\C[2]Flancorose:\C[0] ¡Pero el bosque de 
 niebla es peligroso para alguien sin 
 entrenarse!
 
@@ -152,7 +152,7 @@ entrenarse!
 <<position: top>>
 \C[2]Flamrose:\C[0]No me importa, iré a 
 luchar contra quien sea necesario para 
-descubrirme a mi misma!
+demostrar de qué soy capaz.
 
 <<002:Terreno d/007:Flancoros/Page 02/023>>
 <<position: top>>
@@ -181,8 +181,8 @@ precedentes... por favor ten mucho cuidado, Flamrose
 <<002:Terreno d/012:TZIMITL/Page 02/001>>
 <<position: top>>
 \C[1]Tzimitl:\C[0] Antes que nada, necesitas
-un arma para defenderte, te dare un par
-de estas.
+un arma para defenderte, y algo de alimento
+para el trayecto.
 
 <<002:Terreno d/012:TZIMITL/Page 02/002>>
 <<background: dim>>
@@ -195,7 +195,7 @@ Has obtenido una Cuchilla Lateral
 <<002:Terreno d/012:TZIMITL/Page 02/004>>
 <<position: top>>
 \C[1]Tzimitl:\C[0]Familiarizate con el 
-menu antes de nada.
+menú antes de nada.
 
 <<002:Terreno d/012:TZIMITL/Page 02/005>>
 \C[1]Tzimitl:\C[0]Los objetos son todos los
@@ -397,7 +397,8 @@ combatelo de nuevo!
 <<004:Poblado S/020:EV020/Page 01/001>>
 Estamos haciendo una ronda en el bosque
 de niebla. Debes de saber que hay trampas
-allí para evitar que los extrajeros vengan.
+allí para evitar que los enemigos entren a 
+nuestros dominios.
 
 <<004:Poblado S/008:Guardia R/Page 01/001>>
 El acceso al templo esta restringido,
@@ -470,10 +471,10 @@ como asi.
 <<004:Poblado S/026:TZIMITLRa/Page 01/009>>
 <<face: FPengralle, 5>>
 <<position: top>>
-\C[23]Pengralle:\C[0] Necesitamos ir al 
-bosque de niebla rapido. Mi amigo puede 
-que este en apuros, el ejercito enemigo
-viene aqui.
+\C[23]Pengralle:\C[0] Y necesito volver al
+bosque de niebla rapido. El otro operativo 
+puede que este en apuros, las fuerzas hostiles
+vienen para aqui.
 
 <<004:Poblado S/026:TZIMITLRa/Page 01/010>>
 <<position: top>>
@@ -494,13 +495,14 @@ que no conociamos antes.
 \C[2]Flamrose:\C[0]Antes que nada, tienes 
 que dejarme hablar con Kusikuy, quizas 
 hablando con el pueda descubrir el misterio
-de la llama roja.
+de la flama ritual roja y sobre esta amenaza.
 
 <<004:Poblado S/026:TZIMITLRa/Page 01/013>>
 <<position: top>>
 \C[1]Tzimitl:\C[0]Bien, te has ganado el derecho
-de hablar con la emperatriz y tambien el derecho
-para que la extranjera entre. 
+de hablar con la emperatriz y también el derecho
+para que la extranjera entre. Vayan entonces al 
+templo del sol.
 
 <<004:Poblado S/027:EV027/Page 01/001>>
 El acceso al templo esta restringido,
@@ -535,7 +537,7 @@ vivos hasta la prehistoria!
 
 <<004:Poblado S/032: /Page 01/005>>
 <<face: flamarosa, 3>>
-\C[2]Flamrose\C[0]:Así no tengamos todos los datos
+\C[2]Flamrose\C[0]:Así no sepamos todo de ellas,
 si sabemos que tenemos que detenerlas a como de
 lugar.
 
@@ -544,7 +546,7 @@ lugar.
 <<position: top>>
 \C[23]Pengralle:\C[0] ... Parece que estamos 
 en desventaja numérica... no creo que podamos
-solas detener a estas máquinas
+solas detener a estas máquinas.
 
 <<004:Poblado S/032: /Page 01/007>>
 <<background: dim>>
@@ -613,8 +615,9 @@ pero no les creas, son unos difamadores!
 <<face: FPengralle, 0>>
 <<position: top>>
 \C[23]Pengralle:\C[0] El era quien estaba buscando, 
-el ha estado investigando el origen de estas
- máquinas y a donde se están moviendo. 
+el ha estado investigando la actividad de estas 
+máquinas, su origen y sus movimientos alrededor del
+planeta.
 
 <<004:Poblado S/032: /Page 02/006>>
 <<face: flamarosa, 0>>
@@ -994,7 +997,7 @@ hay quienes les ponen inscripciones dentro.
 <<position: top>>
 \C[1]Tzimitl:\C[0]Muevete, tienes que 
 buscar a Kusikuy, estará arriba, en 
-el templo habitual.
+el templo solar.
 
 <<004:Poblado S/034:EV034/Page 01/001>>
 \{EY!\}Si quieres comprar algo, tienes que pagarlo
@@ -1044,8 +1047,8 @@ guerrero.
 
 <<005:Poblado C/012:EV012/Page 01/001>>
 Si, cuando crezca podré ir al terreno de rituales
-para que digan que voy a ser la nueva chamán,
-aqui no más a la izquierda.
+para que digan que voy a ser la nueva chamán. 
+Aquí a la izquierda encontrarás ese lugar.
 
 <<005:Poblado C/013:EV013/Page 01/001>>
 Hay que tener experiencia en combate para

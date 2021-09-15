@@ -1169,15 +1169,15 @@ from all alies with his voice.
 Under Pressure
 
 <<skills/81/description>>
-La declamación hecha canto revive a un 
-aliado caído en combate
+A declamation made song tgat revives a
+ally fallen in combat
 
 <<skills/81/name>>
-Salvame
+Save Me
 
 <<skills/82/description>>
-Un canto tan concentrado que distorsiona 
-el espacio para traer un dragon al atauqe
+A song so concentrated that it distorts
+the space to bring a dragon to attack 
 
 <<skills/82/name>>
 Ataque Dragon
@@ -1186,41 +1186,41 @@ Ataque Dragon
 ---Koortesh
 
 <<skills/84/name>>
-Cruz Inclinada
+Sacred Wave
 
 <<skills/85/name>>
-Giro Flameante
+Blazing Spin
 
 <<skills/86/name>>
-Grieta Volcanica
+Volcanic Rift
 
 <<skills/87/name>>
-Navaja Ceniza
+Ashen Blade
 
 <<skills/88/name>>
-Cuarto Creciente
+Cresent Slice
 
 <<skills/89/name>>
-Temple de Hidalgo
+Knight Temperance
 
 <<skills/90/name>>
-Eclipse Lunar
+Forbidden Sun
 
 <<skills/91/name>>
-Erupcion Caotica
+Chaotic Eruption
 
 <<skills/92/name>>
 ----Raylon
 
 <<skills/93/description>>
-El conocimiento de los grandes espiritus
-te permite ver todo sobre el enemigo
+Using the Tatama's spiderweb of knowledge,
+reads all details of an enemy.
 
 <<skills/93/name>>
-Rastreo Ancestral
+Ancient Trace
 
 <<skills/93/message1>>
- usa el rastreo ancestral
+ uses Ancient Trace
 
 <<skills/93/note>>
 <scan info : all>
@@ -1463,7 +1463,7 @@ with the level.
 Side Slash
 
 <<skills/139/message1>>
- uses Side Slice!
+ uses Side Slash!
 
 <<skills/140/description>>
 Golpea usando un guante con resorte. 
@@ -1484,7 +1484,7 @@ with the level.
 Ski Lance
 
 <<skills/141/message1>>
- ha usado su Ski como Lanza!
+ uses her ski sticks as a lance.
 
 <<skills/141/note>>
 Golpea usando un guante con resorte. 
@@ -1498,7 +1498,7 @@ Kusikuy's webs of knowledge.
 Ancient Trace
 
 <<skills/142/message1>>
- lee al enemigo.
+ reads the enemy.
 
 <<skills/142/note>>
 <scan info: all>
@@ -1528,7 +1528,7 @@ Insect Bite
 Reinforcements
 
 <<skills/174/message1>>
- calls Reinforcements!
+ calls for Reinforcements!
 
 <<skills/175/name>>
 Healing Spore
@@ -1786,7 +1786,7 @@ Bullfight Protocol
 Quick Shot
 
 <<skills/213/message1>>
- does Quick Shot!
+ does a Quick Shot!
 
 <<skills/214/name>>
 Avalanche Protocol
@@ -1845,8 +1845,8 @@ Dense (and full) juice of berries that can recover
 Berry Juice
 
 <<items/5/note>>
-Jugo espeso (y completo) que recupera 60 
-puntos magicos. 
+Dense (and full) juice of berries that can recover
+60 energy points.
 
 <<items/6/description>>
 Juice from a mysterious blue fruit that is half filled
@@ -1863,8 +1863,8 @@ fallen ally (even if they don't want to).
 Restorative Herb
 
 <<items/7/note>>
-Su fuerte aroma y amargo sabor levanta a los aliados
-caidos (aunque algunos preferirían seguir caidos).
+Its intense fragrance and bitter taste raises any 
+fallen ally (even if they don't want to).
 
 <<items/8/description>>
 Weird fruits that are repellent to scorpions,
@@ -2143,6 +2143,13 @@ Cures various ailments.
 <<items/43/name>>
 Paracetamol
 
+<<items/44/description>>
+Seasoned sausage in crusty bread.
+(Not recommended for herbivores).
+
+<<items/44/name>>
+Simple Pancho
+
 <<weapons/1/description>>
 Arma especial de Tzmitl
 
@@ -2150,7 +2157,7 @@ Arma especial de Tzmitl
 Tzimitil Spear
 
 <<weapons/2/description>>
-CEOE rifle with ice rounds.
+SCSO rifle with ice rounds.
 
 <<weapons/2/name>>
 Frost Rifle F64
@@ -2281,21 +2288,21 @@ the Creation Flames itself. Tatama's sacred treasure.
 Kusikuy Blowgun
 
 <<weapons/24/description>>
-Alternative model of the first CEOE's ice rounds
+Alternative model of the first SCSO's ice rounds
 rifle. 
 
 <<weapons/24/name>>
 Frost Rifle E32
 
 <<weapons/25/description>>
-Improved version of CEOE's ice rounds
+Improved version of SCSO's ice rounds
 rifle in terms of accuracy and power.
 
 <<weapons/25/name>>
 Frost Rifle D128
 
 <<weapons/26/description>>
-An even more improved version of the CEOE's
+An even more improved version of the SCSO's
 ice rounds rifle with a new scope.
 
 <<weapons/26/name>>
@@ -2520,7 +2527,7 @@ increases the adrenaline of the bearer.
 Fury Amulet
 
 <<armors/7/description>>
-Tunic that was approved by the CEOE committee. Not
+Tunic that was approved by the SCSO committee. Not
 too fashionable but pretty functional.
 
 <<armors/7/name>>
@@ -2530,7 +2537,7 @@ Militar Tunic
 <ge: 1, $Flamrose_AN, 0>
 
 <<armors/8/description>>
-Handmade hat done by CEOE's Supply Company.
+Handmade hat done by SCSO's Supply Company.
 Not so warm, but optimized for mobility.
 
 <<armors/8/name>>
@@ -2554,7 +2561,7 @@ Auxiliar Knife
 ---Pengralle
 
 <<armors/31/description>>
-Helmet used for CEOE agents in training.
+Helmet used for SCSO agents in training.
 
 <<armors/31/name>>
 B64 Helmet
@@ -2602,7 +2609,7 @@ improved maneuverability.
 Lv2 Ski Boots
 
 <<armors/38/description>>
-Manufactured by CEOE specialist that implemented 
+Manufactured by SCSO specialist that implemented 
 speed holes for temperture regulation.
 
 <<armors/38/name>>
@@ -2673,8 +2680,7 @@ Auxiliar Machete
 
 <<armors/79/description>>
 Of considerable weight but can take for 
-surprise
-other gunmen. A absolute classic.
+surprise other gunmen. A absolute classic.
 
 <<armors/79/name>>
 Iron Vest
@@ -2725,11 +2731,11 @@ underwater and overall sight.
 Underwater Lens
 
 <<armors/149/description>>
-Approved by the CEOE committee. Seems like blue
+Approved by the SCSO committee. Seems like blue
 it's not a color for everyone...
 
 <<armors/149/name>>
-CEOE Jacket
+SCSO Jacket
 
 <<armors/149/note>>
 <ge: 7, $Muti_AN, 0>
@@ -3011,13 +3017,13 @@ Magic Evade
 Magic Reflect
 
 <<states/21/message2>>
- Obtiene el poder de fuego!
+ is imbued by the power of fire!
 
 <<states/21/name>>
 Fuerza Flama
 
 <<states/21/message1>>
- Obtiene el poder de fuego!
+ is imbued by the power of fire!
 
 <<states/21/note>>
 <absorb element: 3>
@@ -3528,148 +3534,148 @@ Go to Title
 Cancel
 
 <<constants/Vocab/ShopBuy>>
-Comprar
+Buy
 
 <<constants/Vocab/ShopSell>>
-Vender
+Sell
 
 <<constants/Vocab/ShopCancel>>
-Salir
+Exit
 
 <<constants/Vocab/Possession>>
-Tienes
+In Possession
 
 <<constants/Vocab/ExpTotal>>
-Experiencia Total
+Total Exp.
 
 <<constants/Vocab/ExpNext>>
-Restante %s
+Next Level %s
 
 <<constants/Vocab/SaveMessage>>
-Donde desea guardar?
+Saving Slot?
 
 <<constants/Vocab/LoadMessage>>
-Cual archivo desea cargar?
+Loading Slot?
 
 <<constants/Vocab/File>>
-Archivo
+File
 
 <<constants/Vocab/PartyName>>
-El equipo de %s 
+Party of %s 
 
 <<constants/Vocab/Emerge>>
-%s Apareció!
+%s Emerged!
 
 <<constants/Vocab/Preemptive>>
-%s Ataca Primero!
+%s Attacks first!
 
 <<constants/Vocab/Surprise>>
-%s Te sorprendió!
+%s Surprises!
 
 <<constants/Vocab/EscapeStart>>
-%s Comienza a escapar....
+%s Starts the escape....
 
 <<constants/Vocab/EscapeFailure>>
-No ha podido Escapar
+The escape failed
 
 <<constants/Vocab/Victory>>
-%s Ha salido vencedor!
+%s won the battle!
 
 <<constants/Vocab/Defeat>>
-%s Ha sido derrotado.
+%s was defeated.
 
 <<constants/Vocab/ObtainExp>>
-Ganas %s Puntos de Experiencia
+Earns %s experience points
 
 <<constants/Vocab/ObtainGold>>
-Obtienes %s \G 
+Wins %s \G 
 
 <<constants/Vocab/ObtainItem>>
-Obtienes %s
+Obtains %s
 
 <<constants/Vocab/LevelUp>>
-%s ha subido al nivel %s %s
+%s has leveled up %s %s
 
 <<constants/Vocab/ObtainSkill>>
-Has obtenido la habilidad %s
+Learned the skilll %s
 
 <<constants/Vocab/UseItem>>
-%s Ha usado %s
+%s has used %s
 
 <<constants/Vocab/CriticalToEnemy>>
-Tu daño ha sido Critico!!!
+Critical Hit!!!
 
 <<constants/Vocab/CriticalToActor>>
-Te han dado un golpe Critico
+Got a critical hit!
 
 <<constants/Vocab/ActorDamage>>
-A %s le han hecho %s puntos de daño!!!
+%s received %s points of damage!!!
 
 <<constants/Vocab/ActorRecovery>>
-%s recupera %s de %s!!!
+%s recovers %s of %s!!!
 
 <<constants/Vocab/ActorGain>>
-%s ha ganado %s de %s!
+%s gains %s of %s!
 
 <<constants/Vocab/ActorLoss>>
-%s ha perdido %s de %s!
+%s losses %s of %s!
 
 <<constants/Vocab/ActorDrain>>
-%s ha perdido %s de %s!
+%s losses  %s of %s!
 
 <<constants/Vocab/ActorNoDamage>>
-%s no ha recibido daño!!!
+%s received no damage!!!
 
 <<constants/Vocab/ActorNoHit>>
-Falló! %s no recibe daño!!!
+Miss! %s got no damage!!!
 
 <<constants/Vocab/EnemyDamage>>
-A %s Le han hecho %s puntos de daño!!
+%s received %s points of damage!!!
 
 <<constants/Vocab/EnemyRecovery>>
-%s recupera %s de %s!!!
+%s recovers %s of %s!!!
 
 <<constants/Vocab/EnemyGain>>
-%s ha ganado %s de %s!
+%s gains %s of %s!
 
 <<constants/Vocab/EnemyLoss>>
-%s ha perdido %s de %s!
+%s losses %s of %s!
 
 <<constants/Vocab/EnemyDrain>>
-%s ha perdido %s de %s!
+%s losses %s of %s!
 
 <<constants/Vocab/EnemyNoDamage>>
-%s no ha recibido daño!!!
+%s received no damage!!!
 
 <<constants/Vocab/EnemyNoHit>>
-Falló! %s no recibe daño!!!
+Miss! %s got no damage!!!
 
 <<constants/Vocab/Evasion>>
-%s ha esquivado el ataque!!
+%s evades!!
 
 <<constants/Vocab/MagicEvasion>>
-%s ha esquivado el hechizo!!
+%s evades the spell!!
 
 <<constants/Vocab/MagicReflection>>
-%s ha reflejazo el hechizo
+%s reflects the spell
 
 <<constants/Vocab/CounterAttack>>
-%s ha coontratacado!!
+%s counters!!
 
 <<constants/Vocab/Substitute>>
-%s conjuró %s!!
+%s blocks %s!!
 
 <<constants/Vocab/BuffAdd>>
-%s ahora usa %s!!
+%s now uses %s!!
 
 <<constants/Vocab/DebuffAdd>>
-%s ahora usa %s!!
+%s now uses %s!!
 
 <<constants/Vocab/BuffRemove>>
-%s ya no usa %s
+%s no longer uses %s
 
 <<constants/Vocab/ActionFailure>>
-%s ha fallado.
+%s misses.
 
 <<constants/Vocab/PlayerPosError>>
 No encuentra el punto de partida del jugador.
