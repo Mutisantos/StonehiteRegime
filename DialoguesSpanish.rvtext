@@ -1094,7 +1094,7 @@ Con esta tragedia debemos trabajar el doble
 por aquellos que no pueden hacerlo.
 
 <<005:Poblado C/008:EV008/Page 01/001>>
-Habra un buen año hoy de cultivo!
+Hoy será un buen dia para cultivar.
 
 <<005:Poblado C/008:EV008/Page 02/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
@@ -1322,7 +1322,7 @@ entender que estamos diciendo!
 Cuantos nudos!
 
 <<005:Poblado C/060:EV060/Page 02/001>>
-Flamrose, sabes sobre la llamas místicas de Tatama?
+Flamrose, ¿sabes sobre la llamas místicas de Tatama?
 
 <<005:Poblado C/060:EV060/Page 02/002>>
 Si
@@ -1596,7 +1596,8 @@ ya ha hecho estragos aqui también.
 <<position: top>>
 \C[10]Muti:\C[0] Esto no esta bien... supongo que
 el enemigo debe de estar buscando algo valioso 
-en el templo.
+en el templo. El rastro de destrucción apunta 
+a allí.
 
 <<010:Poblado U/002:EV002/Page 01/005>>
 <<face: flamarosa, 5>>
@@ -1649,7 +1650,7 @@ de solo los meros huesos...
 
 <<010:Poblado U/028:EV028/Page 01/001>>
 Los guerreros nos han dicho que nos escondamos
-aquí. Parece que las maquinas y ese monstruo 
+aquí. Parece las cosas metalicas y ese monstruo 
 colosal se han concentrado todos en el templo 
 de las lunas.
 
@@ -1748,8 +1749,8 @@ no tuvo tiempo para salvarse el mismo.
 <<position: top>>
 \C[10]Muti:\C[0] Mi habilidad me dio suficiente
 tiempo para que lograramos escapar todos, pero
-todo lo que estaba dentro del templo quedó 
-destruido. 
+todo adentro ahora es historia, y no propiamente 
+de la que puedes mostrar en un museo.
 
 <<010:Poblado U/049:EV049/Page 01/006>>
 <<face: flamarosa, 5>>
@@ -1767,17 +1768,17 @@ fuerza para poder evitar que este tipo de
 situaciones vuelvan a ocurrir...
 
 <<010:Poblado U/049:EV049/Page 01/008>>
-<<face: FPengralle, 5>>
+<<face: FMuti1, 5>>
 <<position: top>>
-\C[23]Pengralle:\C[0] Ahora más que nunca tu poder
+\C[10]Muti:\C[0] Ahora más que nunca tu poder
 será de bastante ayuda. Ahora sabemos que 
 quien está detrás de esto es Stonehite y de las 
 capacidades de su tecnología.
 
 <<010:Poblado U/049:EV049/Page 01/009>>
-<<face: FMuti1, 5>>
+<<face: FPengralle, 5>>
 <<position: top>>
-\C[10]Muti:\C[0]  Quizas nos quedamos sin pistas
+\C[23]Pengralle:\C[0] Quizas nos quedamos sin pistas
 del origen de los poderes de Stonehite, por lo 
 menos sabemos a que atenernos para evitar
 que se repita esto mismo en otros lugares.
@@ -2643,7 +2644,7 @@ Hola Flamrose, estoy revisando el inventario.
 Ah claro, oprimiendo la \C[25]X\C[0] es una manera de hacerlo
 
 <<017:Poblado A/012:EV012/Page 01/001>>
-Flamrose, sabes sobre la llamas místicas de Tatama?
+Flamrose, ¿sabes sobre la llamas místicas de Tatama?
 
 <<017:Poblado A/012:EV012/Page 01/002>>
 Si
