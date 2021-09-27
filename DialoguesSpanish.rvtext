@@ -1869,8 +1869,8 @@ siguiendo la pista de un criminal que tiene un
 poder tecnológico sin prescedentes.
 
 <<011:Templo So/010:EV010/Page 01/012>>
-\c[5]Inkukumi:\c[0] ¿Crees que ambas cosas
-puedan tener relación, Flamrose?
+\c[5]Inkukumi:\c[0] Parece que ambas cosas podrían
+estar relacionadas, ¿tu qué opinas, Flamrose?
 
 <<011:Templo So/010:EV010/Page 01/013>>
 <<face: flamarosa, 7>>
@@ -1901,9 +1901,10 @@ brillando allá nos darán la información que nos
 hace falta para saber a que debemos atenernos.
 
 <<011:Templo So/010:EV010/Page 01/018>>
-\c[8]Kusikuy:\c[0] Ahora acercate, tengo que
-darte el ultimo poder que recibirás por parte
-de los protectores de Tatama.
+\c[8]Kusikuy:\c[0] Ahora acércate, tengo que
+darte el último poder que recibirás por parte
+de los protectores de Tatama, el cual se había
+reservado solo para la realeza. 
 
 <<011:Templo So/010:EV010/Page 01/019>>
 \c[8]Kusikuy:\c[0] Esto es el \c[2]rastreo ancestral\c[0],
@@ -1913,7 +1914,7 @@ y debilidades de tus oponentes
 
 <<011:Templo So/010:EV010/Page 01/020>>
 \c[5]Inkukumi:\c[0] No hay tiempo que perder
-Flamrose, ve y salvanos de este peligro!
+Flamrose, ve y sálvanos de este peligro!
 
 <<012:Ciudad Fr/002:EV002/Page 01/001>>
 \C[6]Sasha:\C[0] \{ HUUUUUUUUUUUUUUUUTCH!
@@ -1943,7 +1944,7 @@ viene en gana!
 esforzando lo suficiente entonces.
 
 <<012:Ciudad Fr/002:EV002/Page 01/007>>
-\C[6]Sasha:\C[0] ¿Pero que estas diciendo?
+\C[6]Sasha:\C[0] ¿Pero qué estas diciendo?
 
 <<012:Ciudad Fr/002:EV002/Page 01/008>>
 <<face: FHutch, 3>>
@@ -1958,7 +1959,7 @@ reputación propia a una por herencia!
 \C[6]Sasha:\C[0] ¿Que está ocurriendo?!
 
 <<012:Ciudad Fr/002:EV002/Page 01/011>>
-Corran, un\.... un\.... \.un MONSTRUO!
+Corran, es un\.... un\.... \.un MONSTRUO!
 
 <<012:Ciudad Fr/002:EV002/Page 01/012>>
 <<face: FHutch, 6>>
@@ -1985,7 +1986,7 @@ entre las patas!
 <<012:Ciudad Fr/002:EV002/Page 01/016>>
 <<face: FHutch, 2>>
 \C[31]Hutch:\C[0] Esto no me da buena espina.
-Pero bueno, iré a investigar y de paso iré a un
+Pero bueno, por lo menos iré a investigaré a un
 lugar donde me tienen un poco más de aprecio!
 
 <<012:Ciudad Fr/002:EV002/Page 01/017>>
@@ -2038,15 +2039,15 @@ terror del desierto y el bandido más peligroso!
 <<012:Ciudad Fr/002:EV002/Page 04/004>>
 <<face: FHutch, 0>>
 <<position: top>>
-\C[31]Hutch:\C[0] Que, ¿no te bastó el tratamiento
-de hace poco que vienes por más? 
+\C[31]Hutch:\C[0] ¿Qué?, ¿no te bastó el tratamiento
+de hace poco que ahora vienes por más? 
 
 <<012:Ciudad Fr/002:EV002/Page 04/005>>
 <<position: top>>
-\C[19]Sangrenegra: \C[0] Esas maquinas me 
+\C[19]Sangrenegra: \C[0] Esas máquinas me 
 dispararon un rayo y me dieron un poder 
 impresionante, y voy a usarlo como lo merezco.
-Y lo primero que haré es vengarme!
+¡Y lo primero que haré es vengarme!
 
 <<012:Ciudad Fr/002:EV002/Page 04/006>>
 <<face: flamarosa, 2>>
@@ -2058,8 +2059,8 @@ de Rhysorog en Tatama.
 <<012:Ciudad Fr/002:EV002/Page 04/007>>
 <<face: FHutch, 1>>
 <<position: top>>
-\C[31]Hutch:\C[0] Aura mis calzoncillos, este
-no es sino un fanfarrón solo porque ahora se 
+\C[31]Hutch:\C[0] Energía mis calzoncillos, este
+ahora se hace el fanfarrón solo porque ahora se 
 ve todavía más feo que antes.
 
 <<012:Ciudad Fr/002:EV002/Page 04/008>>
@@ -2149,8 +2150,8 @@ del subsuelo.
 <<012:Ciudad Fr/002:EV002/Page 04/021>>
 <<position: top>>
 \C[28]Molerrez:\C[0]Usted es un operativo no más,
-este tipo de decisiones no les competen a ustedes
-sin haber consultado con el cuartel general. 
+este tipo de decisiones no les competen a ustedes,
+menos sin haber consultado con el cuartel general. 
 Asumiré el resto de la misión desde este punto.
 
 <<012:Ciudad Fr/002:EV002/Page 04/022>>
@@ -2196,7 +2197,7 @@ inclementes...
 <<012:Ciudad Fr/028:NPC 6/Page 01/001>>
 Frocteres es un lugar bastante movido, en 
 especial durante la noche. De eso parece
-que sabes bastante eh?
+que sabes bastante, ¿eh?
 
 <<012:Ciudad Fr/029:NPC 3/Page 01/001>>
 Ha llegado la caravana desde los rincones más
@@ -2205,8 +2206,9 @@ la variedad de productos que tiene la tienda
 del pueblo es gracias a nosotros.
 
 <<012:Ciudad Fr/030:NPC 7/Page 01/001>>
-Hoy parece que el banco no ha abierto. Tal parece
-que \{ alguien \} no ha parado de robar aquí
+Desafortunadamente, el banco esta cerrado hoy.
+Tal parece que \{ alguien \} no ha parado
+de robar aquí.
 
 <<012:Ciudad Fr/031:NPC 6/Page 01/001>>
 Me ponen de guardia provisional del banco
@@ -2619,223 +2621,223 @@ Chill my mannered friend.
 <<016:Destino 2/016: /Page 01/001>>
 
 
-<<017:Poblado A/007:EV007/Page 01/001>>
+<<017:Farming T/007:EV007/Page 01/001>>
 Cuidado con los hornos! Ya sea para cocinar o para
 orfebrería, sin cuidado vas a terminar quemandote.
 
-<<017:Poblado A/008:EV008/Page 01/001>>
+<<017:Farming T/008:EV008/Page 01/001>>
 <<position: top>>
 \C[2]Flancorose:\C[0] Preparada? Sigueme!
 
-<<017:Poblado A/008:EV008/Page 01/002>>
+<<017:Farming T/008:EV008/Page 01/002>>
 \C[2]Flancorose:\C[0] Bien Flamrose, recuerda 
 nuestro sistema de seguridad. Empuja esas piedras
 a los interruptores para levantar las puertas.
 
-<<017:Poblado A/005:EV005/Page 01/001>>
+<<017:Farming T/005:EV005/Page 01/001>>
 Si quieres correr tan rapido como nosotros, un poco
 de \C[25]Shift\C[0] al moverte no cae nada mal.
 
-<<017:Poblado A/006:EV006/Page 01/001>>
+<<017:Farming T/006:EV006/Page 01/001>>
 Mi plan de respaldo siempre será USAR LAS PIERNAS!
 
-<<017:Poblado A/010:EV010/Page 01/001>>
+<<017:Farming T/010:EV010/Page 01/001>>
 Hola Flamrose, estoy revisando el inventario. 
 Ah claro, oprimiendo la \C[25]X\C[0] es una manera de hacerlo
 
-<<017:Poblado A/012:EV012/Page 01/001>>
+<<017:Farming T/012:EV012/Page 01/001>>
 Flamrose, ¿sabes sobre la llamas místicas de Tatama?
 
-<<017:Poblado A/012:EV012/Page 01/002>>
+<<017:Farming T/012:EV012/Page 01/002>>
 Si
 
-<<017:Poblado A/012:EV012/Page 01/003>>
+<<017:Farming T/012:EV012/Page 01/003>>
 No
 
-<<017:Poblado A/012:EV012/Page 01/004>>
+<<017:Farming T/012:EV012/Page 01/004>>
 No esperaba menos de la hija de nuestro lider
 espiritual. Cuando tengas incertidumbre al futuro,
 siempre puedes recurrir a estas flamas.
 
-<<017:Poblado A/012:EV012/Page 01/005>>
+<<017:Farming T/012:EV012/Page 01/005>>
 El fuego siempre nos protege y en el depositamos
 nuestros saberes. Cada vez que veas una flama 
 de estos colores, podrás guardar tus experiencias
 de tu aventura aquí. 
 
-<<017:Poblado A/012:EV012/Page 01/006>>
+<<017:Farming T/012:EV012/Page 01/006>>
 Una vez que deposites tus vivencias, la flama
 te recordará el lugar donde estas para proseguir
 tu aventura.
 
-<<017:Poblado A/012:EV012/Page 01/007>>
+<<017:Farming T/012:EV012/Page 01/007>>
 La red de conocimientos de Tatama siempre 
 servirá para guardar y cargar tu aventura.
 
-<<017:Poblado A/013:EV013/Page 01/001>>
+<<017:Farming T/013:EV013/Page 01/001>>
 Estas flamas no son tan místicas como las de
 al lado, pero si que nos llenan de luz y calor.
 
-<<017:Poblado A/022:EV022/Page 01/001>>
+<<017:Farming T/022:EV022/Page 01/001>>
 <<position: top>>
 \C[2]Flancorose:\C[0] Bien Hija, prosigue
 
-<<017:Poblado A/022:EV022/Page 02/001>>
+<<017:Farming T/022:EV022/Page 02/001>>
 <<position: top>>
 \C[2]Flancorose:\C[0] Excelente, sigueme entonces
 al terreno de rituales.
 
-<<017:Poblado A/027:EV027/Page 01/001>>
+<<017:Farming T/027:EV027/Page 01/001>>
 Estos frutos no estan maduros... \.
 estos otros si\. hay que recolectar con cuidado!
 
-<<017:Poblado A/027:EV027/Page 02/001>>
+<<017:Farming T/027:EV027/Page 02/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/027:EV027/Page 03/001>>
+<<017:Farming T/027:EV027/Page 03/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/027:EV027/Page 04/001>>
+<<017:Farming T/027:EV027/Page 04/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/028:EV028/Page 01/001>>
+<<017:Farming T/028:EV028/Page 01/001>>
 Estos frutos no estan maduros... \.
 estos otros si\. hay que recolectar con cuidado!
 
-<<017:Poblado A/028:EV028/Page 02/001>>
+<<017:Farming T/028:EV028/Page 02/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/028:EV028/Page 03/001>>
+<<017:Farming T/028:EV028/Page 03/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/028:EV028/Page 04/001>>
+<<017:Farming T/028:EV028/Page 04/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/029:EV029/Page 01/001>>
+<<017:Farming T/029:EV029/Page 01/001>>
 Hoy vamos a ver como los niños aprenden a 
 diferenciar que frutas y verduras estan maduras
 y listas para comer y cuales no.
 
-<<017:Poblado A/030:EV030/Page 01/001>>
+<<017:Farming T/030:EV030/Page 01/001>>
 Bueno, estas patatas parecen estar listas para
 arrancar.
 
-<<017:Poblado A/030:EV030/Page 02/001>>
+<<017:Farming T/030:EV030/Page 02/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/030:EV030/Page 03/001>>
+<<017:Farming T/030:EV030/Page 03/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/030:EV030/Page 04/001>>
+<<017:Farming T/030:EV030/Page 04/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/031:EV031/Page 01/001>>
+<<017:Farming T/031:EV031/Page 01/001>>
 Bueno, estas patatas parecen estar listas para
 arrancar.
 
-<<017:Poblado A/031:EV031/Page 02/001>>
+<<017:Farming T/031:EV031/Page 02/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/031:EV031/Page 03/001>>
+<<017:Farming T/031:EV031/Page 03/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/031:EV031/Page 04/001>>
+<<017:Farming T/031:EV031/Page 04/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/032:EV032/Page 01/001>>
+<<017:Farming T/032:EV032/Page 01/001>>
 Bueno, estas patatas parecen estar listas para
 arrancar.
 
-<<017:Poblado A/032:EV032/Page 02/001>>
+<<017:Farming T/032:EV032/Page 02/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/032:EV032/Page 03/001>>
+<<017:Farming T/032:EV032/Page 03/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/032:EV032/Page 04/001>>
+<<017:Farming T/032:EV032/Page 04/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/033:EV033/Page 01/001>>
+<<017:Farming T/033:EV033/Page 01/001>>
 Bueno, estas patatas parecen estar listas para
 arrancar.
 
-<<017:Poblado A/033:EV033/Page 02/001>>
+<<017:Farming T/033:EV033/Page 02/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/033:EV033/Page 03/001>>
+<<017:Farming T/033:EV033/Page 03/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/033:EV033/Page 04/001>>
+<<017:Farming T/033:EV033/Page 04/001>>
 Lo que esta pasando en Tatama es tenebroso,
 al menos nuestros guerreros nos protegen.
 
-<<017:Poblado A/034:EV034/Page 01/001>>
+<<017:Farming T/034:EV034/Page 01/001>>
 No, definitivamente estos hongos me matarian
 si me los como!
 
-<<017:Poblado A/034:EV034/Page 02/001>>
+<<017:Farming T/034:EV034/Page 02/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/034:EV034/Page 03/001>>
+<<017:Farming T/034:EV034/Page 03/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/034:EV034/Page 04/001>>
+<<017:Farming T/034:EV034/Page 04/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/035:EV035/Page 01/001>>
+<<017:Farming T/035:EV035/Page 01/001>>
 Estos frutos no estan maduros... \.
 estos otros si\. hay que recolectar con cuidado!
 
-<<017:Poblado A/035:EV035/Page 02/001>>
+<<017:Farming T/035:EV035/Page 02/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/035:EV035/Page 03/001>>
+<<017:Farming T/035:EV035/Page 03/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/035:EV035/Page 04/001>>
+<<017:Farming T/035:EV035/Page 04/001>>
 No importa lo que pase, Kusikuy y la Emperatriz
 nos protegerán y encontraran solución. Nosotros
 seguiremos trabajando duro.
 
-<<017:Poblado A/037:EV037/Page 01/001>>
+<<017:Farming T/037:EV037/Page 01/001>>
 Es asombrosa como de limpia queda el agua por
 los canales y filtros de nuestros muros. Hasta
 puedes ver tu reflejo y todo aquí.
 
-<<017:Poblado A/038:Interrupt/Page 01/001>>
+<<017:Farming T/038:Interrupt/Page 01/001>>
 Estos interruptores son bastante curiosos.
 ¿Como harán para que activen cosas con solo
 pisarlos?
@@ -2888,7 +2890,7 @@ estan afectando a la fauna salvaje del bosque.
 <<019:Bosque de/038:EV038/Page 01/004>>
 <<face: FMuti1, 5>>
 \C[14]Muti:\C[0] Debemos apresurarnos para 
-dar con la fuente de estas máquinas, o el 
+detener a estas máquinas y su lider, o el 
 daño será irreparable.
 
 <<019:Bosque de/046:EV046/Page 01/001>>
@@ -2896,8 +2898,8 @@ Haz encontrado Pan Caliente(1).
 
 <<019:Bosque de/048:EV048/Page 01/001>>
 <<background: dim>>
-Si el acceso a Uhl se encuentra activo, se deben
-encender todas las hogueras apagadas en las
+Si los controlles de acceso estan activos, se deben
+encender TODAS las hogueras apagadas en las
 mazmorras a la izquierda y derecha de este
 lugar.
 
@@ -2914,8 +2916,8 @@ Haz encontrado un Amuleto Flexible
 
 <<020:Bosque de/045:EV045/Page 01/001>>
 <<background: dim>>
-Los interruptores rojos desactivan los blancos,
-los interruptores blancos desactivan los rojos,
+Los botones rojos desactivan las vallas blancas;
+los botones blancos desactivan las rojos.
 las hogeras deben ser encendidas para continuar.
 
 <<020:Bosque de/047:EV047/Page 01/001>>
@@ -2983,8 +2985,8 @@ pensar. Deberia venir a relajarse un rato,
 
 <<022:Saloon/014:Civil3/Page 01/001>>
 Las variedades de bebidas de Frocteres y en este
-clima arido tienen un sabor particular que en
-Lacocia.
+clima arido me han dejado descubrir sabores 
+que no existen en Lacocia.
 
 <<022:Saloon/015:Civil1/Page 01/001>>
 Las variedades de bebidas de Frocteres y en este
@@ -3100,7 +3102,7 @@ el otro cartel!
 <<022:Saloon/024:Evento 1/Page 01/021>>
 \C[19]Sangrenegra:\C[0] Es un chiste ¿verdad?
 Como es posible que sea una recompensa de \!
-\>\{\ani[1]¿¡100.000 MONEDAS!?\ani[7]
+\>\{]¿¡100.000 MONEDAS!?
 
 <<022:Saloon/024:Evento 1/Page 01/022>>
 <<face: FHutch, 1>>
@@ -3846,7 +3848,7 @@ mera coincidencia.
 <<position: top>>
 \C[2]Flamrose\C[0]: Justamente estamos tratando
 de seguir el rastro de un villano y su ejercito de 
-maquinas y monstruos para evitar que se repita
+máquinas y monstruos para evitar que se repita
 lo que ya pasó en mi pueblo.
 
 <<036:Poblado G/012:EV012/Page 02/010>>
@@ -4171,11 +4173,11 @@ tengan un rango superior a eso.
 
 <<047:Entrada a/004:Soldado O/Page 01/001>>
 Hay que estar en guardia por si vuelven a 
-salir maquinas o bestias a atacarnos.
+salir máquinas o bestias a atacarnos.
 
 <<047:Entrada a/004:Soldado O/Page 02/001>>
 Hay que estar en guardia por si vuelven a 
-salir maquinas o bestias a atacarnos.
+salir máquinas o bestias a atacarnos.
 
 <<047:Entrada a/005:Soldado O/Page 01/001>>
 1,2,1,2... quitate, que me haces perder el 
