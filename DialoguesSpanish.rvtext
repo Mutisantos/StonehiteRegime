@@ -3298,7 +3298,7 @@ Bienvenido a la tienda general. Tenemos productos
 fresquitos!
 
 <<027:Tienda/004:Marcia/Page 01/002>>
-Nada como tener cifras redondeadas no?
+Nada como tener cifras redondeadas, ¿no?
 
 <<027:Tienda/005:EV005/Page 01/001>>
 Se me hace agua la boca de ver todas estas frutas
@@ -3361,8 +3361,8 @@ trasnocharon!
 <<face: FHutch, 7>>
 <<position: top>>
 \C[31]Hutch:\C[0] Pueden decirme lo que quieran,
-pero estos hechos y parece que con el paso de 
-los años las cosas siguen igual o peor. 
+pero estos hechos y con lo que ocurrió antes
+las cosas siguen igual o peor. 
 
 <<029:Habitació/003:EV003/Page 01/002>>
 <<face: flamarosa, 7>>
@@ -3385,7 +3385,7 @@ vuelva a ocurrir.
 \C[23]Pengralle:\C[0] S-soy consciente que en
 nuestras filas puede haber mucha gente... difícil
 de tratar. Pero tambien hay otros como nosotros
-que estamos completamente dispuestos. 
+dispuestos a servir y colaborar.
 
 <<029:Habitació/003:EV003/Page 01/005>>
 <<face: FMuti1, 0>>
@@ -3400,8 +3400,8 @@ Encontraremos el modo de evadir a Molerrez.
 <<position: top>>
 \C[31]Hutch:\C[0] Tengo que admitirlo, tienen
 tenacidad y voluntad. La verdad es que me 
-encantaría restregarle los resultados a ese
-topo idiota.
+encantaría restregar los resultados en la cara 
+de topo idiota.
 
 <<029:Habitació/003:EV003/Page 01/007>>
 <<face: flamarosa, 1>>
