@@ -3629,11 +3629,6 @@ territories look either treasures or trouble.
 accuse me of all the bad stuff you military guys 
 do?. 
 
-¿Te crees muy audaz para venir
-a acusarme de las cosas que hacen ustedes, 
-los militares? Unlike you, I have been 
-accepted by the Guacarí guardian. 
-
 <<033:Poblado G/010:EV010/Page 01/015>>
 \C[17]Martina:\C[0]Yes, mister Raccoon is a welcomed 
 vistor here. Even our guardian has gifted him with 
@@ -3657,154 +3652,150 @@ we must follow the protocol now more than
 ever after suffered an attack!.
 
 <<033:Poblado G/007:Panico 2/Page 01/001>>
-Esto es terrible, esas cosas salieron de la tierra
-y empezaron a atacar sin piedad!
+This is terrible, those things came 
+out from the ground and attacked us
+without mercy!
 
 <<033:Poblado G/024: /Page 01/001>>
-Esto es terrible, esas cosas salieron de la tierra
-y empezaron a atacar sin piedad!
+This is terrible, those things came 
+out from the ground and attacked us
+without mercy!
 
 <<033:Poblado G/024: /Page 02/001>>
-Ha sido todo tan sorpresivo, por fortuna que 
-contamos con quienes nos defiendan para 
-no terminar transformados todos
+That was so unexpected, fortunately, there were 
+others that defended us from being transformed.
 
 <<033:Poblado G/025: /Page 01/001>>
-Ughharrrg... es dificil... mantener mis pensamientos
-en esta forma...
+Ughharrrg... it's hard to keep...
+my thoughts in this body...
 
 <<033:Poblado G/025: /Page 02/001>>
-Ughharrrg... es dificil... mantener mis pensamientos
-en esta forma...
+Ughharrrg... it's hard to keep...
+my thoughts in this body...
 
 <<033:Poblado G/030:EV030/Page 01/001>>
-You have found un amuleto visual.
+You have found a Visual Amulet.
 
 <<033:Poblado G/032: /Page 01/001>>
-Esto es terrible, esas cosas salieron de la tierra
-y empezaron a atacar sin piedad!
-
+This is terrible, those things came 
+out from the ground and attacked us
+without mercy!
 <<033:Poblado G/032: /Page 02/001>>
 \.No \.puedo \.hablar. \.Necesito \.mucha
 \.concentración \.para \.pescar.
 
 <<035:Desierto /004:A/Page 03/001>>
 <<face: FHutch, 4>>
-\C[31]Hutch:\C[0]¿Pero que rayos es esta cosa?
+\C[31]Hutch:\C[0]What in the world is that thing?
 
 <<035:Desierto /004:A/Page 03/002>>
 <<face: FHutch, 3>>
-\C[31]Hutch:\C[0]Que fastidio, largate de aquí.
+\C[31]Hutch:\C[0]Good grief, get out of here!
 
 <<035:Desierto /004:A/Page 03/003>>
 <<face: FHutch, 3>>
-\C[31]Hutch:\C[0]Esto me da mala espina, tengo
-que apresurarme para llegar a Guacarí
+\C[31]Hutch:\C[0]This doesn't feel right, I must 
+hurry up to get to Guacarí.
 
 <<035:Desierto /016:Jaguar en/Page 01/001>>
-Me ha dejado desconcertado este ente tan extraño
-además que venía con un Carchatilo... pense que 
-esos animales solo existian en los cuentos para
-asustar niños.
+I'm so confused with those metallic beings that 
+also had a Carchatilo on their ranks... I thought 
+those animals were a myth to scare little children.
 
 <<035:Desierto /018:EV018/Page 01/001>>
 <<face: FHutch, 6>>
-\C[31]Hutch:\C[0] ¿Qué diablos fue eso?
+\C[31]Hutch:\C[0] What the heck was that?
 
 <<035:Desierto /018:EV018/Page 01/002>>
-Eh, joven mapache, por favor ayudame, estos
-engendros brillantes han empezado a llegar a 
-la aldea Guacarí. ¡Son más tenaces de lo que 
-parecen!
+Eh, young raccoon, please help me, these 
+bright monsters have started to arrive to 
+the Guacarí village, they are tougher than 
+they look!
 
 <<035:Desierto /018:EV018/Page 01/003>>
 <<face: FHutch, 6>>
-\C[31]Hutch:\C[0] ¿Y qué pretendes? ¿Que cruce el 
-rio nadando o qué?
+\C[31]Hutch:\C[0] And what do you pretend me to do? 
+to cross the current swiming or something?
 
 <<035:Desierto /018:EV018/Page 01/004>>
-Eres un vaquero, seguro que puedes lazar con \C[16]A\C[0] 
-este poste con tu cuerda para llegar aquí sin tanto 
-problemita. \. ¡Pero apurate que no puedo tenerlo
-aquí todo el dia!
+You are a cowboy, I'm sure you can throw your lasso 
+with \C[16]A\C[0] and cross without much trouble. 
+\. But hurry up!, I cannot entertain it forever!
 
 <<036:Poblado G/001: /Page 01/001>>
-Yesempre nos tomará por sorpresa que vengan
-extraños a nuestros territorios. Desde la llegada
-de los pioneros y colonos a esta region ya hace
-unas decadas, se ha tornado algo complejo el tema.
+We will be always surprised when strangers come 
+in our territories. Since the pioneers and 
+explorers started coming decades ago, the 
+situation became tense and complex.
 
 <<036:Poblado G/004: /Page 01/001>>
-Confiaremos siempre en el gran criterio de nuestro
-guardian de la naturaleza y la vida, así como quien
-sea designado como lider de la aldea. Gracias a 
-ello hemos logrado mantenernos en el tiempo
+We'll trust in the judgement from our guardian 
+that embodies nature and life. Also we will trust 
+our leader as well, thanks to them, we have been 
+able to thrive during so much time.
 
 <<036:Poblado G/005: /Page 01/001>>
-Yes quieres descansar, este es el lugar.
+If you want to rest, this is the place.
 
 <<036:Poblado G/007: /Page 01/001>>
-No se, a veces cuestiono un poco el alcance de
-las decisiones de Kovurumbe o Tambuku. Digo,
-darle su magia a gente de afuera antes que a
-nosotros no se me hace muy sabio.
+Sometimes, I question myself about the reach of 
+Kovurumbe or Tambuku decisions. I mean, giving 
+their magic to people besides us doesn't seem 
+pretty wise to me. 
 
 <<036:Poblado G/007: /Page 01/002>>
-Aunque no me puedo quejar tampoco, eso tambien
-es un inicio para relacionarnos con el mundo exterior
-primero con un antiguo sheriff de Frocteres y ahora,
-con su hijo que parece tener mucho potencial.
+But I cannot complain, that also helped us to 
+get in touch with people for outside our lands, 
+first with the previous Frocteres' Sheriff and 
+now with his son, that has a lot of potential.
 
 <<036:Poblado G/008:Tambuku/Page 01/001>>
-Es una lastima que los guardianes no puedan 
-salir de su area de influencia. Depende de nosotros
-al hacer uso de sus dotes y enseñanzas para
-proteger a los demás.
+It's a shame that our guardians must stay in a 
+certain place. It depends on us to protect our 
+people using their teachings and gifts.
 
 <<036:Poblado G/008:Tambuku/Page 02/001>>
-Hay mucho misterio con todas estas señales 
-mezcladas que detecta Kovurumbe más allá
-del desierto. Depende de ustedes saber de qué
-se trata todo esto.
+There is a mystery regarding all these mixed 
+signals that Kovurumbe detects beyond the 
+desert. Seems like it will be your work to 
+check what's all about it.
 
 <<036:Poblado G/008:Tambuku/Page 02/002>>
-Por fortuna, el joven Takinohara tiene un potencial
-increible que fue reconocido por nuestro pueblo.
+Hopefully, the young Takinohara has a lot of 
+potential that was already acknowledged by 
+our people.
 
 <<036:Poblado G/009:Kovurumbe/Page 01/001>>
-\C[11]Kovurumbe:\C[0] Joven Mapache, espero
-que sigas tu entrenamiento mágico. Se que 
-hay habilidades que todavía consumen toda 
-tu energía, pero no te rindas.
+\C[11]Kovurumbe:\C[0] Young raccoon, I hope you
+keep your magic training. I know many skills 
+consume all of your energy, but never give up.
 
 <<036:Poblado G/009:Kovurumbe/Page 01/002>>
-\C[11]Kovurumbe:\C[0] Jovenes de las tierras
-lejanas, si hablan con el joven mapache, diganle
-que le mando saludos.
+\C[11]Kovurumbe:\C[0] Youngsters from the far lands, 
+if you talk with the young raccoon, give him 
+my regards.
 
 <<036:Poblado G/009:Kovurumbe/Page 02/001>>
-\C[11]Kovurumbe:\C[0] Apresúrate para ir a 
-Frocteres. Pero eso si, tengan cuidado con el
-transito por el desierto, incluso si yo deambulara
-por el, muy seguramente me extraviaría.
+\C[11]Kovurumbe:\C[0] Hurry up to go to Frocteres. 
+But be warned that walking through the desert is 
+complicated. Even if I were wandering around it,
+I would certainly get lost.
 
 <<036:Poblado G/014: /Page 01/001>>
-La magia de tierra es muy diversa. Tanto así que 
-puedes usar la energia mágica de tu cuerpo para
-dar vida a las plantas, como la furia alimentada
-de tu adrenalina para sacudir el suelo.
+Earth magic is pretty diverse. You can use your 
+magical energy to raise plants to live, or use 
+your rage to make the ground tremble.
 
 <<036:Poblado G/015: /Page 01/001>>
-La filosofía de Guacarí se mantiene en una constante
-relación entre la quietud y el movimiento. Entre
-el silencio y el ruido, entre la danza y la meditación,
-entre los rios y el desierto.
+Guacarí's phylosophy remains in a constant relation 
+between steadiness and movement. Between silence 
+and noise, between dance and meditation, between
+rivers and dunes.
 
 <<036:Poblado G/016: /Page 01/001>>
-Seguirle el ritmo a la magia que nos enseña
-Kovurumbe siempre resulta agotador, pero
-debemos continuar para ser unos guerreros
-dignos de sus dotes.
+Trying to keep the pace of Kovurumbe magic teachings 
+is pretty exhausting, but we must keep pushing 
+forward to become warriors worthy of his gifts.
 
 <<036:Poblado G/012:EV012/Page 01/001>>
 <<face: FHutch, 3>>
@@ -3813,107 +3804,107 @@ dignos de sus dotes.
 
 <<036:Poblado G/012:EV012/Page 01/002>>
 <<position: top>>
-\C[17]Martina:\C[0] Señor Mapache, Señores
-extranjeros, esperen, no hemos pedido permiso
-todavía para una audiencia con el lider Tambuku
-ni con el gran Kovurumbe!
+\C[17]Martina:\C[0] Oh no, Mr. raccoon, and 
+estimated foreigners, wait, we haven't asked 
+for permissions yet to have an audience with 
+the leader Tambuku or the great Kovurumbe.
 
 <<036:Poblado G/012:EV012/Page 02/001>>
-\C[16]Tambuku:\C[0] Joven Takinohara, te 
-estabamos esperando. Supusimos que en
-el momento que llegaras aquí terminarías 
-pasando de todos los protocolos.
+\C[16]Tambuku:\C[0] Young Takinohara, we were expecting 
+you. We guessed that the moment you arrived here 
+you would end up ignoring all protocols and 
+rules anyways.
 
 <<036:Poblado G/012:EV012/Page 02/002>>
 <<face: FHutch, 4>>
 <<position: top>>
-\C[31]Hutch:\C[0]Uno, ya les dije que no me llamen 
-así. Yo soy McCoy: Hutch McCoy \.
-Y dos, ¿Cómo se les ocurre acoger a estos 
-inmundos de los militares aquí?
+\C[31]Hutch:\C[0]First, I already told you to not 
+call me that way. I'm McCoy: Hutch McCoy \.
+And second, are you out of your mind, letting these 
+disgusting militaries in here?
 
 <<036:Poblado G/012:EV012/Page 02/003>>
-\C[11]Kovurumbe:\C[0] Joven mapache, tranquilo,
-que estén en este lugar es porque yo lo he permitido.
-Supuse que sería conveniente hablar con todos aquí
-reunidos de una vez.
+\C[11]Kovurumbe:\C[0] young raccoon, calm down, if they 
+are in this place is because I let them be. I also 
+guessed that it would be better to talk with everyone 
+now that we are reunited in here.
 
 <<036:Poblado G/012:EV012/Page 02/004>>
 <<face: FPengralle, 6>>
 <<position: top>>
-\C[23]Pengralle:\C[0] (¿Pero qué pasa con todos
-los guardianes de este continente y por qué
-resultan ser tan imponentes pero asequibles?)
+\C[23]Pengralle:\C[0] (Seriously, what's up with the 
+guardians of this continent? They are so imposing 
+but also so accesible and open.)
 
 <<036:Poblado G/012:EV012/Page 02/005>>
-\C[11]Kovurumbe:\C[0] Bien, ¿por donde empiezo?
-\!Ah claro, por el inicio. Hace cierto tiempo he 
-percibido una enorme anomalía de energía desde
-más allá del desierto.
+\C[11]Kovurumbe:\C[0] Well, where do I start?
+\!Oh, right, from the beginning. A long time ago 
+I have been perceiving an huge amount of 
+weirding energy from far beyond the desert. 
 
 <<036:Poblado G/012:EV012/Page 02/006>>
-\C[11]Kovurumbe:\C[0] Y hace solo unos dias tambien
-he detectado esa energia pertubadora acercandose mas 
-y más en nuestros dominios. Supuse que la anomalía
-estaría en la zona del silencio pero...
+\C[11]Kovurumbe:\C[0] And just a few days ago I 
+detected that kind of energy getting closer and closer 
+to our domains. I lost the track of it when it 
+reached the Zone of Silence. 
 
 <<036:Poblado G/012:EV012/Page 02/007>>
-\C[16]Tambuku:\C[0]...Al enviar a algunos corredores
-allí encontramos a este trio perdido e incapaz de 
-comunicarse con sus aliados. A diferencia de otros,
-ellos no mostraron hostilidad contra los nuestros.
+\C[16]Tambuku:\C[0] We sent a team of runners to there 
+and we found the three of them wandering and unable 
+to contact their allies. Unlike others, they have 
+shown no animosity against any of us.
 
 <<036:Poblado G/012:EV012/Page 02/008>>
-\C[16]Tambuku:\C[0]Eventualmente nos dieron
-contexto de su investigación y como han terminado
-aquí. Tantas suscesos al tiempo no podían ser
-mera coincidencia.
+\C[16]Tambuku:\C[0]Eventually, they gave us context 
+about their investigation and why they end up here. 
+So many things happening at the same time must 
+respond to something greater, not mere coincidence.
 
 <<036:Poblado G/012:EV012/Page 02/009>>
 <<face: flamarosa, 5>>
 <<position: top>>
-\C[2]Flamrose\C[0]: Justamente estamos tratando
-de seguir el rastro de un villano y su ejercito de 
-maquinas y monstruos para evitar que se repita
-lo que ya pasó en mi pueblo.
+\C[2]Flamrose\C[0]: We are tracking a villian and 
+his machine and monster army, so we can prevent 
+a disaster to happen as it already occured in 
+my homeland.
 
 <<036:Poblado G/012:EV012/Page 02/010>>
 <<face: FMuti1, 7>>
 <<position: top>>
-\C[10]Muti:\C[0] Lastimosamente, parece que 
-al final ellos terminaron encontrandonos a nosotros,
-salieron excavando desde el suelo y empezaron
-a atacar a quien se les cruzara.
+\C[10]Muti:\C[0] Unfortunately, seems like in the end 
+they found us before than we found them, and 
+started coming digging up from the ground and 
+attacking whoever was in their way.
 
 <<036:Poblado G/012:EV012/Page 02/011>>
 <<face: FHutch, 6>>
 <<position: top>>
-\C[31]Hutch:\C[0]A ver si entiendo: una especie
-de idiota importante viene a mi territorio a hacer
-destrozos y a atacar a la gente de Guacarí, y esos
-trastos de basura son de este sujeto.
+\C[31]Hutch:\C[0]Let me get this straight: some sort 
+of jerk comes to my territory to make a mess and 
+attack the people of Guacarí, and these trash bins 
+are property of this same idiot.
 
 <<036:Poblado G/012:EV012/Page 02/012>>
 <<face: FPengralle, 3>>
 <<position: top>>
-\C[23]Pengralle:\C[0] Bueno, no es propiamente
-la terminología correcta, pero basicamente esa es
-la situación actualmente.
+\C[23]Pengralle:\C[0] Uhmmm, that's not technically 
+the correct terminology, but basically that's the 
+current situation.
 
 <<036:Poblado G/012:EV012/Page 02/013>>
 <<face: FHutch, 3>>
 <<position: top>>
-\C[31]Hutch:\C[0]Pues me compadezco de semejante
-torpe que cree que se puede meter conmigo y 
-salir sin escarmiento.
+\C[31]Hutch:\C[0] Well, pity on the fool who thinks 
+that can mess up with me and leave without
+a proper punishment.
 
 <<036:Poblado G/012:EV012/Page 02/014>>
 <<face: FHutch, 1>>
 <<position: top>>
-\C[31]Hutch:\C[0] Heh, ni modos, confiaré en el
-criterio del cactus gordo y dejaré que se unan
-a mi para darle su merecido a ese individuo,
-como quiera que se llame.
+\C[31]Hutch:\C[0] Heh, I guess I will trust in the 
+fat cactus' judgement and I will let you all 
+join me to give that fool what he deserves, 
+whatever his name is.
 
 <<036:Poblado G/012:EV012/Page 02/015>>
 <<face: FMuti1, 6>>
@@ -3923,194 +3914,193 @@ como quiera que se llame.
 <<036:Poblado G/012:EV012/Page 02/016>>
 <<face: FHutch, 1>>
 <<position: top>>
-\C[31]Hutch:\C[0] Si, lo que sea!
+\C[31]Hutch:\C[0] Yeah, whatever!
 
 <<036:Poblado G/012:EV012/Page 02/017>>
-\C[16]Tambuku:\C[0]Aunque si nos han atacado,
-es probable que ahora mismo se dirijan tambien
-al poblado de Frocteres.
+\C[16]Tambuku:\C[0] Since they have attacked us, 
+is pretty probable that they next attack to 
+the town of Frocteres.
 
 <<036:Poblado G/012:EV012/Page 02/018>>
 <<face: FHutch, 2>>
 <<position: top>>
-\C[31]Hutch:\C[0] Ay, pues que se defiendan como 
-puedan, seguro que hasta se enojan si voy y les
-salvo el pellejo como con los forajidos.
+\C[31]Hutch:\C[0] Well, they totally should find a way 
+to defend themselves, I bet that they will get
+mad at me even if I go there and save their skin,
+just as I already do with outlaws.
 
 <<036:Poblado G/012:EV012/Page 02/019>>
-\C[11]Kovurumbe:\C[0] Joven Mapache, entiendo
-que tu reacción es justificada, pero debes de mostrar
-que estas a un nivel mejor que ellos. Te he dado
-la gracia de mi poder porque se cual es tu valía.
+\C[11]Kovurumbe:\C[0] Young Raccoon, I understand your 
+feeling, but you must show that you are better 
+than them. I gave you my gifts and teachings because 
+I know your worth and you are better than that.
 
 <<036:Poblado G/012:EV012/Page 02/020>>
 <<face: flamarosa, 1>>
 <<position: top>>
-\C[2]Flamrose\C[0]: Y los poderes que otorgan
-a los guardianes representan una responsabilidad
-en proteger de amenazas como estas a quienes 
-no pueden hacerlo por si mismos.
+\C[2]Flamrose\C[0]: And the powers that guardians give 
+us represent a responsability of protecting 
+those who cannot protect themselves against 
+threats and evil-doers. 
 
 <<036:Poblado G/012:EV012/Page 02/021>>
 <<face: FHutch, 3>>
 <<position: top>>
-\C[31]Hutch:\C[0]Bueno ya, dejense de discursos
-de heroismo barato. Iré a ayudarles \! pero porque
-protejo lo que me pertenece, no porque me importe
-esa gente ingrata ni nada
+\C[31]Hutch:\C[0]Ok, ok, stop those cheap speeches 
+of heroism and honor. I will help them \! but 
+it's more because I protect what I own, not 
+because I care about those ungrateful or anything.
 
 <<036:Poblado G/006: /Page 01/001>>
-Kovurumbe puede sentir la energía de los seres 
-vivos y saber cuando se aproximan. Sin embargo,
-cosas como las que nos atacaron pueden pasar
-inadvertidas incluso para su poder.
+Kovurumbe can sense the energy of living beings 
+and know when they get closer. However, these 
+things that attacked us were able to pass 
+unadverted even with his power.
 
 <<036:Poblado G/017: /Page 01/001>>
-Nos mantendremos siempre vigías para evitar
-que alguien ataque este lugar. El ultimo bastión
-de cualquier pueblo son sus lideres y guardianes,
-sin ellos perdemos su poder y sabiduría.
+We will remain watching to prevent someone from 
+attacking this place. The last bastion of a tribe
+are its leaders and guardians, without them, we lose 
+their power and wisdom.
 
 <<036:Poblado G/019:Martina/Page 01/001>>
 <<position: top>>
-\C[17]Martina:\C[0] Señor Mapache, tenemos
-una variedad de productos que no encontrarás
-en otro lugar!
+\C[17]Martina:\C[0] Mr. Raccoon, we have a variety
+of products that you won't find in another place.
 
 <<036:Poblado G/019:Martina/Page 01/002>>
 <<position: top>>
-\C[17]Martina:\C[0] Hola hola, les ayudaré 
-en su aventura con esos productos buenisimos
+\C[17]Martina:\C[0] Hi hi, I'll help you
+out in your adventure with these 
+amazing products!
 
 <<037:Desierto /001:EV001/Page 01/001>>
-You have found Restaurador Total(1).
+You have found Total Restorative(1).
 
 <<037:Desierto /005:EV005/Page 01/001>>
-You have found un amuleto visual.
+You have found un Visual Amulet.
 
 <<038:Desierto /013:EV013/Page 01/001>>
-You have found Bomba de Choque (1)
+You have found Stun Bomb(1)
 
 <<038:Desierto /017:EV017/Page 01/001>>
 <<face: flamarosa, 6>>
 <<position: top>>
-\C[2]Flamrose\C[0]: Seriamente tenemos que 
-pensar bien por que sendero estamos pasando,
-hay algo que parece que estamos haciendo
-mal.
+\C[2]Flamrose\C[0]: We seriously must be 
+aware of the steps we are taking, I feel 
+like we going to the wrong place.
 
 <<038:Desierto /017:EV017/Page 01/002>>
 <<face: FHutch, 6>>
 <<position: top>>
-\C[31]Hutch:\C[0]Y yo que juraba que ese
-era el sendero correcto...
+\C[31]Hutch:\C[0]I've sworn this was the 
+right path.
 
 <<038:Desierto /017:EV017/Page 01/003>>
 <<face: FPengralle, 5>>
 <<position: top>>
-\C[23]Pengralle:\C[0] T-t-tal vez tenemos que 
-devolver nuestros pasos para descartar
-el camino equivocado
+\C[23]Pengralle:\C[0] Mmmm-maybe we should do 
+some back-tracking to discard the wrong 
+directions and then find the correct one.
 
 <<039:Desierto /012:EV012/Page 01/001>>
 <<background: dim>>
--Aviso de Guacarí- 
-Recordatorio de no dejar \C[1]jarrones\C[0] 
-en el desierto. Hay momentos donde hay que
-usar un lazo para alcanzarlas incluso.
+-Notes from Guacarí- 
+Gentle reminder to not leave \C[1]jars\C[0] 
+on the desert. And even less in places where 
+a lasso is the only way to get them.
 
 <<039:Desierto /018:EV018/Page 01/001>>
 <<face: FMuti1, 6>>
 <<position: top>>
-\C[10]Muti:\C[0] Disculpa Hutch, pero... ¿seguro 
-que este es el camino correcto? Me siento como
-caricatura recorriendo el mismo fondo una 
-y otra vez.
+\C[10]Muti:\C[0] Excuse me, Hutch, but... are you 
+reaaaally sure this is the right path? I'm 
+feeling like a cartoon, walking through the 
+same background over and over.
 
 <<039:Desierto /018:EV018/Page 01/002>>
 <<face: FHutch, 3>>
 <<position: top>>
-\C[31]Hutch:\C[0]Pues seguro que si eres una
-caricatura! 
+\C[31]Hutch:\C[0]Maybe you are a cartoon and you 
+are just noticing now, \! whatever that means!.
 
 <<039:Desierto /018:EV018/Page 01/003>>
 <<face: FPengralle, 2>>
 <<position: top>>
-\C[23]Pengralle:\C[0] Pues entonces probemos un
-camino diferente!
+\C[23]Pengralle:\C[0] Then let's try a different 
+path next time. 
 
 <<039:Desierto /018:EV018/Page 02/001>>
 <<face: FPengralle, 3>>
 <<position: top>>
-\C[23]Pengralle:\C[0] Tanto pasar por este lugar
-ese está volviendo algo exasperante...
+\C[23]Pengralle:\C[0] Passing through this path 
+again and again is feeding me up!
 
 <<039:Desierto /018:EV018/Page 02/002>>
 <<face: FMuti1, 6>>
 <<position: top>>
-\C[10]Muti:\C[0] Ya hasta me aprendí el paisaje:
-la roca gigante a la izquierda, las otras dos atras
-haciendo como una flecha, los arboles sin hojas en 
-paralelo, las piedritas más abajo...
+\C[10]Muti:\C[0] I even learned the landscape:
+the huge stone on the left, the other two behind 
+making an arrow shape, the dried trees in paralel, 
+the little rock below...
 
 <<039:Desierto /018:EV018/Page 02/003>>
 <<face: FHutch, 3>>
 <<position: top>>
-\C[31]Hutch:\C[0]Para ser tan perceptivos, 
-no es que me esten ayudando a tomar el 
-camino correcto!
+\C[31]Hutch:\C[0]You being so perceptive is not 
+helping me to take the right way!
 
 <<043:Descansad/001:EV001/Page 01/001>>
-Hola, tenemos esta choza provisional para que 
-puedas reposar. Por unas 10 \G puedes quedarte.
-¿Te interesa?\$
+Hi, we have a provisional hut for rest. For only
+10 \G you can stay.
+¿Are you interested?\$
 
 <<043:Descansad/001:EV001/Page 01/002>>
-Sí
+Yes
 
 <<043:Descansad/001:EV001/Page 01/003>>
 No
 
 <<043:Descansad/001:EV001/Page 01/004>>
-Hmmm, que mal, y yo que pensaba que 
-cobraba barato.
+Hmmm, so bad, and I thought my prices 
+were low.
 
 <<046:Zona del /004:Martina/Page 01/001>>
 <<position: top>>
-Les sorprenderá saber la cantidad de gente
-que ha empezado a venir a este lugar. 
-Igual de sorprendente de los productos
-que les voy a ofrecer.
+You would be amazed to the amount of people 
+to come to this place. Is as amazing as 
+the products that I can offer to you!
 
 <<046:Zona del /004:Martina/Page 01/002>>
 <<position: top>>
-Gracias, y recuerden: que por más lejos que 
-andemos, siempre habrá un más allá
+Thank you, and remember: that no matter 
+how far we go, there will always be
+somewhere beyond.
 
 <<046:Zona del /005:EV005/Page 01/001>>
-La zona del silencio es todo un misterio arquelogico
-y geológico. Incluso se sostiene que vienen 
-visitantes de otros planetas atraidos por las 
-propiedades de este lugar. 
+The Zone of Silence is a complete archeological
+and geological mystery. Some event affirm that 
+visitors from other planets come here, attracted 
+by the properties of this place.
 
 <<046:Zona del /005:EV005/Page 01/002>>
-Aunque personalmente creo que ese tema tambien
-ha sido inventado para atraer turistas.
+Personally, I just think that is something 
+made up to attract naive tourists.
 
 <<046:Zona del /006:EV006/Page 01/001>>
-Un extraño contenedor metálico que parece 
-llevar aqui años. \!Lo cierto es que su forma no
-parece a ser algo de este mundo.
+An strange metallic container seems to be 
+here for many years. \!The truth is that its 
+shape is out of this world.
 
 <<046:Zona del /007:EV007/Page 01/001>>
-Un extraño contenedor metálico que parece 
-llevar aqui años. \!Lo cierto es que su forma no
-parece a ser algo de este mundo.
+An strange metallic container seems to be 
+here for many years. \!The truth is that its 
+shape is out of this world.
 
 <<046:Zona del /008:EV008/Page 01/001>>
-Un extraño contenedor metálico que parece 
-llevar aqui años. \!Lo cierto es que su forma no
-parece a ser algo de este mundo.
+An strange metallic container seems to be 
+here for many years. \!The truth is that its 
+shape is out of this world.
 
 <<046:Zona del /011:EV011/Page 01/001>>
 <<face: FPengralle, 0>>

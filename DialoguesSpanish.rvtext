@@ -567,7 +567,7 @@ que te hubiera pasado algo...
 
 <<004:Poblado S/032: /Page 01/010>>
 <<face: FMuti1, 2>>
-\C[10]???\C[0] ...Cuanta crueldad, y con lo dificil
+\C[10]???\C[0] ...Cuanta crueldad, y con lo difícil
 que fue encontrarte aquí!
 
 <<004:Poblado S/032: /Page 01/011>>
@@ -1078,7 +1078,7 @@ Nos han dado la orden de proteger a los civiles
 de esta amenaza, contamos contigo, Flamrose.
 
 <<005:Poblado C/006:EV006/Page 01/001>>
-El cultivo siempre sera una labor dificil pero
+El cultivo siempre sera una labor difícil pero
 que te da sus frutos siempre.
 
 <<005:Poblado C/006:EV006/Page 02/001>>
@@ -3630,8 +3630,8 @@ aprobación que tengás, el guardian se nos
 puede enojar!
 
 <<033:Poblado G/007:Panico 2/Page 01/001>>
-Esto es terrible, esas cosas salieron de la tierra
-y empezaron a atacar sin piedad!
+Esto es horrible, esas cosas salieron de la tierra
+y empezaron a armar la podrida!
 
 <<033:Poblado G/024: /Page 01/001>>
 Pero re-zarpados estos tipos, loco. Salieron sin
@@ -3645,18 +3645,18 @@ rashos láser.
 
 <<033:Poblado G/025: /Page 01/001>>
 Andate... porque me los puedo terminar morfando...
-mantener mis pensamientos es... dificil...
+mantener mis pensamientos es... difícil...
 
 <<033:Poblado G/025: /Page 02/001>>
-Ughharrrg... es dificil... mantener mis pensamientos
+Ughharrrg... es difícil... mantener mis pensamientos
 en esta forma...
 
 <<033:Poblado G/030:EV030/Page 01/001>>
 Haz encontrado un amuleto visual.
 
 <<033:Poblado G/032: /Page 01/001>>
-Esto es terrible, esas cosas salieron de la tierra
-y empezaron a atacar sin piedad!
+Esto es horrible, esas cosas salieron de la tierra
+y empezaron a armar la podrida!
 
 <<033:Poblado G/032: /Page 02/001>>
 \.No \.puedo \.hablar. \.Necesito \.alta
@@ -3664,11 +3664,11 @@ y empezaron a atacar sin piedad!
 
 <<035:Desierto /004:A/Page 03/001>>
 <<face: FHutch, 4>>
-\C[31]Hutch:\C[0]¿Pero que rayos es esta cosa?
+\C[31]Hutch:\C[0]¿Pero qué rayos es esta cosa?
 
 <<035:Desierto /004:A/Page 03/002>>
 <<face: FHutch, 3>>
-\C[31]Hutch:\C[0]Que fastidio, largate de aquí.
+\C[31]Hutch:\C[0]Que fastidio, lárgate de aquí.
 
 <<035:Desierto /004:A/Page 03/003>>
 <<face: FHutch, 3>>
@@ -3676,9 +3676,9 @@ y empezaron a atacar sin piedad!
 que apresurarme para llegar a Guacarí
 
 <<035:Desierto /016:Jaguar en/Page 01/001>>
-Me ha dejado desconcertado este ente tan extraño
-además que venía con un Carchatilo... pense que 
-esos animales solo existian en los cuentos para
+Me ha dejado loquisimo, este bicho tan extraño
+además que venía con un Carchatilo... pensé que 
+esos animales solo existían en los cuentos para
 asustar niños.
 
 <<035:Desierto /018:EV018/Page 01/001>>
@@ -3828,11 +3828,11 @@ más allá del desierto.
 <<036:Poblado G/012:EV012/Page 02/006>>
 \C[11]Kovurumbe:\C[0] Y hace solo unos dias tambien
 he detectado esa energia pertubadora acercandose mas 
-y más en nuestros dominios. Supuse que la anomalía
-estaría en la zona del silencio pero...
+y más en nuestros dominios. Le perdí el rastro 
+cuando la sentí llegando a la Zona del Silencio.
 
 <<036:Poblado G/012:EV012/Page 02/007>>
-\C[16]Tambuku:\C[0]...Al enviar a algunos corredores
+\C[16]Tambuku:\C[0] Al enviar a algunos corredores
 allí encontramos a este trio perdido e incapaz de 
 comunicarse con sus aliados. A diferencia de otros,
 ellos no mostraron hostilidad contra los nuestros.
@@ -3877,9 +3877,9 @@ la situación actualmente.
 <<036:Poblado G/012:EV012/Page 02/013>>
 <<face: FHutch, 3>>
 <<position: top>>
-\C[31]Hutch:\C[0]Pues me compadezco de semejante
-torpe que cree que se puede meter conmigo y 
-salir sin escarmiento.
+\C[31]Hutch:\C[0]Pues me pobre del idiota que
+cree que se puede meter conmigo y salir sin 
+un castigo apropiado.
 
 <<036:Poblado G/012:EV012/Page 02/014>>
 <<face: FHutch, 1>>
@@ -3922,7 +3922,7 @@ la gracia de mi poder porque se cual es tu valía.
 <<position: top>>
 \C[2]Flamrose\C[0]: Y los poderes que otorgan
 a los guardianes representan una responsabilidad
-en proteger de amenazas como estas a quienes 
+de proteger de amenazas como estas a quienes 
 no pueden hacerlo por si mismos.
 
 <<036:Poblado G/012:EV012/Page 02/021>>
@@ -4005,7 +4005,7 @@ y otra vez.
 <<face: FHutch, 3>>
 <<position: top>>
 \C[31]Hutch:\C[0]Pues seguro que si eres una
-caricatura! 
+caricatura! \! lo que quiera que sea eso.
 
 <<039:Desierto /018:EV018/Page 01/003>>
 <<face: FPengralle, 2>>
@@ -4535,7 +4535,7 @@ mucho por trabajar...
 
 <<055:Mina - Pu/002:EV002/Page 01/008>>
 <<face: FPengralle, 2>>
-\C[23]Pengralle:\C[0]Es dificil procesar el hecho
+\C[23]Pengralle:\C[0]Es difícil procesar el hecho
 que esta máquina sea la responsable de todo
 este desastre o que haya liderado a los demás
 robots.
