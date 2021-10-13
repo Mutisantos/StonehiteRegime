@@ -4104,40 +4104,41 @@ shape is out of this world.
 
 <<046:Zona del /011:EV011/Page 01/001>>
 <<face: FPengralle, 0>>
-\C[23]Pengralle:\C[0] Vaya, no habia detallado 
-esta sección, si hay todo un foso ahí abajo.
+\C[23]Pengralle:\C[0] Wow, I haven't checked this 
+out properly, it looks like a bottomless pit 
+down here.
 
 <<046:Zona del /011:EV011/Page 01/002>>
 <<face: FHutch, 0>>
-\C[31]Hutch:\C[0]Pues nada, tendremos que 
-saltar por ahí para seguir investigando.
+\C[31]Hutch:\C[0]Oh well, seems like we need 
+to jump there to keep tracking those things.
 
 <<046:Zona del /011:EV011/Page 01/003>>
 <<face: FMuti1, 4>>
-\C[10]Muti:\C[0] \!Espera, \!espera, \!espera...
-\!...espera. Tenemos que revisar si tenemos
-todo lo necesario antes de aventurarnos ahí,
-no sabemos si podremos volver con facilidad.
+\C[10]Muti:\C[0] \!Wait, \!wait, \!wait...
+\!...wait. We should check if we are prepared 
+before jumping out there. We don't know if 
+we will be able to climb back.
 
 <<046:Zona del /011:EV011/Page 01/004>>
 <<face: flamarosa, 2>>
-\C[2]Flamrose\C[0]: Aunque parece que Kovurumbe
-se ha anticipado a nuestro plan. Hay varios emisarios
-de Guacarí aquí.
+\C[2]Flamrose\C[0]: Looks like Kovurumbe was also 
+preparing our arrival to this place. Seems like 
+some messengers from Guacarí are here.
 
 <<046:Zona del /011:EV011/Page 01/005>>
 <<face: FHutch, 1>>
-\C[31]Hutch:\C[0] Seguro el cactus gordo tiene
-algun plan tambien, habrá que preguntarles.
+\C[31]Hutch:\C[0] There's a chance that fat cactus 
+has some sort of plan too. Let's ask them first.
 
 <<046:Zona del /012:Martina/Page 01/001>>
-Hola señor Mapache y compañía, el gran Kovurumbe
-me ha solicitado venir a la Zona del Silencio a
-revisar la presencia de las máquinas pensando que
-estaban saliendo del crater.
+Hello mister Raccoon and acquantances. The great 
+Kovurumbe sent us to the Zone of Silence to check 
+the presence of the machines thinking that 
+they were popping out from the crater.
 
 <<046:Zona del /012:Martina/Page 01/002>>
-¿Quiere bajar para inspeccionar?
+Do you want to go down and inspect by yourself?
 
 <<046:Zona del /012:Martina/Page 01/003>>
 Yes
@@ -4146,240 +4147,247 @@ Yes
 No
 
 <<046:Zona del /012:Martina/Page 01/005>>
-De acuerdo, espero que puedan dar con el
-origen de estos atacantes
+Alright, I hope you can find the origin
+of our attackers.
 
 <<046:Zona del /012:Martina/Page 01/006>>
-Ya veo, lo esperaré aqui para indicarle el lugar
-apropiado para bajar.
+I see, I'll wait to point you out the place 
+to safely go down. 
 
 <<047:Entrada a/001:Soldado O/Page 01/001>>
-Largo de aquí, solo el pelotón autorizado tiene 
-permiso de entrar a las minas. ¡No me hagan 
-llamar al Mayor Molerrez!
+Scram, only the authorized platoon
+has permission to enter the mines. 
+Don't make me accuse you with the 
+Captain Molerrez
 
 <<047:Entrada a/001:Soldado O/Page 02/001>>
-Largo de aquí, solo el pelotón autorizado tiene 
-permiso de entrar a las minas. ¡No me hagan 
-llamar al Mayor Molerrez!
+Scram, only the authorized platoon
+has permission to enter the mines. 
+Don't make me accuse you with the 
+Captain Molerrez
 
 <<047:Entrada a/002:Soldado O/Page 01/001>>
-Tenemos que cuidar el acceso a esta mina hasta
-que sepamos de dónde estan saliendo esas 
-máquinas infernales. Vayan a investigar a otro
-lado.
+We must guard this access point
+until we know the placw where this 
+hellish machines are coming from. Go
+other place to do your investigation.
 
 <<047:Entrada a/002:Soldado O/Page 02/001>>
-Tenemos que cuidar el acceso a esta mina hasta
-que sepamos de dónde estan saliendo esas 
-máquinas infernales. Vayan a investigar a otro
-lado.
+We must guard this access point
+until we know the placw where this 
+hellish machines are coming from. Go
+other place to do your investigation.
 
 <<047:Entrada a/003:Soldado O/Page 01/001>>
 ... eh? \! Tenemos órdenes directas del Mayor
 de no dejar pasar a nadie. Vuelvan cuando
 tengan un rango superior a eso.
-\! Pfff, disque teniente...
+\! Pfff, Lieutenant...
 
 <<047:Entrada a/003:Soldado O/Page 02/001>>
 ... eh? \! Tenemos órdenes directas del Mayor
 de no dejar pasar a nadie. Vuelvan cuando
 tengan un rango superior a eso.
-\! Pfff, disque teniente...
+\! Pfff, Lieutenant...
 
 <<047:Entrada a/004:Soldado O/Page 01/001>>
-Hay que estar en guardia por si vuelven a 
-salir maquinas o bestias a atacarnos.
+We must keep in guard if those machines 
+or beasts come back for more.
 
 <<047:Entrada a/004:Soldado O/Page 02/001>>
-Hay que estar en guardia por si vuelven a 
-salir maquinas o bestias a atacarnos.
+We must keep in guard if those machines 
+or beasts come back for more.
 
 <<047:Entrada a/005:Soldado O/Page 01/001>>
-1,2,1,2... quitate, que me haces perder el 
-paso!
+1,2,1,2... get out the way, you are making 
+me lose my pace.
 
 <<047:Entrada a/005:Soldado O/Page 02/001>>
-1,2,1,2... quitate, que me haces perder el 
-paso!
+1,2,1,2... get out the way, you are making 
+me lose my pace.
 
 <<047:Entrada a/009:EV009/Page 01/001>>
 <<face: FPengralle, 0>>
 <<position: top>>
-\C[23]Pengralle:\C[0] Esperen, tenemos
-que tratar de conseguir información primero.
+\C[23]Pengralle:\C[0] Wait, we must try to 
+get more information first.
 
 <<047:Entrada a/010:EV010/Page 01/001>>
 <<face: FPengralle, 0>>
 <<position: top>>
-\C[23]Pengralle:\C[0] Esperen, tenemos
-que tratar de conseguir información primero.
+\C[23]Pengralle:\C[0] Wait, we must try to 
+get more information first.
 
 <<047:Entrada a/011:EV011/Page 01/001>>
 <<face: FPengralle, 0>>
 <<position: top>>
-\C[23]Pengralle:\C[0] Esperen, tenemos
-que tratar de conseguir información primero.
+\C[23]Pengralle:\C[0] Wait, we must try to 
+get more information first.
 
 <<047:Entrada a/015:EV015/Page 01/001>>
 <<face: FPengralle, 7>>
 <<position: top>>
-\C[23]Pengralle:\C[0] Parece que el Capitan fue
-muy estricto con sus ordenes. Tendremos que 
-buscar otro lugar para entrar.
+\C[23]Pengralle:\C[0] The captain was pretty 
+strict with his orders. We will find another 
+way to get through.
 
 <<047:Entrada a/015:EV015/Page 01/002>>
 <<face: FHutch, 6>>
-\C[31]Hutch:\C[0]Bueno, no creo que quepamos
-todos por donde llegaron los robots, eso es seguro.
+\C[31]Hutch:\C[0]Hmmm, I don't think we will 
+fit from the holes where the robots came from, 
+I tell you that.
 
 <<047:Entrada a/015:EV015/Page 01/003>>
 <<face: FMuti1, 6>>
 <<position: top>>
-\C[10]Muti:\C[0] tengo cierto conocimiento de 
-fenomenos paranormales y hay quienes aseguran
-que hace milenios una nave extraterrestre 
-cayó en el desierto y generó un crater
+\C[10]Muti:\C[0] I kinda have certain knowledge 
+of paranormal phenomenons, and some people said 
+that milleniums ago, an alien ship crashed in 
+the desert and made a crater there.
 
 <<047:Entrada a/015:EV015/Page 01/004>>
 <<face: FMuti1, 5>>
 <<position: top>>
-\C[10]Muti:\C[0] puede que sean solo paparruchas,
-pero no perdemos nada con buscar la famosa
-"Zona del Silencio", seguro entre tantos caminos
-que tomamos mal la habiamos encontrado.
+\C[10]Muti:\C[0] It might be a complete nonsense, 
+but we don't lose nothing trying to find the so 
+called "Zone of Silence". I'm sure it was in any 
+of the many wrong paths on the desert.
 
 <<047:Entrada a/015:EV015/Page 01/005>>
 <<face: flamarosa, 2>>
 <<position: top>>
-\C[2]Flamrose\C[0]: Ahora que lo recuerdo, 
-Kovurumbe mencionó algo al respecto sobre
-esa zona, o sea que no es tan ficticia como
-pensamos.
+\C[2]Flamrose\C[0]: Now that I think about it, 
+Kovurumbe mentioned something about this zone 
+when we got lost. So it's not so false as you 
+think.
 
 <<047:Entrada a/015:EV015/Page 01/006>>
 <<face: FHutch, 1>>
-\C[31]Hutch:\C[0] Entonces de regreso al desierto
-vamos a buscar ese crater paranormal o lo que sea.
+\C[31]Hutch:\C[0] Then let's go back to the desert 
+and find that paranormal crater or whatever it is.
 
 <<047:Entrada a/020:EV020/Page 01/001>>
-\C[28]Molerrez:\C[0] Bien... creo que vamos a
-tener una larga conversación de regreso al 
-cuartel general. El bandido mapache tambien 
-viene con nosotros si no quiere problemas.
+\C[28]Molerrez:\C[0] Well... seems like we will have 
+a long conversation back to the headquarters.
+The raccoon bandit will come with us if he 
+doesn't want further problems with us.
 
 <<047:Entrada a/020:EV020/Page 01/002>>
 <<face: FPengralle, 5>>
-\C[23]Pengralle:\C[0] P-pero Capitan, logramos
-encontrar la máquina lider de los ataques y ...
+\C[23]Pengralle:\C[0] B-but Captain, we managed 
+to find the machine leader of these attacks 
+and, and, and ...
 
 <<047:Entrada a/020:EV020/Page 01/003>>
 <<position: top>>
-\C[28]Molerrez:\C[0] No voy a discutir nada con
-ustedes, les di una orden directa, la desobedecieron
-y pusieron en riesgo toda la misión. \! Me llevaré 
-este caso a corte militar y no se habla mas del asunto!
+\C[28]Molerrez:\C[0] I'll not discuss anything else 
+with you. I gave a direct order, you disobeyed it and 
+jeopardized the whole mission. \! I'll take this case 
+to the military court and that's it.
 
 <<048:Fosa OVNI/001:EV001/Page 01/001>>
 <<face: FPengralle, 0>>
 <<position: top>>
-\C[23]Pengralle:\C[0] fiu, menos mal parece que 
-la caida estaba amortiguada.
+\C[23]Pengralle:\C[0] phew, seems like the fall 
+was cushioned. 
 
 <<048:Fosa OVNI/001:EV001/Page 01/002>>
 <<face: flamarosa, 1>>
 <<position: top>>
-\C[2]Flamrose\C[0]: Si, la verdad es que me 
-puse a aletear pensando que iba a ser una 
-caida mas dramatica pero al final estuvo
-bien.
+\C[2]Flamrose\C[0]: Yeah, I thought the fall 
+was going to be more dramatic and started 
+flapping my wings, but everything was fine in 
+the end.
 
 <<048:Fosa OVNI/001:EV001/Page 01/003>>
 <<face: FHutch, 1>>
-\C[31]Hutch:\C[0] Parece que los jaguares 
-hicieron un buen preparativo para esta caida.
+\C[31]Hutch:\C[0] Those jaguars sure did a good 
+job preparing this place.
+
 
 <<048:Fosa OVNI/001:EV001/Page 01/004>>
 <<face: FMuti1, 6>>
 <<position: top>>
-\C[10]Muti:\C[0] Si, suuuuuuper preparado todo,
-creo que me rompí el brazo y todo de la caida.
+\C[10]Muti:\C[0] Yeah, right, they prepared it 
+suuuuuuuuuuuuuuper good. I think I broke my 
+arm with that landing.
 
 <<048:Fosa OVNI/001:EV001/Page 01/005>>
 <<face: FHutch, 6>>
-\C[31]Hutch:\C[0] Ay, deja de quejarte, yo 
-aqui veo que estás bien, el metal no tiene 
-cara de doblarse tan fácil, mejor entremos
-a estas cuevas.
+\C[31]Hutch:\C[0] Meh, stop complaining, I don't 
+see anything wrong, the metal doesn't seem to 
+bend so easily. Let's get inside on the caves. 
 
 <<049:Mina - Cu/001:EV001/Page 01/001>>
-You have found 2 baterías duraderas.
+You have found 2 Durable Bateries.
 
 <<049:Mina - Cu/021:EV021/Page 01/001>>
----Para Mineros y operarios varios---
-Varios sistemas de palancas han sido instalados
-para mover la carga de manera automatizada.
-Adicionalmente, se han instalado interruptores
+---For Miners and other workers---
+Several lever systems have been installed
+to move loaded carts automatically.
+Additionally, switches have been prepared
 
 <<049:Mina - Cu/021:EV021/Page 01/002>>
-de salvaguarda para las secciones más frágiles
-de los rieles, en especial las que sirven de puente.
+as a fallback method for the most 
+fragile sections of the rails, specially
+that work as bridges.
 
 <<049:Mina - Cu/022:EV022/Page 01/001>>
----Para Mineros y operarios varios---
-Varios sistemas de palancas han sido instalados
-para mover la carga de manera automatizada.
-Adicionalmente, se han instalado interruptores
+---For Miners and other workers---
+Several lever systems have been installed
+to move loaded carts automatically.
+Additionally, switches have been prepared
 
 <<049:Mina - Cu/022:EV022/Page 01/002>>
-de salvaguarda para las secciones más frágiles
-de los rieles, en especial las que sirven de puente.
-Puede que los interruptores necesiten lanzarles
-algo o halarlos con fuerza para activarlos.
+as a fallback method for the most fragile
+sections of the rails, specially that work
+as bridges. You might need to throw something 
+or pull them to activate them.
 
 <<049:Mina - Cu/036:EV036/Page 01/001>>
----Para Mineros y operarios varios---
-Se les recomienda traer de vuelta los 
-vagones que ya no estén utilizando en 
-las secciones este y oeste. 
+---For Miners and other workers---
+Please, bring back the karts that are 
+not being used from the west and 
+east section of the mines. 
 
 <<049:Mina - Cu/036:EV036/Page 01/002>>
-Recuerden que el sistema de palancas 
-nos ha permitido automatizar el movimiento
-por los rieles.
+Just a reminder that the levers system 
+has automated the movement of karts 
+through the rails. 
 
 <<050:Frocteres/002:EV002/Page 01/001>>
 <<background: dim>>
 <<position: top>>
-Frocteres. Año 5736. 
+Frocteres. Year 5736. 
 
 <<050:Frocteres/002:EV002/Page 01/002>>
-\C[31]Hutch:\C[0] El Sheriff Butch Takinohara era
-el encargado de preservar la paz y el orden en 
-la creciente colonia de Frocteres. \! El era mi 
-padre.
+\C[31]Hutch:\C[0] Sheriff Butch Takinohara was in 
+charge of preserving peace and order in the 
+ever-growing colony of Frocteres. \! He was also 
+my father.
 
 <<050:Frocteres/002:EV002/Page 01/003>>
-\C[31]Hutch:\C[0] El venía de un lugar diferente
-a todos los que llegaban de Eosia, el venía del 
-pais de Shunzuru, al otro lado del planeta.
+\C[31]Hutch:\C[0] He came for a different place, as 
+almost everybody came from Eosia. He was born on 
+the country of Shunzuru, at the other side 
+of the planet.
 
 <<050:Frocteres/002:EV002/Page 01/004>>
-\C[31]Hutch:\C[0] Habia mucho recelo contra el
-de cierta gente, pero eso no lo detenia para cumplir
-su trabajo.
+\C[31]Hutch:\C[0] There was certain mistrust against 
+him from certain people, but that never stopped 
+him to do his job.
 
 <<050:Frocteres/002:EV002/Page 01/005>>
-\C[31]Hutch:\C[0] En el transcurso de ese tiempo,
-ya habia hecho una familia con Sasha McCoy. 
-Tambien habia hecho una gran amistad con 
-los habitantes de Guacarí, eso ultimo pues...
+\C[31]Hutch:\C[0] During that time, he married 
+and made a family with Sasha McCoy. He even 
+established a bond with the inhabitants of 
+Guacarí. However, that last thing...
 
 <<050:Frocteres/002:EV002/Page 01/006>>
-\C[31]Hutch:\C[0] Eso interfería con los intereses
-de los eosianos y la gente de la CEOE, así que lo
-incriminaron falsamente de una serie de delitos
-que no cometió.
+\C[31]Hutch:\C[0] It interferred with the Eosian 
+interests and the SCSO people, so they just 
+framed him with a series of crimes that he 
+never commited. 
 
 <<050:Frocteres/002:EV002/Page 01/007>>
 \C[31]Hutch:\C[0] Sus amigos y la gente que habia
