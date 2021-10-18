@@ -1,4 +1,4 @@
-# LFS DATABASE VERSION 13
+# LFS DATABASE Versión 13
 
 <<maps/2/display_name>>
 Terreno de Rituales
@@ -207,6 +207,7 @@ Muti
 [new quote]
 "No se metan con el morso."
 </win quotes>
+
 <drops quotes>
 "¿Solo esto?, Bueh..."
 [new quote]
@@ -214,6 +215,7 @@ Muti
 [new quote]
 "¿Se van a comer esto?"
 </drops quotes>
+
 <level quotes>
 "El poder sigue creciendo en mi."
 [new quote]
@@ -2185,14 +2187,14 @@ la CEOE.
 Rifle Helado E32
 
 <<weapons/25/description>>
-Version Mejorada del rifle de cargas congeladas
+Versión Mejorada del rifle de cargas congeladas
 de la CEOE
 
 <<weapons/25/name>>
 Rifle Helado D128
 
 <<weapons/26/description>>
-Version mejorada del rifle helado de la CEOE,
+Versión mejorada del rifle helado de la CEOE,
 con un rango de exactitud mayor.
 
 <<weapons/26/name>>
@@ -2213,7 +2215,7 @@ que mantiene su capacidad de congelar.
 Reinz .50Cal
 
 <<weapons/29/description>>
-Version Actual del Rifle de Batalla Mejorada, 
+Versión Actual del Rifle de Batalla Mejorada, 
 utilizado por ejercitos regulares en el mundo.
 
 <<weapons/29/name>>
@@ -3671,6 +3673,18 @@ ABSORBE
 <<constants/YEA::SHOP/EQUIP>>
 Equipar
 
+<<variables/YEA::SHOP::VOCAB_STATUS[:hp_recover]>>
+Cura PV
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:mp_recover]>>
+Cura PE
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:applies]>>
+Aplica
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:removes]>>
+Remueve
+
 <<variables/YEA::ITEM::VOCAB_STATUS[:hp_recover]>>
 + PV
 
@@ -3685,6 +3699,15 @@ Aplica
 
 <<variables/YEA::ITEM::VOCAB_STATUS[:removes]>>
 Remueve
+
+<<variables/YEA::ITEM::ITEM_TYPES[:all]>>
+Todos
+
+<<variables/YEA::ITEM::ITEM_TYPES[:battle]>>
+Combate
+
+<<variables/YEA::ITEM::ITEM_TYPES[:key_item]>>
+Objetos Clave
 
 <<variables/YEA::STATUS::COMMANDS[:general]>>
 General
@@ -3723,31 +3746,10 @@ Nuevo Nivel
 Nivel Máximo
 
 <<constants/YEA::ENEMY_INFO/HELP_INFO_SHOW>>
-\}Presiona \C[2]SHIFTC[0] para ver mas información.
+\e}Presiona \eC[2]SHIFT\eC[0] para ver mas información.
 
 <<constants/YEA::ENEMY_INFO/HELP_INFO_SWITCH>>
-\}Presiona \C[2]Q\C[0] o \C[2]W\C[0] para ver más.
-
-<<constants/YEA::PARTY/REMOVE_TEXT>>
--Remover-
-
-<<constants/YEA::PARTY/NO_DATA>>
--Sin Datos-
-
-<<constants/YEA::PARTY/EQUIP_TEXT>>
-Equipo
-
-<<constants/YEA::STATUS/COMMAND_TEXT>>
-Formación
-
-<<constants/YEA::STATUS/PARAMETERS_VOCAB>>
-Parametros
-
-<<constants/YEA::STATUS/EXPERIENCE_VOCAB>>
-Experiencia
-
-<<constants/YEA::STATUS/NEXT_TOTAL_VOCAB>>
-Sig. Nivel 
+\e}Presiona \eC[2]Q\eC[0] o \eC[2]W\eC[0] para ver más.
 
 <<variables/YEA::PARTY::COMMANDS[:change]>>
 Cambiar
@@ -3760,3 +3762,17 @@ Revertir
 
 <<variables/YEA::PARTY::COMMANDS[:finish]>>
 Confirmar
+
+<<constants/YEA::PARTY/REMOVE_TEXT>>
+-Remover-
+
+<<constants/YEA::PARTY/NO_DATA>>
+-Sin Datos-
+
+<<constants/YEA::PARTY/EQUIP_TEXT>>
+Equipo
+
+<<constants/YEA::COMMAND_PARTY/COMMAND_TEXT>>
+Formación
+
+

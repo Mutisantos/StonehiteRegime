@@ -224,75 +224,75 @@ la misma dedicación que a Kusikuy. Nuestros
 guardianes son todo lo que nos define como pueblo
 de Tatama.
 
-<<003:Casa de F/001:EV001/Page 01/001>>
+<<003:Flamrose /001:EV001/Page 01/001>>
 Flamrose....
 
-<<003:Casa de F/001:EV001/Page 01/002>>
+<<003:Flamrose /001:EV001/Page 01/002>>
 Flamrose...Despierta, ya se te hizo tarde...
 
-<<003:Casa de F/001:EV001/Page 01/003>>
+<<003:Flamrose /001:EV001/Page 01/003>>
 Flamrose...Mueve el plumero de una vez
 por todas, no me hagas enojar!
 
-<<003:Casa de F/001:EV001/Page 01/004>>
+<<003:Flamrose /001:EV001/Page 01/004>>
 <<face: flamarosa, 2>>
 \C[2]\P[1]\C[0]: Eh... ¿Que Pasa?... 
 ¿Que es todo ese escandalo, padre? 
 
-<<003:Casa de F/001:EV001/Page 01/005>>
+<<003:Flamrose /001:EV001/Page 01/005>>
 \C[2]Flancorose:\C[0] Por el amor a Tatama, Flamrose,
 que yo sea el chaman del Reino no te salva de 
 hacer lo debido, y eso incluye nuestros rituales.
 
-<<003:Casa de F/001:EV001/Page 01/006>>
+<<003:Flamrose /001:EV001/Page 01/006>>
 \C[2]Flancorose:\C[0] Y sabes que este 
 es el mas importante de todos.
 La gran flama de Tatama te 
 dara tu labor destinada.
 
-<<003:Casa de F/001:EV001/Page 01/007>>
+<<003:Flamrose /001:EV001/Page 01/007>>
 <<face: flamarosa, 6>>
 \C[2]Flamrose:\C[0] Si, si lo se, solo que me 
 por los nervios no Había logrado dormir temprano,
 así que terminé por despertarme tarde, jeje...
 
-<<003:Casa de F/001:EV001/Page 01/008>>
+<<003:Flamrose /001:EV001/Page 01/008>>
 \C[2]Flancorose:\C[0] Te espero afuera, 
 termina de despertarte y vamos al templo
 
-<<003:Casa de F/001:EV001/Page 01/009>>
+<<003:Flamrose /001:EV001/Page 01/009>>
 <<face: flamarosa, 1>>
 \C[2]Flamrose:\C[0]Claro, voy para allá
 
-<<003:Casa de F/005:EV005/Page 01/001>>
+<<003:Flamrose /005:EV005/Page 01/001>>
 <<face: flamarosa, 1>>
 \C[2]Flamrose\C[0]: (Bien, en marcha, este ritual
 me va a dar mi vocación por fin!).
 
-<<003:Casa de F/006:EV006/Page 01/001>>
+<<003:Flamrose /006:EV006/Page 01/001>>
 ¿Deseas descansar un rato y reponer 
 fuerzas y energia?
 
-<<003:Casa de F/006:EV006/Page 01/002>>
+<<003:Flamrose /006:EV006/Page 01/002>>
 Si
 
-<<003:Casa de F/006:EV006/Page 01/003>>
+<<003:Flamrose /006:EV006/Page 01/003>>
 No
 
-<<003:Casa de F/006:EV006/Page 01/004>>
+<<003:Flamrose /006:EV006/Page 01/004>>
 You don't have enough money.
 
-<<003:Casa de F/008:EV008/Page 01/001>>
+<<003:Flamrose /008:EV008/Page 01/001>>
 ¿Deseas descansar un rato y reponer 
 fuerzas y energia?
 
-<<003:Casa de F/008:EV008/Page 01/002>>
+<<003:Flamrose /008:EV008/Page 01/002>>
 Si
 
-<<003:Casa de F/008:EV008/Page 01/003>>
+<<003:Flamrose /008:EV008/Page 01/003>>
 No
 
-<<003:Casa de F/008:EV008/Page 01/004>>
+<<003:Flamrose /008:EV008/Page 01/004>>
 You don't have enough money.
 
 <<004:Poblado S/010:EV010/Page 01/001>>
@@ -1385,6 +1385,9 @@ Oprime Z multiples veces hasta llenar la barra
 
 <<007:BattleBac/013: /Page 01/002>>
 Multiplicador en \V[105]
+
+<<007:BattleBac/41: /Page 01/001>>
+Idioma cambiado a Español
 
 <<008:Bosque de/004:EV004/Page 01/001>>
 <<background: dim>>

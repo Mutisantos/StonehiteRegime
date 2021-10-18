@@ -49,11 +49,9 @@ Flamrose
 [new quote]
 "They should think it better after this fight."
 </win quotes>
-
 <drops quotes>
 "I'll take this as a prize."
 </drops quotes>
-
 <level quotes>
 "This is all thanks to the great flame of Tatama."
 [new quote]
@@ -76,13 +74,11 @@ Pengralle
 [new quote]
 "T-t-the next one we will win faster"
 </win quotes>
-
 <drops quotes>
 "I-i-i hope you don't mind that I take this with me."
 [new quote]
 "S-s-surely they won't need this"
 </drops quotes>
-
 <level quotes>
 "I'll keep training hard."
 [new quote]
@@ -104,13 +100,11 @@ Hutch
 [new quote]
 "And that was all of it?."
 </win quotes>
-
 <drops quotes>
 "This serves me better than you."
 [new quote]
 "Now this is my property."
 </drops quotes>
-
 <level quotes>
 "Behold the might of the great Hutch."
 [new quote]
@@ -130,11 +124,9 @@ Dana
 [new quote]
 "They couldn't deny my talent"
 </win quotes>
-
 <drops quotes>
 "Great, more money for the next tour."
 </drops quotes>
-
 <level quotes>
 "And the band keeps playing."
 </level quotes>
@@ -157,13 +149,11 @@ Akane
 [new quote]
 "Don't underestimate me just for being short."
 </win quotes>
-
 <drops quotes>
 "Look: materials for new spells!"
 [new quote]
 "An equivalent exchange."
 </drops quotes>
-
 <level quotes>
 "Growing in knowledge."
 [new quote]
@@ -183,7 +173,6 @@ Farrock
 [new quote]
 "Showtime is over, thank you!."
 </win quotes>
-
 <drops quotes>
 "The audience throws what they got!."
 [new quote]
@@ -209,7 +198,6 @@ Muti
 [new quote]
 "Don't mess with the walrus."
 </win quotes>
-
 <drops quotes>
 "¿Only this?, Okay..."
 [new quote]
@@ -217,7 +205,6 @@ Muti
 [new quote]
 "Are you gonna eat this?"
 </drops quotes>
-
 <level quotes>
 "The power keeps growing on me."
 [new quote]
@@ -239,11 +226,9 @@ Koortesh
 [new quote]
 "Fight for those whom canst not"
 </win quotes>
-
 <drops quotes>
 "A worthy tribute to the kingdom."
 </drops quotes>
-
 <level quotes>
 "I shall fight till the last instant. "
 [new quote]
@@ -263,11 +248,9 @@ Byel
 [new quote]
 "Han sido fáciles de leer"
 </win quotes>
-
 <drops quotes>
 "Vamos "
 </drops quotes>
-
 <level quotes>
 "Valio la pena la molestia."
 </level quotes>
@@ -283,11 +266,9 @@ Raylon
 <win quotes>
 "No se metan con la comida de un hombre"
 </win quotes>
-
 <drops quotes>
 "Un digno tributo para el reino."
 </drops quotes>
-
 <level quotes>
 "Luchare hasta el ultimo instante."
 [new quote]
@@ -3682,3 +3663,201 @@ No encuentra el punto de partida del jugador.
 
 <<constants/Vocab/EventOverflow>>
 Se ha superado el limite de llamados para eventos(Event Overflow)
+
+<<constants/YEA::SYSTEM/COMMAND_NAME>>
+Options
+
+<<constants/YEA::SAVE/SLOT_NAME>>
+File %s
+
+<<constants/YEA::SAVE/ACTION_LOAD>>
+Load
+
+<<constants/YEA::SAVE/ACTION_SAVE>>
+Save
+
+<<constants/YEA::SAVE/ACTION_DELETE>>
+Delete
+
+<<constants/YEA::SAVE/SELECT_HELP>>
+Select your adventure file.
+
+<<constants/YEA::SAVE/LOAD_HELP>>
+Load from the point where you saved.
+
+<<constants/YEA::SAVE/SAVE_HELP>>
+Save your current progress on your adventure.
+
+<<constants/YEA::SAVE/DELETE_HELP>>
+Delete your file with ALL  the progress in it.
+
+<<constants/YEA::SAVE/EMPTY_TEXT>>
+No Data
+
+<<constants/YEA::SAVE/PLAYTIME>>
+Total Playtime: 
+
+<<constants/YEA::SAVE/TOTAL_SAVE>>
+Times Saved: 
+
+<<constants/YEA::SAVE/TOTAL_GOLD>>
+Coins: 
+
+<<constants/YEA::SAVE/LOCATION>>
+Location: 
+
+<<constants/YEA::BATTLE/HELP_TEXT_ALL_FOES>>
+All enemies
+
+<<constants/YEA::BATTLE/HELP_TEXT_ONE_RANDOM_FOE>>
+One Enemy
+
+<<constants/YEA::BATTLE/HELP_TEXT_MANY_RANDOM_FOE>>
+%d enemies
+
+<<constants/YEA::BATTLE/HELP_TEXT_ALL_ALLIES>>
+All Allies
+
+<<constants/YEA::BATTLE/HELP_TEXT_ALL_DEAD_ALLIES>>
+All fallen allies
+
+<<constants/YEA::BATTLE/HELP_TEXT_ONE_RANDOM_ALLY>>
+One Ally
+
+<<constants/YEA::BATTLE/HELP_TEXT_RANDOM_ALLIES>>
+%d allies
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:missed]>>
+MISSED
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:drained]>>
+DRAINED
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:critical]>>
+CRITICAL
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:evaded]>>
+EVADES
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:failed]>>
+FAILS
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:weakpoint]>>
+EFFECTIVE
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:resistant]>>
+RESISTS
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:immune]>>
+INMUNE
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:absorbed]>>
+ABSORBS
+
+<<constants/YEA::SHOP/EQUIP>>
+Equip.
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:hp_recover]>>
+Cure HP
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:mp_recover]>>
+Cure EP
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:applies]>>
+Applies!
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:removes]>>
+Removes!
+
+<<variables/YEA::ITEM::VOCAB_STATUS[:hp_recover]>>
++ HP
+
+<<variables/YEA::ITEM::VOCAB_STATUS[:mp_recover]>>
++ EP
+
+<<variables/YEA::ITEM::VOCAB_STATUS[:tp_recover]>>
++ FP
+
+<<variables/YEA::ITEM::VOCAB_STATUS[:applies]>>
+Applies
+
+<<variables/YEA::ITEM::VOCAB_STATUS[:removes]>>
+Removes
+
+<<variables/YEA::STATUS::COMMANDS[:general]>>
+General
+
+<<variables/YEA::STATUS::COMMANDS[:parameters]>>
+Parameters
+
+<<variables/YEA::STATUS::COMMANDS[:custom1]>>
+Skills
+
+<<variables/YEA::STATUS::COMMANDS[:custom2]>>
+Equipment
+
+<<variables/YEA::STATUS::COMMANDS[:biography]>>
+Biography
+
+<<constants/YEA::VICTORY_AFTERMATH/SKILLS_TEXT>>
+New Skills
+
+<<constants/YEA::VICTORY_AFTERMATH/TOP_TEAM>>
+%s's Team
+
+<<constants/YEA::VICTORY_AFTERMATH/TOP_VICTORY_TEXT>>
+%s has won
+
+<<constants/YEA::VICTORY_AFTERMATH/TOP_LEVEL_UP>>
+%s has leveled up
+
+<<constants/YEA::VICTORY_AFTERMATH/TOP_SPOILS>>
+Objects earned!
+
+<<constants/YEA::VICTORY_AFTERMATH/LEVELUP_TEXT>>
+LEVEL UP!
+
+<<constants/YEA::VICTORY_AFTERMATH/MAX_LVL_TEXT>>
+MAX LEVEL
+
+<<constants/YEA::ENEMY_INFO/HELP_INFO_SHOW>>
+\}Press \C[2]SHIFT\C[0] to show extra info.
+
+<<constants/YEA::ENEMY_INFO/HELP_INFO_SWITCH>>
+\}Press \C[2]Q\C[0] or \C[2]W\C[0] to show more.
+
+<<variables/YEA::PARTY::COMMANDS[:change]>>
+Change
+
+<<variables/YEA::PARTY::COMMANDS[:remove]>>
+Remove
+
+<<variables/YEA::PARTY::COMMANDS[:revert]>>
+Revert
+
+<<variables/YEA::PARTY::COMMANDS[:finish]>>
+Confirm
+
+<<constants/YEA::PARTY/REMOVE_TEXT>>
+-Remove-
+
+<<constants/YEA::PARTY/NO_DATA>>
+- No Data -
+
+<<constants/YEA::PARTY/EQUIP_TEXT>>
+Equipment
+
+<<constants/YEA::COMMAND_PARTY/COMMAND_TEXT>>
+Formation
+
+<<constants/YEA::STATUS/COMMAND_TEXT>>
+Formation
+
+<<constants/YEA::STATUS/PARAMETERS_VOCAB>>
+Parameters
+
+<<constants/YEA::STATUS/EXPERIENCE_VOCAB>>
+Expererience
+
+<<constants/YEA::STATUS/NEXT_TOTAL_VOCAB>>
+Next Level

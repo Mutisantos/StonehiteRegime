@@ -89,8 +89,8 @@ But to shine in this manner makes no sense...
 <<002:Terreno d/007:Flancoros/Page 02/012>>
 <<position: top>>
 \C[2]Flancorose:\C[0] I have been the shaman leader
-of Tatama for several year, and in spite of that, 
-every new thing surpasses my knowledge. 
+of Tatama for several years, and in spite of that, 
+this new phenomenon surpasses my knowledge. 
 
 <<002:Terreno d/007:Flancoros/Page 02/013>>
 <<face: flamarosa, 5>>
@@ -238,11 +238,12 @@ don't make me get angrier!
 <<003:Flamrose /001:EV001/Page 01/005>>
 \C[2]Flancorose:\C[0] For the love of Tatama, Flamrose,
 the fact I'm the main shaman of our people won't make
-you save you from your duties, and that includes our rituals.
+you save you from your duties, and that includes
+our rituals.
 
 <<003:Flamrose /001:EV001/Page 01/006>>
 \C[2]Flancorose:\C[0] And you already know that this 
-one is the most important of them. Today, the great flame of 
+one is the most important of them. Today, the great flame 
 of Tatama will choose your destined work for the future.
 
 <<003:Flamrose /001:EV001/Page 01/007>>
@@ -261,8 +262,8 @@ get ready and then follow me to the holy grounds.
 
 <<003:Flamrose /005:EV005/Page 01/001>>
 <<face: flamarosa, 1>>
-\C[2]Flamrose\C[0]: (Alright, let's get, this ritual will finally
-give me my destined vocation and powers!).
+\C[2]Flamrose\C[0]: (Alright, let's get, this ritual will
+finally give me my destined vocation and powers!).
 
 <<003:Flamrose /006:EV006/Page 01/001>>
 Do you want to rest a little bit and restore your
@@ -313,7 +314,7 @@ now. Good luck Flamrose.
 \C[1]Tzimitl:\C[0] But before leaving, let me 
 treat your wounds, I'm known for being demanding
 but I'm not going to leave you to be bug 
-meat there!á!
+meat there!
 
 <<004:Poblado S/012:TZIMITL/Page 01/004>>
 <<position: top>>
@@ -718,8 +719,9 @@ you are talking about?
 <<004:Poblado S/032: /Page 02/023>>
 <<face: FMuti1, 3>>
 \C[10]Muti\C[0]: He is a merciless tyrant, a pedantic, 
-pontificating, pretentious \C[17]#?$*!*%\C[0], a belligerent old \C[17]¿?*!\C[0],
-a worthless steaming pile of cow dung... 
+pontificating, pretentious \C[17]#?$*!*%\C[0], a belligerent 
+old \C[17]¿?*!\C[0],a worthless steaming 
+pile of cow dung... 
 
 <<004:Poblado S/032: /Page 02/024>>
 <<face: FMuti1, 6>>
@@ -735,7 +737,7 @@ the continent of Boreios.
 
 <<004:Poblado S/032: /Page 02/026>>
 <<face: FMuti1, 7>>
-\C[10]Muti\C[0]: Yes, the truth is that there is whole detailed
+\C[10]Muti\C[0]: Yes, the truth is that there is whole 
 story behind this. But the importan thing here is that 
 he possesses a dangerous technology and we must stopped 
 so no more innocent civilians are harmed.
@@ -1016,23 +1018,24 @@ Solar Temple.
 you must pay for it as any other client.
 
 <<004:Poblado S/059:Vendedora/Page 01/001>>
-Bienvenido a esta tienda al aire libre. Adelante
-compra todo lo que necesites para la aventura.
+Welcome to this roof-less shop. Come in, 
+buy anything you need for your adventure
 
 <<004:Poblado S/059:Vendedora/Page 01/002>>
-Vuelve pronto.
+Thank you, come again!
 
 <<004:Poblado S/060:TZIMITL C/Page 01/001>>
 <<position: top>>
-\C[1]Tzimitl:\C[0]Me descuidé Flamrose, lo siento.
-Intentaré cubrirte mientras vas al templo de la luna.
+\C[1]Tzimitl:\C[0]I was so careless Flamrose, I'm
+so sorry. I'll try to keep you covered while 
+you go to the Lunar Temple.
 
 <<004:Poblado S/060:TZIMITL C/Page 01/002>>
 <<position: top>>
-\C[1]Tzimitl:\C[0]El bosque de niebla es el sendero
-que separa los cambios del poblado central de 
-Tatama, o sea este poblado, y el de Uhl. Adentrate
-en el bosque y encontrarás el camino al norte.
+\C[1]Tzimitl:\C[0]The Fog Forest is the path 
+that separates the central village of Tatama
+and the bordering village of Uhl. If you 
+keep going through the forest you will get there.
 
 <<004:Poblado S/057:EV057/Page 01/001>>
 \{HEY!\}If you want to buy something,
@@ -1332,25 +1335,27 @@ and water filters. Just check out this water, even
 looks like a mirror.
 
 <<005:Poblado C/056:EV056/Page 01/001>>
-Hi Flamrose, I'm leaving a message on this quipu. The Tatama 
-Runner will arrive soon through it to report to the surrounding 
-villages about the food that we will send them from here.
+Hi Flamrose, I'm leaving a message on this quipu. 
+The Tatama Runner will arrive soon through it to 
+report to the surrounding villages about the food 
+that we will send them from here.
 
 <<005:Poblado C/057:EV057/Page 01/001>>
 Finish of that quipu please, I want to get to the 
 village of Uhl before it gets dark!
 
 <<005:Poblado C/058:EV058/Page 01/001>>
-This runner seems a little bit impatient, but these messages
-must be finished with good quality. A wrong knot or a 
-wrong color and nobody will be able to understand the 
-message!
+This runner seems a little bit impatient, but these
+messages must be finished with good quality. A wrong 
+knot or a  wrong color and nobody will be able 
+to understand the message!
 
 <<005:Poblado C/059:EV059/Page 01/001>>
 So many knots!
 
 <<005:Poblado C/060:EV060/Page 02/001>>
-Flamrose, do you know about the mystic flames of Tatama?
+Flamrose, do you know about the mystic flames 
+of Tatama?
 
 <<005:Poblado C/060:EV060/Page 02/002>>
 Yes
@@ -1580,15 +1585,15 @@ to get into the Lunar Temple, as there are several
 security controls between Tatama and Uhl.
 
 <<009:Bosque de/043:Dodotutor/Page 01/003>>
-As you might know, there are \C[2]those who can summon flames
-\C[0], but there are other talents such as \C[23] those
-who can shot and activate switches from afar \C[0] or 
-even \C[10] those who can summon water.\C[0]
+As you might know, there are \C[2]those who can summon 
+flames\C[0], but there are other talents such as 
+\C[23] thosewho can shot and activate switches from 
+afar \C[0] or even \C[10] those who can summon water.\C[0]
 
 <<009:Bosque de/043:Dodotutor/Page 01/004>>
-If you press either \C[16]Q\C[0] or \C[16]W\C[0] you can swap
-who is the first in the line, so they can show their 
-particular talent and activate switches or remove
+If you press either \C[16]Q\C[0] or \C[16]W\C[0] you can
+swap who is the first in the line, so they can show 
+their particular talent and activate switches or remove
 obstacles. Give it a try!
 
 <<009:Bosque de/043:Dodotutor/Page 01/005>>
@@ -1878,14 +1883,14 @@ desolate every town, territory and civilization
 in the planet. That until the Guardians gave us
 
 <<011:Templo So/010:EV010/Page 01/008>>
-their powers to restore the peace and control and recover
-our freedom from those monsters.
+their powers to restore the peace and control and
+recover our freedom from those monsters.
 
 <<011:Templo So/010:EV010/Page 01/009>>
 \c[8]Kusikuy:\c[0] If the great Creation Flame, the origin 
 of the light and knowledge of Tatama has produced a 
-flame of the most natural color, it only mean that it has 
-given it's power as it detected a new threat. 
+flame of the most natural color, it only mean that
+it has given it's power as it detected a new threat. 
 
 <<011:Templo So/010:EV010/Page 01/010>>
 <<face: flamarosa, 2>>
