@@ -1,0 +1,3778 @@
+# LFS DATABASE Versión 13
+
+<<maps/2/display_name>>
+Terreno de Rituales
+
+<<maps/3/display_name>>
+Casa de Flamrose
+
+<<maps/5/display_name>>
+Poblado Central
+
+<<maps/11/display_name>>
+Templo Solar
+
+<<maps/13/display_name>>
+Templo Lunar
+
+<<maps/14/display_name>>
+Templo Lunar
+
+<<maps/15/display_name>>
+Templo de la Luna
+
+<<maps/16/display_name>>
+Aldea Guacarí
+
+<<maps/20/display_name>>
+Bosque de Niebla (4B)
+
+<<maps/21/display_name>>
+Bosque de Niebla (4D)
+
+<<maps/22/display_name>>
+Saloon de Frocteres
+
+<<maps/23/display_name>>
+Bosque de Niebla (4C)
+
+<<maps/33/display_name>>
+Aldea Guacarí
+
+<<actors/1/name>>
+Flamrose
+
+<<actors/1/note>>
+<battler icon: 216>
+<win quotes>
+"Una victoria mas para nuestro beneficio."
+[new quote]
+"Deben pensarlo mejor despues de pelear."
+</win quotes>
+
+<drops quotes>
+"Me llevare esto de premio."
+</drops quotes>
+
+<level quotes>
+"Todo ha sido gracias a la gran flama de Tatama."
+[new quote]
+"La flama dentro de mi cegara a la oscuridad"
+[new quote]
+"Un viento renovado sopla con nosotros."
+</level quotes>
+
+<<actors/1/description>>
+Habitante del Poblado Tatama dotada con 
+misticos dones.
+
+<<actors/2/name>>
+Pengralle 
+
+<<actors/2/note>>
+<battler icon: 217>
+<win quotes>
+"Un resultado merecido, creo"
+[new quote]
+"A-a-a la proxima ganaré más rápido"
+</win quotes>
+
+<drops quotes>
+"Espero que no les moleste que me lleve esto."
+[new quote]
+"S-s-seguro no les hará falta esto"
+</drops quotes>
+
+<level quotes>
+"Seguire entrenando duro."
+[new quote]
+"Sigamos avanzando por buen camino"
+</level quotes>
+
+<<actors/2/description>>
+Pinguina con gran punteria y resistencia al frio,
+su nerviosismo no afecta su combate
+
+<<actors/3/name>>
+Hutch
+
+<<actors/3/note>>
+<battler icon: 218>
+<win quotes>
+"Esto si que fue facil."
+[new quote]
+"¿Eso fue todo?."
+</win quotes>
+
+<drops quotes>
+"Esto me sirve mas a mi que a ustedes."
+[new quote]
+"Ahora esto es de mi propiedad."
+</drops quotes>
+
+<level quotes>
+"Contemplen el poder del gran Hutch."
+[new quote]
+"Mi recompensa subirá de precio ."
+</level quotes>
+
+<<actors/3/description>>
+Mapache forajido con un gran sinergia con la
+naturaleza. 
+
+<<actors/4/name>>
+Dana
+
+<<actors/4/note>>
+<win quotes>
+"Estremezcanse con mis solos."
+[new quote]
+"No pueden negarse a mi talento"
+</win quotes>
+
+<drops quotes>
+"Más recursos para la próxima gira."
+</drops quotes>
+
+<level quotes>
+"Y la banda sigue, tocando."
+</level quotes>
+
+<<actors/4/description>>
+Guitarrista errante y talentosa apasionada al rock.
+
+<<actors/5/name>>
+Akane
+
+<<actors/5/note>>
+<element absorb: 12>
+<win quotes>
+"Sientan el poder de la magia."
+[new quote]
+"Jeje, todo de acuerdo a mis cálculos."
+[new quote]
+"Nada que el libro correcto no pueda solucionar."
+[new quote]
+"No me subestimen por solo ser bajita."
+</win quotes>
+
+<drops quotes>
+"Ingredientes para hechizos nuevos!"
+[new quote]
+"Un intercambio equivalente."
+</drops quotes>
+
+<level quotes>
+"Creciendo en el conocimiento."
+[new quote]
+"Incluso los pequeños tambien crecen."
+</level quotes>
+
+<<actors/5/description>>
+Pequeña y curiosa maga, que pese a su corta
+edad posee un inmeso conocimiento.
+
+<<actors/6/name>>
+Farrock
+
+<<actors/6/note>>
+<win quotes>
+"Nada puede callar la voz del alma."
+[new quote]
+"Fin del espectaculo muchachos."
+</win quotes>
+
+<drops quotes>
+"El publico arroja lo que puede!."
+[new quote]
+"Un recuerdo de esta gira.
+</drops quotes>
+<level quotes>
+"Que la musica llegue a todos los fanaticos."
+[new quote]
+"No me detengan ahora"
+</level quotes>
+
+<<actors/6/description>>
+Legendario vocalista que vuelve al escenario
+para deslumbrar a todos.
+
+<<actors/7/name>>
+Muti
+
+<<actors/7/note>>
+<battler icon: 219>
+<win quotes>
+"A la proxima será más fácil"
+[new quote]
+"No se metan con el morso."
+</win quotes>
+
+<drops quotes>
+"¿Solo esto?, Bueh..."
+[new quote]
+"Interesante, Interesante"
+[new quote]
+"¿Se van a comer esto?"
+</drops quotes>
+
+<level quotes>
+"El poder sigue creciendo en mi."
+[new quote]
+"Tenia que notarse tanto esfuerzo, ¿no?"
+</level quotes>
+
+<<actors/7/description>>
+Pistolero e investigador de Mietchieng, con
+una personalidad peculiar.
+
+<<actors/8/name>>
+Koortesh
+
+<<actors/8/note>>
+<win quotes>
+"Te habeis metido con el caballero equivocado"
+[new quote]
+"En el nombre de la Reina"
+[new quote]
+"Luchad por los que no pueden"
+</win quotes>
+
+<drops quotes>
+"Un digno tributo para el reino."
+</drops quotes>
+
+<level quotes>
+"Luchare hasta el ultimo instante."
+[new quote]
+"Forjad el camino a la victoria!"
+</level quotes>
+
+<<actors/8/description>>
+Caballero en Jefe de la Orden de la Ceniza.
+Elegante y chapado a la antigua.
+
+<<actors/9/name>>
+Byel
+
+<<actors/9/note>>
+<win quotes>
+"Les falta esforzarse!"
+[new quote]
+"Han sido fáciles de leer"
+</win quotes>
+
+<drops quotes>
+"Vamos "
+</drops quotes>
+
+<level quotes>
+"Valio la pena la molestia."
+</level quotes>
+
+<<actors/9/description>>
+Prodigia de la tecnología, usa sus poderes
+mentales para manipular todo tipo de máquinas
+
+<<actors/10/name>>
+Raylon
+
+<<actors/10/note>>
+<win quotes>
+"No se metan con la comida de un hombre"
+</win quotes>
+
+<drops quotes>
+"Un digno tributo para el reino."
+</drops quotes>
+
+<level quotes>
+"Luchare hasta el ultimo instante."
+[new quote]
+"Forjad el camino a la victoria!"
+</level quotes>
+
+<<actors/10/description>>
+Morsa glotona con el poder de su mochila mística
+para manipular todo tipo de plantas.
+
+<<actors/11/name>>
+Skulltash
+
+<<actors/12/name>>
+Blizzeroth
+
+<<actors/12/nickname>>
+1.5
+
+<<actors/13/name>>
+Crockoon
+
+<<actors/14/name>>
+Byalther
+
+<<actors/15/name>>
+Stonehite
+
+<<actors/16/name>>
+Eirenjhar
+
+<<actors/17/name>>
+Ghalimb
+
+<<classes/1/name>>
+Guerrera Tatama
+
+<<classes/1/note>>
+<equip slots>
+  Weapon
+  Headgear
+  Bodygear
+  Accessory
+  Accessory
+</equip slots>
+
+<<classes/2/name>>
+Francotiradora
+
+<<classes/3/name>>
+Forajido
+
+<<classes/4/name>>
+Guitarrista
+
+<<classes/5/name>>
+Maga Dimensional
+
+<<classes/6/name>>
+Vocalista
+
+<<classes/7/name>>
+Pistolero
+
+<<classes/8/name>>
+Caballero Volcanico
+
+<<classes/9/name>>
+Tecnomante
+
+<<classes/10/name>>
+Espectro Oseo
+
+<<classes/11/name>>
+Mochilero
+
+<<classes/12/name>>
+Caballero Sacro
+
+<<classes/13/name>>
+Catacrocker
+
+<<classes/14/name>>
+Robot Helado
+
+<<classes/15/name>>
+Asistente Artificial
+
+<<classes/16/name>>
+Dragon Eléctrico
+
+<<classes/17/name>>
+???
+
+<<skills/1/description>>
+Damages the enemy.
+
+<<skills/1/name>>
+Attack
+
+<<skills/1/message1>>
+ ataca!
+
+<<skills/2/description>>
+Protects user and reduces damage taken.
+
+<<skills/2/name>>
+Guard
+
+<<skills/2/message1>>
+ se defiende
+
+<<skills/2/note>>
+Skill #2 will be used when you select
+the Guard command.
+
+<<skills/3/description>>
+Hits an enemy twice!
+
+<<skills/3/name>>
+Dual Attack
+
+<<skills/3/message1>>
+ ataca!
+
+<<skills/4/description>>
+Attacks two random enemies.
+
+<<skills/4/name>>
+Double Attack
+
+<<skills/4/message1>>
+ ataca!
+
+<<skills/5/description>>
+Attacks three random enemies.
+
+<<skills/5/name>>
+Triple Attack
+
+<<skills/5/message1>>
+  ataca!
+
+<<skills/6/description>>
+Enemy action. Causes enemy to flee from battle.
+
+<<skills/6/name>>
+Escape
+
+<<skills/6/message1>>
+ escapa!
+
+<<skills/7/description>>
+Does nothing.
+
+<<skills/7/name>>
+Wait
+
+<<skills/7/message1>>
+ espera.
+
+<<skills/8/name>>
+-----Flamrose
+
+<<skills/9/description>>
+Corriente de fuego concentrada a través
+de una cerbatana. Puede provocar quemaduras.
+
+<<skills/9/name>>
+Llama Soplete
+
+<<skills/9/message1>>
+ ha usado Llama Soplete!
+
+<<skills/10/description>>
+Danza que impulsa la fuerza de fuego elemental
+de todos los disparos.
+
+<<skills/10/name>>
+Danza de Llamas
+
+<<skills/10/message1>>
+ ha usado Danza de Llamas
+
+<<skills/10/note>>
+Incremento de poder de Flamrose con ataques de fuego.
+
+<<skills/11/description>>
+Plumas que salen para golpear a
+varios enemigos a la velocidad del viento
+
+<<skills/11/name>>
+Plumas Dardo
+
+<<skills/11/message1>>
+ ha usado Plumas Dardo!
+
+<<skills/12/description>>
+Caida desde la altura que daña bastante
+al rival.
+
+<<skills/12/name>>
+Salto Elevado
+
+<<skills/12/message1>>
+ha usado Salto Elevado!
+
+<<skills/13/description>>
+Una barrera de fuego pasa por todos los 
+enemigos, con altas chances de quemarlos
+
+<<skills/13/name>>
+Muro Igneo
+
+<<skills/13/message1>>
+ha lanzado llamas!
+
+<<skills/14/description>>
+Baile que invoca un tifon de aire.
+A mayor energia disponible, mayor daño
+
+<<skills/14/name>>
+Danza Huracanada
+
+<<skills/14/message1>>
+ha invocado un huracan!
+
+<<skills/15/description>>
+Una red de araña en llamas atrapa
+a todos los enemigos. 
+
+<<skills/15/name>>
+Red Tatama
+
+<<skills/15/message1>>
+ha usado Plumeo Tatama!
+
+<<skills/16/description>>
+Corriente de viento mistica que hace 
+que el enemigo sufra diferentes estados.
+
+<<skills/16/name>>
+Viento Tribal
+
+<<skills/16/message1>>
+ usó Viento Tribal!
+
+<<skills/17/name>>
+-------Muti
+
+<<skills/18/description>>
+Rodeado de agua, impacta contra el oponente
+a gran velocidad.
+
+<<skills/18/name>>
+Nado Rapido
+
+<<skills/18/message1>>
+ha usado Nado Rapido!
+
+<<skills/18/note>>
+<ctb change: +50%>
+
+<<skills/19/description>>
+Usando la presión del agua, arroja una corriente
+potente que puede aturdir al rival.
+
+<<skills/19/name>>
+Golpe Hidraulico
+
+<<skills/19/message1>>
+ usó Patada Hidraulica!
+
+<<skills/19/note>>
+<ctb cost: 150%>
+
+<<skills/20/description>>
+Esfera concentrada de energia acuosa.
+Aumenta a medida que se recibe mas daño
+
+<<skills/20/name>>
+Acuasfera
+
+<<skills/20/message1>>
+ usó Acuasfera!
+
+<<skills/21/description>>
+Usa su brazo mecanico para aumentar la
+cantidad de disparos efectuados.
+
+<<skills/21/name>>
+Disparo Oculto
+
+<<skills/21/message1>>
+ usó Disparo Oculto!
+
+<<skills/22/description>>
+Utiliza el poder de sus colmillos para 
+morder al enemigo. Puede aturdir.
+
+<<skills/22/name>>
+Mordida Acuosa
+
+<<skills/22/message1>>
+ usó Mordida Acuosa!
+
+<<skills/23/description>>
+Corriente que sale del piso, quitando varios
+efectos positivos del rival.
+
+<<skills/23/name>>
+Bomba Geiser
+
+<<skills/23/message1>>
+ usó Flujo Subterraneo!
+
+<<skills/24/description>>
+Genera un cubo de agua que promueve la defensa.
+Tambien reduce los daños de fuego.
+
+<<skills/24/name>>
+Bloque Hidraulico
+
+<<skills/24/message1>>
+ usó Bloque Hidraulico!
+
+<<skills/25/description>>
+Por medio de la separación de Oxigeno e 
+Hidrogeno genera una explosion masiva.
+
+<<skills/25/name>>
+Explosion Quimica
+
+<<skills/25/message1>>
+ usó Explosion Quimica!
+
+<<skills/26/description>>
+Corta con la cuchilla, la habilidad incrementa 
+con el nivel
+
+<<skills/26/name>>
+Corte Lateral
+
+<<skills/26/message1>>
+ ha usado Corte Lateral!
+
+<<skills/27/description>>
+Da un cabezaco potente con el casco 
+con cuernos.
+
+<<skills/27/name>>
+Cabezazo Casco
+
+<<skills/27/message1>>
+ ha dado un Cabezazo!
+
+<<skills/28/name>>
+------Pengralle
+
+<<skills/29/description>>
+Realiza un deslizo de nieve contra el enemigo. 
+El daño aumenta con la velocidad de Pengralle.
+
+<<skills/29/name>>
+Barrido Nevado
+
+<<skills/29/message1>>
+ usó Barrido Nevado!
+
+<<skills/30/description>>
+Utiliza el aire acondicionado para generar una 
+leve ventisca contra sus enemigos
+
+<<skills/30/name>>
+Ventisca Oscilante
+
+<<skills/30/message1>>
+ usó Ventisca Oscilante!
+
+<<skills/31/description>>
+Pengralle toma impulso acumulado para aumentar
+su velocidad durante 3 turnos.
+
+<<skills/31/name>>
+Deslizo Aumentado
+
+<<skills/31/message1>>
+ usó Deslizo de Colina!
+
+<<skills/32/description>>
+De la nevera portatil, Pengralle genera un 
+bloque de hielo para golpear al enemigo
+
+<<skills/32/name>>
+Rompehielos
+
+<<skills/32/message1>>
+ usó Bloque Pulido!
+
+<<skills/33/description>>
+De la nevera portatil, Pengralle genera bloques
+de hielo para proteger a los aliados.
+
+<<skills/33/name>>
+Barrera Tempano
+
+<<skills/34/description>>
+Usa los bloques de hielo para atacar a los enemigos,
+rompiendo sus defensas por el impacto.
+
+<<skills/34/name>>
+Bombardeo Nevera
+
+<<skills/35/description>>
+Viento gelido que ralentiza al rival y puede
+dificultar su visibilidad por el hielo.
+
+<<skills/35/name>>
+Furia Invernal
+
+<<skills/36/description>>
+Explosivos que dejan congelado a algunos
+enemigos en la explosion.
+
+<<skills/36/name>>
+Granada de Hielo
+
+<<skills/37/description>>
+Explosivo utilizado principalmente para 
+dificultar la vision en el campo de batalla.
+
+<<skills/37/name>>
+Granada Neblina
+
+<<skills/38/name>>
+Blizzeroth
+
+<<skills/39/name>>
+-----Hutch
+
+<<skills/40/description>>
+Usando su lazo, golpea al rival y ademas puede
+amarrarlo para evitar que se mueva.
+
+<<skills/40/name>>
+Lazo Atadura
+
+<<skills/40/message1>>
+ usó Lazo Atadura!
+
+<<skills/41/description>>
+Crea plantas curativas usando toda la energía 
+mágica que tengas guardada. 
+
+<<skills/41/name>>
+Curación Natural
+
+<<skills/41/message1>>
+ usa Curación Natural
+
+<<skills/42/description>>
+Lanza un gran trozo de suelo contra el enemigo,
+provocando una contusión que rompe defensas.
+
+<<skills/42/name>>
+Impacto Rocoso
+
+<<skills/42/message1>>
+ usó Impacto Rocoso!
+
+<<skills/43/description>>
+Con su taladro oculto, lo envia bajo tierra al
+enemigo por sorpresa, ignorando defensas
+
+<<skills/43/name>>
+Taladro Excavador
+
+<<skills/43/message1>>
+ usó Taladro Excavador!
+
+<<skills/43/note>>
+<ctb cost: 150%>
+
+<<skills/44/description>>
+Hutch levanta una barrera de cactus, 
+lo que causa a los atacantes herirse al atacar.
+
+<<skills/44/name>>
+Muro Cactus
+
+<<skills/44/message1>>
+ uso Muro Cactus!
+
+<<skills/45/description>>
+Se patea una bola rodadora a gran 
+velocidad, trayendo polvo tambien.
+
+<<skills/45/name>>
+Bola Desertica
+
+<<skills/45/message1>>
+ usó Bola Desertica!
+
+<<skills/46/description>>
+Con semillas magicas, salen grandes cactus
+enormes que golpean a los enemigos
+
+<<skills/46/name>>
+Embate Cactus
+
+<<skills/47/description>>
+Grandes raices crecen a los pies de los enemigos,
+perforandolos con sus puntas.
+
+<<skills/47/name>>
+Frenezí Plantular
+
+<<skills/48/description>>
+Hutch usa todo su impetu para atacar a
+ambas manos durante varios turnos.
+
+<<skills/48/name>>
+Doble Empuñadura
+
+<<skills/49/name>>
+-----Dana
+
+<<skills/50/description>>
+Un punteo de guitarra rápido y afilado para provocar 
+al enemigo despertando tu pasión.
+<<skills/50/name>>
+Florecita Rockera
+
+<<skills/50/message1>>
+ toca Florecita Rockera!
+
+<<skills/50/note>>
+Atercipelados
+
+<<skills/51/description>>
+Acordes como el viento que desbarata al enemigo sin
+dudarlo desde adentro. Elimina varias potenciaciones.
+
+<<skills/51/name>>
+Afuera
+
+<<skills/51/message1>>
+ toca Afuera!
+
+<<skills/51/note>>
+Caifanes
+
+<<skills/52/description>>
+Acordes que evocan estar en invierno, evitando soñar,
+falseando tu identidad y siendo estúpido para amar.
+
+<<skills/52/name>>
+Paramar
+
+<<skills/52/message1>>
+ toca Paramar!
+
+<<skills/52/note>>
+Prisioneros
+
+<<skills/53/description>>
+Riff rebelde y psicotico que rompe las defensas
+y asusta a los oponentes con un poder demoledor
+
+<<skills/53/name>>
+Demoliendo Hoteles
+
+<<skills/53/message1>>
+toca Demoliendo Hoteles!
+
+<<skills/54/description>>
+Toca una canción triste para que del mismo dolor
+venga un nuevo amancer, reviviendo un aliado.  
+
+<<skills/54/name>>
+Adios
+
+<<skills/54/message1>>
+ toca Adios!
+
+<<skills/54/note>>
+Cerati
+
+<<skills/55/description>>
+Usa su propia fuerza para hacer que el oponente
+use la guitarra de sombrero.
+
+<<skills/55/name>>
+La Guitarra
+
+<<skills/55/message1>>
+ toca La Guitarra!
+
+<<skills/55/note>>
+Autenticos Decadentes
+
+<<skills/56/description>>
+Evoca estar en la muralla que divide lo que fué de lo 
+que será, mirando como las heridas se cerraron.
+
+<<skills/56/name>>
+Muralla Verde
+
+<<skills/56/message1>>
+ toca Muralla Verde!
+
+<<skills/57/description>>
+Ritmo que hace seguir el mismo camino, el más dificil
+para superar varios estados alterados.
+
+<<skills/57/name>>
+El Salmon
+
+<<skills/57/message1>>
+ tocó Flor Rockera!
+
+<<skills/58/description>>
+Con cada sonido de alta fidelidad, crea una dimensión donde los
+espíritus son inciertos, dañando al enemigo.
+
+<<skills/58/name>>
+Disco Eterno
+
+<<skills/58/message1>>
+ tocó Disco Eterno!
+<<skills/59/name>>
+-----Akane
+
+<<skills/60/description>>
+Akane invoca a su familiar insectoide que 
+muerde a varios enemigos y los envenena. 
+
+<<skills/60/name>>
+Invocación:Beeleto
+
+<<skills/60/message1>>
+ ha llamado a Beeleto!
+
+<<skills/61/description>>
+Akane invoca a su familiar de pez espada,
+el cual atacará rompiendo las defensas enemigas.
+
+<<skills/61/name>>
+Invocación:Flouret
+
+<<skills/61/message1>>
+ invocó a Solflo!
+
+<<skills/62/description>>
+Akane invoca a su familiar cactus regia,
+que lanza semillas comestibles a los aliados
+
+<<skills/62/name>>
+Invocación:Fonflo
+
+<<skills/62/message1>>
+ invocó a Flouret!
+
+<<skills/63/description>>
+Una condensación de energia pura que 
+se arroja y explota haciendo daño fisico.
+
+<<skills/63/name>>
+Explosión Magica
+
+<<skills/63/message1>>
+ usó Explosión Mágica!
+
+<<skills/64/description>>
+Un hechizo que emite una energia que hace
+que el enemigo quede paralizado
+
+<<skills/64/name>>
+Conjuro Retenedor
+
+<<skills/64/message1>>
+ uso Conjuro Retenedor!
+
+<<skills/65/description>>
+Con su amplio conocimiento en magia, 
+se reduce el costo de las habilidades.
+
+<<skills/65/name>>
+Amplitud Magica
+
+<<skills/65/message1>>
+ uso Amplitud Magica!
+
+<<skills/66/description>>
+Con un conjuro, invoca a su familiar acolchonado
+para dar soporte magico a quien se le acerque
+
+<<skills/66/name>>
+Invocación: Mazt
+
+<<skills/66/message1>>
+ uso Ligereza Magica!
+
+<<skills/67/description>>
+Akane abre un velo especial que reduce
+la efectividad de energia e impactos magicos
+
+<<skills/67/name>>
+Cortina Arcana
+
+<<skills/67/message1>>
+ usa Cortina Magica!
+
+<<skills/68/description>>
+Usando un tomo de conocimientos antiguos,
+afecta al rival con varios efectos adversos.
+
+<<skills/68/name>>
+Tomo Filosofal
+
+<<skills/68/message1>>
+ uso uno de sus Tomos!
+
+<<skills/69/description>>
+Akane abre el velo del espacio exterior, 
+cayendo cuerpos astrales al campo.
+
+<<skills/69/name>>
+Embate Dimensional
+
+<<skills/69/message1>>
+ usa Embate Dimensional!
+
+<<skills/70/description>>
+Se invoca a la deidad del espacio exterior
+que con su iluminación, causa un daño masivo.
+
+<<skills/70/name>>
+Invocación:Orusius
+
+<<skills/70/message1>>
+ invocó a Orusius!
+
+<<skills/71/name>>
+-----Farrock
+
+<<skills/72/description>>
+Farrock prepara sus cuerdas vocales, 
+dandole los puntos de furia para cantar.
+
+<<skills/72/name>>
+Entonación Inicial
+
+<<skills/72/message1>>
+ ha comenzado el Espectaculo!
+
+<<skills/73/description>>
+Con su estilo iconico, toca el piano con
+tal velocidad que marea a los rivales.
+
+<<skills/73/name>>
+Seven Seas of Rhye 
+
+<<skills/74/description>>
+Con efectos especiales y su voz oculta su posicion
+verdadera, acertando un golpe inevadible.
+
+<<skills/74/name>>
+Now I'm here
+
+<<skills/75/description>>
+Genera daños electricos y luminosos
+a todos los enemigos
+
+<<skills/75/name>>
+Flash
+
+<<skills/76/description>>
+Una carrera de bicicletas entrante que atropella
+a todos los enemigos y su completación de frases.
+
+<<skills/76/name>>
+Bicycle Races
+
+<<skills/77/description>>
+Usa efectos especiales para 
+hacer caer notas como martillos
+
+<<skills/77/name>>
+Hammer to fall
+
+<<skills/78/description>>
+Concentra todos los reflectores en un solo punto, 
+haciendo un daño critico al enemigo 
+
+<<skills/78/name>>
+One Vision
+
+<<skills/79/description>>
+Aumenta el ataque fisico, magico y
+velocidad de Farrock por 5 turnos 
+
+<<skills/79/name>>
+Don't stop me now
+
+<<skills/80/description>>
+Remueve los efectos adversos y el estrés
+de sus aliados con este canto.
+
+<<skills/80/name>>
+Under Pressure
+
+<<skills/81/description>>
+La declamación hecha canto revive a un 
+aliado caído en combate
+
+<<skills/81/name>>
+Salvame
+
+<<skills/82/description>>
+Un canto tan concentrado que distorsiona 
+el espacio para traer un dragon al ataque
+
+<<skills/82/name>>
+Ataque Dragon
+
+<<skills/83/name>>
+---Koortesh
+
+<<skills/84/name>>
+Onda Sacra
+
+<<skills/85/name>>
+Giro Flameante
+
+<<skills/86/name>>
+Grieta Volcanica
+
+<<skills/87/name>>
+Navaja Ceniza
+
+<<skills/88/name>>
+Cuarto Creciente
+
+<<skills/89/name>>
+Temple de Hidalgo
+
+<<skills/90/name>>
+Sol Profano
+
+<<skills/91/name>>
+Erupción Caotica
+
+<<skills/92/name>>
+----Raylon
+
+<<skills/93/description>>
+El conocimiento de los grandes espiritus
+te permite ver todo sobre el enemigo
+
+<<skills/93/name>>
+Rastreo Ancestral
+
+<<skills/93/message1>>
+ usa el rastreo ancestral
+
+<<skills/93/note>>
+<scan info : all>
+<scan info: all>
+
+<<skills/94/description>>
+Carga energia pura en sus manos y las
+lanza como un cañon que daña al rival
+
+<<skills/94/name>>
+Carga Somnifera
+
+<<skills/94/message1>>
+ha liberado el Cañon Aura!
+
+<<skills/95/description>>
+Esfera concentrada de energia acuosa.
+Disminuye a medida que se recibe mas daño
+
+<<skills/95/name>>
+Carga Espinosa
+
+<<skills/95/message1>>
+ usó Energisfera!
+
+<<skills/96/description>>
+Genera un campo de energia que refleja 
+cualquier ataque especial del enemigo
+
+<<skills/96/name>>
+Carga Solar
+
+<<skills/96/message1>>
+ usó Reflejo Rebotador!
+
+<<skills/97/description>>
+Realiza un plumeo contra todos los enemigos 
+y elimina todos sus estados beneficos.
+
+<<skills/97/name>>
+Carga Pinaculo
+
+<<skills/97/message1>>
+ usó Alas Celestiales!
+
+<<skills/98/description>>
+Invoca el poder divino del cielo para
+curar a los aliados un poco.
+
+<<skills/98/name>>
+Carga Venenosa
+
+<<skills/98/message1>>
+ usó Cielo Medicinal!
+
+<<skills/99/description>>
+Un poderoso corte que siempre deja al enemigo
+con la mitad de sus puntos vitales.
+
+<<skills/99/name>>
+Carga Troncal
+
+<<skills/99/message1>>
+ha usado Divisor Divino!
+
+<<skills/100/name>>
+Carga Carnivora
+
+<<skills/101/name>>
+------Byel
+
+<<skills/102/name>>
+Puño Amplificado
+
+<<skills/103/name>>
+Antigravitación
+
+<<skills/104/name>>
+Toque Electrizante
+
+<<skills/105/name>>
+Láser Ocular
+
+<<skills/106/name>>
+Barrera Infolográfica
+
+<<skills/107/name>>
+Sai Relámpago
+
+<<skills/108/name>>
+Bombardero Táctico
+
+<<skills/109/name>>
+Disparador Óptico
+
+<<skills/110/name>>
+Protocolo Nuclear
+
+<<skills/111/name>>
+---Stonehite
+
+<<skills/112/name>>
+Golpe Tectonico
+
+<<skills/113/name>>
+Filo Piedroso
+
+<<skills/114/name>>
+Alteración Mineral
+
+<<skills/115/name>>
+Cuchilla Obsidiana
+
+<<skills/116/name>>
+Disparo Volcanico
+
+<<skills/117/name>>
+Reflejo Diamante
+
+<<skills/118/name>>
+Garra Diamante
+
+<<skills/119/name>>
+Cubo Titanio
+
+<<skills/120/name>>
+Impacto Metalico
+
+<<skills/121/name>>
+Cristal Explosivo
+
+<<skills/127/name>>
+---Sistema
+
+<<skills/128/description>>
+Skip enemy graphic.
+
+<<skills/128/name>>
+Skip Animation Sample
+
+<<skills/128/message1>>
+You suck!
+
+<<skills/129/description>>
+Throwing weapon test.
+
+<<skills/129/name>>
+Throwing + Recoil Damage
+
+<<skills/129/message1>>
+I choose you!
+
+<<skills/130/description>>
+Shows damage in a row that stacks.
+
+<<skills/130/name>>
+Multistage Attack Sample
+
+<<skills/130/message1>>
+Go numbers go!
+
+<<skills/131/description>>
+Test of a cut-in picture.
+
+<<skills/131/name>>
+Cut-In Sample
+
+<<skills/131/message1>>
+Next pictar plox!
+
+<<skills/132/description>>
+Movie Play test.
+
+<<skills/132/name>>
+Movie Sample
+
+<<skills/132/message1>>
+Ooh, I like this movie!
+
+<<skills/133/description>>
+Changing Image test.
+
+<<skills/133/name>>
+Transformation Sample
+
+<<skills/133/message1>>
+transforms!
+
+<<skills/134/description>>
+Weapon Throw Test.
+
+<<skills/134/name>>
+Derived Skills Sample
+
+<<skills/134/message1>>
+CATCH NOOB!
+
+<<skills/135/description>>
+Blackout and afterimage effect test.
+
+<<skills/135/name>>
+Dim Attack Sample
+
+<<skills/135/message1>>
+BLACKOUT!
+
+<<skills/136/description>>
+Jump Action Battle Test.
+
+<<skills/136/name>>
+Jump Sample
+
+<<skills/136/message1>>
+JUUUMP!
+
+<<skills/137/description>>
+Camera Transition in battle.
+
+<<skills/137/name>>
+Change Background Sample
+
+<<skills/137/message1>>
+Go camera go!
+
+<<skills/138/description>>
+Battle picture transition on special attack.
+
+<<skills/138/name>>
+Attack Pictures Sample
+
+<<skills/138/message1>>
+uses Special!
+
+<<skills/139/description>>
+Corta con la cuchilla, la habilidad incrementa 
+con el nivel del usuario
+
+<<skills/139/name>>
+Corte Lateral
+
+<<skills/139/message1>>
+ ha usado Corte Lateral!
+
+<<skills/140/description>>
+Golpea usando un guante con resorte. 
+El efecto aumenta con el nivel del usuario.
+
+<<skills/140/name>>
+Golpe Resorte
+
+<<skills/140/message1>>
+ ha usado Golpe Resorte!
+
+<<skills/141/description>>
+Golpea usando un guante con resorte. 
+El efecto aumenta con el nivel del usuario.
+
+<<skills/141/name>>
+Lanza Ski
+
+<<skills/141/message1>>
+ ha usado su Ski como Lanza!
+
+<<skills/142/description>>
+Rastrea la información del enemigo usando
+el conocimiento ancestral de Kusikuy.
+
+<<skills/142/name>>
+Rastreo Ancestral
+
+<<skills/142/message1>>
+ lee al enemigo.
+
+<<skills/142/note>>
+<scan info: all>
+
+<<skills/170/name>>
+---Skills Enemigos
+
+<<skills/171/name>>
+Empedrada
+
+<<skills/171/message1>>
+ ha lanzado una piedra
+
+<<skills/172/name>>
+Doble Cuchillada
+
+<<skills/172/message1>>
+ usa Doble Cuchilla!
+
+<<skills/173/name>>
+Mordida Insecta
+
+<<skills/173/message1>>
+ muerde!
+
+<<skills/174/name>>
+Refuerzos!
+
+<<skills/174/message1>>
+ ha llamado refuerzos!
+
+<<skills/175/name>>
+Espora Curativa
+
+<<skills/175/message1>>
+ usa Espora Curativa.
+
+<<skills/176/name>>
+Dardos Venenosos
+
+<<skills/176/message1>>
+ lanza Dardos Venenosos
+
+<<skills/177/name>>
+Hoja rotatoria
+
+<<skills/177/message1>>
+ usa Hoja rotatoria!
+
+<<skills/178/name>>
+Derribo Insecto
+
+<<skills/178/message1>>
+ usa Derribo Insecto!.
+
+<<skills/179/name>>
+Refuerzo Insectivo
+
+<<skills/179/message1>>
+ llama refuerzos!
+
+<<skills/180/description>>
+Reparacion G1
+
+<<skills/180/name>>
+Protocolo Repar.
+
+<<skills/180/message1>>
+ ejecuta el Protocolo de Reparacion!
+
+<<skills/181/description>>
+Fuego G1 Daño constante
+
+<<skills/181/name>>
+Protocolo Igneo
+
+<<skills/181/message1>>
+ ejecuta Protocolo Igneo!
+
+<<skills/182/description>>
+Explosion G1
+
+<<skills/182/name>>
+Protocolo Explosivo
+
+<<skills/182/message1>>
+ ejecuta Protocolo Explosivo
+
+<<skills/183/name>>
+Protocolo Laser
+
+<<skills/183/message1>>
+ ejecuta Protocolo Laser
+
+<<skills/184/name>>
+Protocolo Frio
+
+<<skills/184/message1>>
+ ejecuta Protocolo Frio!
+
+<<skills/185/name>>
+Protocolo Evolutivo
+
+<<skills/185/message1>>
+ ejecutra Protocolo Evolutivo
+
+<<skills/186/name>>
+Protocolo Magico
+
+<<skills/186/message1>>
+ ejecuta Protocolo Magico!
+
+<<skills/187/name>>
+Protocolo Cegador
+
+<<skills/187/message1>>
+ ejecuta Protocolo Cegador!
+
+<<skills/188/name>>
+Protocolo Radiactivo
+
+<<skills/188/message1>>
+ ejecuta Protocolo Radiactivo
+
+<<skills/189/name>>
+Protocolo Estatico
+
+<<skills/189/message1>>
+ ejecuta Protocolo Estatico!
+
+<<skills/190/name>>
+Protocolo Laser
+
+<<skills/190/message1>>
+ ejecuta Protocolo Laser
+
+<<skills/191/name>>
+Protocolo Ritmico
+
+<<skills/191/message1>>
+ ejecuta Protocolo Ritmico!
+
+<<skills/192/name>>
+Protocolo Sonico
+
+<<skills/192/message1>>
+ ejecuta Protocolo Sónico!
+
+<<skills/193/name>>
+Protocolo Ruidoso
+
+<<skills/193/message1>>
+ ejecuta Protocolo Ruidoso!
+
+<<skills/194/name>>
+Impacto Paleoceno
+
+<<skills/194/message1>>
+ usó Impacto Paleoceno!
+
+<<skills/195/name>>
+Taladro Radiactivo
+
+<<skills/195/message1>>
+ usó Taladro Radiactivo!
+
+<<skills/196/name>>
+Pisoton Prehistorico
+
+<<skills/196/message1>>
+ usó Pisoton Prehistorico!
+
+<<skills/197/name>>
+Bomba Paleocena
+
+<<skills/197/message1>>
+ explotó con toda su energía!
+
+<<skills/198/name>>
+Rayo Evolucionador
+
+<<skills/198/message1>>
+ usa Rayo Evolucionador!
+
+<<skills/198/note>>
+Solo para efectos escenicos
+
+<<skills/199/description>>
+Disparo de pistolas viejas de forajidos de poca monta
+
+<<skills/199/name>>
+Disparo Oxidado
+
+<<skills/199/message1>>
+ da un Disparo Oxidado!
+
+<<skills/200/description>>
+Puño que va y viene. 
+
+<<skills/200/name>>
+Puño Reverso
+
+<<skills/200/message1>>
+ ataca con puños.
+
+<<skills/201/description>>
+Puño con puas incluidas
+
+<<skills/201/name>>
+Gancho Picudo
+
+<<skills/201/message1>>
+ hizo un Gancho Picudo!
+
+<<skills/202/name>>
+Ciclon Arenisco
+
+<<skills/202/message1>>
+ hizo Ciclon Arenisco!
+
+<<skills/203/name>>
+Lluvia Puas
+
+<<skills/203/message1>>
+ hace Llover Puas!
+
+<<skills/204/description>>
+Poderes de absorcion de las plantas
+
+<<skills/204/name>>
+Espora Absorbente
+
+<<skills/204/message1>>
+ usa Esporas Absorbentes!
+
+<<skills/205/name>>
+Rugido Atronador
+
+<<skills/205/message1>>
+ ruge atronadoramente!
+
+<<skills/206/name>>
+Garra Bestial
+
+<<skills/206/message1>>
+ usa su garra bestial!
+
+<<skills/207/name>>
+Relincho Burlón
+
+<<skills/207/message1>>
+ se burla con su relincho!
+
+<<skills/208/name>>
+Excavar
+
+<<skills/208/message1>>
+ se esconde bajo tierra!
+
+<<skills/209/name>>
+Protocolo Fusilamiento
+
+<<skills/209/message1>>
+ ejecuta Protocolo Fusilamiento
+
+<<skills/210/name>>
+Protocolo Arenizca
+
+<<skills/210/message1>>
+ ejecuta Protocolo Arenizca
+
+<<skills/211/name>>
+Protocolo Apaleador
+
+<<skills/211/message1>>
+ ejecuta Protocolo Apaleador!
+
+<<skills/212/name>>
+Protocolo Corrida
+
+<<skills/212/message1>>
+ ejecuta Protocolo Corrida
+
+<<skills/213/name>>
+Disparo Rapido
+
+<<skills/213/message1>>
+ usa Disparo Rápido!
+
+<<skills/214/name>>
+Protocolo Alud
+
+<<skills/214/message1>>
+ ejecuta Protocolo Alud!
+
+<<skills/215/name>>
+Protocolo Demoledor
+
+<<skills/215/message1>>
+ ejecuta Protocolo Demoledor!
+
+<<skills/216/description>>
+Mordizco Brutal
+
+<<skills/216/name>>
+Fauces Prehistoricas
+
+<<skills/216/message1>>
+ usó Fauces Prehistoricas!
+
+<<items/1/description>>
+Pequeña cantidad de pan que recupera 30
+puntos vitales. Cuidado con los dientes.
+
+<<items/1/name>>
+Pan Duro
+
+<<items/2/description>>
+Pan fresco que recupera 80 puntos vitales,
+aprovecha mientras esta caliente!
+
+<<items/2/name>>
+Pan Caliente
+
+<<items/3/description>>
+Su delicioso sabor recupera 200 puntos de
+vida al comerse. Crocancia absoluta.
+
+<<items/3/name>>
+Pan Crugiente
+
+<<items/4/description>>
+Jugo de bayas llenado (o consumido) hasta 
+la mitad. Recupera 20 puntos de energía.
+
+<<items/4/name>>
+Medio Jugo
+
+<<items/5/description>>
+Jugo espeso (y completo) que recupera 60 
+puntos magicos. 
+
+<<items/5/name>>
+Jugo de Bayas
+
+<<items/6/description>>
+De misterioso fruto azul a medio llenar (o medio 
+consumir) que recupera 112 puntos de energía.
+
+<<items/6/name>>
+Medio Azul
+
+<<items/7/description>>
+Su fuerte aroma y amargo sabor levanta a los aliados
+caidos (aunque algunos preferirían seguir caidos).
+
+<<items/7/name>>
+Hierba Restauradora
+
+<<items/8/description>>
+Frutos repelentes a los escorpiones,
+sus enzimas detienen los efectos del veneno.
+
+<<items/8/name>>
+Fruto Antidoto
+
+<<items/9/description>>
+Cura estados de paralisis y aturdimiento 
+con sus nutrientes y chiclosidad.
+
+<<items/9/name>>
+Bayas Elasticas
+
+<<items/10/description>>
+Apliquese solo en los ojos (por favor).
+Cura la ceguera temporal.
+
+<<items/10/name>>
+Gotas Oculares
+
+<<items/11/description>>
+Desata las cuerdas vocales para eliminar
+el silencio de quien lo consume.
+
+<<items/11/name>>
+Tecito de Miel
+
+<<items/12/description>>
+Alimento altamente benefico que 
+aumenta permanentemente la defensa.
+
+<<items/12/name>>
+Seta Nutritiva
+
+<<items/13/description>>
+Fruta con suficiente sabor para aumentar
+el ataque magico de quien lo consume.
+
+<<items/13/name>>
+Durazno Nutritivo
+
+<<items/14/description>>
+Aunque no tan dulce como una fresa comun,
+puede subir la resistencia magica.
+
+<<items/14/name>>
+Fresa Nutritiva
+
+<<items/15/description>>
+Con dosis adicional de potasio, aumenta
+la movilidad de su consumidor (y no por las cascaras)
+
+<<items/15/name>>
+Platano Nutritivo
+
+<<items/16/description>>
+¡Increiblemente comestible! Dicen que aumenta
+la suerte al comerse (pero no me consta).
+
+<<items/16/name>>
+Trebol Nutritivo
+
+<<items/17/description>>
+Enredadera misteriosa (si claro) que se dice incre-
+mentar la vitalidad y longevidad de sus consumidores.
+
+<<items/17/name>>
+Hierba Nutritiva
+
+<<items/18/description>>
+Proveniente de un arbol unico en la selva,
+su consumo aumenta la fuerza al comerse.
+
+<<items/18/name>>
+Pera Nutritiva
+
+<<items/19/description>>
+Frutos para compartir que pueden recobrar 
+la energia al comerse. 
+
+<<items/19/name>>
+Bayas Energeticas
+
+<<items/20/description>>
+Frutos para compartir que pueden recobrar 
+los puntos vitales de quienes lo coman.
+
+<<items/20/name>>
+Bayas Saludables
+
+<<items/21/description>>
+Revive a un compañero caido y adicionalmente
+lo deja con puntos vitales.
+
+<<items/21/name>>
+Restaurador Medio
+
+<<items/22/description>>
+Revive a un compañero caido y le recupera
+todos sus puntos vitales. Usalo con sabiduría.
+
+<<items/22/name>>
+Restaurador Total
+
+<<items/23/description>>
+Cristal de hielo utilizado para curar las
+quemaduras. (No lo uses en bebidas)
+
+<<items/23/name>>
+Hielo Polar
+
+<<items/24/description>>
+Liquido que parece agudizar los sentidos.
+Permite contraatacar durante cierto tiempo.
+
+<<items/24/name>>
+Suero Sensorial
+
+<<items/25/description>>
+Su olor fétido puede producir incluso intoxicación.
+Contraindicado incluso en tratados internacionales.
+
+<<items/25/name>>
+Bomba Apestosa
+
+<<items/26/description>>
+Explosivo que se puede utilizar para cegar o 
+aturdir a los enemigos
+
+<<items/26/name>>
+Bomba de Choque
+
+<<items/27/description>>
+Frutos para compartir que pueden recobrar 
+que recobran vitalidad y energia
+
+<<items/27/name>>
+Bayas Mixtas
+
+<<items/28/description>>
+Su cocción de primer nivel llena el estomago
+de cualquiera que lo consuma
+
+<<items/28/name>>
+Pan Gourmet
+
+<<items/29/description>>
+Misteriosamente lleno, beberlo en su totalidad
+recupera hasta 284 puntos de energía.
+
+<<items/29/name>>
+Jugo Azul
+
+<<items/30/description>>
+Fruta favorita de los escorpiones, aunque
+no es comestible, puede venderse.
+
+<<items/30/name>>
+Fruto Escorpion
+
+<<items/31/description>>
+Medicamento compuesto mayormente de Yodo. 
+Neutraliza los efectos de la radiación.
+
+<<items/31/name>>
+Pildora KI
+
+<<items/32/description>>
+Alimento usado como fuerte condimento que sirve
+para impulsar algo la furia acumulada por el ardor.
+
+<<items/32/name>>
+Chile Picante
+
+<<items/33/description>>
+Alimento usado como fuerte condimento que sirve
+para impulsar algo bastante acumulada por el ardor.
+
+<<items/33/name>>
+Chile Ultrapicante
+
+<<items/34/description>>
+Inmisericorde chile de Qruetzaltenango. Produce un
+aumento de adrenalina, con "efectos adversos".
+
+<<items/34/name>>
+Chile Radiactivo
+
+<<items/35/description>>
+Vino de calidad bastante dudosa pero que da cierta
+vitalidad. No apto para menores de edad (¡en serio!)
+
+<<items/35/name>>
+Moscatelo
+
+<<items/36/description>>
+Celda de energía de las máquinas de Stonehite.
+Suelta una -MUY- leve descarga al arrojarse.
+
+<<items/36/name>>
+Bateria Ordinaria
+
+<<items/37/description>>
+Celda de energía de una marca conocida cuyos anun-
+cios aseguran que sus descargas son las mejores.
+
+<<items/37/name>>
+Bateria Duradera
+
+<<items/38/description>>
+Celda de energía de una marca con publicidad tan
+agresiva con las descargas que propicia.
+
+<<items/38/name>>
+Bateria Energizada
+
+<<items/39/description>>
+Mineral precioso encontrado mayormente en
+las minas de Frocteres. Puede venderse a un incauto.
+
+<<items/39/name>>
+Gema Roja
+
+<<items/40/description>>
+Fosil misterioso y muy bien preservado arrebatado de
+Excarmole, que mantiene todavía trazas de ADN.
+
+<<items/40/name>>
+Muestra Fosilizada
+
+<<items/41/description>>
+Un soplido de único uso y puede hacer volver
+en sí cualquier personaje.
+
+<<items/41/name>>
+Trombon Corrector
+
+<<items/42/description>>
+Jugo del fruto de Guacarí, conocido por capacidad
+estimulante. Recupera tambien 35 puntos mágicos.
+
+<<items/42/name>>
+Jugo de Guaraná
+
+<<items/43/description>>
+Medicamento utilizado como comodín por
+varios doctores. Cura varias dolencias.
+
+<<items/43/name>>
+Paracetamol
+
+<<items/44/description>>
+Embutido sazonado dentro de un pan crujiente. 
+(Cuidado con los herbíboros).
+
+<<items/44/name>>
+Pancho Simple
+
+<<weapons/1/description>>
+Arma especial de Tzmitl
+
+<<weapons/1/name>>
+Lanza de Tzimitl
+
+<<weapons/2/description>>
+Rifle de las CEOE con caracteristicas de frio.
+
+
+<<weapons/2/name>>
+Rifle Helado F64
+
+<<weapons/4/description>>
+Prototipo de pistola de agua, puede fallar con 
+frecuencia
+
+<<weapons/4/name>>
+Pistola H20.22
+
+<<weapons/6/description>>
+Arte hecha magia, solo para las manos mas
+inspiradas.
+
+<<weapons/6/name>>
+Pincel Magico
+
+<<weapons/7/name>>
+Fusil CL-58
+
+<<weapons/8/description>>
+Modelo avanzado de la pistola de 
+agua potenciada con mercurio 
+
+<<weapons/8/name>>
+Pistola mmHg.22
+
+<<weapons/9/name>>
+Dardo Escorpion
+
+<<weapons/10/description>>
+Para los enemigos
+
+<<weapons/10/name>>
+Arma Enemiga Basica
+
+<<weapons/11/description>>
+Arma Enemiga
+
+<<weapons/11/name>>
+Aguijon Escorpion
+
+<<weapons/12/description>>
+Arma Enemiga
+
+<<weapons/12/name>>
+Sierra Insectiva
+
+<<weapons/13/description>>
+Prototipo de pistola de agua, puede fallar con 
+frecuencia
+
+<<weapons/13/name>>
+Pistola H20.22
+
+<<weapons/14/description>>
+Arma basica que lanza dardos al oponente
+desde lejos.
+
+<<weapons/14/name>>
+Cerbatana Simple
+
+<<weapons/14/note>>
+[Naturaleza]
+
+<<weapons/15/description>>
+Cerbatana hecha para imitar el poder
+de los escorpiones Tanjer.
+
+<<weapons/15/name>>
+Cerbatana Tanjer
+
+<<weapons/16/description>>
+La madera de Guacari parece ser
+bastante pesada, pero resistente
+
+<<weapons/16/name>>
+Cerbatana Guacari
+
+<<weapons/17/description>>
+De las guerreras del antiguo imperio de Swakar.
+De alta predileccion por sus leyendas.
+
+<<weapons/17/name>>
+Arco Swakar
+
+<<weapons/18/description>>
+La madera subterranea parece que 
+lo ha llenado de polvo.
+
+<<weapons/18/name>>
+Cerbatana Epiwuin
+
+<<weapons/19/description>>
+Acabado de orfebrería que le da durabilidad
+y maniobrabilidad mayor.
+
+<<weapons/19/name>>
+Cerbatana Chunsua
+
+<<weapons/20/description>>
+Arco utilizado para la caceria en los montes
+helados de Balcca.
+
+<<weapons/20/name>>
+Arco Balcca
+
+<<weapons/21/description>>
+Cerbatana encantada con un ser ancestral
+de fuego. 
+
+<<weapons/21/name>>
+Cerbatana Swakar
+
+<<weapons/22/description>>
+Creado con filamento de minerales volcanicos,
+puede quemar de solo dispararlo
+
+<<weapons/22/name>>
+Arco Mogtorion
+
+<<weapons/23/description>>
+Arma forjada a partir de los dones del gran
+guardian Kusikuy.
+
+<<weapons/23/name>>
+Cerbatana Kusikuy
+
+<<weapons/24/description>>
+Modelo paralelo de rifle de carga helada de
+la CEOE.
+
+<<weapons/24/name>>
+Rifle Helado E32
+
+<<weapons/25/description>>
+Versión Mejorada del rifle de cargas congeladas
+de la CEOE
+
+<<weapons/25/name>>
+Rifle Helado D128
+
+<<weapons/26/description>>
+Versión mejorada del rifle helado de la CEOE,
+con un rango de exactitud mayor.
+
+<<weapons/26/name>>
+Rifle Helado C256
+
+<<weapons/27/description>>
+Modelo de fusil francotirador utilizado por la
+resistencia de la Flama Roja.
+
+<<weapons/27/name>>
+G32-RB
+
+<<weapons/28/description>>
+Rifle Francotirador de fabricacion extranjera,
+que mantiene su capacidad de congelar.
+
+<<weapons/28/name>>
+Reinz .50Cal
+
+<<weapons/29/description>>
+Versión Actual del Rifle de Batalla Mejorada, 
+utilizado por ejercitos regulares en el mundo.
+
+<<weapons/29/name>>
+G40-RBM
+
+<<weapons/30/description>>
+Rifle de Batalla predilecto de unidades francotiradoras.
+Un modelo que no pasa de moda despues de 5 años.
+
+<<weapons/30/name>>
+GB-5740
+
+<<weapons/31/description>>
+Modificación Silenciada del Rifle de Batalla
+GB-5740. Menos poder, más sigilo.
+
+<<weapons/31/name>>
+GB-5740-S
+
+<<weapons/32/description>>
+Revolver predilecto para los forajidos.
+
+<<weapons/32/name>>
+Magnum Clásica
+
+<<weapons/33/description>>
+Pistola ligera y de corto alcance pero
+bastante eficiente.
+
+<<weapons/33/name>>
+Barrinten
+
+<<weapons/34/description>>
+Revolver predilecta de fuerzas de seguridad
+pública de Eosia.
+
+<<weapons/34/name>>
+Magnum Barrinten
+
+<<weapons/35/description>>
+Pistola de una forja peculiar. La emanación
+calorica es parte de su singularidad.
+
+<<weapons/35/name>>
+Magnum Raptor
+
+<<weapons/36/description>>
+Pistola diseñada para uso general que otorga un 
+mejor experiencia en las armas de fuego.
+
+<<weapons/36/name>>
+Revolver Epiwuin
+
+<<weapons/37/description>>
+Arma de fuego aparentemente forjada con elementos
+sagrados que le pesan inexplicablemente al portador.
+
+<<weapons/37/name>>
+Magnum Luscus
+
+<<weapons/38/description>>
+Ultimo modelo de las fabricas de Mietchieng, 
+su potencia es atronadora.
+
+<<weapons/38/name>>
+BHM Magnum
+
+<<weapons/39/description>>
+Modelo experimental de los laboratorios lunares
+de Zerest. ¡ZAP!
+
+<<weapons/39/name>>
+Neognum
+
+<<weapons/40/description>>
+Modelo descontinuado por su peligrosidad.
+Perteneciente a Butch Takinohara.
+
+<<weapons/40/name>>
+Xolt Magnum 5738
+
+<<weapons/41/description>>
+Pistola ligera con un aura ominioso. Puede
+incluso matar de un solo golpe.
+
+<<weapons/41/name>>
+Barrinten Maligna
+
+<<weapons/60/name>>
+---Armas Enemigas
+
+<<weapons/61/description>>
+Artilleria G1
+
+<<weapons/61/name>>
+MisilAG1
+
+<<weapons/62/name>>
+Taladro
+
+<<weapons/63/name>>
+LlaveTuerca
+
+<<weapons/64/name>>
+Bomba
+
+<<weapons/65/name>>
+Gran Martillo 
+
+<<weapons/66/description>>
+Una cuchilla que se dice puede perforar casi todo.
+
+<<weapons/66/name>>
+Cuchilla Perforadora
+
+<<weapons/67/name>>
+Muelas Pequeñas
+
+<<weapons/68/name>>
+Microfono
+
+<<weapons/69/name>>
+Pistola Oxidada
+
+<<weapons/70/name>>
+Dinamita
+
+<<weapons/71/name>>
+Puño Pincho
+
+<<weapons/72/name>>
+Pisoton Cavalju
+
+<<weapons/73/name>>
+Pistola Robotica
+
+<<weapons/74/name>>
+Pistolita Laser
+
+<<weapons/75/name>>
+Garra Sable
+
+<<weapons/76/name>>
+Pala
+
+<<weapons/77/name>>
+Muelas Deserticas
+
+<<weapons/78/name>>
+Garras Deserticas
+
+<<weapons/79/name>>
+Taladro Poderoso
+
+<<weapons/80/name>>
+Pistola Pesada
+
+<<armors/1/name>>
+---Flamrose
+
+<<armors/2/description>>
+Vestido típico de los tatamenses pero muy
+desgastada por el uso repetido.
+
+<<armors/2/name>>
+Tunica Desgastada
+
+<<armors/2/note>>
+<ge: 1, $Flamrose, 0>
+
+<<armors/3/description>>
+Gorrito calido y artesanal típico de Tatama
+
+<<armors/3/name>>
+Chuyo Comun
+
+<<armors/4/description>>
+Tunica tatamense peculiar utilizada mayormente para
+rituales y eventos especiales
+
+<<armors/4/name>>
+Tunica Tatama
+
+<<armors/4/note>>
+<ge: 1, $Flamrose, 0>
+
+<<armors/5/description>>
+Amuleto embuido con una peculiar magia que reduce
+la probabilidad de calambres y aturdimiento.
+
+<<armors/5/name>>
+Amuleto Flexible
+
+<<armors/6/description>>
+Amuleto embuido con una peculiar magia
+que permite acumular adrenalina más rapido.
+
+<<armors/6/name>>
+Amuleto Furia
+
+<<armors/7/description>>
+Tunica aprobada por el comité de la CEOE. No es el 
+último hito de la moda, pero es bastante funcional.
+
+<<armors/7/name>>
+Tunica Militar
+
+<<armors/7/note>>
+<ge: 1, $Flamrose_AN, 0>
+
+<<armors/8/description>>
+Gorrito tejido por la compañía de suministros de la
+CEOE. No abriga mucho para optimizar la movilidad
+
+<<armors/8/name>>
+Chuyo Militar
+
+<<armors/9/description>>
+Amuleto embuido con una peculiar magia que 
+mejora la eficiencia en el uso de objetos.
+
+<<armors/9/name>>
+Amuleto Eficiente
+
+<<armors/10/description>>
+Agregado a la cerbatana para realizar ataques
+cuerpo a cuerpo como Corte Lateral.
+
+<<armors/10/name>>
+Cuchilla Lateral
+
+<<armors/30/name>>
+---Pengralle
+
+<<armors/31/description>>
+Casco usado por agentes de la CEOE 
+en entrenamiento
+
+<<armors/31/name>>
+Casco B64
+
+<<armors/32/description>>
+Calzado con skies incluidos, faciles de manipular.
+
+<<armors/32/name>>
+Botas Ski nv. 1
+
+<<armors/33/description>>
+Para soportar el frio levemente. Talla XS
+
+<<armors/33/name>>
+Abrigo Invernal B64
+
+<<armors/34/description>>
+Palos para esquiar para deportistas
+principiantes. Puede picar hielo.
+
+<<armors/34/name>>
+Palos Ski
+
+<<armors/35/description>>
+Amuleto desarrollado por universitarios para estar
+despierto el mayor tiempo que sea posible
+
+<<armors/35/name>>
+Amuleto Cafeina
+
+<<armors/36/description>>
+Casco fabricado para soldados profesionales
+del a CEOE. Mayor proteccion ante contusiones.
+
+<<armors/36/name>>
+Casco E32
+
+<<armors/37/description>>
+Botas con sus skies retractiles incluidos con 
+leves mejoras.
+
+<<armors/37/name>>
+Botas Ski Nv. 2
+
+<<armors/38/description>>
+Fabricacion especial de la CEOE con autodenominadas
+aeroventilas para la velocidad y discipar el calor.
+
+<<armors/38/name>>
+Abrigo Desertico E32
+
+<<armors/52/name>>
+--Akane
+
+<<armors/53/description>>
+Amuleto que misteriosamente aumenta las 
+defensas del organismo, evitando enfermarse.
+
+<<armors/53/name>>
+Amuleto Antidoto
+
+<<armors/54/description>>
+Sombrero que aparenta ser indumentaria
+de algun instituto educativo.
+
+<<armors/54/name>>
+Sombrero Aprendiz
+
+<<armors/55/description>>
+Indumentaria de algun instituto educativo.
+Posee cierta carga magica.
+
+<<armors/55/name>>
+Uniforme Aprendiz
+
+<<armors/56/description>>
+Indumentaria de algun instituto educativo.
+Posee cierta carga magica.
+
+<<armors/56/name>>
+Botas Epiwuin
+
+<<armors/74/name>>
+--Hutch
+
+<<armors/75/description>>
+Prenda versatil para los climas del desierto.
+Puede que necesite una buena lavada.
+
+<<armors/75/name>>
+Poncho Forajido
+
+<<armors/76/description>>
+Tipico entre vaqueros y forajidos por igual.
+Este en particular guarda cierto valor sentimental.
+
+<<armors/76/name>>
+Sombrero Clasico
+
+<<armors/77/description>>
+Además de ganado, permite atrapar personas
+o alcanzar lugares lejanos (si sabes hacer nudos).
+
+<<armors/77/name>>
+Lazo de Ganado
+
+<<armors/78/description>>
+Util cuando las pistolas no solucionan tus problemas
+y se necesita recurrir a los golpes.
+
+<<armors/78/name>>
+Machete Auxiliar
+
+<<armors/79/description>>
+De peso considerable pero puede tomar por
+sorpresa a otros pistoleros. Un clásico.
+
+<<armors/79/name>>
+Chaleco Metalico
+
+<<armors/80/description>>
+Sus peculiares propiedades redistribuyen la fuerza
+a costa de la defensa de manera ligera.
+
+<<armors/80/name>>
+Brazalete Agresivo
+
+<<armors/92/name>>
+--Dana
+
+<<armors/115/name>>
+--Farrock
+
+<<armors/131/name>>
+--Koortesh
+
+<<armors/144/name>>
+--Muti
+
+<<armors/145/description>>
+Abrigo que da resistencia y esta de moda
+
+<<armors/145/name>>
+Chaqueta Morsa
+
+<<armors/146/description>>
+Para darle cabezazos al rival
+
+<<armors/146/name>>
+Casco Cornudo
+
+<<armors/147/description>>
+Refuerzo Metalico para un brazo mecanico.
+[Conductor de electricidad]
+
+<<armors/147/name>>
+Aleacion Metalica
+
+<<armors/148/description>>
+Lente amplio que permite la respiración bajo
+el agua y aumenta la punteria.
+
+<<armors/148/name>>
+Lente Subacuatico
+
+<<armors/149/description>>
+Abrigo aprobado por la CEOE. El azul no es un 
+color para todo el mundo...
+
+<<armors/149/name>>
+Chaqueta CEOE
+
+<<armors/149/note>>
+<ge: 7, $Muti_AN, 0>
+
+<<armors/150/description>>
+Amuleto prismático que protege la visión
+de los rayos UV y demás cosas que te dejan ciego.
+
+<<armors/150/name>>
+Amuleto Visual
+
+<<enemies/1/name>>
+Blizzeroth
+
+<<enemies/1/note>>
+<element absorb: 3>
+<animated>
+<mirror>
+
+
+<<enemies/2/name>>
+Tzimitl 
+
+<<enemies/3/name>>
+Inspil Bloque 
+
+<<enemies/3/note>>
+<show info : all>
+<show info: all>
+
+<<enemies/4/name>>
+Inspil Arbusto
+
+<<enemies/4/note>>
+<show info: all>
+
+<<enemies/5/name>>
+Guerrera Araña
+
+<<enemies/6/name>>
+Cynspil Oseo
+
+<<enemies/7/name>>
+Stonebot-T
+
+<<enemies/7/note>>
+Stonebot Taladro
+
+
+<<enemies/8/name>>
+Bizzer
+
+<<enemies/9/name>>
+Sirakuri
+
+<<enemies/9/note>>
+<show info: all>
+
+<<enemies/10/name>>
+Sirakiru
+
+<<enemies/11/name>>
+Stonebot-R
+
+<<enemies/11/note>>
+Stonbot Reparacion
+
+
+<<enemies/12/name>>
+Stonebot-Mono
+
+<<enemies/12/note>>
+Stonbot 
+
+
+<<enemies/13/name>>
+Lancero Tatama
+
+<<enemies/14/name>>
+Rhysorog
+
+<<enemies/15/name>>
+Stonebot-MgD
+
+<<enemies/16/name>>
+Stonebot-CwD
+
+<<enemies/17/name>>
+Stonebot-PaD
+
+<<enemies/18/name>>
+Huitilo
+
+<<enemies/19/name>>
+Carchatilo
+
+<<enemies/20/name>>
+Korolecti
+
+<<enemies/20/note>>
+<element absorb: 6>
+
+<<enemies/21/name>>
+Perilecti
+
+<<enemies/22/name>>
+Guacitarra
+
+<<enemies/23/name>>
+Bandido Musaraña
+
+<<enemies/24/name>>
+Forajido Musaraña
+
+<<enemies/25/name>>
+El Sangrenegra
+
+<<enemies/26/name>>
+Cavalkuju
+
+<<enemies/27/name>>
+Cavalkuje
+
+<<enemies/28/name>>
+3X-CAR-M0L3
+
+<<enemies/29/name>>
+Sangrenegra Mutado
+
+<<enemies/199/name>>
+tEST B
+
+<<states/1/message2>>
+ no puede continuar!
+
+<<states/1/name>>
+Derrota
+
+<<states/1/message1>>
+ ha caido!
+
+<<states/1/message4>>
+ revive!
+
+<<states/1/note>>
+State #1 will be automatically added when
+HP reaches 0.
+
+<<states/2/message2>>
+ esta envenenado
+
+<<states/2/name>>
+Veneno
+
+<<states/2/message1>>
+ esta envenenado
+
+<<states/2/message4>>
+ se ha librado del veneno
+
+<<states/2/message3>>
+ sufre por el veneno
+
+<<states/3/message2>>
+ ha sido cegado!
+
+<<states/3/name>>
+Ceguera
+
+<<states/3/message1>>
+ ha sido cegado!
+
+<<states/3/message4>>
+ se recupero de la ceguera
+
+<<states/4/message2>>
+ no puede usar magia!
+
+<<states/4/name>>
+Silencio
+
+<<states/4/message1>>
+ no puede usar magia!
+
+<<states/4/message4>>
+ ya puede volver a usar magia!
+
+<<states/5/message2>>
+ ha sido confundido!
+
+<<states/5/name>>
+Confusion
+
+<<states/5/message1>>
+ ha sido confundido!
+
+<<states/5/message4>>
+ se ha librado de la confusion!
+
+<<states/6/message2>>
+ se ha quedado dormido...
+
+<<states/6/name>>
+Sueño
+
+<<states/6/message1>>
+ se ha quedado dormido...
+
+<<states/6/message4>>
+ se ha despertado
+
+<<states/6/message3>>
+ esta durmiendo (No molestar)......
+
+<<states/7/message2>>
+ ha sido paralizado!
+
+<<states/7/name>>
+Paralisis
+
+<<states/7/message1>>
+ ha sido paralizado!
+
+<<states/7/message4>>
+ ya no esta paralizado
+
+<<states/7/message3>>
+ no se puede mover por la paralisis
+
+<<states/8/message2>>
+ ha perdido el equilibrio
+
+<<states/8/name>>
+Aturdimiento
+
+<<states/8/message1>>
+ esta aturdido
+
+<<states/8/message4>>
+ ha recuperado el equilibrio
+
+<<states/8/message3>>
+ sigue aturdido......
+
+<<states/9/name>>
+Defensa
+
+<<states/10/name>>
+Immortal
+
+<<states/11/name>>
+Proteccion
+
+<<states/12/name>>
+Provocacion
+
+<<states/13/name>>
+Camuflaje
+
+<<states/14/name>>
+HP Regen
+
+<<states/15/name>>
+MP Regen
+
+<<states/16/name>>
+TP再生
+
+<<states/17/name>>
+Cuerpo de Hierro
+
+<<states/18/name>>
+Contrataque
+
+<<states/19/name>>
+Magic Evade
+
+<<states/20/name>>
+Magic Reflect
+
+<<states/21/message2>>
+ Obtiene el poder de fuego!
+
+<<states/21/name>>
+Fuerza Flama
+
+<<states/21/message1>>
+ Obtiene el poder de fuego!
+
+<<states/21/note>>
+<absorb element: 3>
+
+<<states/22/message2>>
+Obtiene el poder de hielo!
+
+<<states/22/name>>
+Ice Force
+
+<<states/22/message1>>
+Obtiene el poder de hielo!
+
+<<states/23/message2>>
+ Obtiene el poder de trueno!
+
+<<states/23/name>>
+Thunder Force
+
+<<states/23/message1>>
+Obtiene el poder de trueno!
+
+<<states/24/name>>
+Ailment Guard
+
+<<states/25/name>>
+Reduccion de MP
+
+<<states/26/message2>>
+ sufre de quemaduras!
+
+<<states/26/name>>
+Quemadura
+
+<<states/26/message1>>
+ ha sido quemado!
+
+<<states/26/message4>>
+ ya no esta quemado!
+
+<<states/26/message3>>
+ esta sufriendo por las quemaduras!
+
+<<states/27/name>>
+Bloqueo Acuatico
+
+<<states/27/message1>>
+tiene un bloque de agua!
+
+<<states/28/message2>>
+ es afectado por la radiacion.
+
+<<states/28/name>>
+Radiacion
+
+<<states/28/message1>>
+ es afectado por la radiacion.
+
+<<states/28/message4>>
+ se recupero de la radiacion.
+
+<<states/28/message3>>
+ es herido por la radiacion.
+
+<<states/28/note>>
+La radiacion afecta cuando se usan ataques
+de energia, el daño recibido por estos ataques. Solo se puede curar con el paso del tiempo, caminando o con una camara contra la radiacion.
+
+<<states/29/message2>>
+ sufre del efecto del granizo!
+
+<<states/29/name>>
+Efecto Granizo
+
+<<states/29/message1>>
+ sufre del efecto del granizo!
+
+<<states/29/message4>>
+ ya no sufre más por el frio!
+
+<<states/29/message3>>
+ se mantiene con frio del hielo!
+
+<<states/30/message2>>
+ ha sido aterrado!
+
+<<states/30/name>>
+Miedo
+
+<<states/30/message1>>
+ está aterrado por los insectos!
+
+<<states/30/message4>>
+ supero el terror(Por ahora)!
+
+<<states/30/message3>>
+ sigue aterrado!
+
+<<states/30/note>>
+Terror por insectos
+
+<<states/31/message2>>
+ ha sido aterrado!
+
+<<states/31/name>>
+Miedo
+
+<<states/31/message1>>
+ está aterrado por los insectos!
+
+<<states/31/message4>>
+ supero el terror(Por ahora)!
+
+<<states/31/message3>>
+ sigue aterrado!
+
+<<states/31/note>>
+Terror por Oscuridad
+
+<<states/32/message2>>
+ ha aumentado su velocidad!
+
+<<states/32/name>>
+Rapidez
+
+<<states/32/message1>>
+ ha aumentado su velocidad!
+
+<<states/32/message4>>
+ ha vuelto a velocidad normal.
+
+<<states/33/name>>
+Proteccion de Cactus
+
+<<states/33/note>>
+<eff: reflect_damage 0.4>
+
+<<states/34/name>>
+Doble Ataque
+
+<<states/34/message1>>
+ ataca el doble!
+
+<<states/34/message4>>
+ deja de atacar el doble...
+
+<<states/35/name>>
+Velo Energetico
+
+<<states/35/message1>>
+ tiene un Velo Magico!
+
+<<states/35/message4>>
+ el velo se ha desvanecido...
+
+<<states/36/name>>
+Obligar Armas
+
+<<states/37/name>>
+Obligar Ataque
+
+<<states/38/name>>
+Obligar Especial
+
+<<states/39/name>>
+Furia
+
+<<states/40/message2>>
+ se ha escondido
+
+<<states/40/name>>
+Escondido
+
+<<states/40/message1>>
+ se ha escondido
+
+<<states/40/message4>>
+ es visible nuevamente
+
+<<states/40/message3>>
+ no se puede ver
+
+<<states/41/name>>
+Involución
+
+<<states/42/message2>>
+ ha sido aterrado!
+
+<<states/42/name>>
+Terror
+
+<<states/42/message1>>
+ está aterrado y confundido!
+
+<<states/42/message4>>
+ supero el terror(Por ahora)!
+
+<<states/42/message3>>
+ sigue aterrado!
+
+<<states/42/note>>
+Miedo y Debilidad
+
+<<states/43/message2>>
+ está intoxicado.
+
+<<states/43/name>>
+Intoxicación
+
+<<states/43/message1>>
+ ha comido algo que no debía...
+
+<<states/43/message4>>
+ ha superado la intoxicación.
+
+<<states/43/message3>>
+ sufre por el dolor de estomago.
+
+<<system/game_title>>
+El Regimen de Stonehite
+
+<<system/currency_unit>>
+Monedas
+
+<<types/elements/1>>
+Fisico
+
+<<types/elements/2>>
+Absorcion
+
+<<types/elements/3>>
+Fuego
+
+<<types/elements/4>>
+Hielo
+
+<<types/elements/5>>
+Trueno
+
+<<types/elements/6>>
+Agua
+
+<<types/elements/7>>
+Tierra
+
+<<types/elements/8>>
+Viento
+
+<<types/elements/9>>
+Luz
+
+<<types/elements/10>>
+Oscuridad
+
+<<types/elements/11>>
+Magia
+
+<<types/elements/12>>
+Energia
+
+<<types/elements/13>>
+Sonido
+
+<<types/elements/14>>
+Radiactividad
+
+<<types/elements/15>>
+Naturaleza
+
+<<types/elements/16>>
+A distancia
+
+<<types/skill_types/1>>
+Especial
+
+<<types/skill_types/2>>
+Armas
+
+<<types/skill_types/3>>
+Magia
+
+<<types/skill_types/4>>
+Composicion
+
+<<types/skill_types/5>>
+Tecnica 
+
+<<types/skill_types/6>>
+Invocación
+
+<<types/weapon_types/1>>
+Hacha
+
+<<types/weapon_types/2>>
+Mazo
+
+<<types/weapon_types/3>>
+Lanza
+
+<<types/weapon_types/4>>
+Espada
+
+<<types/weapon_types/5>>
+Sable
+
+<<types/weapon_types/6>>
+Arco
+
+<<types/weapon_types/7>>
+Daga
+
+<<types/weapon_types/8>>
+Martillo
+
+<<types/weapon_types/9>>
+Baston
+
+<<types/weapon_types/10>>
+Pistola
+
+<<types/weapon_types/11>>
+Rifle 
+
+<<types/weapon_types/12>>
+Guante
+
+<<types/weapon_types/13>>
+Casco
+
+<<types/weapon_types/14>>
+Guitarra
+
+<<types/weapon_types/15>>
+Microfono
+
+<<types/weapon_types/16>>
+Machete
+
+<<types/weapon_types/17>>
+Cerbatana
+
+<<types/weapon_types/18>>
+Arrojadizo
+
+<<types/weapon_types/19>>
+Misil
+
+<<types/weapon_types/20>>
+Laser
+
+<<types/weapon_types/21>>
+Revolver
+
+<<types/armor_types/1>>
+Pajaril
+
+<<types/armor_types/2>>
+Morsil
+
+<<types/armor_types/3>>
+Reptil
+
+<<types/armor_types/4>>
+Pinguinil
+
+<<types/armor_types/5>>
+Magica
+
+<<types/armor_types/6>>
+Comun
+
+<<types/armor_types/7>>
+Mapache
+
+<<types/armor_types/8>>
+Guerrero
+
+<<types/armor_types/9>>
+Antilopil
+
+<<types/armor_types/10>>
+Conejil
+
+<<types/armor_types/11>>
+Rocosil
+
+<<types/armor_types/12>>
+Morsa
+
+<<terms/basic/0>>
+Nivel
+
+<<terms/basic/1>>
+Lv
+
+<<terms/basic/2>>
+Puntos Vitales
+
+<<terms/basic/3>>
+PV
+
+<<terms/basic/4>>
+Energia
+
+<<terms/basic/5>>
+PE
+
+<<terms/basic/6>>
+Furia
+
+<<terms/basic/7>>
+PF
+
+<<terms/params/0>>
+MaxPv
+
+<<terms/params/1>>
+MaxEn
+
+<<terms/params/2>>
+Ataque
+
+<<terms/params/3>>
+Defensa
+
+<<terms/params/4>>
+At.Especial
+
+<<terms/params/5>>
+Df.Especial
+
+<<terms/params/6>>
+Velocidad
+
+<<terms/params/7>>
+Suerte
+
+<<terms/etypes/0>>
+Arma
+
+<<terms/etypes/1>>
+Arma/Escudo
+
+<<terms/etypes/2>>
+Cabeza
+
+<<terms/etypes/3>>
+Armadura
+
+<<terms/etypes/4>>
+Accesorio
+
+<<terms/commands/0>>
+Luchar
+
+<<terms/commands/1>>
+Escapar
+
+<<terms/commands/2>>
+Atacar
+
+<<terms/commands/3>>
+Defender
+
+<<terms/commands/4>>
+Objetos
+
+<<terms/commands/5>>
+Especial
+
+<<terms/commands/6>>
+Equipo
+
+<<terms/commands/7>>
+Estado
+
+<<terms/commands/8>>
+Formacion
+
+<<terms/commands/9>>
+Guardar
+
+<<terms/commands/10>>
+Salir
+
+<<terms/commands/12>>
+Arma
+
+<<terms/commands/13>>
+Armadura
+
+<<terms/commands/14>>
+Objetos Clave
+
+<<terms/commands/15>>
+Equipado
+
+<<terms/commands/16>>
+Optimizar
+
+<<terms/commands/17>>
+Quitar Todo
+
+<<terms/commands/18>>
+Nueva Partida
+
+<<terms/commands/19>>
+Continuar
+
+<<terms/commands/20>>
+Salir
+
+<<terms/commands/21>>
+Ir al titulo
+
+<<terms/commands/22>>
+Cancelar
+
+<<constants/Vocab/ShopBuy>>
+Comprar
+
+<<constants/Vocab/ShopSell>>
+Vender
+
+<<constants/Vocab/ShopCancel>>
+Salir
+
+<<constants/Vocab/Possession>>
+Tienes
+
+<<constants/Vocab/ExpTotal>>
+Experiencia Total
+
+<<constants/Vocab/ExpNext>>
+Restante %s
+
+<<constants/Vocab/SaveMessage>>
+Donde desea guardar?
+
+<<constants/Vocab/LoadMessage>>
+Cual archivo desea cargar?
+
+<<constants/Vocab/File>>
+Archivo
+
+<<constants/Vocab/PartyName>>
+El equipo de %s 
+
+<<constants/Vocab/Emerge>>
+%s Apareció!
+
+<<constants/Vocab/Preemptive>>
+%s Ataca Primero!
+
+<<constants/Vocab/Surprise>>
+%s Te sorprendió!
+
+<<constants/Vocab/EscapeStart>>
+%s Comienza a escapar....
+
+<<constants/Vocab/EscapeFailure>>
+No ha podido Escapar
+
+<<constants/Vocab/Victory>>
+%s Ha salido vencedor!
+
+<<constants/Vocab/Defeat>>
+%s Ha sido derrotado.
+
+<<constants/Vocab/ObtainExp>>
+Ganas %s Puntos de Experiencia
+
+<<constants/Vocab/ObtainGold>>
+Obtienes %s \G 
+
+<<constants/Vocab/ObtainItem>>
+Obtienes %s
+
+<<constants/Vocab/LevelUp>>
+%s ha subido al nivel %s %s
+
+<<constants/Vocab/ObtainSkill>>
+Has obtenido la habilidad %s
+
+<<constants/Vocab/UseItem>>
+%s Ha usado %s
+
+<<constants/Vocab/CriticalToEnemy>>
+Tu daño ha sido Critico!!!
+
+<<constants/Vocab/CriticalToActor>>
+Te han dado un golpe Critico
+
+<<constants/Vocab/ActorDamage>>
+A %s le han hecho %s puntos de daño!!!
+
+<<constants/Vocab/ActorRecovery>>
+%s recupera %s de %s!!!
+
+<<constants/Vocab/ActorGain>>
+%s ha ganado %s de %s!
+
+<<constants/Vocab/ActorLoss>>
+%s ha perdido %s de %s!
+
+<<constants/Vocab/ActorDrain>>
+%s ha perdido %s de %s!
+
+<<constants/Vocab/ActorNoDamage>>
+%s no ha recibido daño!!!
+
+<<constants/Vocab/ActorNoHit>>
+Falló! %s no recibe daño!!!
+
+<<constants/Vocab/EnemyDamage>>
+A %s Le han hecho %s puntos de daño!!
+
+<<constants/Vocab/EnemyRecovery>>
+%s recupera %s de %s!!!
+
+<<constants/Vocab/EnemyGain>>
+%s ha ganado %s de %s!
+
+<<constants/Vocab/EnemyLoss>>
+%s ha perdido %s de %s!
+
+<<constants/Vocab/EnemyDrain>>
+%s ha perdido %s de %s!
+
+<<constants/Vocab/EnemyNoDamage>>
+%s no ha recibido daño!!!
+
+<<constants/Vocab/EnemyNoHit>>
+Falló! %s no recibe daño!!!
+
+<<constants/Vocab/Evasion>>
+%s ha esquivado el ataque!!
+
+<<constants/Vocab/MagicEvasion>>
+%s ha esquivado el hechizo!!
+
+<<constants/Vocab/MagicReflection>>
+%s ha reflejazo el hechizo
+
+<<constants/Vocab/CounterAttack>>
+%s ha coontratacado!!
+
+<<constants/Vocab/Substitute>>
+%s conjuró %s!!
+
+<<constants/Vocab/BuffAdd>>
+%s ahora usa %s!!
+
+<<constants/Vocab/DebuffAdd>>
+%s ahora usa %s!!
+
+<<constants/Vocab/BuffRemove>>
+%s ya no usa %s
+
+<<constants/Vocab/ActionFailure>>
+%s ha fallado.
+
+<<constants/Vocab/PlayerPosError>>
+No encuentra el punto de partida del jugador.
+
+<<constants/Vocab/EventOverflow>>
+Se ha superado el limite de llamados para eventos(Event Overflow)
+
+<<constants/YEA::SYSTEM/COMMAND_NAME>>
+Opciones
+
+<<constants/YEA::SAVE/SLOT_NAME>>
+Archivo %s
+
+<<constants/YEA::SAVE/ACTION_LOAD>>
+Cargar
+
+<<constants/YEA::SAVE/ACTION_SAVE>>
+Guardar
+
+<<constants/YEA::SAVE/ACTION_DELETE>>
+Borrar
+
+<<constants/YEA::SAVE/SELECT_HELP>>
+Selecciona el archivo de tu aventura.
+
+<<constants/YEA::SAVE/LOAD_HELP>>
+Carga desde el punto de guardado.
+
+<<constants/YEA::SAVE/SAVE_HELP>>
+Guarda el progreso actual de tu aventura
+
+<<constants/YEA::SAVE/DELETE_HELP>>
+Elimina tu archivo con TODO el progreso en el.
+
+<<constants/YEA::SAVE/EMPTY_TEXT>>
+Sin Datos.
+
+<<constants/YEA::SAVE/PLAYTIME>>
+Tiempo Jugado:
+
+<<constants/YEA::SAVE/TOTAL_SAVE>>
+Veces guardadas:
+
+<<constants/YEA::SAVE/TOTAL_GOLD>>
+Monedas:
+
+<<constants/YEA::SAVE/LOCATION>>
+Ubicación:
+
+<<constants/YEA::BATTLE/HELP_TEXT_ALL_FOES>>
+Todos los Enemigos
+
+<<constants/YEA::BATTLE/HELP_TEXT_ONE_RANDOM_FOE>>
+Un Enemigo
+
+<<constants/YEA::BATTLE/HELP_TEXT_MANY_RANDOM_FOE>>
+%d enemigos
+
+<<constants/YEA::BATTLE/HELP_TEXT_ALL_ALLIES>>
+Todos los Aliados
+
+<<constants/YEA::BATTLE/HELP_TEXT_ALL_DEAD_ALLIES>>
+Todos los aliados caidos
+
+<<constants/YEA::BATTLE/HELP_TEXT_ONE_RANDOM_ALLY>>
+Un aliado
+
+<<constants/YEA::BATTLE/HELP_TEXT_RANDOM_ALLIES>>
+%d aliados
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:missed]>>
+FALLA
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:drained]>>
+DRENADO
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:critical]>>
+CRITICO
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:evaded]>>
+EVADE
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:failed]>>
+FALLA
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:weakpoint]>>
+EFECTIVO
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:resistant]>>
+RESISTE
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:immune]>>
+INMUNE
+
+<<variables/YEA::BATTLE::POPUP_SETTINGS[:absorbed]>>
+ABSORBE
+
+<<constants/YEA::SHOP/EQUIP>>
+Equipar
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:hp_recover]>>
+Cura PV
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:mp_recover]>>
+Cura PE
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:applies]>>
+Aplica
+
+<<variables/YEA::SHOP::VOCAB_STATUS[:removes]>>
+Remueve
+
+<<variables/YEA::ITEM::VOCAB_STATUS[:hp_recover]>>
++ PV
+
+<<variables/YEA::ITEM::VOCAB_STATUS[:mp_recover]>>
++ PE
+
+<<variables/YEA::ITEM::VOCAB_STATUS[:tp_recover]>>
++ PF
+
+<<variables/YEA::ITEM::VOCAB_STATUS[:applies]>>
+Aplica
+
+<<variables/YEA::ITEM::VOCAB_STATUS[:removes]>>
+Remueve
+
+<<variables/YEA::ITEM::ITEM_TYPES[:all]>>
+Todos
+
+<<variables/YEA::ITEM::ITEM_TYPES[:battle]>>
+Combate
+
+<<variables/YEA::ITEM::ITEM_TYPES[:key_item]>>
+Objetos Clave
+
+<<variables/YEA::STATUS::COMMANDS[:general]>>
+General
+
+<<variables/YEA::STATUS::COMMANDS[:parameters]>>
+Parametros
+
+<<variables/YEA::STATUS::COMMANDS[:custom1]>>
+Habilidades
+
+<<variables/YEA::STATUS::COMMANDS[:custom2]>>
+Equipmento
+
+<<variables/YEA::STATUS::COMMANDS[:biography]>>
+Biografía
+
+<<constants/YEA::VICTORY_AFTERMATH/SKILLS_TEXT>>
+Nuevas Habilidades
+
+<<constants/YEA::VICTORY_AFTERMATH/TOP_TEAM>>
+El equipo de %s ha ganado
+
+<<constants/YEA::VICTORY_AFTERMATH/TOP_VICTORY_TEXT>>
+%s ha ganado
+
+<<constants/YEA::VICTORY_AFTERMATH/TOP_LEVEL_UP>>
+%s ha subido de nivel
+
+<<constants/YEA::VICTORY_AFTERMATH/TOP_SPOILS>>
+Objetos Obtenidos
+
+<<constants/YEA::VICTORY_AFTERMATH/LEVELUP_TEXT>>
+Nuevo Nivel
+
+<<constants/YEA::VICTORY_AFTERMATH/MAX_LVL_TEXT>>
+Nivel Máximo
+
+<<constants/YEA::ENEMY_INFO/HELP_INFO_SHOW>>
+\e}Presiona \eC[2]SHIFT\eC[0] para ver mas información.
+
+<<constants/YEA::ENEMY_INFO/HELP_INFO_SWITCH>>
+\e}Presiona \eC[2]Q\eC[0] o \eC[2]W\eC[0] para ver más.
+
+<<variables/YEA::PARTY::COMMANDS[:change]>>
+Cambiar
+
+<<variables/YEA::PARTY::COMMANDS[:remove]>>
+Remover
+
+<<variables/YEA::PARTY::COMMANDS[:revert]>>
+Revertir
+
+<<variables/YEA::PARTY::COMMANDS[:finish]>>
+Confirmar
+
+<<constants/YEA::PARTY/REMOVE_TEXT>>
+-Remover-
+
+<<constants/YEA::PARTY/NO_DATA>>
+-Sin Datos-
+
+<<constants/YEA::PARTY/EQUIP_TEXT>>
+Equipo
+
+<<constants/YEA::COMMAND_PARTY/COMMAND_TEXT>>
+Formación
+
+
