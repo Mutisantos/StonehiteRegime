@@ -70,10 +70,12 @@ module YEA
     # change the "Game End" vocab, and disable or enable autodash, instant
     # messages, or animations by default.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    COMMAND_NAME = "Opciones"      # Command name used to replace Game End.
+    COMMAND_NAME = "Options"      # Command name used to replace Game End.
     DEFAULT_AUTODASH   = false    # Enable automatic dashing by default?
     DEFAULT_INSTANTMSG = false   # Enable instant message text by default?
     DEFAULT_ANIMATIONS = true    # Enable battle animations by default?
+    DEFAULT_ENLARGE = false      #Enable screen enlargement by default?
+    DEFAULT_SPANISH = true      #Enable Spanish by default?
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Command Settings -
@@ -114,6 +116,8 @@ module YEA
       :autodash,     # Sets the player to automatically dash.
       :instantmsg,   # Sets message text to appear instantly.
       :animations,   # Enables battle animations or disables them.
+      :resolution,   # Enables battle animations or disables them.
+      :language,     # Enable using Spanish or English
     # :switch_1,     # Custom Switch 1. Adjust settings below.
     # :switch_2,     # Custom Switch 2. Adjust settings below.
     # :variable_1,   # Custom Variable 1. Adjust settings below.
@@ -185,55 +189,64 @@ module YEA
       :blank      => ["", "None", "None",
                       ""
                      ], # Do not remove this.
+                     
     # -------------------------------------------------------------------------
-      :window_red => ["Base Rojo", "None", "None",
-                      "Cambia la intensidad del rojo.\n" +
-                      "Presiona SHIFT para acelerar el cambio en 10."
+      :language   => ["Language", "Spanish", "English",
+                      "Change the game language."
+                      ], # Do not remove this.
+    # -------------------------------------------------------------------------
+      :window_red => ["Red Value", "None", "None",
+                      "Change the amount of Red.\n" +
+                      "Press SHIFT to change the value in 10."
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :window_grn => ["Base Verde", "None", "None",
-                      "Cambia la intensidad del verde.\n" +
-                      "Presiona SHIFT para acelerar el cambio en 10."
+      :window_grn => ["Green Value", "None", "None",
+                      "Change the amount of Green.\n" +
+                      "Press SHIFT to change the value in 10."
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :window_blu => ["Base Azul", "None", "None",
-                      "Cambia la intensidad del razul.\n" +
-                      "Presiona SHIFT para acelerar el cambio en 10."
+      :window_blu => ["Blue Value", "None", "None",
+                      "Change the amount of Blue.\n" +
+                      "Press SHIFT to change the value in 10."
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :volume_bgm => ["Volumen BGM", 12, 4, # Options 1 & 2 are Gauge Colours.
-                      "Cambia el volumen de la musica de fondo.\n" +
-                      "Presiona SHIFT para acelerar el cambio en 10."
+      :volume_bgm => ["Volume BGM", 12, 4, # Options 1 & 2 are Gauge Colours.
+                      "Change Background music volume.\n" +
+                      "Press SHIFT to change the value in 10."
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :volume_bgs => ["Volumen BGS ", 13, 5, # Options 1 & 2 are Gauge Colours.
-                      "Cambia el volumen de los sonidos de fondo.\n" +
-                      "Presiona SHIFT para acelerar el cambio en 10."
+      :volume_bgs => ["Volume BGS ", 13, 5, # Options 1 & 2 are Gauge Colours.
+                      "Change Background sounds volume.\n" +
+                      "Press SHIFT to change the value in 10."
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
       :volume_sfx => ["Volumen SFX ", 14, 6, # Options 1 & 2 are Gauge Colours.
-                      "Cambia el volumen de los efectos de sonido.\n" +
-                      "Presiona SHIFT para acelerar el cambio en 10."
+                      "Change sound effects volume.\n" +
+                      "Press SHIFT to change the value in 10."
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :autodash   => ["Auto-Correr", "Caminar", "Correr",
-                      "Permite correr sin la necesidad de oprimir C."
+      :autodash   => ["Auto-run", "Walk", "Run",
+                      "Enables running by default"
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :instantmsg => ["Texto instantaneo", "Normal", "Instantaneo",
-                      "Cambiar la velocidad de aparocion del texto."
+      :resolution   => ["Resolution", "640x480", "1280x832",
+                       "Modify the Screen Resolution."
+                       ], # Do not remove this.
+    # -------------------------------------------------------------------------
+      :instantmsg => ["Instant Text", "Normal", "Instant",
+                      "Change the speed the text is displayed."
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :animations => ["Animaciones", "Detener", "Mostrar",
-                      "Esconder o no las animaciones en batalla"
+      :animations => ["Animations", "Hide", "Show",
+                      "Hide or show attack animations."
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :to_title   => ["Volver a la pantalla de inicio", "None", "None",
-                      "Vuelve al menu de inicio."
+      :to_title   => ["Return to Main Screen", "None", "None",
+                      "Return to the Main Screen."
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :shutdown   => ["Apagar Juego", "None", "None",
-                      "Detiene la ejecucion de la partida."
+      :shutdown   => ["Close Game", "None", "None",
+                      "Stops the game execution."
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
     } # Do not remove this.
@@ -364,6 +377,7 @@ class Game_System
     init_autodash
     init_instantmsg
     init_animations
+    init_language
   end
   
   #--------------------------------------------------------------------------
@@ -406,7 +420,7 @@ class Game_System
   def autodash?
     init_autodash if @autodash.nil?
     return @autodash
-  end
+  end  
   
   #--------------------------------------------------------------------------
   # new method: set_autodash
@@ -414,7 +428,51 @@ class Game_System
   def set_autodash(value)
     @autodash = value
   end
+
+  #--------------------------------------------------------------------------
+  # new method: init_resolution
+  #--------------------------------------------------------------------------
+  def init_resolution
+    @enlarge = YEA::SYSTEM::DEFAULT_ENLARGE
+  end
   
+  #--------------------------------------------------------------------------
+  # new method: enlarge?
+  #--------------------------------------------------------------------------
+  def enlarge?
+    init_resolution if @enlarge.nil?
+    return @enlarge
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: set_enlarge
+  #--------------------------------------------------------------------------
+  def set_enlarge(value)
+    @enlarge = value
+  end
+  
+  #--------------------------------------------------------------------------
+  # new method: init_language
+  #--------------------------------------------------------------------------
+  def init_language
+   @spanish = YEA::SYSTEM::DEFAULT_SPANISH
+  end
+  
+  #--------------------------------------------------------------------------
+  # new method: spanish?
+  #--------------------------------------------------------------------------
+  def spanish?
+    init_resolution if @spanish.nil?
+    return @spanish
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: set_spanish
+  #--------------------------------------------------------------------------
+  def set_spanish(value)
+    @spanish = value
+  end
+
   #--------------------------------------------------------------------------
   # new method: init_instantmsg
   #--------------------------------------------------------------------------
@@ -589,7 +647,7 @@ class Window_SystemOptions < Window_Command
       when :volume_bgm, :volume_bgs, :volume_sfx
         add_command(YEA::SYSTEM::COMMAND_VOCAB[command][0], command)
         @help_descriptions[command] = YEA::SYSTEM::COMMAND_VOCAB[command][3]
-      when :autodash, :instantmsg, :animations
+      when :language, :autodash, :instantmsg, :animations, :resolution
         add_command(YEA::SYSTEM::COMMAND_VOCAB[command][0], command)
         @help_descriptions[command] = YEA::SYSTEM::COMMAND_VOCAB[command][3]
       when :to_title, :shutdown
@@ -634,7 +692,7 @@ class Window_SystemOptions < Window_Command
       draw_window_tone(rect, index, @list[index][:symbol])
     when :volume_bgm, :volume_bgs, :volume_sfx
       draw_volume(rect, index, @list[index][:symbol])
-    when :autodash, :instantmsg, :animations
+    when :autodash, :instantmsg, :animations, :resolution, :language
       draw_toggle(rect, index, @list[index][:symbol])
     when :to_title, :shutdown
       draw_text(item_rect_for_text(index), command_name(index), 1)
@@ -714,6 +772,10 @@ class Window_SystemOptions < Window_Command
       enabled = $game_system.instantmsg?
     when :animations
       enabled = $game_system.animations?
+    when :resolution
+      enabled = $game_system.enlarge?
+    when :language
+      enabled = $game_system.spanish?
     end
     dx = contents.width/2
     change_color(normal_color, !enabled)
@@ -788,7 +850,7 @@ class Window_SystemOptions < Window_Command
       change_window_tone(direction)
     when :volume_bgm, :volume_bgs, :volume_sfx
       change_volume(direction)
-    when :autodash, :instantmsg, :animations
+    when :autodash, :instantmsg, :animations, :resolution, :language
       change_toggle(direction)
     when :custom_switch
       change_custom_switch(direction)
@@ -841,14 +903,32 @@ class Window_SystemOptions < Window_Command
     value = direction == :left ? false : true
     case current_symbol
     when :autodash
-      current_case = $game_system.autodash?
-      $game_system.set_autodash(value)
+        current_case = $game_system.autodash?
+        $game_system.set_autodash(value)
     when :instantmsg
-      current_case = $game_system.instantmsg?
-      $game_system.set_instantmsg(value)
+        current_case = $game_system.instantmsg?
+        $game_system.set_instantmsg(value)
     when :animations
-      current_case = $game_system.animations?
-      $game_system.set_animations(value)
+        current_case = $game_system.animations?
+        $game_system.set_animations(value)
+    when :resolution
+        current_case = $game_system.enlarge?
+        $game_system.set_enlarge(value)
+        if $game_system.enlarge?
+            Window_Resize.r(1280,832)
+        else
+            Window_Resize.r(640,480)
+        end
+    when :language
+        current_case = $game_system.spanish?
+        $game_system.set_spanish(value)
+        p(LanguageFileSystem::language)
+        p($game_system.spanish?)
+        if $game_system.spanish?
+            LanguageFileSystem::set_language(:English)
+        else
+            LanguageFileSystem::set_language(:Spanish)
+        end
     end
     Sound.play_cursor if value != current_case
     draw_item(index)

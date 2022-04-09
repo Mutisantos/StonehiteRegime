@@ -1,38 +1,38 @@
 #==============================================================================
-# ■ Game_ActionResult
+# ** Game_ActionResult
 #------------------------------------------------------------------------------
-# 　戦闘行動の結果を扱うクラスです。このクラスは Game_Battler クラスの内部で
-# 使用されます。
+#  This class handles the results of battle actions. It is used internally for
+# the Game_Battler class. 
 #==============================================================================
 
 class Game_ActionResult
   #--------------------------------------------------------------------------
-  # ● 公開インスタンス変数
+  # * Public Instance Variables
   #--------------------------------------------------------------------------
-  attr_accessor :used                     # 使用フラグ
-  attr_accessor :missed                   # 命中失敗フラグ
-  attr_accessor :evaded                   # 回避成功フラグ
-  attr_accessor :critical                 # クリティカルフラグ
-  attr_accessor :success                  # 成功フラグ
-  attr_accessor :hp_damage                # HP ダメージ
-  attr_accessor :mp_damage                # MP ダメージ
-  attr_accessor :tp_damage                # TP ダメージ
-  attr_accessor :hp_drain                 # HP 吸収
-  attr_accessor :mp_drain                 # MP 吸収
-  attr_accessor :added_states             # 付加されたステート
-  attr_accessor :removed_states           # 解除されたステート
-  attr_accessor :added_buffs              # 付加された能力強化
-  attr_accessor :added_debuffs            # 付加された能力弱体
-  attr_accessor :removed_buffs            # 解除された強化／弱体
+  attr_accessor :used                     # used flag
+  attr_accessor :missed                   # missed flag
+  attr_accessor :evaded                   # evaded flag
+  attr_accessor :critical                 # critical flag
+  attr_accessor :success                  # success flag
+  attr_accessor :hp_damage                # HP damage
+  attr_accessor :mp_damage                # MP damage
+  attr_accessor :tp_damage                # TP damage
+  attr_accessor :hp_drain                 # HP drain
+  attr_accessor :mp_drain                 # MP drain
+  attr_accessor :added_states             # added states
+  attr_accessor :removed_states           # removed states
+  attr_accessor :added_buffs              # added buffs
+  attr_accessor :added_debuffs            # added debuffs
+  attr_accessor :removed_buffs            # removed buffs/debuffs
   #--------------------------------------------------------------------------
-  # ● オブジェクト初期化
+  # * Object Initialization
   #--------------------------------------------------------------------------
   def initialize(battler)
     @battler = battler
     clear
   end
   #--------------------------------------------------------------------------
-  # ● クリア
+  # * Clear
   #--------------------------------------------------------------------------
   def clear
     clear_hit_flags
@@ -40,7 +40,7 @@ class Game_ActionResult
     clear_status_effects
   end
   #--------------------------------------------------------------------------
-  # ● 命中系フラグのクリア
+  # * Clear Hit Flags
   #--------------------------------------------------------------------------
   def clear_hit_flags
     @used = false
@@ -50,7 +50,7 @@ class Game_ActionResult
     @success = false
   end
   #--------------------------------------------------------------------------
-  # ● ダメージ値のクリア
+  # * Clear Damage Values
   #--------------------------------------------------------------------------
   def clear_damage_values
     @hp_damage = 0
@@ -60,7 +60,7 @@ class Game_ActionResult
     @mp_drain = 0
   end
   #--------------------------------------------------------------------------
-  # ● ダメージの作成
+  # * Create Damage
   #--------------------------------------------------------------------------
   def make_damage(value, item)
     @critical = false if value == 0
@@ -73,7 +73,7 @@ class Game_ActionResult
     @success = true if item.damage.to_hp? || @mp_damage != 0
   end
   #--------------------------------------------------------------------------
-  # ● ステータス効果のクリア
+  # * Clear Status Effects
   #--------------------------------------------------------------------------
   def clear_status_effects
     @added_states = []
@@ -83,32 +83,32 @@ class Game_ActionResult
     @removed_buffs = []
   end
   #--------------------------------------------------------------------------
-  # ● 付加されたステートをオブジェクトの配列で取得
+  # * Get Added States as an Object Array
   #--------------------------------------------------------------------------
   def added_state_objects
     @added_states.collect {|id| $data_states[id] }
   end
   #--------------------------------------------------------------------------
-  # ● 解除されたステートをオブジェクトの配列で取得
+  # * Get Removed States as an Object Array
   #--------------------------------------------------------------------------
   def removed_state_objects
     @removed_states.collect {|id| $data_states[id] }
   end
   #--------------------------------------------------------------------------
-  # ● 何らかのステータス（能力値かステート）が影響を受けたかの判定
+  # * Determine Whether Some Sort of Status (Parameter or State) Was Affected
   #--------------------------------------------------------------------------
   def status_affected?
     !(@added_states.empty? && @removed_states.empty? &&
       @added_buffs.empty? && @added_debuffs.empty? && @removed_buffs.empty?)
   end
   #--------------------------------------------------------------------------
-  # ● 最終的に命中したか否かを判定
+  # * Determine Final Hit 
   #--------------------------------------------------------------------------
   def hit?
     @used && !@missed && !@evaded
   end
   #--------------------------------------------------------------------------
-  # ● HP ダメージの文章を取得
+  # * Get Text for HP Damage
   #--------------------------------------------------------------------------
   def hp_damage_text
     if @hp_drain > 0
@@ -126,7 +126,7 @@ class Game_ActionResult
     end
   end
   #--------------------------------------------------------------------------
-  # ● MP ダメージの文章を取得
+  # * Get Text for MP Damage
   #--------------------------------------------------------------------------
   def mp_damage_text
     if @mp_drain > 0
@@ -143,7 +143,7 @@ class Game_ActionResult
     end
   end
   #--------------------------------------------------------------------------
-  # ● TP ダメージの文章を取得
+  # * Get Text for TP Damage
   #--------------------------------------------------------------------------
   def tp_damage_text
     if @tp_damage > 0

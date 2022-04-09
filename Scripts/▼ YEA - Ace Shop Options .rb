@@ -94,6 +94,8 @@ module YEA
     # :custom2,      # Custom Command 2.
     ] # Do not remove this.
     
+    EQUIP = "Equip."
+    
     #--------------------------------------------------------------------------
     # - Shop Custom Commands -
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -105,7 +107,7 @@ module YEA
     #--------------------------------------------------------------------------
     CUSTOM_SHOP_COMMANDS ={
     # :command => ["Display Name", EnableSwitch, ShowSwitch, Handler Method],
-      :equip   => [       "Equipar",            0,          0, :command_equip],
+      :equip   => [       EQUIP,            0,          0, :command_equip],
       :totorishop => [ "Synthesis",           0,      0, :command_synthshop],
       :custom1 => [ "Custom Name",            0,          0, :command_name1],
       :custom2 => [ "Custom Text",           13,          0, :command_name2],
@@ -119,17 +121,16 @@ module YEA
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     STATUS_FONT_SIZE = 20       # Font size used for data window.
     MAX_ICONS_DRAWN  = 10       # Maximum number of icons drawn for states.
-    
     # The following adjusts the vocabulary used for the data window. Each
     # of the vocabulary settings are self explanatory.
     VOCAB_STATUS ={
       :empty      => "---",          # Text used when nothing is shown.
-      :hp_recover => "Curar PV",      # Text used for HP Recovery.
-      :mp_recover => "CURAR PM",      # Text used for MP Recovery.
+      :hp_recover => "Recover",      # Text used for HP Recovery.
+      :mp_recover => "R",      # Text used for MP Recovery.
       #:tp_recover => "TP Heal",      # Text used for TP Recovery.
       #:tp_gain    => "TP Gain",      # Text used for TP Gain.
-      :applies    => "Aplica",      # Text used for applied states and buffs.
-      :removes    => "Remueve",      # Text used for removed states and buffs.
+      :applies    => "A",      # Text used for applied states and buffs.
+      :removes    => "R",      # Text used for removed states and buffs.
     } # Do not remove this.
     
   end # SHOP

@@ -1,46 +1,47 @@
 #==============================================================================
-# ■ Game_Battler
+# ** Game_Battler
 #------------------------------------------------------------------------------
-# 　スプライトや行動に関するメソッドを追加したバトラーのクラスです。このクラス
-# は Game_Actor クラスと Game_Enemy クラスのスーパークラスとして使用されます。
+#  A battler class with methods for sprites and actions added. This class 
+# is used as a super class of the Game_Actor class and Game_Enemy class.
 #==============================================================================
 
 class Game_Battler < Game_BattlerBase
   #--------------------------------------------------------------------------
-  # ● 定数（使用効果）
+  # * Constants (Effects)
   #--------------------------------------------------------------------------
-  EFFECT_RECOVER_HP     = 11              # HP 回復
-  EFFECT_RECOVER_MP     = 12              # MP 回復
-  EFFECT_GAIN_TP        = 13              # TP 増加
-  EFFECT_ADD_STATE      = 21              # ステート付加
-  EFFECT_REMOVE_STATE   = 22              # ステート解除
-  EFFECT_ADD_BUFF       = 31              # 能力強化
-  EFFECT_ADD_DEBUFF     = 32              # 能力弱体
-  EFFECT_REMOVE_BUFF    = 33              # 能力強化の解除
-  EFFECT_REMOVE_DEBUFF  = 34              # 能力弱体の解除
-  EFFECT_SPECIAL        = 41              # 特殊効果
-  EFFECT_GROW           = 42              # 成長
-  EFFECT_LEARN_SKILL    = 43              # スキル習得
-  EFFECT_COMMON_EVENT   = 44              # コモンイベント
+  EFFECT_RECOVER_HP     = 11              # HP Recovery
+  EFFECT_RECOVER_MP     = 12              # MP Recovery
+  EFFECT_GAIN_TP        = 13              # TP Gain
+  EFFECT_ADD_STATE      = 21              # Add State
+  EFFECT_REMOVE_STATE   = 22              # Remove State
+  EFFECT_ADD_BUFF       = 31              # Add Buff
+  EFFECT_ADD_DEBUFF     = 32              # Add Debuff
+  EFFECT_REMOVE_BUFF    = 33              # Remove Buff
+  EFFECT_REMOVE_DEBUFF  = 34              # Remove Debuff
+  EFFECT_SPECIAL        = 41              # Special Effect
+  EFFECT_GROW           = 42              # Raise Parameter
+  EFFECT_LEARN_SKILL    = 43              # Learn Skill
+  EFFECT_COMMON_EVENT   = 44              # Common Events
   #--------------------------------------------------------------------------
-  # ● 定数（特殊効果）
+  # * Constants (Special Effects)
   #--------------------------------------------------------------------------
-  SPECIAL_EFFECT_ESCAPE = 0               # 逃げる
+  SPECIAL_EFFECT_ESCAPE = 0               # Escape
   #--------------------------------------------------------------------------
-  # ● 公開インスタンス変数
+  # * Public Instance Variables
   #--------------------------------------------------------------------------
-  attr_reader   :battler_name             # 戦闘グラフィック ファイル名
-  attr_reader   :battler_hue              # 戦闘グラフィック 色相
-  attr_reader   :action_times             # 行動回数
-  attr_reader   :actions                  # 戦闘行動（行動側）
-  attr_reader   :speed                    # 行動速度
-  attr_reader   :result                   # 行動結果（対象側）
-  attr_accessor :last_target_index        # ラストターゲット
-  attr_accessor :animation_id             # アニメーション ID
-  attr_accessor :animation_mirror         # アニメーション 左右反転フラグ
-  attr_accessor :sprite_effect_type       # スプライトのエフェクト
+  attr_reader   :battler_name             # battle graphic filename
+  attr_reader   :battler_hue              # battle graphic hue
+  attr_reader   :action_times             # action times
+  attr_reader   :actions                  # combat actions (action side)
+  attr_reader   :speed                    # action speed
+  attr_reader   :result                   # action result (target side)
+  attr_accessor :last_target_index        # last target
+  attr_accessor :animation_id             # animation ID
+  attr_accessor :animation_mirror         # animation flip horizontal flag
+  attr_accessor :sprite_effect_type       # sprite effect
+  attr_accessor :magic_reflection         # reflection flag
   #--------------------------------------------------------------------------
-  # ● オブジェクト初期化
+  # * Object Initialization
   #--------------------------------------------------------------------------
   def initialize
     @battler_name = ""
@@ -54,7 +55,7 @@ class Game_Battler < Game_BattlerBase
     super
   end
   #--------------------------------------------------------------------------
-  # ● スプライトのエフェクトをクリア
+  # * Clear Sprite Effects
   #--------------------------------------------------------------------------
   def clear_sprite_effects
     @animation_id = 0
@@ -62,20 +63,20 @@ class Game_Battler < Game_BattlerBase
     @sprite_effect_type = nil
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘行動のクリア
+  # * Clear Actions
   #--------------------------------------------------------------------------
   def clear_actions
     @actions.clear
   end
   #--------------------------------------------------------------------------
-  # ● ステート情報をクリア
+  # * Clear State Information
   #--------------------------------------------------------------------------
   def clear_states
     super
     @result.clear_status_effects
   end
   #--------------------------------------------------------------------------
-  # ● ステートの付加
+  # * Add State
   #--------------------------------------------------------------------------
   def add_state(state_id)
     if state_addable?(state_id)
@@ -85,26 +86,26 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● ステートの付加可能判定
+  # * Determine if States Are Addable
   #--------------------------------------------------------------------------
   def state_addable?(state_id)
     alive? && $data_states[state_id] && !state_resist?(state_id) &&
       !state_removed?(state_id) && !state_restrict?(state_id)
   end
   #--------------------------------------------------------------------------
-  # ● 同一行動内で解除済みのステートを判定
+  # * Determine States Removed During Same Action
   #--------------------------------------------------------------------------
   def state_removed?(state_id)
     @result.removed_states.include?(state_id)
   end
   #--------------------------------------------------------------------------
-  # ● 行動制約によって無効化されるステートを判定
+  # * Determine States Removed by Action Restriction
   #--------------------------------------------------------------------------
   def state_restrict?(state_id)
     $data_states[state_id].remove_by_restriction && restriction > 0
   end
   #--------------------------------------------------------------------------
-  # ● 新しいステートの付加
+  # * Add New State
   #--------------------------------------------------------------------------
   def add_new_state(state_id)
     die if state_id == death_state_id
@@ -114,7 +115,7 @@ class Game_Battler < Game_BattlerBase
     refresh
   end
   #--------------------------------------------------------------------------
-  # ● 行動制約が生じたときの処理
+  # * Processing Performed When Action Restriction Occurs
   #--------------------------------------------------------------------------
   def on_restrict
     clear_actions
@@ -123,7 +124,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● ステートのカウント（ターン数および歩数）をリセット
+  # * Reset State Counts (Turns and Steps)
   #--------------------------------------------------------------------------
   def reset_state_counts(state_id)
     state = $data_states[state_id]
@@ -132,7 +133,7 @@ class Game_Battler < Game_BattlerBase
     @state_steps[state_id] = state.steps_to_remove
   end
   #--------------------------------------------------------------------------
-  # ● ステートの解除
+  # * Remove State
   #--------------------------------------------------------------------------
   def remove_state(state_id)
     if state?(state_id)
@@ -143,7 +144,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘不能になる
+  # * Knock Out
   #--------------------------------------------------------------------------
   def die
     @hp = 0
@@ -151,13 +152,13 @@ class Game_Battler < Game_BattlerBase
     clear_buffs
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘不能から復活
+  # * Revive from Knock Out
   #--------------------------------------------------------------------------
   def revive
     @hp = 1 if @hp == 0
   end
   #--------------------------------------------------------------------------
-  # ● 逃げる
+  # * Escape
   #--------------------------------------------------------------------------
   def escape
     hide if $game_party.in_battle
@@ -166,7 +167,7 @@ class Game_Battler < Game_BattlerBase
     Sound.play_escape
   end
   #--------------------------------------------------------------------------
-  # ● 能力強化
+  # * Add Buff
   #--------------------------------------------------------------------------
   def add_buff(param_id, turns)
     return unless alive?
@@ -177,7 +178,7 @@ class Game_Battler < Game_BattlerBase
     refresh
   end
   #--------------------------------------------------------------------------
-  # ● 能力弱体
+  # * Add Debuff
   #--------------------------------------------------------------------------
   def add_debuff(param_id, turns)
     return unless alive?
@@ -188,7 +189,7 @@ class Game_Battler < Game_BattlerBase
     refresh
   end
   #--------------------------------------------------------------------------
-  # ● 能力強化／弱体の解除
+  # * Remove Buff/Debuff
   #--------------------------------------------------------------------------
   def remove_buff(param_id)
     return unless alive?
@@ -199,45 +200,45 @@ class Game_Battler < Game_BattlerBase
     refresh
   end
   #--------------------------------------------------------------------------
-  # ● 能力強化／弱体の消去
+  # * Erase Buff/Debuff
   #--------------------------------------------------------------------------
   def erase_buff(param_id)
     @buffs[param_id] = 0
     @buff_turns[param_id] = 0
   end
   #--------------------------------------------------------------------------
-  # ● 能力強化状態の判定
+  # * Determine Buff Status
   #--------------------------------------------------------------------------
   def buff?(param_id)
     @buffs[param_id] > 0
   end
   #--------------------------------------------------------------------------
-  # ● 能力弱体状態の判定
+  # * Determine Debuff Status
   #--------------------------------------------------------------------------
   def debuff?(param_id)
     @buffs[param_id] < 0
   end
   #--------------------------------------------------------------------------
-  # ● 能力強化が最大の段階か否かを判定
+  # * Determine if Buff Is at Maximum Level
   #--------------------------------------------------------------------------
   def buff_max?(param_id)
     @buffs[param_id] == 2
   end
   #--------------------------------------------------------------------------
-  # ● 能力弱体が最大の段階か否かを判定
+  # * Determine if Debuff Is at Maximum Level
   #--------------------------------------------------------------------------
   def debuff_max?(param_id)
     @buffs[param_id] == -2
   end
   #--------------------------------------------------------------------------
-  # ● 能力強化／弱体のターン数上書き
-  #    ターン数が短くなる場合は上書きしない。
+  # * Overwrite Buff/Debuff Turns
+  #    Doesn't overwrite if number of turns would become shorter.
   #--------------------------------------------------------------------------
   def overwrite_buff_turns(param_id, turns)
     @buff_turns[param_id] = turns if @buff_turns[param_id].to_i < turns
   end
   #--------------------------------------------------------------------------
-  # ● ステートのターンカウント更新
+  # * Update State Turn Count
   #--------------------------------------------------------------------------
   def update_state_turns
     states.each do |state|
@@ -245,7 +246,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 強化／弱体のターンカウント更新
+  # * Update Buff/Debuff Turn Count
   #--------------------------------------------------------------------------
   def update_buff_turns
     @buff_turns.keys.each do |param_id|
@@ -253,7 +254,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘用ステートの解除
+  # * Remove Battle States
   #--------------------------------------------------------------------------
   def remove_battle_states
     states.each do |state|
@@ -261,14 +262,14 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 強化／弱体の全解除
+  # * Remove All Buffs/Debuffs
   #--------------------------------------------------------------------------
   def remove_all_buffs
     @buffs.size.times {|param_id| remove_buff(param_id) }
   end
   #--------------------------------------------------------------------------
-  # ● ステート自動解除
-  #     timing : タイミング（1:行動終了 2:ターン終了）
+  # * Automatically Remove States
+  #     timing:  Timing (1: End of action 2: End of turn)
   #--------------------------------------------------------------------------
   def remove_states_auto(timing)
     states.each do |state|
@@ -278,7 +279,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 強化／弱体の自動解除
+  # * Automatically Remove Buffs/Debuffs
   #--------------------------------------------------------------------------
   def remove_buffs_auto
     @buffs.size.times do |param_id|
@@ -287,7 +288,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● ダメージによるステート解除
+  # * Remove State by Damage
   #--------------------------------------------------------------------------
   def remove_states_by_damage
     states.each do |state|
@@ -297,13 +298,13 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 行動回数の決定
+  # * Determine Action Times
   #--------------------------------------------------------------------------
   def make_action_times
     action_plus_set.inject(1) {|r, p| rand < p ? r + 1 : r }
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘行動の作成
+  # * Create Battle Action
   #--------------------------------------------------------------------------
   def make_actions
     clear_actions
@@ -311,25 +312,25 @@ class Game_Battler < Game_BattlerBase
     @actions = Array.new(make_action_times) { Game_Action.new(self) }
   end
   #--------------------------------------------------------------------------
-  # ● 行動速度の決定
+  # * Determine Action Speed
   #--------------------------------------------------------------------------
   def make_speed
     @speed = @actions.collect {|action| action.speed }.min || 0
   end
   #--------------------------------------------------------------------------
-  # ● 現在の戦闘行動を取得
+  # * Get Current Action
   #--------------------------------------------------------------------------
   def current_action
     @actions[0]
   end
   #--------------------------------------------------------------------------
-  # ● 現在の戦闘行動を除去
+  # * Remove Current Action
   #--------------------------------------------------------------------------
   def remove_current_action
     @actions.shift
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘行動の強制
+  # * Force Action
   #--------------------------------------------------------------------------
   def force_action(skill_id, target_index)
     clear_actions
@@ -345,7 +346,7 @@ class Game_Battler < Game_BattlerBase
     @actions.push(action)
   end
   #--------------------------------------------------------------------------
-  # ● ダメージ計算
+  # * Calculate Damage
   #--------------------------------------------------------------------------
   def make_damage_value(user, item)
     value = item.damage.eval(user, self, $game_variables)
@@ -359,7 +360,7 @@ class Game_Battler < Game_BattlerBase
     @result.make_damage(value.to_i, item)
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの属性修正値を取得
+  # * Get Element Modifier for Skill/Item
   #--------------------------------------------------------------------------
   def item_element_rate(user, item)
     if item.damage.element_id < 0
@@ -369,21 +370,21 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 属性の最大修正値の取得
-  #     elements : 属性 ID の配列
-  #    与えられた属性の中で最も有効な修正値を返す
+  # * Get Maximum Elemental Adjustment Amount
+  #     elements : An array of attribute IDs
+  #    Returns the most effective adjustment of all elemental alignments.
   #--------------------------------------------------------------------------
   def elements_max_rate(elements)
     elements.inject([0.0]) {|r, i| r.push(element_rate(i)) }.max
   end
   #--------------------------------------------------------------------------
-  # ● クリティカルの適用
+  # * Apply Critical
   #--------------------------------------------------------------------------
   def apply_critical(damage)
     damage * 3
   end
   #--------------------------------------------------------------------------
-  # ● 分散度の適用
+  # * Applying Variance
   #--------------------------------------------------------------------------
   def apply_variance(damage, variance)
     amp = [damage.abs * variance / 100, 0].max.to_i
@@ -391,15 +392,15 @@ class Game_Battler < Game_BattlerBase
     damage >= 0 ? damage + var : damage - var
   end
   #--------------------------------------------------------------------------
-  # ● 防御修正の適用
+  # * Applying Guard Adjustment
   #--------------------------------------------------------------------------
   def apply_guard(damage)
     damage / (damage > 0 && guard? ? 2 * grd : 1)
   end
   #--------------------------------------------------------------------------
-  # ● ダメージの処理
-  #    呼び出し前に @result.hp_damage @result.mp_damage @result.hp_drain
-  #    @result.mp_drain が設定されていること。
+  # * Damage Processing
+  #    @result.hp_damage @result.mp_damage @result.hp_drain
+  #    @result.mp_drain must be set before call.
   #--------------------------------------------------------------------------
   def execute_damage(user)
     on_damage(@result.hp_damage) if @result.hp_damage > 0
@@ -409,8 +410,8 @@ class Game_Battler < Game_BattlerBase
     user.mp += @result.mp_drain
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの使用
-  #    行動側に対して呼び出され、使用対象以外に対する効果を適用する。
+  # * Use Skill/Item
+  #    Called for the acting side and applies the effect to other than the user.
   #--------------------------------------------------------------------------
   def use_item(item)
     pay_skill_cost(item) if item.is_a?(RPG::Skill)
@@ -418,13 +419,13 @@ class Game_Battler < Game_BattlerBase
     item.effects.each {|effect| item_global_effect_apply(effect) }
   end
   #--------------------------------------------------------------------------
-  # ● アイテムの消耗
+  # * Consume Items
   #--------------------------------------------------------------------------
   def consume_item(item)
     $game_party.consume_item(item)
   end
   #--------------------------------------------------------------------------
-  # ● 使用対象以外に対する使用効果の適用
+  # * Apply Effect of Use to Other Than User
   #--------------------------------------------------------------------------
   def item_global_effect_apply(effect)
     if effect.code == EFFECT_COMMON_EVENT
@@ -432,8 +433,9 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの適用テスト
-  #    使用対象が全快しているときの回復禁止などを判定する。
+  # * Test Skill/Item Application
+  #    Used to determine, for example, if a character is already fully healed
+  #   and so cannot recover anymore.
   #--------------------------------------------------------------------------
   def item_test(user, item)
     return false if item.for_dead_friend? != dead?
@@ -445,66 +447,64 @@ class Game_Battler < Game_BattlerBase
     return false
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムに有効な使用効果が一つでもあるかを判定
+  # * Determine if Skill/Item Has Any Valid Effects
   #--------------------------------------------------------------------------
   def item_has_any_valid_effects?(user, item)
     item.effects.any? {|effect| item_effect_test(user, item, effect) }
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの反撃率計算
+  # * Calculate Counterattack Rate for Skill/Item
   #--------------------------------------------------------------------------
   def item_cnt(user, item)
-    return 0 unless item.physical?          # 命中タイプが物理ではない
-    return 0 unless opposite?(user)         # 味方には反撃しない
-    return cnt                              # 反撃率を返す
+    return 0 unless item.physical?          # Hit type is not physical
+    return 0 unless opposite?(user)         # No counterattack on allies
+    return cnt                              # Return counterattack rate
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの反射率計算
+  # * Calculate Reflection Rate of Skill/Item
   #--------------------------------------------------------------------------
   def item_mrf(user, item)
-    return mrf if item.magical?             # 魔法攻撃なら魔法反射率を返す
+    return mrf if item.magical?     # Return magic reflection if magic attack
     return 0
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの命中率計算
+  # * Calculate Hit Rate of Skill/Item
   #--------------------------------------------------------------------------
   def item_hit(user, item)
-    rate = item.success_rate * 0.01         # 成功率を取得
-    rate *= user.hit if item.physical?      # 物理攻撃：命中率を乗算
-    return rate                             # 計算した命中率を返す
+    rate = item.success_rate * 0.01     # Get success rate
+    rate *= user.hit if item.physical?  # Physical attack: Multiply hit rate
+    return rate                         # Return calculated hit rate
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの回避率計算
+  # * Calculate Evasion Rate for Skill/Item
   #--------------------------------------------------------------------------
   def item_eva(user, item)
-    return eva if item.physical?            # 物理攻撃なら回避率を返す
-    return mev if item.magical?             # 魔法攻撃なら魔法回避率を返す
+    return eva if item.physical?    # Return evasion if physical attack
+    return mev if item.magical?     # Return magic evasion if magic attack
     return 0
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの会心率計算
+  # * Calculate Critical Rate of Skill/Item
   #--------------------------------------------------------------------------
   def item_cri(user, item)
     item.damage.critical ? user.cri * (1 - cev) : 0
   end
   #--------------------------------------------------------------------------
-  # ● 通常攻撃の効果適用
+  # * Apply Normal Attack Effects
   #--------------------------------------------------------------------------
   def attack_apply(attacker)
     item_apply(attacker, $data_skills[attacker.attack_skill_id])
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの効果適用
-  # Formerly, Skill_effect
+  # * Apply Effect of Skill/Item
   #--------------------------------------------------------------------------
   def item_apply(user, item)
     @result.clear
     @result.used = item_test(user, item)
-
     @result.missed = (@result.used && rand >= item_hit(user, item))
     @result.evaded = (!@result.missed && rand < item_eva(user, item))
     if @result.hit?
-      unless item.damage.none?        
+      unless item.damage.none?
         @result.critical = (rand < item_cri(user, item))
         make_damage_value(user, item)
         execute_damage(user)
@@ -514,7 +514,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果のテスト
+  # * Test Effect
   #--------------------------------------------------------------------------
   def item_effect_test(user, item, effect)
     case effect.code
@@ -541,7 +541,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果の適用
+  # * Apply Effect
   #--------------------------------------------------------------------------
   def item_effect_apply(user, item, effect)
     method_table = {
@@ -563,7 +563,7 @@ class Game_Battler < Game_BattlerBase
     send(method_name, user, item, effect) if method_name
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［HP 回復］
+  # * [HP Recovery] Effect
   #--------------------------------------------------------------------------
   def item_effect_recover_hp(user, item, effect)
     value = (mhp * effect.value1 + effect.value2) * rec
@@ -574,7 +574,7 @@ class Game_Battler < Game_BattlerBase
     self.hp += value
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［MP 回復］
+  # * [MP Recovery] Effect
   #--------------------------------------------------------------------------
   def item_effect_recover_mp(user, item, effect)
     value = (mmp * effect.value1 + effect.value2) * rec
@@ -585,7 +585,7 @@ class Game_Battler < Game_BattlerBase
     self.mp += value
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［TP 増加］
+  # * [TP Gain] Effect
   #--------------------------------------------------------------------------
   def item_effect_gain_tp(user, item, effect)
     value = effect.value1.to_i
@@ -594,7 +594,7 @@ class Game_Battler < Game_BattlerBase
     self.tp += value
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［ステート付加］
+  # * [Add State] Effect
   #--------------------------------------------------------------------------
   def item_effect_add_state(user, item, effect)
     if effect.data_id == 0
@@ -604,7 +604,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［ステート付加］：通常攻撃
+  # * [Add State] Effect: Normal Attack
   #--------------------------------------------------------------------------
   def item_effect_add_state_attack(user, item, effect)
     user.atk_states.each do |state_id|
@@ -619,7 +619,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［ステート付加］：通常
+  # * [Add State] Effect: Normal
   #--------------------------------------------------------------------------
   def item_effect_add_state_normal(user, item, effect)
     chance = effect.value1
@@ -631,7 +631,7 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［ステート解除］
+  # * [Remove State] Effect
   #--------------------------------------------------------------------------
   def item_effect_remove_state(user, item, effect)
     chance = effect.value1
@@ -641,14 +641,14 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［能力強化］
+  # * [Buff] Effect
   #--------------------------------------------------------------------------
   def item_effect_add_buff(user, item, effect)
     add_buff(effect.data_id, effect.value1)
     @result.success = true
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［能力弱体］
+  # * [Debuff] Effect
   #--------------------------------------------------------------------------
   def item_effect_add_debuff(user, item, effect)
     chance = debuff_rate(effect.data_id) * luk_effect_rate(user)
@@ -658,21 +658,21 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［能力強化の解除］
+  # * [Remove Buff] Effect
   #--------------------------------------------------------------------------
   def item_effect_remove_buff(user, item, effect)
     remove_buff(effect.data_id) if @buffs[effect.data_id] > 0
     @result.success = true
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［能力弱体の解除］
+  # * [Remove Debuff] Effect
   #--------------------------------------------------------------------------
   def item_effect_remove_debuff(user, item, effect)
     remove_buff(effect.data_id) if @buffs[effect.data_id] < 0
     @result.success = true
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［特殊効果］
+  # * [Special Effect] Effect
   #--------------------------------------------------------------------------
   def item_effect_special(user, item, effect)
     case effect.data_id
@@ -682,67 +682,67 @@ class Game_Battler < Game_BattlerBase
     @result.success = true
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［成長］
+  # * [Raise Parameter] Effect
   #--------------------------------------------------------------------------
   def item_effect_grow(user, item, effect)
     add_param(effect.data_id, effect.value1.to_i)
     @result.success = true
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［スキル習得］
+  # * [Learn Skill] Effect
   #--------------------------------------------------------------------------
   def item_effect_learn_skill(user, item, effect)
     learn_skill(effect.data_id) if actor?
     @result.success = true
   end
   #--------------------------------------------------------------------------
-  # ● 使用効果［コモンイベント］
+  # * [Common Event] Effect
   #--------------------------------------------------------------------------
   def item_effect_common_event(user, item, effect)
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの使用者側への効果
+  # * Effect of Skill/Item on Using Side
   #--------------------------------------------------------------------------
   def item_user_effect(user, item)
     user.tp += item.tp_gain * user.tcr
   end
   #--------------------------------------------------------------------------
-  # ● 運による有効度変化率の取得
+  # * Get Effect Change Rate by Luck
   #--------------------------------------------------------------------------
   def luk_effect_rate(user)
     [1.0 + (user.luk - luk) * 0.001, 0.0].max
   end
   #--------------------------------------------------------------------------
-  # ● 敵対関係の判定
+  # * Determine if Hostile Relation
   #--------------------------------------------------------------------------
   def opposite?(battler)
-    actor? != battler.actor?
+    actor? != battler.actor? || battler.magic_reflection
   end
   #--------------------------------------------------------------------------
-  # ● マップ上でダメージを受けたときの効果
+  # * Effect When Taking Damage on Map
   #--------------------------------------------------------------------------
   def perform_map_damage_effect
   end
   #--------------------------------------------------------------------------
-  # ● TP の初期化
+  # * Initialize TP
   #--------------------------------------------------------------------------
   def init_tp
     self.tp = rand * 25
   end
   #--------------------------------------------------------------------------
-  # ● TP のクリア
+  # * Clear TP
   #--------------------------------------------------------------------------
   def clear_tp
     self.tp = 0
   end
   #--------------------------------------------------------------------------
-  # ● 被ダメージによる TP チャージ
+  # * Charge TP by Damage Suffered
   #--------------------------------------------------------------------------
   def charge_tp_by_damage(damage_rate)
     self.tp += 50 * damage_rate * tcr
   end
   #--------------------------------------------------------------------------
-  # ● HP の再生
+  # * Regenerate HP
   #--------------------------------------------------------------------------
   def regenerate_hp
     damage = -(mhp * hrg).to_i
@@ -751,26 +751,26 @@ class Game_Battler < Game_BattlerBase
     self.hp -= @result.hp_damage
   end
   #--------------------------------------------------------------------------
-  # ● スリップダメージの最大値を取得
+  # * Get Maximum Value of Slip Damage
   #--------------------------------------------------------------------------
   def max_slip_damage
     $data_system.opt_slip_death ? hp : [hp - 1, 0].max
   end
   #--------------------------------------------------------------------------
-  # ● MP の再生
+  # * Regenerate MP
   #--------------------------------------------------------------------------
   def regenerate_mp
     @result.mp_damage = -(mmp * mrg).to_i
     self.mp -= @result.mp_damage
   end
   #--------------------------------------------------------------------------
-  # ● TP の再生
+  # * Regenerate TP
   #--------------------------------------------------------------------------
   def regenerate_tp
     self.tp += 100 * trg
   end
   #--------------------------------------------------------------------------
-  # ● 全ての再生
+  # * Regenerate All
   #--------------------------------------------------------------------------
   def regenerate_all
     if alive?
@@ -780,13 +780,13 @@ class Game_Battler < Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘開始処理
+  # * Processing at Start of Battle
   #--------------------------------------------------------------------------
   def on_battle_start
     init_tp unless preserve_tp?
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘行動終了時の処理
+  # * Processing at End of Action
   #--------------------------------------------------------------------------
   def on_action_end
     @result.clear
@@ -794,7 +794,7 @@ class Game_Battler < Game_BattlerBase
     remove_buffs_auto
   end
   #--------------------------------------------------------------------------
-  # ● ターン終了処理
+  # * Processing at End of Turn
   #--------------------------------------------------------------------------
   def on_turn_end
     @result.clear
@@ -804,7 +804,7 @@ class Game_Battler < Game_BattlerBase
     remove_states_auto(2)
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘終了処理
+  # * Processing at End of Battle
   #--------------------------------------------------------------------------
   def on_battle_end
     @result.clear
@@ -815,7 +815,7 @@ class Game_Battler < Game_BattlerBase
     appear
   end
   #--------------------------------------------------------------------------
-  # ● 被ダメージ時の処理
+  # * Processing When Suffering Damage
   #--------------------------------------------------------------------------
   def on_damage(value)
     remove_states_by_damage

@@ -120,7 +120,7 @@ module YEA
     VICTORY_BGM  = RPG::BGM.new("Field1", 100, 100)    # Victory BGM
     VICTORY_TICK = RPG::SE.new("Decision1", 100, 150)  # EXP ticking SFX
     LEVEL_SOUND  = RPG::SE.new("Up4", 80, 150)         # Level Up SFX
-    SKILLS_TEXT  = "Nuevas habilidades"                # New skills text title.
+    SKILLS_TEXT  = "New Skills"                # New skills text title.
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Important Settings -
@@ -142,10 +142,10 @@ module YEA
     # Here, you can adjust the various text that appears in the window that
     # appears at the top of the screen.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    TOP_TEAM         = "El equipo de %s"     # Team name used.
-    TOP_VICTORY_TEXT = "%s ha ganado"   # Text used to display victory.
-    TOP_LEVEL_UP     = "%s ha subido de nivel"  # Text used to display level up.
-    TOP_SPOILS       = "Tesoros Obtenidos!"     # Text used for spoils.
+    TOP_TEAM         = "%s's Team"     # Team name used.
+    TOP_VICTORY_TEXT = "%s has won"   # Text used to display victory.
+    TOP_LEVEL_UP     = "%s has leveled up"  # Text used to display level up.
+    TOP_SPOILS       = "Objects earned!"     # Text used for spoils.
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - EXP Gauge Settings -
@@ -156,8 +156,8 @@ module YEA
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     VICTORY_EXP  = "+%sEXP"      # Text used to display EXP.
     EXP_PERCENT  = "%1.2f%%"     # The way EXP percentage will be displayed.
-    LEVELUP_TEXT = "SUBE NIVEL!"   # Text to replace percentage when leveled.
-    MAX_LVL_TEXT = "NIVEL MAXIMO"   # Text to replace percentage when max level.
+    LEVELUP_TEXT = "LEVEL UP!"   # Text to replace percentage when leveled.
+    MAX_LVL_TEXT = "MAX LEVEL"   # Text to replace percentage when max level.
     FONTSIZE_EXP = 20            # Font size used for EXP.
     EXP_TICKS    = 15            # Ticks to full EXP
     EXP_GAUGE1   = 12            # "Window" skin text colour for gauge.

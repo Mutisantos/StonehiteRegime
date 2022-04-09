@@ -1406,6 +1406,7 @@ class Game_Interpreter
       @index += 1
       script += @list[@index].parameters[0] + "\n"
     end
+    # p(script)
     eval(script)
   end
 end

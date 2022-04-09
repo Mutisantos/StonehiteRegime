@@ -297,6 +297,9 @@ class Battle_Camera
   #--------------------------------------------------------------------------
   def move(target_x, target_y, zoom, time, screen = true)
     # 戦闘背景以上のサイズまでズームアウトしないよう調整
+    if(@max_zoom_out == nil)
+      @max_zoom_out = 100.00
+    end
     @target_zoom = [zoom * 0.01, @max_zoom_out * 0.01].max
     target_x *= -1 if screen && @mirror
     # ズーム分の中心座標補正

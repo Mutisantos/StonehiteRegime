@@ -46,7 +46,11 @@ class Window_Selectable < Window_Base
   # ● 項目の幅を取得
   #--------------------------------------------------------------------------
   def item_width
-    (width - standard_padding * 2 + spacing) / col_max - spacing
+    if(col_max > 0)
+      (width - standard_padding * 2 + spacing) / col_max - spacing
+    else
+      1
+    end
   end
   #--------------------------------------------------------------------------
   # ● 項目の高さを取得
@@ -58,7 +62,12 @@ class Window_Selectable < Window_Base
   # ● 行数の取得
   #--------------------------------------------------------------------------
   def row_max
-    [(item_max + col_max - 1) / col_max, 1].max
+    calc = (item_max + col_max - 1)
+    if(col_max > 0)
+      [calc / col_max, 1].max
+    else
+      [calc, 1].max
+    end
   end
   #--------------------------------------------------------------------------
   # ● ウィンドウ内容の高さを計算
@@ -119,7 +128,11 @@ class Window_Selectable < Window_Base
   # ● 現在の行の取得
   #--------------------------------------------------------------------------
   def row
-    index / col_max
+    if(col_max > 0)
+      index / col_max
+    else
+      index
+    end
   end
   #--------------------------------------------------------------------------
   # ● 先頭の行の取得
@@ -172,8 +185,13 @@ class Window_Selectable < Window_Base
     rect = Rect.new
     rect.width = item_width
     rect.height = item_height
-    rect.x = index % col_max * (item_width + spacing)
-    rect.y = index / col_max * item_height
+    if(col_max > 0)
+      rect.x = index % col_max * (item_width + spacing)
+      rect.y = index / col_max * item_height
+    else
+      rect.x = 1
+      rect.y = 1
+    end 
     rect
   end
   #--------------------------------------------------------------------------

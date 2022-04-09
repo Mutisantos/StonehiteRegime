@@ -60,11 +60,11 @@ module YEA
     # the way the slot names appear, and the icons used.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     MAX_FILES = 24         # Maximum saves a player can make. Default: 16
-    SLOT_NAME = "Partida %s"  # How the file slots will be named.
+    SLOT_NAME = "File %s"  # How the file slots will be named.
     
     # These are the icons
-    SAVE_ICON  = 368       # Icon used to indicate a save is present.
-    EMPTY_ICON = 375       # Icon used to indicate an empty file.
+    SAVE_ICON  = 710       # Icon used to indicate a save is present.
+    EMPTY_ICON = 688       # Icon used to indicate an empty file.
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Action Window Settings -
@@ -72,16 +72,16 @@ module YEA
     # This section adjusts how the action window appears, the sound effect
     # played when deleting files, and what appears in the help window above.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    ACTION_LOAD   = "Cargar"           # Text used for loading games.
-    ACTION_SAVE   = "Guardar"           # Text used for saving games.
-    ACTION_DELETE = "Borrar"         # Text used for deleting games.
+    ACTION_LOAD   = "Load"           # Text used for loading games.
+    ACTION_SAVE   = "Save"           # Text used for saving games.
+    ACTION_DELETE = "Delete"         # Text used for deleting games.
     DELETE_SOUND  = RPG::SE.new("Collapse3", 100, 100) # Sound for deleting.
     
     # These text settings adjust what displays in the help window.
-    SELECT_HELP = "Selecciona el archivo de tu aventura."
-    LOAD_HELP   = "Carga los datos en el punto que guardaste."
-    SAVE_HELP   = "Guarda el progreso actual de tu aventura."
-    DELETE_HELP = "Borra todo los datos de tu aventura."
+    SELECT_HELP = "Select your adventure file."
+    LOAD_HELP   = "Load from the point where you saved."
+    SAVE_HELP   = "Save your current progress on your adventure."
+    DELETE_HELP = "Delete your file with ALL  the progress in it."
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Status Window Settings -
@@ -91,11 +91,11 @@ module YEA
     # times saved, total gold, the party's current location, and the variables
     # to be displayed.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    EMPTY_TEXT = "Sin Datos"      # Text used when no save data is present.
-    PLAYTIME   = "Tiempo Jugados"          # Text used for total playtime.
-    TOTAL_SAVE = "Veces Guardadas: "     # Text used to indicate total saves.
-    TOTAL_GOLD = "Total Monedas: "      # Text used to indicate total gold.
-    LOCATION   = "Ubicación: "        # Text used to indicate current location.
+    EMPTY_TEXT = "No Data"      # Text used when no save data is present.
+    PLAYTIME   = "Total Playtime"          # Text used for total playtime.
+    TOTAL_SAVE = "Times Saved: "     # Text used to indicate total saves.
+    TOTAL_GOLD = "Coins: "      # Text used to indicate total gold.
+    LOCATION   = "Location: "        # Text used to indicate current location.
     
     # These variables will be shown in each of the two columns for those who
     # would want to display more information than just what's shown. Input the

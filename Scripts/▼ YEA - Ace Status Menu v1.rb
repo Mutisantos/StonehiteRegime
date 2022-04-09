@@ -72,18 +72,20 @@ module YEA
     # :retitle         Requires YEA - Retitle Actor
     # 
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    COMMANDS =[ # The order at which the menu items are shown.
+    COMMANDS_KEYS = [:general,:parameters,:custom1,:custom2,:biograph]
+    COMMANDS ={ # The order at which the menu items are shown.
+    
     # [    :command,    "Display"],
-      [    :general,    "General"],
-      [ :parameters, "Parametros"],
+          :general => "General",
+       :parameters => "Parameters",
     # [ :properties, "Propiedades"],
-      [    :custom1, "Habilidades"],
-      [    :custom2,     "Equipo"],
+          :custom1 => "Skills",
+          :custom2 => "Equipment",
     # [    :custom3,      "Class"],
-      [  :biography,  "Biografia"],
+        :biograph  => "Biography",
     # [     :rename,     "Rename"],  # Requires YEA - Rename Actor
     # [    :retitle,    "Retitle"],  # Requires YEA - Rename Actor
-    ] # Do not remove this.
+    } # Do not remove this.
     
     #--------------------------------------------------------------------------
     # - Status Custom Commands -
@@ -107,9 +109,9 @@ module YEA
     # These settings adjust the way the general window visually appears.
     # Not many changes need to be done here other than vocab changes.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    PARAMETERS_VOCAB = "Parametros"         # Title used for Parameters.
-    EXPERIENCE_VOCAB = "Experiencia"         # Title used for Experience.
-    NEXT_TOTAL_VOCAB = "Experiencia Objetivo"  # Label used for total experience.
+    PARAMETERS_VOCAB = "Parameters"         # Title used for Parameters.
+    EXPERIENCE_VOCAB = "Experience"         # Title used for Experience.
+    NEXT_TOTAL_VOCAB = "Next Level"  # Label used for total experience.
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Parameters Window Settings -
@@ -140,10 +142,10 @@ module YEA
     
     # These are the properties that appear in column 1.
     PROPERTIES_COLUMN1 =[
-      [:hit, "Precisión"],
-      [:eva, "Evasión"],
-      [:cri, "Prob. Crítico"],
-      [:cev, "Def. de Crítico"],
+      [:hit, "Accuracy"],
+      [:eva, "Evasion"],
+      [:cri, "Critical Rate"],
+      [:cev, "Critical Evasion"],
       #[:mev, "Evasión Magica"],
       #[:mrf, "Reflexión Mágica"],
       #[:cnt, "Prob. Contrataque"],
@@ -155,7 +157,7 @@ module YEA
       [:hrg, "Regen. HP"],
       [:mrg, "Regen. MP"],
       [:trg, "Regen. FP"],
-      [:rec, "Restauración"],
+      [:rec, "Recovery"],
       #[:grd, "Guard Rate"],
       #[:pha, "Item Boost"],
       #[:exr, "EXP Rate"],
@@ -294,18 +296,18 @@ class Window_StatusCommand < Window_Command
   #--------------------------------------------------------------------------
   def make_command_list
     return unless @actor
-    for command in YEA::STATUS::COMMANDS
-      case command[0]
+    for command in YEA::STATUS::COMMANDS_KEYS
+      case command
       #--- Default ---
       when :general, :parameters, :properties, :biography
-        add_command(command[1], command[0])
+        add_command(YEA::STATUS::COMMANDS[command],command)
       #--- Yanfly Engine Ace ---
       when :rename
         next unless $imported["YEA-RenameActor"]
-        add_command(command[1], command[0], @actor.rename_allow?)
+        add_command(YEA::STATUS::COMMANDS[command],command, @actor.rename_allow?)
       when :retitle
         next unless $imported["YEA-RenameActor"]
-        add_command(command[1], command[0], @actor.retitle_allow?)
+        add_command(YEA::STATUS::COMMANDS[command],command, @actor.retitle_allow?)
       #--- Custom Commands ---
       else
         process_custom_command(command)
@@ -332,14 +334,14 @@ class Window_StatusCommand < Window_Command
   # process_custom_command
   #--------------------------------------------------------------------------
   def process_custom_command(command)
-    return unless YEA::STATUS::CUSTOM_STATUS_COMMANDS.include?(command[0])
-    show = YEA::STATUS::CUSTOM_STATUS_COMMANDS[command[0]][1]
+    return unless YEA::STATUS::CUSTOM_STATUS_COMMANDS.include?(command)
+    show = YEA::STATUS::CUSTOM_STATUS_COMMANDS[command][1]
     continue = show <= 0 ? true : $game_switches[show]
     return unless continue
-    text = command[1]
-    switch = YEA::STATUS::CUSTOM_STATUS_COMMANDS[command[0]][0]
+    text = YEA::STATUS::COMMANDS[command]
+    switch = YEA::STATUS::CUSTOM_STATUS_COMMANDS[command][0]
     enabled = switch <= 0 ? true : $game_switches[switch]
-    add_command(text, command[0], enabled)
+    add_command(text, command, enabled)
   end
   
   #--------------------------------------------------------------------------
@@ -924,8 +926,8 @@ class Scene_Status < Scene_MenuBase
   #--------------------------------------------------------------------------
   def process_custom_status_commands
     for command in YEA::STATUS::COMMANDS
-      next unless YEA::STATUS::CUSTOM_STATUS_COMMANDS.include?(command[0])
-      called_method = YEA::STATUS::CUSTOM_STATUS_COMMANDS[command[0]][2]
+      next unless YEA::STATUS::CUSTOM_STATUS_COMMANDS.include?(command)
+      called_method = YEA::STATUS::CUSTOM_STATUS_COMMANDS[command][2]
       @command_window.set_handler(command[0], method(called_method))
     end
   end

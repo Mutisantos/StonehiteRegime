@@ -225,7 +225,7 @@ module YEA
     FLASH_WHITE_EFFECT = false   # Flash enemy white when it starts an attack.
     SCREEN_SHAKE       = true   # Shake screen in battle?
     SKIP_PARTY_COMMAND = false   # Skips the Fight/Escape menu.
-    AUTO_FAST          = true   # Causes message windows to not wait.
+    AUTO_FAST          = false   # Causes message windows to not wait.
     ENEMY_ATK_ANI      = 36     # Sets default attack animation for enemies.
     
     # If this switch is ON, popups will be hidden. If OFF, the popups will be
@@ -242,7 +242,7 @@ module YEA
     #   :dtb               - Default Turn Battle. Default system.
     #   :ftb               - YEA Battle System Add-On: Free Turn Battle
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    DEFAULT_BATTLE_SYSTEM = :dtb     # Default battle system set.
+    DEFAULT_BATTLE_SYSTEM = :pctb    # Default battle system set.
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Battle Status Window -
@@ -264,13 +264,13 @@ module YEA
     # in place of a target's name for special cases. These special cases are
     # for selections that were originally non-targetable battle scopes.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    HELP_TEXT_ALL_FOES        = "Todos los enemigos"
-    HELP_TEXT_ONE_RANDOM_FOE  = "Un enemigo"
-    HELP_TEXT_MANY_RANDOM_FOE = "%d enemigos"
-    HELP_TEXT_ALL_ALLIES      = "Todos los aliados"
-    HELP_TEXT_ALL_DEAD_ALLIES = "Todos los aliados (M)"
-    HELP_TEXT_ONE_RANDOM_ALLY = "Un Aliado"
-    HELP_TEXT_RANDOM_ALLIES   = "%d aliados"
+    HELP_TEXT_ALL_FOES        = "All enemies"
+    HELP_TEXT_ONE_RANDOM_FOE  = "One Enemy"
+    HELP_TEXT_MANY_RANDOM_FOE = "%d enemies"
+    HELP_TEXT_ALL_ALLIES      = "All Allies"
+    HELP_TEXT_ALL_DEAD_ALLIES = "All fallen allies"
+    HELP_TEXT_ONE_RANDOM_ALLY = "One Ally"
+    HELP_TEXT_RANDOM_ALLIES   = "%d allies"
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Popup Settings -
@@ -287,28 +287,28 @@ module YEA
     POPUP_SETTINGS ={
       :offset     => -24,         # Height offset of a popup.
       :fade       => 12,          # Fade rate for each popup.
-      :full       => 60,          # Frames before a popup fades.
+      :full       => 80,          # Frames before a popup fades.
       :hp_dmg     => "-%s ",      # SprintF for HP damage.
       :hp_heal    => "+%s ",      # SprintF for HP healing.
       :mp_dmg     => "-%s MP",    # SprintF for MP damage.
       :mp_heal    => "+%s MP",    # SprintF for MP healing.
       :tp_dmg     => "-%s TP",    # SprintF for MP damage.
       :tp_heal    => "+%s TP",    # SprintF for MP healing.
-      :drained    => "ABSORBE",     # Text display for draining HP/MP.
-      :critical   => "CRITICO!", # Text display for critical hit.
-      :missed     => "FALLO",      # Text display for missed attack.
-      :evaded     => "EVADE!",    # Text display for evaded attack.
+      :drained    => "DRAIN",     # Text display for draining HP/MP.
+      :critical   => "CRITICAL", # Text display for critical hit.
+      :missed     => "MISSED",      # Text display for missed attack.
+      :evaded     => "EVADES",    # Text display for evaded attack.
       :nulled     => "0",      # Text display for nulled attack.
-      :failed     => "FALLO",    # Text display for a failed attack.
+      :failed     => "FAILED",    # Text display for a failed attack.
       :add_state  => "+%s",      # SprintF for added states.
       :rem_state  => "-%s",      # SprintF for removed states.
       :dur_state  => "%s",        # SprintF for during states.
       :ele_rates  => true,        # This will display elemental affinities.
       :ele_wait   => 20,          # This is how many frames will wait.
-      :weakpoint  => "EFECTIVO", # Appears if foe is weak to element.
-      :resistant  => "RESISTE",    # Appears if foe is resistant to element.
-      :immune     => "IMMUNE",    # Appears if foe is immune to element.
-      :absorbed   => "ABSORBE",    # Appears if foe can absorb the element.
+      :weakpoint  => "WEAK", # Appears if foe is weak to element.
+      :resistant  => "RESISTS",    # Appears if foe is resistant to element.
+      :immune     => "INMUNE",    # Appears if foe is immune to element.
+      :absorbed   => "ABSORBS",    # Appears if foe can absorb the element.
       :add_buff   => "%s",      # Appears when a positive buff is applied.
       :add_debuff => "%s",      # Appears when a negative buff is applied.
     } # Do not remove this.
@@ -360,17 +360,17 @@ module YEA
     # Now you can! Select which messages you want to enable or disable. Some of
     # these messages will be rendered useless due to popups.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    MSG_ENEMY_APPEARS  = true  # Message when enemy appears start of battle.
-    MSG_CURRENT_STATE  = false  # Show which states has affected battler.
+    MSG_ENEMY_APPEARS  = true   # Message when enemy appears start of battle.
+    MSG_CURRENT_STATE  = false   # Show which states has affected battler.
     MSG_CURRENT_ACTION = true   # Show the current action of the battler.
-    MSG_COUNTERATTACK  = true   # Show the message for a counterattack.
-    MSG_REFLECT_MAGIC  = true   # Show message for reflecting magic attacks.
-    MSG_SUBSTITUTE_HIT = true   # Show message for ally taking another's hit.
+    MSG_COUNTERATTACK  = false   # Show the message for a counterattack.
+    MSG_REFLECT_MAGIC  = false   # Show message for reflecting magic attacks.
+    MSG_SUBSTITUTE_HIT = false   # Show message for ally taking another's hit.
     MSG_FAILURE_HIT    = false  # Show effect failed against target.
     MSG_CRITICAL_HIT   = false  # Show attack was a critical hit.
     MSG_HIT_MISSED     = false  # Show attack missed the target.
     MSG_EVASION        = false  # Show attack was evaded by the target.
-    MSG_HP_DAMAGE      = true  # Show HP damage to target.
+    MSG_HP_DAMAGE      = true   # Show HP damage to target.
     MSG_MP_DAMAGE      = false  # Show MP damage to target.
     MSG_TP_DAMAGE      = false  # Show TP damage to target.
     MSG_ADDED_STATES   = false  # Show target's added states.
@@ -2223,6 +2223,7 @@ class Window_BattleEnemy < Window_Selectable
   def update
     super
     return unless active
+    return if enemy.nil?
     enemy.sprite_effect_type = :whiten
     return unless select_all?
     for enemy in $game_troop.alive_members
@@ -2266,6 +2267,7 @@ class Window_BattleHelp < Window_Help
     elsif @enemy_window.active
       battler = @enemy_window.enemy
     end
+    return if battler.nil?
     if special_display?
       refresh_special_case(battler)
     else
@@ -2277,7 +2279,12 @@ class Window_BattleHelp < Window_Help
   # battler_name
   #--------------------------------------------------------------------------
   def battler_name(battler)
-    text = battler.name.clone
+    text = ""
+    if(battler.nil?)
+      text = "-"
+    else
+      text = battler.name.clone
+    end
     return text
   end
   

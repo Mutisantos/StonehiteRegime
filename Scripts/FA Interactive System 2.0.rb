@@ -244,7 +244,7 @@ module FalInt
   HookSpeed = 6
   
   # Sound played when using the hook
-  HookActionSe = "Bow1"
+  HookActionSe = "whip"
   
   # Sound played when hooking object
   HookHookingSe = "Hammer"
@@ -985,10 +985,10 @@ class Sprite_LightEffec < Sprite
     if @character.is_a?(Game_Water)
       play = $game_player
       case play.direction
-      when 2 ; self.x = play.screen_x ;      self.y = play.screen_y + 120
-      when 4 ; self.x = play.screen_x - 60 ; self.y = play.screen_y + 65
-      when 6 ; self.x = play.screen_x + 60 ; self.y = play.screen_y + 65
-      when 8 ; self.x = play.screen_x ;      self.y = play.screen_y + 10
+      when 2 ; self.x = play.screen_x ;      self.y = play.screen_y + 90
+      when 4 ; self.x = play.screen_x - 90 ; self.y = play.screen_y + 65
+      when 6 ; self.x = play.screen_x + 90 ; self.y = play.screen_y + 65
+      when 8 ; self.x = play.screen_x ;      self.y = play.screen_y - 30
       end
     end
   end
@@ -2421,10 +2421,10 @@ class Sprite_Character < Sprite_Base
     
     if @character.is_a?(Game_Hook)
       case play.direction
-      when 2 ; self.x = self.x        ; self.y = self.y + 2
-      when 4 ; self.x = self.x - 4    ; self.y = self.y
-      when 6 ; self.x = self.x + 4    ; self.y = self.y
-      when 8 ; self.x = self.x        ; self.y = self.y - 6
+      when 2 ; self.x = self.x        ; self.y = self.y - 20
+      when 4 ; self.x = self.x        ; self.y = self.y - 20
+      when 6 ; self.x = self.x        ; self.y = self.y - 20
+      when 8 ; self.x = self.x        ; self.y = self.y 
       end
     end
     
@@ -2439,10 +2439,10 @@ class Sprite_Character < Sprite_Base
 
     if @character.is_a?(Game_Water)
       case play.direction
-      when 2; self.x = play.screen_x      ; self.y = play.screen_y + 90 # Down
-      when 4; self.x = play.screen_x - 49 ; self.y = play.screen_y + 41 # Left
-      when 6; self.x = play.screen_x + 49 ; self.y = play.screen_y + 41 # Right
-      when 8; self.x = play.screen_x      ; self.y = play.screen_y - 20 # Up
+      when 2; self.x = play.screen_x      ; self.y = play.screen_y + 50 # Down
+      when 4; self.x = play.screen_x - 60 ; self.y = play.screen_y + 41 # Left
+      when 6; self.x = play.screen_x + 60 ; self.y = play.screen_y + 41 # Right
+      when 8; self.x = play.screen_x      ; self.y = play.screen_y - 10; self.z = 0 # Up
       end
     end
 

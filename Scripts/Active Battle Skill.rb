@@ -61,24 +61,24 @@ module CommandSkill
   # Skill set
   T_SKILL = {
   # SkillID => [[key 1, key 2,...], Failure of power (%) (]
-        7  => [[UP, DOWN], 50],
-        8  => [[X, A, Z], 50],
-        12 => [[LEFT, UP, RIGHT, DOWN], 50], #Salto Elevado
-        13 => [[UP, RIGHT], 50],
-        14 => [[L, Z, A], 50],
-        15 => [[R, X, X, DOWN], 50],
-        16 => [[DOWN, RIGHT], 50],
-        17 => [[A, B, C], 50],
-        18 => [[Y, X, DOWN, B], 50],
-        19 => [[LEFT, DOWN,X,Y], 50],
-        20 => [[A,B,A,B,A,B,LEFT,LEFT], 50],
-        21 => [[A,LEFT,A,LEFT,A,LEFT], 50],
-        22 => [[RIGHT, DOWN], 50],
-        23 => [[A, B, R], 50],
-        24 => [[X, Y, LEFT, R], 50],
-        25 => [[LEFT, RIGHT], 50],
-        26 => [[X, L, B], 50],
-        28 => [[LEFT, DOWN], 50],
+        #7  => [[UP, DOWN], 50],
+        #8  => [[X, A, Z], 50],
+        #12 => [[LEFT, UP, RIGHT, DOWN], 50], #Salto Elevado
+        #13 => [[UP, RIGHT], 50],
+        #14 => [[L, Z, A], 50],
+        #15 => [[R, X, X, DOWN], 50],
+        #16 => [[DOWN, RIGHT], 50],
+        #17 => [[A, B, C], 50],
+        #18 => [[Y, X, DOWN, B], 50],
+        #19 => [[LEFT, DOWN,X,Y], 50],
+        #20 => [[A,B,A,B,A,B,LEFT,LEFT], 50],
+        #21 => [[A,LEFT,A,LEFT,A,LEFT], 50],
+        #22 => [[RIGHT, DOWN], 50],
+        #23 => [[A, B, R], 50],
+        #24 => [[X, Y, LEFT, R], 50],
+        #25 => [[LEFT, RIGHT], 50],
+        #26 => [[X, L, B], 50],
+        #28 => [[LEFT, DOWN], 50],
         57 => [[RAND, RAND], 10]
   }
   #Global variable for multiplying in case of success or failure

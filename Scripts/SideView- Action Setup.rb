@@ -148,7 +148,7 @@ module N03
    #                 more at the end of the array.
    
    # Stand By
-   # -Action Name-      Type   Index   Vert  Horz  Pattern Speed  Z  Wait Shadow Weapon
+   # -Action Name-          Type    Index   Vert Horz Pattern Speed  Z  Wait Shadow Weapon
    "Wait"             => ["motion",   "",    1,   0,   4,   12,   0, true, true, "" ],
    "Wait(Fixed) WT"   => ["motion",   "",    1,   1,   0,   12,   0, true, true, "" ],
    "Wait(Fixed)"      => ["motion",   "",    1,   1,   0,   12,   0,false, true, "" ],
@@ -216,7 +216,7 @@ module N03
    "Escape Middle"          => ["move",-7,  80,   0,   0,  7,   0, [  0,  0], "Move Right"],
    "Command Input"          => ["move",-7, -20,   0, nil,-10,   0, [  0,  0], "Move Left"],
    "Damage Pull"            => ["move", 0,  20,   0, nil,-10,   0, [  0,  0], ""],
-   "Damage Levantamiento"   => ["move", 0, 150,   0, nil,-15,   0, [  0, 40], ""],
+   "Damage Levantamiento"   => ["move", 0, 600,   0,   0, -5,   0, [  0 , 0], "Wait(Fixed)"],
    "Move to Field Center"   => ["move", 4,  10,   0, nil,-15,   0, [  0,  0], ""],
    "Large Damage Pull"      => ["move", 0,  60,   0, nil,-10,   0, [  0,  0], ""],
    
@@ -224,6 +224,7 @@ module N03
    "Coordinate Reset Fast"   => ["move",-7,   0,   0,   0,-10,   0, [  0,  0], "Move Right"],
    "Coordinate Reset"        => ["move",-7,   0,   0,   0,-20,   0, [  0,  0], "Move Right"],
    "Coordinate Reset Curve"  => ["move",-7,   0,   0,   0,-20,  -2, [  0,  0], "Move Right"],
+   ## Note, Coordinates reset left are used to reset Playable characters. Skills used on player must use this, otherwise they will be pointing to the wrong location.
    "Coordinate Reset Left"   => ["move",-7,   0,   0,   0,-20,   0, [  0,  0], "Move Left"],
    
    # -Action Name-            Type  Target X     Y    H  Speed Curve Jump    Anime
@@ -378,22 +379,22 @@ module N03
    "Water Gun Fire"     => ["m_a",[69,69], 0,  1, [ 0, 0], [ 0, 0], 10,  0, [ 0, 0], true, [ true, true],  true,  true,  true,  true, false,  ""],
    "Acuaesfera Fire"    => ["m_a",[144,120], 0,  1, [ 0, 0], [ 0, 0], 10,  2, [ 0, 0], true, [ true, true],  true,  true,  false,  true, false,  ""],
    "Acuaesfera Load"    => ["m_a",[0,146], 0,  0, [ 0, 0], [ 0, 0], 10,  2, [ 0, 0], true, [ false, false],  false,  true,  false,  true, false,  ""],
-   "Feather Fire"       => ["m_a",[126,178], 0,  1, [0, -4], [ 10,-4], 20,  2, [ 0, 0], true, [ false, false],  true,  true,  false,  false, false,  ""],
-   
-   
-   
+   "Feather Fire"       => ["m_a",[126,178], 0,  1, [0, -4], [ 10,-4], -15,  2, [ 0, 0], true, [ false, false],  true,  true,  false,  false, false,  ""],
+   "Rock Load"          => ["m_a",[0,188], 0,  0, [ -4, 0], [ -4, 0], 10,  2, [ 0, 0], true, [ false, true],  false,  false,  false,  true, false,  ""],
+   "Rock Fire"          => ["m_a",[189,190], 0,  1, [0, -4], [ 10,-4], 5,  2, [ -3, -3], true, [ true, true],  true,  true,  false,  false, false,  ""],
+   "Ice Fire"           => ["m_a",[192,193], 0,  1, [0, -4], [ 10,-4], 10,  2, [ 0, 0], true, [ true, true],  true,  true,  false,  false, false,  ""],
    "Wpn Throw Start"    => ["m_a",[ 0,-1], 0,  1, [ 4,-6], [ 0, 0], 10,  2, [-3,-3], true, [ true,false],  true,  true,  true, false, false,  "Rotation"],
    "Wpn Throw Return"   => ["m_a",[ 0, 0], 1,  0, [ 0, 0], [ 4,-6], 10,  0, [ 3, 3], true, [ true,false], false,  true,  true, false, false,  "Rotation"],
-   
    "SwiftNado"          => ["m_a",[69,120], 0,  1, [ 0, 0], [ 4,-6], 10,  0, [ 3, 3], true, [ false,true], true,  true,  true, false, false,  ""],
+   "SpinDrill"          => ["m_a",[218,216], 0,  1, [ 0, 0], [ 4,-6], 10,  0, [ 0, 0], true, [ false,false], true,  true,  true, false, false,  ""],
+   "CorridaToro"        => ["m_a",[204,217], 0,  1, [ 0, 0], [ 4,-6], 10,  0, [ 3, 3], true, [ false,true], true,  true,  true, false, false,  ""],
    "BolaNieve"          => ["m_a",[137,163], 0,  1, [ 0, 0], [ 4,-6], 10,  0, [ 3, 3], true, [ true,false], true,  true,  true, false, false,  ""],
- 
-   
-   "BullerWT"           => ["m_a",[ 0,-1], 0, 1, [ 0, 0], [ 0, 0], 10, 2, [0,0], true, [ true, true], true, true, true, false, false, "Bullet"],
+   "BullerWT"           => ["m_a",[ 0,-1], 0, 1, [ 0, 0], [ 0, 0], 60, 2, [0,0], true, [ true, true], true, true, true, false, false, "Bullet"],
+   "ShotWT"             => ["m_a",[ 0,-1], 0,  1, [0, -4], [ 10,-4], 10,  2, [ 0, 0], true, [ true, true],  true,  true,  false,  false, false,  ""],
    "CerbWT"             => ["m_a",[ 0,-1], 0, 1, [ 0, 0], [ 0, 0], 10, 2, [0,0], true, [ true, true], true, true, true, false, false, "Cerb"],
    "RocketWT"           => ["m_a",[ 0,-1], 0, 1, [ 0, 0], [ 0, 0], 10, 2, [0,0], true, [ true, true], true, true, true, false, false, "Rocket"],
    "HammerWT"           => ["m_a",[ 0,-1], 0, 0, [ 0, 0], [ 0, 0], 10, 2, [0,0], true, [ true, true], true, true, true, false, false, "Martillo"],
-   "ItemWT"             => ["m_a",[ 0, 0], 0, 1, [ 0,-6], [ 0,-6], 2, 2, [-3,-3], true, [ true,false],  true,  true,  true, false, false,  "Rotation"],
+   "ItemWT"             => ["m_a",[ 0, 0], 0, 1, [ 0,-6], [ 0,-6], 4, 2, [-2,-2], true, [ true,false],  false,  true,  true, false, false,  "Rotation"],
   
  #--------------------------------------------------------------------------
   # ● Battle Animation
@@ -456,8 +457,9 @@ module N03
    
    # -Action Name-         Type  Target   Adjust  Time  Zoom  Wait
    "Reset Camera"=> ["camera",   6, [   0,   0], 100,  40, false],
-   "Zoom In"    => ["camera",   6, [   0, 100], 120,  40, false],
-   "Zoom Out"  => ["camera",   6, [   0,   0],  80,  40, false],
+   "Zoom In"     => ["camera",   6, [   0, 100], 120,  40, false],
+   "Zoom Self"   => ["camera",   0, [   0, 100], 120,  40, false],
+   "Zoom Out"    => ["camera",   6, [   0,   0],  80,  40, false],
    
   #--------------------------------------------------------------------------
   # ● Screen Shake
@@ -504,7 +506,7 @@ module N03
    "Poison Tone"                      => ["color",   0, [ 170,  50, 255, 170,  30,  30], false],
    "BurningColor"                     => ["color",   0, [ 250,  50, 0,   170,  30,  30], false],  
    "FreezeColor"                      => ["color",   0, [ 200, 240, 255, 170,  30,  30], false],  
-   "Generic Status Abnormal Tone"     => ["color",   0, [ 255, 255,  50, 170,  40,  40], false],
+   "Generic Status Abnormal Tone"     => ["color",   0, [ 255, 255,  50, 170,  40,  40], false], 
    "Dim Background"                   => ["color",   6, [   0,   0,   0, 255,  30,   0], false],
    "Dim All Except Target"            => ["color",   9, [   0,   0,   0, 255,  30,   0], false],
     
@@ -747,11 +749,11 @@ module N03
    # Filename - Filename of the sound. Use "" for no BGM/BGS.
    
    # -Action Name-     Type   SType Pitch Volume Filename
-   "Bow1"          => ["sound",  "se", 100,  80, "Bow1"], #Sonido Predefinido
-   "Gun1"   => ["sound", "se", 100, 80, "Gun1"],
+   "Bow1"           => ["sound",  "se", 100,  80, "Bow1"], #Sonido Predefinido
+   "Rifle1"         => ["sound",  "se", 100,  80, "rifcok1"],
    "Cerb1"          => ["sound",  "se", 100,  80, "Bow1"],
    "Rocket1"        => ["sound",  "se", 100,  80, "rocket_launcher0"],
-   "throw_se"        => ["sound",  "se", 100,  80, "smrpg_enemy_throw"],
+   "throw_se"       => ["sound",  "se", 100,  80, "smrpg_enemy_throw"],
    
    
   #--------------------------------------------------------------------------
@@ -1068,6 +1070,12 @@ module N03
    "Multistrike Attack"        => ["common",  14,  false],  
    "Timed Charge Stages A"     => ["common",  15,  true], 
    "Timed Charge Bar LR Loop"  => ["common",  16,  false],
+   "Hutch MP Depletion"        => ["common",  17,  false],
+   "Timed Charge Bar UP"       => ["common",  18,  true],
+   "Timed Charge Random Key"   => ["common",  20,  true],
+   "Timed Charge CCW Rotate"   => ["common",  23,  false],
+   "Timed Charge Stages Back"  => ["common",  24,  true],
+   "Timed Charge Bar AS"       => ["common",  25,  false],
    
    
    
@@ -1196,6 +1204,7 @@ module N03
    "Poison Stance"          => ["Abnormal State/Generic","Poison Tone","Wait","Wait","Enemy Limit","80"],
    "Quemadura"       => ["Abnormal State/Generic","BurningColor","Wait","Wait","Enemy Limit","80"],
    "Congelado"       => ["Abnormal State/Generic","FreezeColor","Wait","Wait","Enemy Limit","80"],
+   "Escondido"       => ["anime_me(212,false)"],
    "Sleep Stance"        => ["Abnormal State/Sleep","Enemy Limit","40","Enemy Abort","Fallen","Fallen"],
    "General Abnormal Stance"=> ["Abnormal State/Generic","Generic Status Abnormal Tone","Wait","Wait","Enemy Limit","80"],
    "Standby"          => ["Wait","60"],
@@ -1324,7 +1333,9 @@ module N03
  
    "Bow Attack"          => ["Ranged Attack Start","Bow1","Bow Shot","Arrow Fire WT","Ranged Attack End"],
    
-   "Gun"   => ["Ranged Attack Start","Gun1","GunPoint","BullerWT","Ranged Attack End"],
+   "Rifle"   => ["Ranged Attack Start","GunPoint","Rifle1","ShotWT","Ranged Attack End"],
+
+   "Shot"   => ["Ranged Attack Start","GunPoint","ShotWT","Ranged Attack End"],
    
    "Rckt"   => ["Ranged Attack Start","Rocket1","RocketPoint","RocketWT","Ranged Attack End"],
    
@@ -1337,6 +1348,8 @@ module N03
    "Generic Skill"      => ["Skill Motion","Wpn Swing R","Damage Animation","Coordinate Reset"],
    
    "Generic Magic"        => ["Magic Motion","Wpn Swing R","Damage Animation","Coordinate Reset"], 
+   
+   "Depletion Magic"        => ["Skill Motion","Wpn Swing R","Timed Charge Random Key","Damage Animation","Hutch MP Depletion","Coordinate Reset"], 
    
    "Water Gun"     => ["Skill Motion","Wpn Swing R","Water Gun Fire","Wait","Coordinate Reset"],
    
@@ -1371,10 +1384,10 @@ module N03
                          "Wpn Swing R","20","Hue Default","Collapse","Coordinate Reset"], 
 
    "DanzaFlama"        => ["Skill Motion","Fast Spin","Wpn Swing R" ,"One Step After Jump","5", "One Step Before Jump",
-                          "Wpn Swing LR","Skill Anim","Coordinate Reset"],                       
+                          "Wpn Swing LR","Skill Anim", "Wait","Coordinate Reset Left"],                       
    
-   "Impulso"        => ["Skill Motion","One Step After Jump","5", "One Step Before Jump","One Step After Jump","5", "One Step Before Jump",
-                            "Wpn Swing LR","Skill Anim","Coordinate Reset"],  
+   "Impulso"        => ["Skill Motion","Fast Spin","One Step After Jump","5", "One Step Before Jump","One Step After Jump","5", "One Step Before Jump",
+                            "Wpn Swing LR","Skill Anim", "Wait","Coordinate Reset Left"],  
 
    "Directo"           => ["Don't Collapse","Skill Motion","Move Before Enemy","Skill Anim",
                            "One Step After Jump","20","Coordinate Reset","Collapse"],
@@ -1392,9 +1405,9 @@ module N03
                          "Skill Anim","Hard Shake","Force Action","Hard Shake","Pitching","20",
                          "One Step After Jump","Hard Shake","Coordinate Reset"],
 
-   "Salto invertido"       => ["Skill Motion","One Step Before Jump","Before Jump Slam",
-                         "Timed Charge Bar XY",
-                         "Wait(Fixed)","Rotate Left Once","10","Slammed",
+   "Salto invertido"       => ["Skill Motion","One Step Before Jump","Before Jump Slam","Timed Charge Bar AS",
+                         "Loop Start","Front Rotate","If Timed Hit", "Loop End",
+                         "Wait(Fixed)","10","Slammed",
                          "Skill Anim","Small Shake","Force Action","Pitching","20",
                          "One Step After Jump","Coordinate Reset"],
                          
@@ -1424,57 +1437,44 @@ module N03
                    "Coordinate Reset", 
                    ],
         
-  "Derrape" => ["Skill Motion",
-                 "One Step Before Jump",
-                 "Timed Charge Bar 4x20",
-                 "Afterimage ON",
-                 "se('smrpg_enemy_fastmovement',100)",
-                 "Move near Enemy",
-                 "BolaNieve",
-                 "One Step After Jump",
-                 "Afterimage OFF",
-                 "Coordinate Reset"],
+  "Derrape" => ["Skill Motion","One Step Before Jump","Timed Charge Bar 4x20","Afterimage ON","se('smrpg_enemy_fastmovement',100)","Move near Enemy","BolaNieve","One Step After Jump","Afterimage OFF","Coordinate Reset"],
                  
   "Derribo" => ["Skill Motion","One Step After Jump",
                  "Afterimage ON","se('smrpg_enemy_fastmovement',100)",
                   "Move Before Enemy","Move After Enemy","Skill Anim","Medium Shake",     
                  "One Step After Jump","Afterimage OFF","Coordinate Reset"], 
                  
-  "Placaje" => ["Skill Motion","Move to Enemy","target('Damage Levantamiento')","6","Skill Anim",
-                 "One Step After Jump","Coordinate Reset","target('Coordinate Reset')"],     
+  "Placaje" => ["Skill Motion","Move to Enemy","target('Damage Levantamiento')","Skill Anim","Medium Shake","60",
+                 "One Step After Jump","Coordinate Reset","20","target('Coordinate Reset')"],     
                  
-  "NadoRapido" => [
-                   "Don't Collapse",
-                   "Skill Motion",
-                   "One Step After Jump",
-                   "Timed Charge Bar XY",
-                   "Rotar 90",
-                   "SwiftNado",
-                   "Move to Enemy",
-                   #"anime_me(69,false)",
-                   "Rotar -90",
-                   "One Step After Jump",
-                   #"Skill Anim",
-                   "One Step After Move" ,
-                   "Collapse",
-                   "Coordinate Reset"
-                   ],
-                   
+  "NadoRapido" => ["Don't Collapse","Skill Motion","One Step After Jump","Timed Charge Bar XY","Rotar 90","SwiftNado","Move to Enemy","Rotar -90","One Step After Jump","One Step After Move" ,"Collapse","Coordinate Reset"],
+   
+  "Protocolo Corrida" => ["Don't Collapse","Skill Motion","One Step After Jump","CorridaToro","Move to Enemy","target('Self Spin')","One Step After Jump","One Step After Move" ,"Collapse","Coordinate Reset","target('Coordinate Reset')"  ],                
   
   "BalaEsp"   => ["Skill Motion","Wpn Swing R","6","Wait(Fixed)","Wpn Throw Start","Coordinate Reset"],
                  
   "Use Item"  => ["Wait", "throw_se", "ItemWT","6","Wait(Fixed)","Skill Anim WT","Coordinate Reset Left"],
    
-  "Ventisca"  => ["Don't Collapse","Zoom Out","Wpn Swing R","Timed Charge Bar Rotate","Loop Start","Self Spin", "If Timed Hit", "Loop End" ,"Skill Motion","Reset Camera", "Damage Animation", "Collapse", "Coordinate Reset"],
+  "Ventisca"  => ["Don't Collapse","Zoom Out","Wpn Swing R","Timed Charge Bar Rotate","Loop Start","Self Spin", 
+    "If Timed Hit", "Loop End" ,"Skill Motion","Reset Camera", "Damage Animation", "Collapse", "Coordinate Reset"],
   
   "Flujo Subterraneo"  => ["Don't Collapse","Zoom Out","Wpn Swing R","Timed Charge Bar LR Loop","Loop Start","Simple Jump", "If Timed Hit", "Loop End" ,"Skill Motion","Reset Camera", "Damage Animation", "Collapse", "Coordinate Reset"],
    
-  "Acuasphere"  => ["Don't Collapse","Skill Motion","Wpn Swing R","Timed Charge Bar XY Loop","Loop Start","anime_me(146,false)","20","If Timed Hit", "Loop End","Wait" ,"Acuaesfera Fire","Coordinate Reset", "Collapse"],   
+  "Acuasphere"  => ["Don't Collapse",  "Skill Motion",  "Wpn Swing R",  "Timed Charge Bar XY Loop",  "Loop Start",  "anime_me(146,false)",  "20",  "If Timed Hit",   "Loop End",  "Wait" ,  "Acuaesfera Fire",  "Coordinate Reset",   "Collapse"],   
 
-  "Feather Damage"  => ["Feather Fire","Damage Animation"],
+  "Rope Bind"  => ["Don't Collapse",  "Skill Motion",  "Move Front Enemy",  "Zoom Self",  
+                   "Timed Charge Stages Back",  "Fast Spin", "Skill Anim", "15",  "Coordinate Reset", "Reset Camera",   "Collapse"],     
+     
+  "Boulder Throw"  => ["Don't Collapse",  "Skill Motion",  "Timed Charge Bar UP",  "If Timed Hit",   "Fast Spin",  "anime_me(188,false)",  "15",  "Rotate Right Once",  "Rock Fire",  "Coordinate Reset",   "Collapse"],      
+  
+  "IceBlock Throw"  => ["Don't Collapse",  "Skill Motion",  "Timed Charge Bar UP",  "If Timed Hit",   "Fast Spin",  "anime_me(191,false)",  "55",  "Rotate Right Once",  "Ice Fire",  "Coordinate Reset",   "Collapse"],  
 
-  "Dardo Pluma"     => ["Don't Collapse","Move Front Enemy","One Step After Jump","Multistrike Attack","5","Loop Start","If Indicator A","Feather Damage","If Timed Hit","Loop End","Wait","Collapse","Coordinate Reset"],
+  "Feather Damage"  => ["Feather Fire"],
 
+  "Dardo Pluma"     => ["Don't Collapse","Move Front Enemy","One Step After Jump","Multistrike Attack","5","Loop Start","If Indicator A","Feather Damage","If Timed Hit","Loop End","Collapse","Coordinate Reset"],
+  
+  "Destrozaladro" => ["Don't Collapse","Skill Motion","One Step After Jump","Timed Charge CCW Rotate","Loop Start","Fast Spin", "If Timed Hit", "Loop End" ,"Rotar 90","SpinDrill","Move to Enemy","Rotar -90","One Step After Jump","One Step After Move" ,"Collapse","Coordinate Reset"],
+   
    }
    
   #==============================================================================

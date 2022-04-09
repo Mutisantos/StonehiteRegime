@@ -59,13 +59,13 @@ module IntTool
   # than one id to trigger the assigned tool), separate each id with a coma
   Interactive_Weapons = {
  
-  HweaponId     => [ ],  # HookShot
-  FweaponId     => [14,15,16,18],  # Flame
+  HweaponId     => [32,33,34,35,36,37,38,39,40],  # HookShot
+  FweaponId     => [14,15,16,18,19,20,21,22,23],  # Flame
   BweaponId     => [ ],  # Bomb
   BAweaponId    => [ ],  # Barrel
   BladeWeaponId => [ ],  # Blade
   ArrowWeaponId => [3],  # Arrow
-  GunWeaponId   => [2],  # Sniper
+  GunWeaponId   => [2,7,24,25,26,27,28,29,30,31],  # Sniper
   WweaponId     => [4,8],# Water
   }
  
@@ -94,16 +94,19 @@ module IntTool
  
   # check if specific interactive weapon / armor is equipped?
   def self.equipped?(dw, value)
-    value.push(dw) unless value.include?(dw)
-    if WToolSlot
-      value.any? {|wep| $game_player.actor.weapons.include?($data_weapons[wep])}
-    else
-      value.any? {|arm| $game_player.actor.armors.include?($data_armors[arm])}
+    if !$game_player.actor.nil?
+      value.push(dw) unless value.include?(dw)
+      if WToolSlot
+        value.any? {|wep| $game_player.actor.weapons.include?($data_weapons[wep])}
+      else
+        value.any? {|arm| $game_player.actor.armors.include?($data_armors[arm])}
+      end
     end
   end
  
   # get equipped weapon / armor icon index
   def self.icon_index
+    return nil if $game_player.actor.nil?
     for t in tool_weapons
       return t.icon_index if $game_player.actor.weapons.include?(t) if WToolSlot
       return t.icon_index if $game_player.actor.armors.include?(t) if !WToolSlot

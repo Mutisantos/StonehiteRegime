@@ -31,6 +31,8 @@ class Game_System
     @battle_bgm = nil
     @battle_end_me = nil
     @saved_bgm = nil
+    ## Test Elements
+    @increased_resolution = false 
   end
   #--------------------------------------------------------------------------
   # ● 日本語モード判定

@@ -183,6 +183,8 @@ module YEA
     #  3   Bodygear
     #  4   Accessory
     # 
+    
+
     # Whatever you set the below slots to, the dual wield setup will be exactly
     # identical except that the second slot will be changed to a weapon (0).
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -200,8 +202,8 @@ module YEA
            2 => [ "Headgear",       true,      true],
            3 => [ "Bodygear",       true,      true],
            4 => ["Accessory",       true,     false],
-           5 => [    "Cloak",       true,      true],
-           6 => [ "Necklace",       true,      true],
+           5 => [   "Amulet",       true,      true],
+           6 => [   "Collar",       true,      true],
     } # Do not remove this.
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -224,7 +226,7 @@ module YEA
     # Command window in the Equip Scene.
     COMMAND_LIST =[
       :equip,
-    # :optimize,
+      :optimize,
       :clear,
     # :custom1,
     # :custom2,

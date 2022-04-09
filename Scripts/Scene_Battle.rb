@@ -401,6 +401,7 @@ class Scene_Battle < Scene_Base
   # ● 敵キャラ［決定］
   #--------------------------------------------------------------------------
   def on_enemy_ok
+    return if @enemy_window.enemy.nil?
     BattleManager.actor.input.target_index = @enemy_window.enemy.index
     @enemy_window.hide
     @skill_window.hide

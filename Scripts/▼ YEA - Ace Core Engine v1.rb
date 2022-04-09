@@ -161,7 +161,7 @@ module YEA
     # not adjust themselves properly.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     RESIZE_WIDTH  = 640
-    RESIZE_HEIGHT = 480 
+    RESIZE_HEIGHT = 480
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Adjust Animation Speed -
@@ -243,18 +243,18 @@ module YEA
       :normal     =>  0,   # Default:  0
       :system     => 16,   # Default: 16
       :crisis     => 17,   # Default: 17
-      :knockout   => 18,   # Default: 18
+      :knockout   => 19,   # Default: 18
       :gauge_back => 19,   # Default: 19
-      :hp_gauge1  => 28,   # Default: 20
+      :hp_gauge1  => 17,   # Default: 20
       :hp_gauge2  => 29,   # Default: 21
       :mp_gauge1  => 22,   # Default: 22
       :mp_gauge2  => 23,   # Default: 23
       :mp_cost    => 23,   # Default: 23
-      :power_up   => 24,   # Default: 24
-      :power_down => 25,   # Default: 25
+      :power_up   =>  4,   # Default: 24
+      :power_down =>  5,   # Default: 25
       :tp_gauge1  => 10,   # Default: 28
-      :tp_gauge2  =>  2,   # Default: 29
-      :tp_cost    =>  2,   # Default: 29
+      :tp_gauge2  => 16,   # Default: 29
+      :tp_cost    => 16,   # Default: 29
     } # Do not remove this.
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

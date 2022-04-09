@@ -35,13 +35,13 @@
 #CLOCK_TOGGLE is any input button available, see the INPUT help file for options
 #------#
 USE_CLOCK       = false
-CLOCK_POSITION  = 4
-CLOCK_TOGGLE    = :C
+CLOCK_POSITION  = 3
+CLOCK_TOGGLE    = :L
  
 module GameTime
   #---Game Time Details---#
   #Number of frames in a game minute, 60 frames = 1 second
-  TIME_COUNT      = 60
+  TIME_COUNT      = 180
   #Sets whether to tint screen based on game time
   USE_TINT        = true
  
@@ -52,32 +52,32 @@ module GameTime
   NIGHT_TIME_START = 18
  
   #True to pause time while not in map or while during a message
-  PAUSE_IN_COMBAT  = false
+  PAUSE_IN_COMBAT  = true
   PAUSE_NOT_IN_MAP = true
   PAUSE_IN_MESSAGE = true
  
   #Sets time frames of tints by minute count, one day is 1440 minutes
   # 0 = 12am, 360 = 6am, 720 = 12pm, 1080 = 6pm  etc...
-  PRESUNRISE_TIME = 240
-  SUNRISE_TIME    = 360
-  NOONSTART_TIME  = 660
-  NOONEND_TIME    = 900
-  PRESUNSET_TIME  = 1080
-  SUNSET_TIME     = 1260
-  MIDNIGHT_TIME   = 60  #Must be greater than 0
+  MIDNIGHT_TIME   = 1  #Must be greater than 0
+  PRESUNRISE_TIME = 300
+  SUNRISE_TIME    = 390
+  NOONSTART_TIME  = 720
+  NOONEND_TIME    = 820
+  PRESUNSET_TIME  = 1020
+  SUNSET_TIME     = 1200
  
   #Sets custome tints
+  MIDNIGHT_TONE   = Tone.new(-65,-75,0,95)
   PRESUNRISE_TONE = Tone.new(-55,-55,0,50)
   SUNRISE_TONE    = Tone.new(-17,-17,0,0)
   NOONSTART_TONE  = Tone.new(17,17,0,0)
   NOONEND_TONE    = Tone.new(0,0,0,0)
-  PRESUNSET_TONE  = Tone.new(-30,-30,0,25)
-  SUNSET_TONE     = Tone.new(-50,-50,0,55)
-  MIDNIGHT_TONE   = Tone.new(-75,-95,0,125)
+  PRESUNSET_TONE  = Tone.new(34,-30,-30,25)
+  SUNSET_TONE     = Tone.new(-50,-50,0,25)
  
   #Include the ids of any maps not to be tinted based on time
   # Usually reserved for indoor maps
-  NOTINTMAPS = [3,11,10,13,18]
+  NOTINTMAPS = [3,11,10,13,14,18,23,7,24,22,25,26,27,28,29]
  
   #Store current time in a variable?
   USE_VARIABLE = true

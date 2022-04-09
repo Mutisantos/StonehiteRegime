@@ -92,6 +92,10 @@ module Victor_Engine
   #   remove the delay just leave it zero.
   #--------------------------------------------------------------------------
   VE_MOVE_DISTANCE = 16
+  REORDER_SWITCH = 84 
+  MEMBERS_ORDER = {
+      followers_id: [],
+  }
   #--------------------------------------------------------------------------
   # * Setup follower reorder
   #   You can reorder the players on the map without changing the battle
@@ -144,6 +148,11 @@ module Victor_Engine
     name = name.to_s.gsub("_", " ").upcase.split
     name.collect! {|char| char == ext ? "#{char} -" : char.capitalize }
     name.join(" ")
+  end
+  
+  def self.set_followers(followers_id_array)
+    MEMBERS_ORDER[:followers_id] = followers_id_array
+    p(MEMBERS_ORDER[:followers_id])
   end
 end
 
@@ -266,6 +275,9 @@ class Game_Party < Game_Unit
   # * New method: update_followers_id
   #--------------------------------------------------------------------------
   def update_followers_id
+    @followers_id = MEMBERS_ORDER[:followers_id] if(!$game_switches[REORDER_SWITCH])
+    MEMBERS_ORDER[:followers_id] = @followers_id if($game_switches[REORDER_SWITCH])
+    
     return if @followers_id.sort == members_id
     @followers_id.delete_if {|id| !members_id.include?(id) }
     @followers_id += members_id.select {|id| !@followers_id.include?(id)}
@@ -279,6 +291,7 @@ class Game_Party < Game_Unit
     @alive_followers = alive_followers.dup
     $game_player.refresh
   end
+   
 end
 
 #==============================================================================
@@ -296,7 +309,7 @@ class Game_Map
   def update(main = false)
     update_ve_followers_options(main)
     $game_party.update_followers
-    reorder_party if VE_FOLLOWERS_REORDER[:enable]
+    reorder_party if (VE_FOLLOWERS_REORDER[:enable] && $game_switches[REORDER_SWITCH] ) 
   end
   #--------------------------------------------------------------------------
   # * Alias method: update
