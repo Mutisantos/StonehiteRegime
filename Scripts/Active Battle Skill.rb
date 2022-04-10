@@ -282,24 +282,65 @@ class Game_Battler
     initialize_cmd_skill # original
     @cmd_miss_flag = false
   end
+
+  # ------------------------------------------------- -------------------------
+  # ● application effect of skills
+  # User: the user of the skill
+  # Skill: Skills
+  # ------------------------------------------------- -------------------------
+  alias muti_item_eva item_eva
+  def item_eva(user, item)
+    return eva if item.physical?    # Return evasion if physical attack
+    return mev if item.magical?     # Return magic evasion if magic attack
+    return 0
+  end
+  # ------------------------------------------------- -------------------------
+  # ● application effect of skills
+  # User: the user of the skill
+  # Skill: Skills
+  # ------------------------------------------------- -------------------------
+  alias muti_item_hit item_hit
+  def item_hit(user, item)
+    rate = item.success_rate * 0.01     # Get success rate
+    rate *= user.hit if item.physical?  # Physical attack: Multiply hit rate
+    return rate                         # Return calculated hit rate
+  end
   # ------------------------------------------------- -------------------------
   # ● application effect of skills
   # User: the user of the skill
   # Skill: Skills
   # ------------------------------------------------- -------------------------
   alias skill_effect_cmd_skill item_apply
-  
   def item_apply(user, skill)
-    $multiplier = 1
+    $multiplier = 1.0
     if user.cmd_miss_flag
-    
-      #skill_copy = $data_skills[skill.id].dup
-      $multiplier = CommandSkill::T_SKILL[skill.id][1]
-      $multiplier = $multiplier / 100.0 #only 100 makes the value trunk to an Integer instead of a float
-      #p($multiplier,"multi")
+        #skill_copy = $data_skills[skill.id].dup
+        $multiplier = CommandSkill::T_SKILL[skill.id][1]
+        $multiplier = $multiplier / 100.0 #only 100 makes the value trunk to an Integer instead of a float
+        #p($multiplier,"multi")
     end
-    ret = skill_effect_cmd_skill(user, skill)#Call the original method   
-    return ret
+    @result.clear
+    @result.used = item_test(user, skill)
+    @result.missed = (@result.used && rand >= item_hit(user, skill))
+    @result.evaded = (!@result.missed && rand < item_eva(user, skill))
+    if ($game_variables[CommandSkill::DAMAGE_MULTIPLIER] >= 1.0)
+        @result.missed = false
+        @result.evaded = false
+    end
+    if @result.hit?
+      unless skill.damage.none?
+        @result.critical = (rand < item_cri(user, skill))
+        make_damage_value(user, skill)
+        execute_damage(user)
+      end
+      skill.effects.each {|effect| item_effect_apply(user, skill, effect) }
+      item_user_effect(user, skill)
+    end
+    if($imported["YEA-BattleEngine"] == true)
+        make_miss_popups(user,skill)
+    end
+    # ret = skill_effect_cmd_skill(user, skill)#Call the original method   
+    # return ret
   end
    # ------------------------------------------------- -------------------------
   # ● Redefine damage output overwriting the original damage based on multiplier
@@ -309,7 +350,7 @@ class Game_Battler
 
   alias muti_make_damage make_damage_value
   def make_damage_value (user, item)
-    value = item.damage.eval(user, self, $game_variables)
+    value = item.damage.eval(user, self, $game_variables) + 0.0
     value *= item_element_rate(user, item)
     value *= pdr if item.physical?
     value *= mdr if item.magical?
@@ -317,13 +358,11 @@ class Game_Battler
     value = apply_critical(value) if @result.critical
     value = apply_variance(value, item.damage.variance)
     value = apply_guard(value)
-    # p(value.to_s + '*' + $multiplier.to_s + '*' + $game_variables[CommandSkill::DAMAGE_MULTIPLIER].to_s + "=")
     value = value * $multiplier * $game_variables[CommandSkill::DAMAGE_MULTIPLIER] 
-    if ($game_variables[CommandSkill::DAMAGE_MULTIPLIER] >= 1)
+    if ($game_variables[CommandSkill::DAMAGE_MULTIPLIER] >= 1.0)
       @result.missed = false
       @result.evaded = false
     end
-    # p(value.to_s)
     @result.make_damage(value.to_i, item)
     #---For effectiveness popup from Yanfly's Battle Engine
     if($imported["YEA-BattleEngine"] == true)
