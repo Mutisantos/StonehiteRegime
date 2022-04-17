@@ -42,24 +42,6 @@ Guacarí Village
 <<actors/1/name>>
 Flamrose
 
-<<actors/1/note>>
-<battler icon: 216>
-<win quotes>
-"One more victory for our benefit."
-[new quote]
-"They should think it better after this fight."
-</win quotes>
-<drops quotes>
-"I'll take this as a prize."
-</drops quotes>
-<level quotes>
-"This is all thanks to the great flame of Tatama."
-[new quote]
-"The flame inside me will blind the darkness"
-[new quote]
-"A renewed wind pushes us forward."
-</level quotes>
-
 <<actors/1/description>>
 A inhabitant from Tatama Domains with latent
 mysterious powers.
@@ -67,49 +49,13 @@ mysterious powers.
 <<actors/2/name>>
 Pengralle 
 
-<<actors/2/note>>
-<battler icon: 217>
-<win quotes>
-"A deserved result... I guess"
-[new quote]
-"T-t-the next one we will win faster"
-</win quotes>
-<drops quotes>
-"I-i-i hope you don't mind that I take this with me."
-[new quote]
-"S-s-surely they won't need this"
-</drops quotes>
-<level quotes>
-"I'll keep training hard."
-[new quote]
-"Let's keep moving forward on the right track"
-</level quotes>
 
 <<actors/2/description>>
 Penguin with great aim and resistance to cold,
-
 her nervousness does not affect her combat skills
 
 <<actors/3/name>>
 Hutch
-
-<<actors/3/note>>
-<battler icon: 218>
-<win quotes>
-"This was really easy."
-[new quote]
-"And that was all of it?."
-</win quotes>
-<drops quotes>
-"This serves me better than you."
-[new quote]
-"Now this is my property."
-</drops quotes>
-<level quotes>
-"Behold the might of the great Hutch."
-[new quote]
-"The reward for my head sure will be raised."
-</level quotes>
 
 <<actors/3/description>>
 Notorious Outlaw Raccoon with great synergy with
@@ -118,47 +64,12 @@ nature and earth.
 <<actors/4/name>>
 Dana
 
-<<actors/4/note>>
-<win quotes>
-"Tremble with my riffs."
-[new quote]
-"They couldn't deny my talent"
-</win quotes>
-<drops quotes>
-"Great, more money for the next tour."
-</drops quotes>
-<level quotes>
-"And the band keeps playing."
-</level quotes>
-
 <<actors/4/description>>
 Wandering and talented guitarist with a 
 passion for rock.
 
 <<actors/5/name>>
 Akane
-
-<<actors/5/note>>
-<element absorb: 12>
-<win quotes>
-"Feel the power of magic."
-[new quote]
-"Hehe, all according to my calculations."
-[new quote]
-"Nothing the right book can't fix."
-[new quote]
-"Don't underestimate me just for being short."
-</win quotes>
-<drops quotes>
-"Look: materials for new spells!"
-[new quote]
-"An equivalent exchange."
-</drops quotes>
-<level quotes>
-"Growing in knowledge."
-[new quote]
-"Small ones also have room for growing up."
-</level quotes>
 
 <<actors/5/description>>
 Little and curious magician, who despite her short
@@ -167,23 +78,6 @@ age, possesses immense knowledge.
 <<actors/6/name>>
 Farrock
 
-<<actors/6/note>>
-<win quotes>
-"Nothing can silence the voice of the soul."
-[new quote]
-"Showtime is over, thank you!."
-</win quotes>
-<drops quotes>
-"The audience throws what they got!."
-[new quote]
-"A nice souvenir for this tour"
-</drops quotes>
-<level quotes>
-"Let the music reach more people."
-[new quote]
-"Don't stop me now"
-</level quotes>
-
 <<actors/6/description>>
 Legendary vocalist returning to the stage
 to dazzle everyone.
@@ -191,49 +85,12 @@ to dazzle everyone.
 <<actors/7/name>>
 Muti
 
-<<actors/7/note>>
-<battler icon: 219>
-<win quotes>
-"Next time sure will be easier"
-[new quote]
-"Don't mess with the walrus."
-</win quotes>
-<drops quotes>
-"¿Only this?, Okay..."
-[new quote]
-"Interesting, Interesting"
-[new quote]
-"Are you gonna eat this?"
-</drops quotes>
-<level quotes>
-"The power keeps growing on me."
-[new quote]
-"The effort had to show its results, right?"
-</level quotes>
-
 <<actors/7/description>>
 Gunman and researcher from Mietchieng, with
 a quirky personality.
 
 <<actors/8/name>>
 Koortesh
-
-<<actors/8/note>>
-<win quotes>
-"You hast messed with the wrong gentleman"
-[new quote]
-"In thy name of the queen"
-[new quote]
-"Fight for those whom canst not"
-</win quotes>
-<drops quotes>
-"A worthy tribute to the kingdom."
-</drops quotes>
-<level quotes>
-"I shall fight till the last instant. "
-[new quote]
-"Forge the way to victory!"
-</level quotes>
 
 <<actors/8/description>>
 Knight-in-Chief of the Ashen Order.
@@ -3861,3 +3718,199 @@ Expererience
 
 <<constants/YEA::STATUS/NEXT_TOTAL_VOCAB>>
 Next Level
+
+
+<<constants/YEA::VICTORY_AFTERMATH/FLAMROSE_NOTES>>
+<battler icon: 216>
+<win quotes>
+"One more victory for our benefit."
+[new quote]
+"They should think it better after this fight."
+</win quotes>
+<drops quotes>
+"I'll take this as a prize."
+</drops quotes>
+<level quotes>
+"This is all thanks to the great flame of Tatama."
+[new quote]
+"The flame inside me will blind the darkness"
+[new quote]
+"A renewed wind pushes us forward."
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/PENGRALLE_NOTES>>
+<battler icon: 217>
+<win quotes>
+"A deserved result... I guess"
+[new quote]
+"T-t-the next one we will win faster"
+</win quotes>
+<drops quotes>
+"I-i-i hope you don't mind that I take this with me."
+[new quote]
+"S-s-surely they won't need this"
+</drops quotes>
+<level quotes>
+"I'll keep training hard."
+[new quote]
+"Let's keep moving forward on the right track"
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/HUTCH_NOTES>>
+<battler icon: 218>
+<win quotes>
+"This was really easy."
+[new quote]
+"And that was all of it?."
+</win quotes>
+<drops quotes>
+"This serves me better than you."
+[new quote]
+"Now this is my property."
+</drops quotes>
+<level quotes>
+"Behold the might of the great Hutch."
+[new quote]
+"The reward for my head sure will be raised."
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/DANA_NOTES>>
+<win quotes>
+"Tremble with my riffs."
+[new quote]
+"They couldn't deny my talent"
+</win quotes>
+<drops quotes>
+"Great, more money for the next tour."
+</drops quotes>
+<level quotes>
+"And the band keeps playing."
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/AKANE_NOTES>>
+<element absorb: 12>
+<win quotes>
+"Feel the power of magic."
+[new quote]
+"Hehe, all according to my calculations."
+[new quote]
+"Nothing the right book can't fix."
+[new quote]
+"Don't underestimate me just for being short."
+</win quotes>
+<drops quotes>
+"Look: materials for new spells!"
+[new quote]
+"An equivalent exchange."
+</drops quotes>
+<level quotes>
+"Growing in knowledge."
+[new quote]
+"Small ones also have room for growing up."
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/FARROCK_NOTES>>
+<win quotes>
+"Nothing can silence the voice of the soul."
+[new quote]
+"Showtime is over, thank you!."
+</win quotes>
+<drops quotes>
+"The audience throws what they got!."
+[new quote]
+"A nice souvenir for this tour"
+</drops quotes>
+<level quotes>
+"Let the music reach more people."
+[new quote]
+"Don't stop me now"
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/KOORTESH_NOTES>>
+<win quotes>
+"You hast messed with the wrong gentleman"
+[new quote]
+"In thy name of the queen"
+[new quote]
+"Fight for those whom canst not"
+</win quotes>
+<drops quotes>
+"A worthy tribute to the kingdom."
+</drops quotes>
+<level quotes>
+"I shall fight till the last instant. "
+[new quote]
+"Forge the way to victory!"
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/MUTI_NOTES>>
+<battler icon: 219>
+<win quotes>
+"Next time sure will be easier"
+[new quote]
+"Don't mess with the walrus."
+</win quotes>
+<drops quotes>
+"¿Only this?, Okay..."
+[new quote]
+"Interesting, Interesting"
+[new quote]
+"Are you gonna eat this?"
+</drops quotes>
+<level quotes>
+"The power keeps growing on me."
+[new quote]
+"The effort had to show its results, right?"
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/CROCKOON_NOTES>>
+<win quotes>
+"..."
+</win quotes>
+<drops quotes>
+"..."
+</drops quotes>
+<level quotes>
+"..."
+[new quote]
+"..."
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/BYEL_NOTES>>
+<win quotes>
+"Les falta esforzarse!"
+[new quote]
+"Han sido fáciles de leer"
+</win quotes>
+<drops quotes>
+"Vamos "
+</drops quotes>
+<level quotes>
+"Valio la pena la molestia."
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/RAYLON_NOTES>>
+<win quotes>
+"No se metan con la comida de un hombre"
+</win quotes>
+<drops quotes>
+"Un digno tributo para el reino."
+</drops quotes>
+<level quotes>
+"Luchare hasta el ultimo instante."
+[new quote]
+"Forjad el camino a la victoria!"
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/SKULLTASH_NOTES>>
+<win quotes>
+"..."
+</win quotes>
+<drops quotes>
+"..."
+</drops quotes>
+<level quotes>
+"..."
+[new quote]
+"..."
+</level quotes>

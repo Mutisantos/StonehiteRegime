@@ -124,6 +124,11 @@ Galv's Character Effects 2.0
 Galv's Group Manager
 Galv's Region Effects
 ~@8
+Text Sound Effect (version 2)
+Language File System - Core Script
+Language File System - Text Viewer
+~@9
+~@10
 ------Yanfly Engine Ace
 ▼ YEA - Ace Core Engine v1
 ▼ YEA - Ace Menu Engine v1
@@ -158,54 +163,52 @@ Parch1
 Parch2
 Yami PCTB
 Yami Order Gauge
---------------------
+~@11
 Day - Night System
------------------
+~@12
 V - Basic Module
 V - Followers Control
 V - Followers Options
 V - Looped Animations
 Active Battle Skill
 Charge Attack Window
-------------------------
+~@13
 TTM Tinys Travel Map
 TTM Names in Map
 TTM Map Effects
 TTM Fadein&out
--------------------
+~@14
 FA Interactive System 2.0
 Fa Patch
 FA Fogs
-----------------
+~@15
 Himeworks Shop Manager
 Himeworks Stock
 Himeworks Splash Screen Map
 Flee Patch
 Change Graphic by Equipment
--------------
+~@16
 Basic Window Resizer v1.1
-----------------------
+~@17
 Galv's Move Route Extras
---------------------------
-Text Sound Effect (version 2)
-# Language File System - Core Script
-# Language File System - Text Viewer
-~@9
+~@18
+~@19
 Script Exporter
-~@10
+~@20
 Main
+Script Exporter~@1
 Fomar ATB + Yanfly
 Testing
 Zeus81's Screen Resolution
 IBG Flash Screen&Skip Title V1.3
 MOG - Animated Title A
-~@11
-~@12
-~@13
-~@14
-~@15
-~@16
-~@17
-~@18
-~@19
-~@20
+~@21
+~@22
+~@23
+~@24
+~@25
+~@26
+~@27
+~@28
+~@29
+~@30

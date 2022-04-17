@@ -177,6 +177,18 @@ module YEA
     HEADER_TEXT = "\e>\eC[6]%s\eC[0]\e<\n"  # Always at start of messages.
     FOOTER_TEXT = ""                        # Always at end of messages.
     
+    FLAMROSE_NOTES =  ""    
+    PENGRALLE_NOTES =  ""    
+    HUTCH_NOTES =  ""    
+    DANA_NOTES =  ""    
+    AKANE_NOTES =  ""    
+    FARROCK_NOTES =  ""    
+    KOORTESH_NOTES =  ""    
+    MUTI_NOTES =  ""    
+    CROCKOON_NOTES =  ""    
+    BYEL_NOTES =  ""    
+    RAYLON_NOTES =  ""
+    SKULLTASH_NOTES =  ""
     # Win Quotes are what the actors say when a battle is won.
     VICTORY_QUOTES ={
     # :type   => Quotes
@@ -320,6 +332,34 @@ class RPG::BaseItem
     @level_quotes = [""]
     @drops_quotes = [""]
     @victory_quote_type = nil
+    if self.is_a?(RPG::Actor)
+      case self.id 
+      when 1
+        self.note = YEA::VICTORY_AFTERMATH::FLAMROSE_NOTES
+      when 2 
+        self.note = YEA::VICTORY_AFTERMATH::PENGRALLE_NOTES
+      when 3
+        self.note = YEA::VICTORY_AFTERMATH::HUTCH_NOTES
+      when 4 
+        self.note = YEA::VICTORY_AFTERMATH::DANA_NOTES
+      when 5
+        self.note = YEA::VICTORY_AFTERMATH::AKANE_NOTES
+      when 6 
+        self.note = YEA::VICTORY_AFTERMATH::FARROCK_NOTES
+      when 7
+        self.note = YEA::VICTORY_AFTERMATH::MUTI_NOTES
+      when 8
+        self.note = YEA::VICTORY_AFTERMATH::KOORTESH_NOTES
+      when 9
+        self.note = YEA::VICTORY_AFTERMATH::BYEL_NOTES
+      when 10
+        self.note = YEA::VICTORY_AFTERMATH::RAYLON_NOTES
+      when 11
+        self.note = YEA::VICTORY_AFTERMATH::CROCKOON_NOTES
+      when 11
+        self.note = YEA::VICTORY_AFTERMATH::SKULLTASH_NOTES
+      end
+    end
     #---
     self.note.split(/[\r\n]+/).each { |line|
       case line
@@ -519,6 +559,7 @@ class Game_Actor < Game_Battler
   # new method: victory_quotes
   #--------------------------------------------------------------------------
   def victory_quotes(type)
+    self.actor.load_notetags_va()
     case type
     when :win
       return self.actor.win_quotes if self.actor.win_quotes != [""]
