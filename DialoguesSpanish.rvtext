@@ -228,11 +228,12 @@ de Tatama.
 Flamrose....
 
 <<003:Flamrose /001:EV001/Page 01/002>>
-Flamrose...Despierta, ya se te hizo tarde...
+Flamrose...Despierta, por más que balbucees 
+sobre el maíz en tu sueños, tienes que levantarte
 
 <<003:Flamrose /001:EV001/Page 01/003>>
 Flamrose...Mueve el plumero de una vez
-por todas, no me hagas enojar!
+por todas, ¡no me hagas enojar!
 
 <<003:Flamrose /001:EV001/Page 01/004>>
 <<face: flamarosa, 2>>
@@ -252,13 +253,16 @@ dará tu labor destinada.
 
 <<003:Flamrose /001:EV001/Page 01/007>>
 <<face: flamarosa, 6>>
-\C[2]Flamrose:\C[0] Si, si lo se, solo que me
-por los nervios no Había logrado dormir temprano,
-así que terminé por despertarme tarde, jeje...
+\C[2]Flamrose:\C[0] Si, si lo se, solo que 
+además de tener el sueño de siempre, tuve 
+uno un poco más extraño, se sentia como si 
+fuera una revelación o algo. 
 
 <<003:Flamrose /001:EV001/Page 01/008>>
-\C[2]Flancorose:\C[0] Te espero afuera,
-termina de despertarte y vamos al templo
+\C[2]Flancorose:\C[0] Bueno, a lo mejor es una señal 
+que ya dejarás de soñar con maíz y ya estas lista 
+para nuestro ritual. En fin, termina de levantarte 
+y nos dirigiremos al templo. Te espero afuera.
 
 <<003:Flamrose /001:EV001/Page 01/009>>
 <<face: flamarosa, 1>>
@@ -2856,17 +2860,17 @@ Numerosas las historias que guarda.
 <<018:Zorthos/001:EV001/Page 01/002>>
 <<background: dim>>
 <<position: top>>
-En uno de los tantos confines de la creación...\.
-Un ocioso planeta, \c[9] Zorthos \c[0], es la cuna
-de innumerables relatos, llenos de heroísmo,
-intriga, suspenso y pasión.
+Entre la infinidad de mundos, en este rincón del cosmos,
+en este planeta llamado Zorthos...\! Es tu turno de 
+revelar uno de tantos misterios...\! \}de protagonizar 
+una nueva historia...\}de ser quien se\!\}encargue de...
 
 <<018:Zorthos/001:EV001/Page 01/003>>
 <<background: dim>>
 <<position: top>>
-Un punto tan diminuto en el universo tiene tanto
-para contarnos, como esta, la historia de
-\c[9]El Régimen de Stonehite\c[0].\!
+\{MIRA, MAIZ. ¡HECTAREAS COMPLETAS DE MAIZ!
+\}¿A poco eso no es mucho mejor? \!Hmmm, tantas cosas
+que se pueden hacer con el maiz...
 
 <<019:Bosque de/005:EV005/Page 01/001>>
 <<face: FMuti1, 6>>
