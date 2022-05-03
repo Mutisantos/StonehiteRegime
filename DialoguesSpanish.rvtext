@@ -1510,7 +1510,7 @@ Has encontrado un Medio Jugo.
 
 <<009:Bosque de/036:EV036/Page 01/001>>
 <<face: FMuti1, 6>>
-\C[14]Muti:\C[0] Fuego místico? \|\^
+\C[14]Muti:\C[0] ¿Fuego místico? \|\^
 
 <<009:Bosque de/036:EV036/Page 01/002>>
 <<face: FMuti1, 0>>
@@ -1518,7 +1518,7 @@ Has encontrado un Medio Jugo.
 
 <<009:Bosque de/037:EV037/Page 01/001>>
 <<face: FMuti1, 6>>
-\C[14]Muti:\C[0] Fuego místico? \|\^
+\C[14]Muti:\C[0] ¿Fuego místico? \|\^
 
 <<009:Bosque de/037:EV037/Page 01/002>>
 <<face: FMuti1, 0>>
@@ -1526,7 +1526,7 @@ Has encontrado un Medio Jugo.
 
 <<009:Bosque de/038:EV038/Page 01/001>>
 <<face: FMuti1, 6>>
-\C[14]Muti:\C[0] Fuego místico? \|\^
+\C[14]Muti:\C[0] ¿Fuego místico? \|\^
 
 <<009:Bosque de/038:EV038/Page 01/002>>
 <<face: FMuti1, 0>>
@@ -2861,20 +2861,21 @@ Numerosas las historias que guarda.
 <<background: dim>>
 <<position: top>>
 Entre la infinidad de mundos, en este rincón del cosmos,
-en este planeta llamado Zorthos...\! Es tu turno de 
+en este planeta llamado Zorthos...\! será tu turno de  
 revelar uno de tantos misterios...\! \}de protagonizar 
-una nueva historia...\}de ser quien se\!\}encargue de...
+una nueva historia...\!\}de ser quien se \!encargue de...
 
 <<018:Zorthos/001:EV001/Page 01/003>>
 <<background: dim>>
 <<position: top>>
+¿A quién le importa eso?, Eso es un sueño aburrido.
 \{MIRA, MAIZ. ¡HECTAREAS COMPLETAS DE MAIZ!
 \}¿A poco eso no es mucho mejor? \!Hmmm, tantas cosas
 que se pueden hacer con el maiz...
 
 <<019:Bosque de/005:EV005/Page 01/001>>
 <<face: FMuti1, 6>>
-\C[14]Muti:\C[0] Fuego místico? \|\^
+\C[14]Muti:\C[0] ¿Fuego místico? \|\^
 
 <<019:Bosque de/005:EV005/Page 01/002>>
 <<face: FMuti1, 0>>
