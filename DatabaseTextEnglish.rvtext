@@ -1338,6 +1338,16 @@ Ancient Trace
 <<skills/142/message1>>
  reads the enemy.
 
+<<skills/143/description>>
+Does a fierce slash using a machete for it.
+The skill increases its damage with the level.
+
+<<skills/143/name>>
+Machete Slash
+
+<<skills/143/message1>>
+ slashes the enemy.
+
 <<skills/142/note>>
 <scan info: all>
 

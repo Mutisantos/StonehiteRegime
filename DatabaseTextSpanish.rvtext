@@ -1239,6 +1239,16 @@ Rastreo Ancestral
 <<skills/142/note>>
 <scan info: all>
 
+<<skills/143/description>>
+Da una fiera cortada usando un machete.
+El Daño aumenta con el nivel del usuario.
+
+<<skills/143/name>>
+Machetazo
+
+<<skills/143/message1>>
+ slashes the enemy.
+
 <<skills/170/name>>
 ---Skills Enemigos
 
