@@ -728,9 +728,9 @@ valor...
 <<face: FPengralle, 3>>
 <<position: top>>
 \C[23]Pengralle:\C[0] Además de esas cosas que son
-algo subjetivas, es un criminal buscado en todo
-Zorthos por haber producido una serie de
-catástrofes en el continente de Boreios.
+algo subjetivas, es un presunto criminal que 
+está siendo investigado por varios ataques como la
+catástrofe en el continente de Boreios.
 
 <<004:Poblado S/032: /Page 02/026>>
 <<face: FMuti1, 7>>
@@ -3181,43 +3181,57 @@ Has encontrado una Túnica Tatama
 <<023:Bosque de/024:EV024/Page 01/001>>
 Haz encontrado unas Bayas Energéticas
 
+<<024:CronicTv/009:Capitulo /Page 01/000>>
+<<position: top>>
+\{\{¡ESTAMOS AL AIRE!  \!
+\}\}Pasa a los titulares, tenemos noticias!
+
 <<024:CronicTv/009:Capitulo /Page 01/001>>
 \{\{\{Último Minuto
 
 <<024:CronicTv/009:Capitulo /Page 01/002>>
-Reiteramos: Se ha confirmado una nueva incursión
-de la Armada Re-Evolucionaria de Stonehite.
-Vamos con los detalles
+Reiteramos: Una nueva tragedia ha tomado lugar 
+ahora en el Dominio Tatama. Sus habitantes 
+han sido atacados y han sido transformados 
+en dinosaurios.
 
 <<024:CronicTv/009:Capitulo /Page 01/003>>
 En efecto. Según un reporte del Centro Estelar
-de Operaciones Especiales, una nueva operación
-del ejército del autodenominado General Stonehite
-ha golpeado a la región de Tatama
+de Operaciones Especiales, un nuevo ataque 
+como los que han tenido lugar en varias partes 
+del mundo ahora han ocurrido aquí.
 
 <<024:CronicTv/009:Capitulo /Page 01/004>>
 Oh, eso es terrible, pobre gente de Tatamales!
 
 <<024:CronicTv/009:Capitulo /Page 01/005>>
-No seas idiota. Es el Dominio Tatama, ubicada
+No seas idiota. Se dice Tatama, una nación ubicada
 en el extremo norte del continente de Cobeltia.
 Creo que voy a tener que mostrarte en un
 mapa.
 
 <<024:CronicTv/009:Capitulo /Page 01/006>>
 El continente de la izquierda es Cobeltia. Nosotros
-estamos desde la derecha, en Eosia. Ahora, veamos
-con más detalle.
+estamos desde la derecha, en Eosia. Tatama es un 
+lugar sumamente dificil de acceder, por lo que 
+la investigacion todavía es limitada.
 
 <<024:CronicTv/009:Capitulo /Page 01/007>>
-Es un lugar sumamente complejo para llegar,
-por lo que poco contacto han mantenido con
-las regiones aledañas.
-
-<<024:CronicTv/009:Capitulo /Page 01/008>>
 Es un lugar hermoso... ¡y desconocido!
 
+<<024:CronicTv/009:Capitulo /Page 01/008>>
+Este suceso parece estar asociado con lo ocurrido
+en el continente Boreios hace solo unos meses, donde 
+el cambio de régimen por el movimiento del auto-
+proclamado Almirante Stonehite ha tenido gran acogida.
+
 <<024:CronicTv/009:Capitulo /Page 01/009>>
+Por la naturaleza de los acontecimientos, se esta 
+adelantando una investigación que determine si
+las fuerzas de Stonehite estan involucradas en 
+estos hechos, pero no hay pronunciamientos al respecto. 
+
+<<024:CronicTv/009:Capitulo /Page 01/010>>
 Bueno. Los mantendremos informados sobre las
 nuevas movidas de Stonehite y lo que le haya
 ocurrido con los Tatatat.. Tata... bueno, ellos.
