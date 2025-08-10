@@ -391,4 +391,3 @@ class Battle_Camera
     update_program_color  if @program_color != []
   end
 end
-

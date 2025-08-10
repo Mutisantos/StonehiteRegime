@@ -2246,7 +2246,7 @@ Tunica aprobada por el comité de la CEOE. No es el
 Tunica Militar
 
 <<armors/7/note>>
-<ge: 1, $Flamrose_AN, 0>
+<ge: 1, $Flamrose_DE, 0>
 
 <<armors/8/description>>
 Gorrito tejido por la compañía de suministros de la
@@ -2324,7 +2324,10 @@ Fabricacion especial de la CEOE con autodenominadas
 aeroventilas para la velocidad y discipar el calor.
 
 <<armors/38/name>>
-Abrigo Desertico E32
+Abrigo Desértico E32
+
+<<armors/38/note>>
+<ge: 2, $Pengralle_DE, 0>
 
 <<armors/52/name>>
 --Akane
@@ -2441,14 +2444,14 @@ el agua y aumenta la punteria.
 Lente Subacuatico
 
 <<armors/149/description>>
-Abrigo aprobado por la CEOE. El azul no es un 
-color para todo el mundo...
+Abrigo aprobado por la CEOE. La paleta de color
+de desierto no es para todo el mundo...
 
 <<armors/149/name>>
 Chaqueta CEOE
 
 <<armors/149/note>>
-<ge: 7, $Muti_AN, 0>
+<ge: 7, $Muti_DE, 0>
 
 <<armors/150/description>>
 Amuleto prismático que protege la visión

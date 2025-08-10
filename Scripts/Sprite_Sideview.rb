@@ -1406,6 +1406,4 @@ class Sprite_Weapon < Sprite_Base
       bt_back_dispose
       super
     end
-  end  
-    
-  
+  end

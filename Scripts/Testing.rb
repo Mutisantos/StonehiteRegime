@@ -96,7 +96,3 @@ end
 #miclase2.print()
 #$game_variables[pos] -> Arreglo de variables accesibles desde la UI
 #$game_switches[pos] -> Arreglo de switches accesibles desde la UI
-
-
-
-

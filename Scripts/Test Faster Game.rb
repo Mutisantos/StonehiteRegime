@@ -60,11 +60,4 @@ class Scene_Map < Scene_Base
     #Graphics.transition(2, "Graphics/System/BattleStart", 100)
     #Graphics.freeze
   #end
-end  
-
-
-
-
-
-
-
+end

@@ -2689,6 +2689,13 @@ al lado, pero sí que nos llenan de luz y calor.
 <<position: top>>
 \C[2]Flancorose:\C[0] Bien Hija, prosigue
 
+
+<<017:Farming T/022:EV022/Page 01/002>>
+<<position: top>>
+\C[2]Flancorose:\C[0] Ni creas que vas a volver
+a la casa a dormir. ¡Se nos ha hecho tarde para 
+el ritual!
+
 <<017:Farming T/022:EV022/Page 02/001>>
 <<position: top>>
 \C[2]Flancorose:\C[0] Excelente, sígueme entonces
@@ -4085,8 +4092,8 @@ Gracias, y recuerden: que por más lejos que
 andemos, siempre habrá un más allá
 
 <<046:Zona del /005:EV005/Page 01/001>>
-La zona del silencio es todo un misterio arqueológico
-y geológico. Incluso se sostiene que vienen
+La zona del silencio es todo un misterio 
+geológico. Incluso se sostiene que vienen
 visitantes de otros planetas atraídos por las
 propiedades de este lugar.
 
@@ -4129,8 +4136,8 @@ no sabemos si podremos volver con facilidad.
 <<046:Zona del /011:EV011/Page 01/004>>
 <<face: flamarosa, 2>>
 \C[2]Flamrose\C[0]: Aunque parece que Kovurumbe
-se ha anticipado a nuestro plan. Hay varios emisarios
-de Guacarí aquí.
+se ha anticipado a nuestro plan. Hay varios 
+emisariosde Guacarí aquí.
 
 <<046:Zona del /011:EV011/Page 01/005>>
 <<face: FHutch, 1>>

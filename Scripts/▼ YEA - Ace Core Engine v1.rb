@@ -160,8 +160,8 @@ module YEA
     # adjusted, but scripts provided by non-Yanfly Engine sources may or may
     # not adjust themselves properly.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    RESIZE_WIDTH  = 640
-    RESIZE_HEIGHT = 480
+    RESIZE_WIDTH  = 544
+    RESIZE_HEIGHT = 416
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Adjust Animation Speed -

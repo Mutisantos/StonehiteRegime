@@ -1,0 +1,249 @@
+------Scripts Custom-----.rb
+------Yanfly Engine Ace.rb
+-Tanketai.rb
+Active Battle Skill.rb
+Basic Window Resizer v1.1.rb
+BattleManager.rb
+Battle_Camera.rb
+Cache.rb
+Change Graphic by Equipment.rb
+Charge Attack Window.rb
+DataManager.rb
+Day - Night System.rb
+FA Fogs.rb
+FA Interactive System 2.0.rb
+Fa Patch.rb
+Flee Patch.rb
+Fomar ATB + Yanfly.rb
+Galv's Character Effects 2.0.rb
+Galv's Group Manager.rb
+Galv's Move Route Extras.rb
+Galv's Region Effects.rb
+Game_Action.rb
+Game_ActionResult.rb
+Game_Actor.rb
+Game_Actors.rb
+Game_BaseItem.rb
+Game_Battler.rb
+Game_BattlerBase.rb
+Game_Character.rb
+Game_CharacterBase.rb
+Game_CommonEvent.rb
+Game_Enemy.rb
+Game_Event.rb
+Game_Follower.rb
+Game_Followers.rb
+Game_Interpreter.rb
+Game_Map.rb
+Game_Message.rb
+Game_Party.rb
+Game_Picture.rb
+Game_Pictures.rb
+Game_Player.rb
+Game_Screen.rb
+Game_SelfSwitches.rb
+Game_Switches.rb
+Game_System.rb
+Game_Temp.rb
+Game_Timer.rb
+Game_Troop.rb
+Game_Unit.rb
+Game_Variables.rb
+Game_Vehicle.rb
+Himeworks Shop Manager.rb
+Himeworks Splash Screen Map.rb
+Himeworks Stock.rb
+IBG Flash Screen&Skip Title V1.3.rb
+Language File System - Core Script.rb
+Language File System - Text Viewer.rb
+Main.rb
+MOG - Animated Title A.rb
+Parch1.rb
+Parch2.rb
+Redefining Aliases.rb
+SceneManager.rb
+Scene_Base.rb
+Scene_Battle.rb
+Scene_Debug.rb
+Scene_End.rb
+Scene_Equip.rb
+Scene_File.rb
+Scene_Gameover.rb
+Scene_Item.rb
+Scene_ItemBase.rb
+Scene_Load.rb
+Scene_Map.rb
+Scene_Menu.rb
+Scene_MenuBase.rb
+Scene_Name.rb
+Scene_Save.rb
+Scene_Shop.rb
+Scene_Skill.rb
+Scene_Status.rb
+Scene_Title.rb
+Script Exporter.rb
+SideView - Battle Setup.rb
+SideView- Action Setup.rb
+Sideview.rb
+Sound.rb
+Spriteset_Battle.rb
+Spriteset_Map.rb
+Spriteset_Weather.rb
+Sprite_Base.rb
+Sprite_Battler.rb
+Sprite_Character.rb
+Sprite_Picture.rb
+Sprite_Sideview.rb
+Sprite_Timer.rb
+Test Faster Game.rb
+Testing.rb
+Text Sound Effect (version 2).rb
+TTM Fadein&out.rb
+TTM Map Effects.rb
+TTM Names in Map.rb
+TTM Tinys Travel Map.rb
+V - Basic Module.rb
+V - Followers Control.rb
+V - Followers Options.rb
+V - Looped Animations.rb
+Vocab.rb
+VXAce_SP1.rb
+Window_ActorCommand.rb
+Window_Base.rb
+Window_BattleActor.rb
+Window_BattleEnemy.rb
+Window_BattleItem.rb
+Window_BattleLog.rb
+Window_BattleSkill.rb
+Window_BattleStatus.rb
+Window_ChoiceList.rb
+Window_Command.rb
+Window_DebugLeft.rb
+Window_DebugRight.rb
+Window_EquipCommand.rb
+Window_EquipItem.rb
+Window_EquipSlot.rb
+Window_EquipStatus.rb
+Window_GameEnd.rb
+Window_Gold.rb
+Window_Help.rb
+Window_HorzCommand.rb
+Window_ItemCategory.rb
+Window_ItemList.rb
+Window_KeyItem.rb
+Window_MapName.rb
+Window_MenuActor.rb
+Window_MenuCommand.rb
+Window_MenuStatus.rb
+Window_Message.rb
+Window_NameEdit.rb
+Window_NameInput.rb
+Window_NumberInput.rb
+Window_PartyCommand.rb
+Window_SaveFile.rb
+Window_ScrollText.rb
+Window_Selectable.rb
+Window_ShopBuy.rb
+Window_ShopCommand.rb
+Window_ShopNumber.rb
+Window_ShopSell.rb
+Window_ShopStatus.rb
+Window_SkillCommand.rb
+Window_SkillList.rb
+Window_SkillStatus.rb
+Window_Status.rb
+Window_TitleCommand.rb
+Yami Order Gauge.rb
+Yami PCTB.rb
+Zeus81's Screen Resolution.rb
+~@1.rb
+~@10.rb
+~@11.rb
+~@12.rb
+~@13.rb
+~@14.rb
+~@15.rb
+~@16.rb
+~@17.rb
+~@18.rb
+~@19.rb
+~@2.rb
+~@20.rb
+~@3.rb
+~@4.rb
+~@5.rb
+~@6.rb
+~@7.rb
+~@8.rb
+~@9.rb
+▼ Yanfly Engine Ace - Buff & State Manag.rb
+▼ Yanfly Engine Ace - Enemy Death Transf.rb
+▼ Yanfly Engine Ace - Skill Cost Manager.rb
+▼ Yanfly Engine Ace - Skill Steal v1.00.rb
+▼ YEA - Ace Battle Engine.rb
+▼ YEA - Ace Core Engine v1.rb
+▼ YEA - Ace Equip Engine.rb
+▼ YEA - Ace Item Menu v1..rb
+▼ YEA - Ace Menu Engine v1.rb
+▼ YEA - Ace Save Engine v.rb
+▼ YEA - Ace Shop Options .rb
+▼ YEA - Ace Status Menu v1.rb
+▼ YEA - Battle Engine Add-.rb
+▼ YEA - Element Absorb v1..rb
+▼ YEA - Enemy Target Info .rb
+▼ YEA - Party System Add-On.rb
+▼ YEA - Party System v1.08.rb
+▼ YEA - System Options v1..rb
+▼ YEA - Target Manager.rb
+▼ YEA - Victory Aftermath.rb
+▼ ウィンドウ.rb
+▼ ゲームオブジェクト.rb
+▼ シーン.rb
+▼ スプライト.rb
+▼ モジュール.rb
+load_order.txt
+*separator*
+*separator*
+*separator*
+*separator*
+*separator*
+*separator*
+*separator*
+Galv's Character Effects 2.rb
+*separator*
+*separator*
+*separator*
+▼ YEA - System Options v1.rb
+▼ YEA - Element Absorb v1.rb
+▼ YEA - Ace Shop Options.rb
+▼ YEA - Ace Item Menu v1.rb
+▼ YEA - Enemy Target Info.rb
+▼ YEA - Party System v1.rb
+▼ Yanfly Engine Ace - Skill Steal v1.rb
+▼ Yanfly Engine Ace - Passive States v1.rb
+▼ Yanfly Engine Ace - Equip Dynamic Stat.rb
+*separator*
+*separator*
+*separator*
+#TTM Fadein
+TTM Fadein\out.rb
+*separator*
+FA Interactive System 2.rb
+*separator*
+*separator*
+Config Window Settings.rb
+Config Window.rb
+*separator*
+#IBG Flash Screen
+IBG Flash Screen\Skip Title V1.rb
+Basic Window Resizer v1.rb
+*separator*
+*separator*
+*separator*
+*separator*
+*separator*
+*separator*
+*separator*
+*separator*
+*separator*
+*separator*

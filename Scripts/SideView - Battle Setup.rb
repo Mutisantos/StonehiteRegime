@@ -129,9 +129,15 @@ class SideView
     #-------------------------------------------------------------------------- 
     def win
       case id
-      when  1,2,3 # Actors No. 2,7 and 10
+      when  1,5
         return "Victory Backward Somersault"
-      else # 上記以外
+      when  2
+        return "Victory Small Pose"
+      when  3
+        return "Victory Back Pose" 
+      when  7
+        return "Victory Meh Pose"
+      else # 
         return "Victory Pose"
       end
     end
@@ -451,7 +457,7 @@ class SideView
         return "GolpeFlama"
       when 139 # Corte Lateral (Flamrose)
         return "Skill Attack" 
-      when 140 # Golpe Resorte (Hutch)
+      when 143 # Machetazo (Hutch)
         return "Skill Attack" 
       when 141 # Lanza Ski (Pengralle)
         return "Skill Attack" 
@@ -592,4 +598,3 @@ class SideView
     end
     
   end
-  

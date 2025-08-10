@@ -13,6 +13,7 @@ $imported["YEA-BattleEngine"] = true
 #==============================================================================
 # ¥ Updates
 # =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+# 2025.07.14 - Customization: Disable Left/Right Command Selection 
 # 2012.03.04 - Bug fixed: Input crash bug.
 # 2012.02.13 - Bug fixed: Odd Victory game crash fixed.
 # 2012.02.12 - Bug fixed: Displayed damage in combat log is correct now.
@@ -285,9 +286,9 @@ module YEA
     # This hash adjusts the popup settings that will govern how popups appear.
     # Adjust them accordingly.
     POPUP_SETTINGS ={
-      :offset     => -24,         # Height offset of a popup.
+      :offset     => -30,         # Height offset of a popup.
       :fade       => 12,          # Fade rate for each popup.
-      :full       => 80,          # Frames before a popup fades.
+      :full       => 40,          # Frames before a popup fades.
       :hp_dmg     => "-%s ",      # SprintF for HP damage.
       :hp_heal    => "+%s ",      # SprintF for HP healing.
       :mp_dmg     => "-%s MP",    # SprintF for MP damage.
@@ -976,10 +977,10 @@ class Sprite_Popup < Sprite_Base
     bitmap.font.color.set(rules_array[5], rules_array[6], rules_array[7])
     bitmap.draw_text(dx, dy, bw-dw, bh, @value, 1)
     self.bitmap = bitmap
-    self.x = @battler.screen_x
+    self.x = @battler.screen_x - 20
     self.x += rand(4) - rand(4) if @battler.sprite.popups.size >= 1
-    self.x -= SceneManager.scene.spriteset.viewport1.ox
-    self.y = @battler.screen_y - @battler.sprite.oy/2
+    self.x -= SceneManager.scene.spriteset.viewport1.ox 
+    self.y = @battler.screen_y - @battler.sprite.oy/2 -  YEA::BATTLE::POPUP_SETTINGS[:offset]
     self.y -= @battler.sprite.oy/2 if @battler.actor?
     self.y -= SceneManager.scene.spriteset.viewport1.oy
     self.ox = bw/2; self.oy = bh/2
@@ -1718,39 +1719,39 @@ end # Window_PartyCommand
 # ¡ Window_ActorCommand
 #==============================================================================
 
-class Window_ActorCommand < Window_Command
+# class Window_ActorCommand < Window_Command
   
-  #--------------------------------------------------------------------------
-  # overwrite method: process_handling
-  #--------------------------------------------------------------------------
-  def process_handling
-    return unless open? && active
-    return process_dir4 if Input.repeat?(:LEFT)
-    return process_dir6 if Input.repeat?(:RIGHT)
-    return super
-  end
+#   #--------------------------------------------------------------------------
+#   # overwrite method: process_handling
+#   #--------------------------------------------------------------------------
+#   def process_handling
+#     return unless open? && active
+#     return process_dir4 if Input.repeat?(:LEFT)
+#     return process_dir6 if Input.repeat?(:RIGHT)
+#     return super
+#   end
   
-  #--------------------------------------------------------------------------
-  # new method: process_dir4
-  #--------------------------------------------------------------------------
-  def process_dir4
-    Sound.play_cursor
-    Input.update
-    deactivate
-    call_handler(:cancel)
-  end
+#   #--------------------------------------------------------------------------
+#   # new method: process_dir4
+#   #--------------------------------------------------------------------------
+#   def process_dir4
+#     Sound.play_cursor
+#     Input.update
+#     deactivate
+#     call_handler(:cancel)
+#   end
   
-  #--------------------------------------------------------------------------
-  # new method: process_dir6
-  #--------------------------------------------------------------------------
-  def process_dir6
-    Sound.play_cursor
-    Input.update
-    deactivate
-    call_handler(:dir6)
-  end
+#   #--------------------------------------------------------------------------
+#   # new method: process_dir6
+#   #--------------------------------------------------------------------------
+#   def process_dir6
+#     Sound.play_cursor
+#     Input.update
+#     deactivate
+#     call_handler(:dir6)
+#   end
   
-end # Window_ActorCommand
+# end # Window_ActorCommand
 
 #==============================================================================
 # ¡ Window_BattleStatus

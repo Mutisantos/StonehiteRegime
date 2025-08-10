@@ -623,8 +623,10 @@ end
 alias order_gauge_dispose_spriteset dispose_spriteset
 def dispose_spriteset
 for order in @spriteset_order
-order.bitmap.dispose
-order.dispose
+  if  order != nil && order.bitmap != nil
+    order.bitmap.dispose
+    order.dispose
+  end
 end
 order_gauge_dispose_spriteset
 end

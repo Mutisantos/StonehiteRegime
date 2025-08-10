@@ -2382,7 +2382,7 @@ too fashionable but pretty functional.
 Militar Tunic
 
 <<armors/7/note>>
-<ge: 1, $Flamrose_AN, 0>
+<ge: 1, $Flamrose_DE, 0>
 
 <<armors/8/description>>
 Handmade hat done by SCSO's Supply Company.
@@ -2462,6 +2462,9 @@ speed holes for temperture regulation.
 
 <<armors/38/name>>
 E32 Desert Coat
+
+<<armors/38/note>>
+<ge: 2, $Pengralle_DE, 0>
 
 <<armors/52/name>>
 --Akane
@@ -2579,14 +2582,14 @@ underwater and overall sight.
 Underwater Lens
 
 <<armors/149/description>>
-Approved by the SCSO committee. Seems like blue
-it's not a color for everyone...
+Approved by the SCSO committee. Seems desert color 
+schemes are not  for everyone...
 
 <<armors/149/name>>
 SCSO Jacket
 
 <<armors/149/note>>
-<ge: 7, $Muti_AN, 0>
+<ge: 7, $Muti_DE, 0>
 
 <<armors/150/description>>
 Prismatic amulet that reduces the effects from
