@@ -165,7 +165,7 @@ Test Faster Game.rb
 Parch1.rb
 Parch2.rb
 Yami PCTB.rb
-Yami Order Gauge.rb
+Yami_Order_Gauge.rb
 *separator*
 Day - Night System.rb
 *separator*
