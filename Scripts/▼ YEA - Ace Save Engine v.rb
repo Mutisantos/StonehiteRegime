@@ -243,7 +243,7 @@ class Window_FileList < Window_Selectable
     draw_icon(save_icon?(header), rect.x, rect.y, enabled)
     change_color(normal_color, enabled)
     text = sprintf(YEA::SAVE::SLOT_NAME, (index + 1).group)
-    draw_text(rect.x+24, rect.y, rect.width-24, line_height, text)
+    draw_text(rect.x+24, rect.y, rect.width - 2, line_height, text)
   end
   
   #--------------------------------------------------------------------------
@@ -329,7 +329,7 @@ class Window_FileStatus < Window_Base
     return if @header[:playtime_s].nil?
     reset_font_settings
     change_color(system_color)
-    draw_text(dx, dy, dw, line_height, YEA::SAVE::PLAYTIME, 0)
+    draw_text(dx-30, dy, dw, line_height, YEA::SAVE::PLAYTIME, 0)
     change_color(normal_color)
     draw_text(dx, dy, dw, line_height, @header[:playtime_s], 2)
   end
@@ -445,7 +445,7 @@ class Window_FileStatus < Window_Base
   # draw_save_contents
   #--------------------------------------------------------------------------
   def draw_save_contents
-    draw_save_slot(4, 0, contents.width/2-8)
+    draw_save_slot(4, 0, contents.width/2+20)
     draw_save_playtime(contents.width/2+4, 0, contents.width/2-8)
     draw_save_total_saves(4, line_height, contents.width/2-8)
     draw_save_gold(contents.width/2+4, line_height, contents.width/2-8)
