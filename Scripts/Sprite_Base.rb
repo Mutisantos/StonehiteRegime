@@ -1,33 +1,33 @@
 #==============================================================================
-# ■ Sprite_Base
+# ** Sprite_Base
 #------------------------------------------------------------------------------
-# 　アニメーションの表示処理を追加したスプライトのクラスです。
+#  A sprite class with animation display processing added.
 #==============================================================================
 
 class Sprite_Base < Sprite
   #--------------------------------------------------------------------------
-  # ● クラス変数
+  # * Class Variable
   #--------------------------------------------------------------------------
   @@ani_checker = []
   @@ani_spr_checker = []
   @@_reference_count = {}
   #--------------------------------------------------------------------------
-  # ● オブジェクト初期化
+  # * Object Initialization
   #--------------------------------------------------------------------------
   def initialize(viewport = nil)
     super(viewport)
-    @use_sprite = true        # スプライト使用フラグ
-    @ani_duration = 0         # アニメーションの残り時間
+    @use_sprite = true        # Sprite use flag
+    @ani_duration = 0         # Remaining time of animation
   end
   #--------------------------------------------------------------------------
-  # ● 解放
+  # * Free
   #--------------------------------------------------------------------------
   def dispose
     super
     dispose_animation
   end
   #--------------------------------------------------------------------------
-  # ● フレーム更新
+  # * Frame Update
   #--------------------------------------------------------------------------
   def update
     super
@@ -36,13 +36,13 @@ class Sprite_Base < Sprite
     @@ani_spr_checker.clear
   end
   #--------------------------------------------------------------------------
-  # ● アニメーション表示中判定
+  # * Determine if animation is being displayed
   #--------------------------------------------------------------------------
   def animation?
     @animation != nil
   end
   #--------------------------------------------------------------------------
-  # ● アニメーションの開始
+  # * Start Animation
   #--------------------------------------------------------------------------
   def start_animation(animation, mirror = false)
     dispose_animation
@@ -57,13 +57,13 @@ class Sprite_Base < Sprite
     end
   end
   #--------------------------------------------------------------------------
-  # ● アニメーションの速度を設定
+  # * Set Animation Speed
   #--------------------------------------------------------------------------
   def set_animation_rate
-    @ani_rate = 4     # デフォルトでは固定値
+    @ani_rate = 4     # Fixed value by default
   end
   #--------------------------------------------------------------------------
-  # ● アニメーション グラフィックの読み込み
+  # * Read (Load) Animation Graphics
   #--------------------------------------------------------------------------
   def load_animation_bitmap
     animation1_name = @animation.animation1_name
@@ -85,7 +85,7 @@ class Sprite_Base < Sprite
     Graphics.frame_reset
   end
   #--------------------------------------------------------------------------
-  # ● アニメーションスプライトの作成
+  # * Create Animation Spirtes
   #--------------------------------------------------------------------------
   def make_animation_sprites
     @ani_sprites = []
@@ -105,7 +105,7 @@ class Sprite_Base < Sprite
     end
   end
   #--------------------------------------------------------------------------
-  # ● アニメーションの原点設定
+  # * Set Animation Origin
   #--------------------------------------------------------------------------
   def set_animation_origin
     if @animation.position == 3
@@ -127,7 +127,7 @@ class Sprite_Base < Sprite
     end
   end
   #--------------------------------------------------------------------------
-  # ● アニメーションの解放
+  # * Free Animation
   #--------------------------------------------------------------------------
   def dispose_animation
     if @ani_bitmap1
@@ -151,7 +151,7 @@ class Sprite_Base < Sprite
     @ani_bitmap2 = nil
   end
   #--------------------------------------------------------------------------
-  # ● アニメーションの更新
+  # * Update Animation
   #--------------------------------------------------------------------------
   def update_animation
     return unless animation?
@@ -170,14 +170,14 @@ class Sprite_Base < Sprite
     end
   end
   #--------------------------------------------------------------------------
-  # ● アニメーションの終了
+  # * End Animation
   #--------------------------------------------------------------------------
   def end_animation
     dispose_animation
   end
   #--------------------------------------------------------------------------
-  # ● アニメーションスプライトの設定
-  #     frame : フレームデータ（RPG::Animation::Frame）
+  # * Set Animation Sprite
+  #     frame : Frame data (RPG::Animation::Frame)
   #--------------------------------------------------------------------------
   def animation_set_sprites(frame)
     cell_data = frame.cell_data
@@ -213,8 +213,8 @@ class Sprite_Base < Sprite
     end
   end
   #--------------------------------------------------------------------------
-  # ● SE とフラッシュのタイミング処理
-  #     timing : タイミングデータ（RPG::Animation::Timing）
+  # * SE and Flash Timing Processing
+  #     timing : Timing data (RPG::Animation::Timing)
   #--------------------------------------------------------------------------
   def animation_process_timing(timing)
     timing.se.play unless @ani_duplicated

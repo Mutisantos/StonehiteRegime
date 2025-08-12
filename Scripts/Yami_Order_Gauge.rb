@@ -59,7 +59,7 @@ module YSA
   module ORDER_GAUGE
 
     # Default Icon for actor and enemy
-    DEFAULT_ENEMY_ICON = 1536
+    DEFAULT_ENEMY_ICON = 244
     DEFAULT_ACTOR_ICON = 1
 
     # Order Sprite Visual. Decide Order's Background and Border.
@@ -73,9 +73,9 @@ module YSA
     # SHOW_DEATH = false
 
     # Coordinate-X of order gauge
-    GAUGE_X = 450
+    GAUGE_X = 36
     # Coordinate-Y of order gauge
-    GAUGE_Y = 50
+    GAUGE_Y = 240
 
     # Show Switch. Turn this switch on to show it. If you want to disable, set this
     # to 0.
@@ -325,7 +325,7 @@ class Sprite_OrderBattler < Sprite_Base
   # create_dtb_style
   #--------------------------------------------------------------------------
   def create_dtb_style
-    bitmap = Bitmap.new(24, 24)
+    bitmap = Bitmap.new(48, 24)
     if $imported["YEA-BattleEngine"]
       icon_bitmap = $game_temp.iconset
     else
@@ -347,6 +347,12 @@ class Sprite_OrderBattler < Sprite_Base
     icon_index = @battler.actor? ? YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:actor][1] : YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:enemy][1]
     rect = Rect.new(icon_index % 16 * 24, icon_index / 16 * 24, 24, 24)
     bitmap.blt(0, 0, icon_bitmap, rect)
+    #--- Create Current Turn Indicator (each battler knows their array position) ---
+    if @number == 0 
+      icon_index = @battler.actor? ? YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:actor][2] : YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:enemy][2]
+      rect = Rect.new((icon_index % 16 * 24), icon_index / 16 * 24, 24, 24)
+      bitmap.blt(12, 2, icon_bitmap, rect)
+    end
     #---
     self.bitmap.dispose if self.bitmap != nil
     self.bitmap = bitmap
@@ -355,7 +361,7 @@ class Sprite_OrderBattler < Sprite_Base
     self.ox = 12; self.oy = 12
     self.x = 24 if @battle != :pctb2 && @battle != :pctb3
     self.y = 24
-    self.z = 8000
+    self.z = 1
   end
 
   #--------------------------------------------------------------------------
@@ -512,13 +518,19 @@ class Sprite_OrderBattler < Sprite_Base
 
   #--------------------------------------------------------------------------
   # make_pctb2_image
+  # This method renders the battler's position in the PCTB2 mechanic.
+  # @number Attribute determines the battler's position in the array, used to locate the bitmap.
   #--------------------------------------------------------------------------
   def make_pctb2_image
     return unless BattleManager.ctb_battlers
     num = YSA::PCTB::CTB_MECHANIC[:pre_turns] - 1
     array = BattleManager.ctb_battlers
     self.battler = array[@number]
-    self.x = 24 + (num - @number) * 24
+    self.y = 24 - (num - @number) * 24
+    if @number == 0
+      # Displaces battler icon to the left if it's their turn.
+      self.x = 12
+    end
   end
 end # Sprite_OrderBattler
 
