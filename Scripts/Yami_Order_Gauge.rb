@@ -2,7 +2,7 @@
 # Found here
 #http://rm-vx-ace.de/WBB4/index.php/Thread/565-YSA-Battle-System-Predicted-Charge-Turn-Battle-BROKEN/
 # ▼ YSA Battle Add-On: Order Battlers
-# -- Last Updated: 2012.02.20
+# -- Last Updated: 2025.08.11
 # -- Level: Easy
 # -- Requires: n/a
 #
@@ -22,6 +22,7 @@ $imported["YSA-OrderBattler"] = true
 # - Groundwork is also made to support future battle system types.
 # - Can show/hide by a switch.
 # 2011.12.27 - Started Script and Finished.
+# 2025.08.11 - Change orientation of array to vertical. Add indicator for current turn.
 #
 #==============================================================================
 # ▼ Instructions
