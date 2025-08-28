@@ -3091,7 +3091,7 @@ Stonehite Regime
 Coins
 
 <<types/elements/1>>
-Melee
+Slashing
 
 <<types/elements/2>>
 Absorb
@@ -3136,7 +3136,10 @@ Radiation
 Nature
 
 <<types/elements/16>>
-Ranged
+Piercing
+
+<<types/elements/17>>
+Blugeoning
 
 <<types/skill_types/1>>
 Special
@@ -3734,7 +3737,7 @@ Next Level
 
 
 <<constants/YEA::VICTORY_AFTERMATH/FLAMROSE_NOTES>>
-<battler icon: 216>
+<battler icon: 1>
 <win quotes>
 "One more victory for our benefit."
 [new quote]
@@ -3752,7 +3755,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/PENGRALLE_NOTES>>
-<battler icon: 217>
+<battler icon: 2>
 <win quotes>
 "A deserved result... I guess"
 [new quote]
@@ -3770,7 +3773,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/HUTCH_NOTES>>
-<battler icon: 218>
+<battler icon: 3>
 <win quotes>
 "This was really easy."
 [new quote]
@@ -3788,6 +3791,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/DANA_NOTES>>
+<battler icon: 4>
 <win quotes>
 "Tremble with my riffs."
 [new quote]
@@ -3801,6 +3805,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/AKANE_NOTES>>
+<battler icon: 5>
 <element absorb: 12>
 <win quotes>
 "Feel the power of magic."
@@ -3823,6 +3828,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/FARROCK_NOTES>>
+<battler icon: 6>
 <win quotes>
 "Nothing can silence the voice of the soul."
 [new quote]
@@ -3840,6 +3846,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/KOORTESH_NOTES>>
+<battler icon: 7>
 <win quotes>
 "You hast messed with the wrong gentleman"
 [new quote]
@@ -3857,7 +3864,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/MUTI_NOTES>>
-<battler icon: 219>
+<battler icon: 8>
 <win quotes>
 "Next time sure will be easier"
 [new quote]
@@ -3877,6 +3884,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/CROCKOON_NOTES>>
+<battler icon: 9>
 <win quotes>
 "..."
 </win quotes>
@@ -3890,6 +3898,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/BYEL_NOTES>>
+<battler icon: 10>
 <win quotes>
 "Les falta esforzarse!"
 [new quote]
@@ -3903,6 +3912,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/RAYLON_NOTES>>
+<battler icon: 11>
 <win quotes>
 "No se metan con la comida de un hombre"
 </win quotes>
@@ -3916,6 +3926,7 @@ Next Level
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/SKULLTASH_NOTES>>
+<battler icon: 12>
 <win quotes>
 "..."
 </win quotes>
@@ -3927,3 +3938,32 @@ Next Level
 [new quote]
 "..."
 </level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/BLIZZEROTH_NOTES>>
+<element absorb: 13>
+<win quotes>
+"..."
+</win quotes>
+<drops quotes>
+"..."
+</drops quotes>
+<level quotes>
+"..."
+[new quote]
+"..."
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/BYALTHER_NOTES>>
+<element absorb: 14>
+<win quotes>
+"..."
+</win quotes>
+<drops quotes>
+"..."
+</drops quotes>
+<level quotes>
+"..."
+[new quote]
+"..."
+</level quotes>
+

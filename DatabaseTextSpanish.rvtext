@@ -2962,7 +2962,7 @@ El Regimen de Stonehite
 Monedas
 
 <<types/elements/1>>
-Fisico
+Cortante
 
 <<types/elements/2>>
 Absorcion
@@ -3001,13 +3001,16 @@ Energia
 Sonido
 
 <<types/elements/14>>
-Radiactividad
+Radiación
 
 <<types/elements/15>>
 Naturaleza
 
 <<types/elements/16>>
-A distancia
+Perforante
+
+<<types/elements/17>>
+Contundente
 
 <<types/skill_types/1>>
 Especial
@@ -3589,7 +3592,7 @@ Revertir
 Confirmar
 
 <<constants/YEA::VICTORY_AFTERMATH/FLAMROSE_NOTES>>
-<battler icon: 216>
+<battler icon: 1>
 <win quotes>
 "Una victoria mas para nuestro beneficio."
 [new quote]
@@ -3607,7 +3610,7 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/PENGRALLE_NOTES>>
-<battler icon: 217>
+<battler icon: 2>
 <win quotes>
 "Un resultado merecido, creo"
 [new quote]
@@ -3625,7 +3628,7 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/HUTCH_NOTES>>
-<battler icon: 218>
+<battler icon: 3>
 <win quotes>
 "Esto si que fue fácil."
 [new quote]
@@ -3643,6 +3646,7 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/DANA_NOTES>>
+<battler icon: 4>
 <win quotes>
 "Estremezcanse con mis solos."
 [new quote]
@@ -3656,7 +3660,7 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/AKANE_NOTES>>
-<element absorb: 12>
+<element absorb: 5>
 <win quotes>
 "Sientan el poder de la magia."
 [new quote]
@@ -3678,6 +3682,7 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/FARROCK_NOTES>>
+<element absorb: 6>
 <win quotes>
 "Nada puede callar la voz del alma."
 [new quote]
@@ -3695,6 +3700,7 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/KOORTESH_NOTES>>
+<element absorb: 7>
 <win quotes>
 "Te habeis metido con el caballero equivocado"
 [new quote]
@@ -3712,7 +3718,7 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/MUTI_NOTES>>
-<battler icon: 219>
+<battler icon: 8>
 <win quotes>
 "A la proxima será más fácil"
 [new quote]
@@ -3732,6 +3738,7 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/CROCKOON_NOTES>>
+<element absorb: 9>
 <win quotes>
 "..."
 </win quotes>
@@ -3745,6 +3752,7 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/BYEL_NOTES>>
+<element absorb: 10>
 <win quotes>
 "Les falta esforzarse!"
 [new quote]
@@ -3758,6 +3766,7 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/RAYLON_NOTES>>
+<element absorb: 11>
 <win quotes>
 "No se metan con la comida de un hombre"
 </win quotes>
@@ -3771,6 +3780,35 @@ Confirmar
 </level quotes>
 
 <<constants/YEA::VICTORY_AFTERMATH/SKULLTASH_NOTES>>
+<element absorb: 12>
+<win quotes>
+"..."
+</win quotes>
+<drops quotes>
+"..."
+</drops quotes>
+<level quotes>
+"..."
+[new quote]
+"..."
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/BLIZZEROTH_NOTES>>
+<element absorb: 13>
+<win quotes>
+"..."
+</win quotes>
+<drops quotes>
+"..."
+</drops quotes>
+<level quotes>
+"..."
+[new quote]
+"..."
+</level quotes>
+
+<<constants/YEA::VICTORY_AFTERMATH/BYALTHER_NOTES>>
+<element absorb: 14>
 <win quotes>
 "..."
 </win quotes>

@@ -60,14 +60,14 @@ module YSA
   module ORDER_GAUGE
 
     # Default Icon for actor and enemy
-    DEFAULT_ENEMY_ICON = 244
-    DEFAULT_ACTOR_ICON = 1
+    DEFAULT_ENEMY_ICON = 260
+    DEFAULT_ACTOR_ICON = 160
 
     # Order Sprite Visual. Decide Order's Background and Border.
     BATTLER_ICON_BORDERS = { # Do not remove this.
       # Type => [Back, Border, current],
-      :actor => [241, 243, 240],
-      :enemy => [224, 242, 240],
+      :actor => [257, 259, 256],
+      :enemy => [258, 258, 268],
     } # Do not remove this.
 
     # Turn this to true if you want to show death battlers.

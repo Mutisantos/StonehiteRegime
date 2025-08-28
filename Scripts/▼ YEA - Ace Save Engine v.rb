@@ -63,8 +63,8 @@ module YEA
     SLOT_NAME = "File %s"  # How the file slots will be named.
     
     # These are the icons
-    SAVE_ICON  = 710       # Icon used to indicate a save is present.
-    EMPTY_ICON = 688       # Icon used to indicate an empty file.
+    SAVE_ICON  = 262       # Icon used to indicate a save is present.
+    EMPTY_ICON = 261       # Icon used to indicate an empty file.
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Action Window Settings -

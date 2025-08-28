@@ -160,7 +160,7 @@ module YEA
     # adjusted, but scripts provided by non-Yanfly Engine sources may or may
     # not adjust themselves properly.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    RESIZE_WIDTH  = 544
+    RESIZE_WIDTH  = 576
     RESIZE_HEIGHT = 416
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

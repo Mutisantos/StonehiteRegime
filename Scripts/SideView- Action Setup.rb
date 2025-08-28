@@ -19,7 +19,7 @@ module N03
   # Actor Initial Start Position
   #　                       1st          2nd          3rd          4th
   #                     X   Y   H    X   Y   H    X   Y   H    X   Y   H
-  ACTOR_POSITION = [[405, 265, 0], [440, 210, 0], [450, 320, 0], [500, 280, 0]]
+  ACTOR_POSITION = [[405, 220, 0], [460, 180, 0], [450, 260, 0], [510, 230, 0]]
   # Wait time after the end of each action in frames
   ACTION_END_WAIT = 20
   # Wait time after the end of each turn in frames
@@ -1685,9 +1685,9 @@ module N03
 
     # -Camera Name-         Type     Target  Adjust     Time Zoom
 
-    "Before Turn Start" => ["camera", 6, [40, 0], 95, 40],
-    "After Turn Start" => ["camera", 6, [0, 0], 100, 40],
-    "End of Battle" => ["camera", 6, [100, 0], 100, 50],
+    "Before Turn Start" => ["camera", 6, [0, 0], 100, 100],
+    "After Turn Start" => ["camera", 6, [0, 0], 100, 100],
+    "End of Battle" => ["camera", 6, [0, 0], 100, 100],
 
   }
 end
