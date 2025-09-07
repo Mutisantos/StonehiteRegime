@@ -3289,7 +3289,7 @@ MaxHP
 MaxEP
 
 <<terms/params/2>>
-Attack
+Strength
 
 <<terms/params/3>>
 Defense
@@ -3304,7 +3304,7 @@ Spirit
 Speed
 
 <<terms/params/7>>
-Luck
+Dexterity
 
 <<terms/etypes/0>>
 Weapon

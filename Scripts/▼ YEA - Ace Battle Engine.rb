@@ -310,13 +310,13 @@ module YEA
       :resistant  => "RESISTS",    # Appears if foe is resistant to element.
       :immune     => "INMUNE",    # Appears if foe is immune to element.
       :absorbed   => "ABSORBS",    # Appears if foe can absorb the element.
-      :add_buff   => "%s",      # Appears when a positive buff is applied.
-      :add_debuff => "%s",      # Appears when a negative buff is applied.
+      :add_buff   => "+%s",      # Appears when a positive buff is applied.
+      :add_debuff => "-%s",      # Appears when a negative buff is applied.
     } # Do not remove this.
     
     # This is the default font used for the popups. Adjust them accordingly
     # or even add new ones.
-    DEFAULT = ["VL Gothic", "Verdana", "Arial", "Courier"]
+    DEFAULT = ["Consolas","VL Gothic", "Verdana", "Arial", "Courier"]
     
     # The following are the various rules that govern the individual popup
     # types that will appear. Adjust them accordingly. Here is a list of what

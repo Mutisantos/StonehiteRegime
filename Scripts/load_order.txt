@@ -1,4 +1,3 @@
-load_order.txt
 *separator*
 ▼ モジュール.rb
 Vocab.rb
@@ -195,6 +194,7 @@ Change Graphic by Equipment.rb
 Galv's Move Route Extras.rb
 Config Window Settings.rb
 Config Window.rb
+ConfigTitleWindow.rb
 *separator*
 Main.rb
 Script Exporter.rb

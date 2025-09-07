@@ -32,80 +32,123 @@ module Cirno
     #--------------------------------------------------------------------------
     if LANG == "CH"
       CHOICE_GENERAL_SETTING = "基本设置"
-      CHOICE_KEY_SETTING     = "按键设置"
-      
+      CHOICE_KEY_SETTING = "按键设置"
+
       GENERAL_SETTING_NAMES = {
         "Run in Fullscreen" => "全屏运行",
-        "Enable VSync"      => "垂直同步",
-        "Window Resize"     => "窗口缩放",
-        "Music Volume"      => "音乐音量",
-        "Sound Volume"      => "声效音量"
+        "Enable VSync" => "垂直同步",
+        "Window Resize" => "窗口缩放",
+        "Music Volume" => "音乐音量",
+        "Sound Volume" => "声效音量",
       }
       GENERAL_SETTING_CONFIRM = "保存"
       GENERAL_SETTING_RESET = "重置"
       GENERAL_SETTING_ON = "开启"
       GENERAL_SETTING_OFF = "关闭"
-      
+
       KEY_NAMES = {
-        "Up"    => "上",
-        "Down"  => "下",
-        "Left"  => "左",
+        "Up" => "上",
+        "Down" => "下",
+        "Left" => "左",
         "Right" => "右",
-        "A"     => "加速",
-        "B"     => "取消/菜单",
-        "C"     => "确认/对话",
-        "X"     => "功能键X",
-        "Y"     => "功能键Y",
-        "Z"     => "功能键Z",
-        "L"     => "前页",
-        "R"     => "后页",
-        }
+        "A" => "加速",
+        "B" => "取消/菜单",
+        "C" => "确认/对话",
+        "X" => "功能键X",
+        "Y" => "功能键Y",
+        "Z" => "功能键Z",
+        "L" => "前页",
+        "R" => "后页",
+      }
       KEY_TEXT_UNASSIGNED = "[无]"
-      KEY_TEXT_CONFIRM    = "保存"
-      KEY_TEXT_CANCEL     = "取消"
-      KEY_TEXT_RESET      = "重置"
+      KEY_TEXT_CONFIRM = "保存"
+      KEY_TEXT_CANCEL = "取消"
+      KEY_TEXT_RESET = "重置"
       KEY_MESSAGE_NOT_SET = "按键【%s】尚未设置。"
       KEY_MESSAGE_ANY_KEY = "请按任意键设置【%s】。"
-      
-    #--------------------------------------------------------------------------
-    # Interface Terms in English
-    #--------------------------------------------------------------------------
-    elsif LANG == "EN"
+
+      #--------------------------------------------------------------------------
+      # Interface Terms in English
+      #--------------------------------------------------------------------------
+    elsif LANG == :English || LANG == "EN" || LANG == "English"
       CHOICE_GENERAL_SETTING = "General Settings"
-      CHOICE_KEY_SETTING     = "Input Settings"
-      
+      CHOICE_KEY_SETTING = "Input Settings"
+
       GENERAL_SETTING_NAMES = {
         "Run in Fullscreen" => "Run in Fullscreen",
-        "Enable VSync"      => "Enable VSync",
-        "Window Resize"     => "Window Resize",
-        "Music Volume"      => "Music Volume",
-        "Sound Volume"      => "Sound Volume"
+        "Enable VSync" => "Enable VSync",
+        "Window Resize" => "Window Resize",
+        "Music Volume" => "Music Volume",
+        "Sound Volume" => "Sound Volume",
+        "Language" => "Language",
       }
       GENERAL_SETTING_CONFIRM = "Save"
       GENERAL_SETTING_RESET = "Reset"
       GENERAL_SETTING_ON = "ON"
       GENERAL_SETTING_OFF = "OFF"
-      
+
       KEY_NAMES = {
-        "Up"    => "Up",
-        "Down"  => "Down",
-        "Left"  => "Left",
+        "Up" => "Up",
+        "Down" => "Down",
+        "Left" => "Left",
         "Right" => "Right",
-        "A"     => "Dash",
-        "B"     => "Cancel/Menu",
-        "C"     => "Confirm/Talk",
-        "X"     => "Key X",
-        "Y"     => "Key Y",
-        "Z"     => "Key Z",
-        "L"     => "Prev Page",
-        "R"     => "Next Page",
-        }
+        "A" => "Dash",
+        "B" => "Cancel/Menu",
+        "C" => "Confirm/Talk",
+        "X" => "Key X",
+        "Y" => "Key Y",
+        "Z" => "Key Z",
+        "L" => "Prev Page",
+        "R" => "Next Page",
+      }
       KEY_TEXT_UNASSIGNED = "[--]" # Say [--] because [unassigned] is complicated enough.
-      KEY_TEXT_CONFIRM    = "Save"
-      KEY_TEXT_CANCEL     = "Cancel"
-      KEY_TEXT_RESET      = "Reset"
+      KEY_TEXT_CONFIRM = "Save"
+      KEY_TEXT_CANCEL = "Cancel"
+      KEY_TEXT_RESET = "Reset"
       KEY_MESSAGE_NOT_SET = "No key is assigned to [%s]."
       KEY_MESSAGE_ANY_KEY = "Press any key to setup [%s]."
+      #--------------------------------------------------------------------------
+      # Interface Terms in Spanish
+      #--------------------------------------------------------------------------
+    elsif LANG == :Spanish
+      CHOICE_GENERAL_SETTING = "Config. General"
+      CHOICE_KEY_SETTING = "Config. de Entrada"
+
+      GENERAL_SETTING_NAMES = {
+        "Run in Fullscreen" => "Pantalla Completa",
+        "Enable VSync" => "Habilitar VSync",
+        "Window Resize" => "Tamaño de Ventana",
+        "Music Volume" => "Volumen de Música",
+        "Sound Volume" => "Volumen de Efectos",
+        "Language" => "Idioma",
+      }
+      GENERAL_SETTING_CONFIRM = "Guardar"
+      GENERAL_SETTING_RESET = "Reiniciar"
+      GENERAL_SETTING_ON = "ON"
+      GENERAL_SETTING_OFF = "OFF"
+
+      KEY_NAMES = {
+        "Up" => "Arriba",
+        "Down" => "Abajo",
+        "Left" => "Izquierda",
+        "Right" => "Derecha",
+        "A" => "Correr",
+        "B" => "Cancelar/Menu",
+        "C" => "Acción",
+        "X" => "Boton X",
+        "Y" => "Boton Y",
+        "Z" => "Boton Z",
+        "L" => "Pag. Anterior",
+        "R" => "Pag. Siguiente",
+      }
+      KEY_TEXT_UNASSIGNED = "[--]" # Say [--] because [unassigned] is complicated enough.
+      KEY_TEXT_CONFIRM = "Guardar"
+      KEY_TEXT_CANCEL = "Cancelar"
+      KEY_TEXT_RESET = "Reiniciar"
+      KEY_MESSAGE_NOT_SET = "No hay entrada asignada para [%s]."
+      KEY_MESSAGE_ANY_KEY = "Presiona botón/tecla para asignar [%s]."
+    else
+      p (LANG)
     end
     #--------------------------------------------------------------------------
     # 同一个按键的选项数量
@@ -113,7 +156,7 @@ module Cirno
     #--------------------------------------------------------------------------
     KEY_COLUMNS = 4
   end
-  
+
   module Persistence
     #--------------------------------------------------------------------------
     # 基本设置的选项。
@@ -127,10 +170,11 @@ module Cirno
     def self.general_settings
       [
         ["Run in Fullscreen", :bool],
-        ["Enable VSync",      :bool],
-        ["Window Resize",     ["1x", "2x", "3x", "4x"]],
-        ["Music Volume",      :percentage],
-        ["Sound Volume",      :percentage],
+        ["Enable VSync", :bool],
+        ["Window Resize", ["1x", "2x", "3x", "4x"]],
+        ["Music Volume", :percentage],
+        ["Sound Volume", :percentage],
+        ["Language", [:English, :Spanish]],
       ]
     end
     #--------------------------------------------------------------------------
@@ -140,10 +184,11 @@ module Cirno
     def self.general_setting_default_values
       {
         "Run in Fullscreen" => false,
-        "Enable VSync"      => true,
-        "Window Resize"     => 1,
-        "Music Volume"      => 100,
-        "Sound Volume"      => 100
+        "Enable VSync" => true,
+        "Window Resize" => 1,
+        "Music Volume" => 100,
+        "Sound Volume" => 100,
+        "Language" => :English, # Default language
       }
     end
     #--------------------------------------------------------------------------
@@ -167,18 +212,18 @@ module Cirno
     #--------------------------------------------------------------------------
     def self.default_key_mapping
       {
-        "Up"    => [38], 
-        "Down"  => [40],
-        "Left"  => [37],
+        "Up" => [38],
+        "Down" => [40],
+        "Left" => [37],
         "Right" => [39],
-        "A"     => [16],
-        "B"     => [27,88],
-        "C"     => [13,32,67,90],
-        "X"     => [65],
-        "Y"     => [83],
-        "Z"     => [68],
-        "L"     => [33,81],
-        "R"     => [34,87],
+        "A" => [16],
+        "B" => [27, 88],
+        "C" => [13, 32, 67, 90],
+        "X" => [65],
+        "Y" => [83],
+        "Z" => [68],
+        "L" => [33, 81],
+        "R" => [34, 87],
       }
     end
   end

@@ -30,6 +30,7 @@ module Cirno
       
       Audio.master_volume_music = read_general_setting("Music Volume").to_i
       Audio.master_volume_sound = read_general_setting("Sound Volume").to_i
+      # LanguageFileSystem::self.language = read_general_setting("Language")
     end
       
     def self.write_keyboard_settings
@@ -57,7 +58,6 @@ module Cirno
     end
   end
 end
-
 
 module Audio
   @@master_volume_music = 100
@@ -134,6 +134,7 @@ module Audio
     end
   end
 end
+
 
 class Window_ConfigCommand < Window_HorzCommand
 

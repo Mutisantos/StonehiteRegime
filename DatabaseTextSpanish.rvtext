@@ -3154,28 +3154,28 @@ Furia
 PF
 
 <<terms/params/0>>
-MaxPv
+Max.PV
 
 <<terms/params/1>>
-MaxEn
+Max.PE
 
 <<terms/params/2>>
-Ataque
+Fuerza
 
 <<terms/params/3>>
 Defensa
 
 <<terms/params/4>>
-At.Especial
+Magia
 
 <<terms/params/5>>
-Df.Especial
+Espíritu
 
 <<terms/params/6>>
-Velocidad
+Agilidad
 
 <<terms/params/7>>
-Suerte
+Destreza
 
 <<terms/etypes/0>>
 Arma

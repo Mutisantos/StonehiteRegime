@@ -1,12 +1,12 @@
 #==============================================================================
-# ■ Scene_Title
+# ** Scene_Title
 #------------------------------------------------------------------------------
-# 　タイトル画面の処理を行うクラスです。
+#  This class performs the title screen processing.
 #==============================================================================
 
 class Scene_Title < Scene_Base
   #--------------------------------------------------------------------------
-  # ● 開始処理
+  # * Start Processing
   #--------------------------------------------------------------------------
   def start
     super
@@ -18,13 +18,13 @@ class Scene_Title < Scene_Base
     play_title_music
   end
   #--------------------------------------------------------------------------
-  # ● トランジション速度の取得
+  # * Get Transition Speed
   #--------------------------------------------------------------------------
   def transition_speed
-    return 20
+    return 97
   end
   #--------------------------------------------------------------------------
-  # ● 終了処理
+  # * Termination Processing
   #--------------------------------------------------------------------------
   def terminate
     super
@@ -33,7 +33,7 @@ class Scene_Title < Scene_Base
     dispose_foreground
   end
   #--------------------------------------------------------------------------
-  # ● 背景の作成
+  # * Create Background
   #--------------------------------------------------------------------------
   def create_background
     @sprite1 = Sprite.new
@@ -44,7 +44,7 @@ class Scene_Title < Scene_Base
     center_sprite(@sprite2)
   end
   #--------------------------------------------------------------------------
-  # ● 前景の作成
+  # * Create Foreground
   #--------------------------------------------------------------------------
   def create_foreground
     @foreground_sprite = Sprite.new
@@ -53,7 +53,7 @@ class Scene_Title < Scene_Base
     draw_game_title if $data_system.opt_draw_title
   end
   #--------------------------------------------------------------------------
-  # ● ゲームタイトルの描画
+  # * Draw Game Title
   #--------------------------------------------------------------------------
   def draw_game_title
     @foreground_sprite.bitmap.font.size = 48
@@ -61,7 +61,7 @@ class Scene_Title < Scene_Base
     @foreground_sprite.bitmap.draw_text(rect, $data_system.game_title, 1)
   end
   #--------------------------------------------------------------------------
-  # ● 背景の解放
+  # * Free Background
   #--------------------------------------------------------------------------
   def dispose_background
     @sprite1.bitmap.dispose
@@ -70,14 +70,14 @@ class Scene_Title < Scene_Base
     @sprite2.dispose
   end
   #--------------------------------------------------------------------------
-  # ● 前景の解放
+  # * Free Foreground
   #--------------------------------------------------------------------------
   def dispose_foreground
     @foreground_sprite.bitmap.dispose
     @foreground_sprite.dispose
   end
   #--------------------------------------------------------------------------
-  # ● スプライトを画面中央に移動
+  # * Move Sprite to Screen Center
   #--------------------------------------------------------------------------
   def center_sprite(sprite)
     sprite.ox = sprite.bitmap.width / 2
@@ -86,7 +86,7 @@ class Scene_Title < Scene_Base
     sprite.y = Graphics.height / 2
   end
   #--------------------------------------------------------------------------
-  # ● コマンドウィンドウの作成
+  # * Create Command Window
   #--------------------------------------------------------------------------
   def create_command_window
     @command_window = Window_TitleCommand.new
@@ -95,14 +95,14 @@ class Scene_Title < Scene_Base
     @command_window.set_handler(:shutdown, method(:command_shutdown))
   end
   #--------------------------------------------------------------------------
-  # ● コマンドウィンドウを閉じる
+  # * Close Command Window
   #--------------------------------------------------------------------------
   def close_command_window
     @command_window.close
     update until @command_window.close?
   end
   #--------------------------------------------------------------------------
-  # ● コマンド［ニューゲーム］
+  # * [New Game] Command
   #--------------------------------------------------------------------------
   def command_new_game
     DataManager.setup_new_game
@@ -112,14 +112,14 @@ class Scene_Title < Scene_Base
     SceneManager.goto(Scene_Map)
   end
   #--------------------------------------------------------------------------
-  # ● コマンド［コンティニュー］
+  # * [Continue] Command
   #--------------------------------------------------------------------------
   def command_continue
     close_command_window
     SceneManager.call(Scene_Load)
   end
   #--------------------------------------------------------------------------
-  # ● コマンド［シャットダウン］
+  # * [Shut Down] Command
   #--------------------------------------------------------------------------
   def command_shutdown
     close_command_window
@@ -127,7 +127,7 @@ class Scene_Title < Scene_Base
     SceneManager.exit
   end
   #--------------------------------------------------------------------------
-  # ● タイトル画面の音楽演奏
+  # * Play Title Screen Music
   #--------------------------------------------------------------------------
   def play_title_music
     $data_system.title_bgm.play

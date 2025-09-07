@@ -689,7 +689,7 @@ module LanguageFileSystem
   #
   # Example: DEFAULT_LANGUAGE = :German
   #---------------------------------------------------------------------------
-  DEFAULT_LANGUAGE = :English
+  DEFAULT_LANGUAGE = :Spanish
   #---------------------------------------------------------------------------
   # ENABLE_ENCRYPTION
   # Set this to true, if you want to read your language files from the encrypted

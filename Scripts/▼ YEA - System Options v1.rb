@@ -116,7 +116,7 @@ module YEA
       :autodash,     # Sets the player to automatically dash.
       :instantmsg,   # Sets message text to appear instantly.
       :animations,   # Enables battle animations or disables them.
-      :resolution,   # Enables battle animations or disables them.
+    # :resolution,   # Enables battle animations or disables them.
       :language,     # Enable using Spanish or English
     # :switch_1,     # Custom Switch 1. Adjust settings below.
     # :switch_2,     # Custom Switch 2. Adjust settings below.

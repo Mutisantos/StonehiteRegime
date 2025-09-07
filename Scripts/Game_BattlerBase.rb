@@ -1,89 +1,89 @@
 #==============================================================================
-# ■ Game_BattlerBase
+# ** Game_BattlerBase
 #------------------------------------------------------------------------------
-# 　バトラーを扱う基本のクラスです。主に能力値計算のメソッドを含んでいます。こ
-# のクラスは Game_Battler クラスのスーパークラスとして使用されます。
+#  This base class handles battlers. It mainly contains methods for calculating
+# parameters. It is used as a super class of the Game_Battler class.
 #==============================================================================
 
 class Game_BattlerBase
   #--------------------------------------------------------------------------
-  # ● 定数（特徴）
+  # * Constants (Features)
   #--------------------------------------------------------------------------
-  FEATURE_ELEMENT_RATE  = 11              # 属性有効度
-  FEATURE_DEBUFF_RATE   = 12              # 弱体有効度
-  FEATURE_STATE_RATE    = 13              # ステート有効度
-  FEATURE_STATE_RESIST  = 14              # ステート無効化
-  FEATURE_PARAM         = 21              # 通常能力値
-  FEATURE_XPARAM        = 22              # 追加能力値
-  FEATURE_SPARAM        = 23              # 特殊能力値
-  FEATURE_ATK_ELEMENT   = 31              # 攻撃時属性
-  FEATURE_ATK_STATE     = 32              # 攻撃時ステート
-  FEATURE_ATK_SPEED     = 33              # 攻撃速度補正
-  FEATURE_ATK_TIMES     = 34              # 攻撃追加回数
-  FEATURE_STYPE_ADD     = 41              # スキルタイプ追加
-  FEATURE_STYPE_SEAL    = 42              # スキルタイプ封印
-  FEATURE_SKILL_ADD     = 43              # スキル追加
-  FEATURE_SKILL_SEAL    = 44              # スキル封印
-  FEATURE_EQUIP_WTYPE   = 51              # 武器タイプ装備
-  FEATURE_EQUIP_ATYPE   = 52              # 防具タイプ装備
-  FEATURE_EQUIP_FIX     = 53              # 装備固定
-  FEATURE_EQUIP_SEAL    = 54              # 装備封印
-  FEATURE_SLOT_TYPE     = 55              # スロットタイプ
-  FEATURE_ACTION_PLUS   = 61              # 行動回数追加
-  FEATURE_SPECIAL_FLAG  = 62              # 特殊フラグ
-  FEATURE_COLLAPSE_TYPE = 63              # 消滅エフェクト
-  FEATURE_PARTY_ABILITY = 64              # パーティ能力
+  FEATURE_ELEMENT_RATE  = 11              # Element Rate
+  FEATURE_DEBUFF_RATE   = 12              # Debuff Rate
+  FEATURE_STATE_RATE    = 13              # State Rate
+  FEATURE_STATE_RESIST  = 14              # State Resist
+  FEATURE_PARAM         = 21              # Parameter
+  FEATURE_XPARAM        = 22              # Ex-Parameter
+  FEATURE_SPARAM        = 23              # Sp-Parameter
+  FEATURE_ATK_ELEMENT   = 31              # Atk Element
+  FEATURE_ATK_STATE     = 32              # Atk State
+  FEATURE_ATK_SPEED     = 33              # Atk Speed
+  FEATURE_ATK_TIMES     = 34              # Atk Times+
+  FEATURE_STYPE_ADD     = 41              # Add Skill Type
+  FEATURE_STYPE_SEAL    = 42              # Disable Skill Type
+  FEATURE_SKILL_ADD     = 43              # Add Skill
+  FEATURE_SKILL_SEAL    = 44              # Disable Skill
+  FEATURE_EQUIP_WTYPE   = 51              # Equip Weapon
+  FEATURE_EQUIP_ATYPE   = 52              # Equip Armor
+  FEATURE_EQUIP_FIX     = 53              # Lock Equip
+  FEATURE_EQUIP_SEAL    = 54              # Seal Equip
+  FEATURE_SLOT_TYPE     = 55              # Slot Type
+  FEATURE_ACTION_PLUS   = 61              # Action Times+
+  FEATURE_SPECIAL_FLAG  = 62              # Special Flag
+  FEATURE_COLLAPSE_TYPE = 63              # Collapse Effect
+  FEATURE_PARTY_ABILITY = 64              # Party Ability
   #--------------------------------------------------------------------------
-  # ● 定数（特殊フラグ）
+  # * Constants (Feature Flags)
   #--------------------------------------------------------------------------
-  FLAG_ID_AUTO_BATTLE   = 0               # 自動戦闘
-  FLAG_ID_GUARD         = 1               # 防御
-  FLAG_ID_SUBSTITUTE    = 2               # 身代わり
-  FLAG_ID_PRESERVE_TP   = 3               # TP持ち越し
+  FLAG_ID_AUTO_BATTLE   = 0               # auto battle
+  FLAG_ID_GUARD         = 1               # guard
+  FLAG_ID_SUBSTITUTE    = 2               # substitute
+  FLAG_ID_PRESERVE_TP   = 3               # preserve TP
   #--------------------------------------------------------------------------
-  # ● 定数（能力強化／弱体アイコンの開始番号）
+  # * Constants (Starting Number of Buff/Debuff Icons)
   #--------------------------------------------------------------------------
-  ICON_BUFF_START       = 64              # 強化（16 個）
-  ICON_DEBUFF_START     = 80              # 弱体（16 個）
+  ICON_BUFF_START       = 128              # buff (16 icons)
+  ICON_DEBUFF_START     = 144              # debuff (16 icons)
   #--------------------------------------------------------------------------
-  # ● 公開インスタンス変数
+  # * Public Instance Variables
   #--------------------------------------------------------------------------
   attr_reader   :hp                       # HP
   attr_reader   :mp                       # MP
   attr_reader   :tp                       # TP
   #--------------------------------------------------------------------------
-  # ● 各種能力値の略称によるアクセスメソッド
+  # * Access Method by Parameter Abbreviations
   #--------------------------------------------------------------------------
-  def mhp;  param(0);   end    # 最大HP          Maximum Hit Point
-  def mmp;  param(1);   end    # 最大MP          Maximum Magic Point
-  def atk;  param(2);   end    # 攻撃力          ATtacK power
-  def def;  param(3);   end    # 防御力          DEFense power
-  def mat;  param(4);   end    # 魔法力          Magic ATtack power
-  def mdf;  param(5);   end    # 魔法防御        Magic DeFense power
-  def agi;  param(6);   end    # 敏捷性          AGIlity
-  def luk;  param(7);   end    # 運              LUcK
-  def hit;  xparam(0);  end    # 命中率          HIT rate
-  def eva;  xparam(1);  end    # 回避率          EVAsion rate
-  def cri;  xparam(2);  end    # 会心率          CRItical rate
-  def cev;  xparam(3);  end    # 会心回避率      Critical EVasion rate
-  def mev;  xparam(4);  end    # 魔法回避率      Magic EVasion rate
-  def mrf;  xparam(5);  end    # 魔法反射率      Magic ReFlection rate
-  def cnt;  xparam(6);  end    # 反撃率          CouNTer attack rate
-  def hrg;  xparam(7);  end    # HP再生率        Hp ReGeneration rate
-  def mrg;  xparam(8);  end    # MP再生率        Mp ReGeneration rate
-  def trg;  xparam(9);  end    # TP再生率        Tp ReGeneration rate
-  def tgr;  sparam(0);  end    # 狙われ率        TarGet Rate
-  def grd;  sparam(1);  end    # 防御効果率      GuaRD effect rate
-  def rec;  sparam(2);  end    # 回復効果率      RECovery effect rate
-  def pha;  sparam(3);  end    # 薬の知識        PHArmacology
-  def mcr;  sparam(4);  end    # MP消費率        Mp Cost Rate
-  def tcr;  sparam(5);  end    # TPチャージ率    Tp Charge Rate
-  def pdr;  sparam(6);  end    # 物理ダメージ率  Physical Damage Rate
-  def mdr;  sparam(7);  end    # 魔法ダメージ率  Magical Damage Rate
-  def fdr;  sparam(8);  end    # 床ダメージ率    Floor Damage Rate
-  def exr;  sparam(9);  end    # 経験獲得率      EXperience Rate
+  def mhp;  param(0);   end               # MHP  Maximum Hit Points
+  def mmp;  param(1);   end               # MMP  Maximum Magic Points
+  def atk;  param(2);   end               # ATK  ATtacK power
+  def def;  param(3);   end               # DEF  DEFense power
+  def mat;  param(4);   end               # MAT  Magic ATtack power
+  def mdf;  param(5);   end               # MDF  Magic DeFense power
+  def agi;  param(6);   end               # AGI  AGIlity
+  def luk;  param(7);   end               # LUK  LUcK
+  def hit;  xparam(0);  end               # HIT  HIT rate
+  def eva;  xparam(1);  end               # EVA  EVAsion rate
+  def cri;  xparam(2);  end               # CRI  CRItical rate
+  def cev;  xparam(3);  end               # CEV  Critical EVasion rate
+  def mev;  xparam(4);  end               # MEV  Magic EVasion rate
+  def mrf;  xparam(5);  end               # MRF  Magic ReFlection rate
+  def cnt;  xparam(6);  end               # CNT  CouNTer attack rate
+  def hrg;  xparam(7);  end               # HRG  Hp ReGeneration rate
+  def mrg;  xparam(8);  end               # MRG  Mp ReGeneration rate
+  def trg;  xparam(9);  end               # TRG  Tp ReGeneration rate
+  def tgr;  sparam(0);  end               # TGR  TarGet Rate
+  def grd;  sparam(1);  end               # GRD  GuaRD effect rate
+  def rec;  sparam(2);  end               # REC  RECovery effect rate
+  def pha;  sparam(3);  end               # PHA  PHArmacology
+  def mcr;  sparam(4);  end               # MCR  Mp Cost Rate
+  def tcr;  sparam(5);  end               # TCR  Tp Charge Rate
+  def pdr;  sparam(6);  end               # PDR  Physical Damage Rate
+  def mdr;  sparam(7);  end               # MDR  Magical Damage Rate
+  def fdr;  sparam(8);  end               # FDR  Floor Damage Rate
+  def exr;  sparam(9);  end               # EXR  EXperience Rate
   #--------------------------------------------------------------------------
-  # ● オブジェクト初期化
+  # * Object Initialization
   #--------------------------------------------------------------------------
   def initialize
     @hp = @mp = @tp = 0
@@ -93,13 +93,13 @@ class Game_BattlerBase
     clear_buffs
   end
   #--------------------------------------------------------------------------
-  # ● 能力値に加算する値をクリア
+  # * Clear Values Added to Parameter
   #--------------------------------------------------------------------------
   def clear_param_plus
     @param_plus = [0] * 8
   end
   #--------------------------------------------------------------------------
-  # ● ステート情報をクリア
+  # * Clear State Information
   #--------------------------------------------------------------------------
   def clear_states
     @states = []
@@ -107,7 +107,7 @@ class Game_BattlerBase
     @state_steps = {}
   end
   #--------------------------------------------------------------------------
-  # ● ステートの消去
+  # * Erase States
   #--------------------------------------------------------------------------
   def erase_state(state_id)
     @states.delete(state_id)
@@ -115,38 +115,38 @@ class Game_BattlerBase
     @state_steps.delete(state_id)
   end
   #--------------------------------------------------------------------------
-  # ● 能力強化情報をクリア
+  # * Clear Buff Information
   #--------------------------------------------------------------------------
   def clear_buffs
     @buffs = Array.new(8) { 0 }
     @buff_turns = {}
   end
   #--------------------------------------------------------------------------
-  # ● ステートの検査
+  # * Check State
   #--------------------------------------------------------------------------
   def state?(state_id)
     @states.include?(state_id)
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘不能ステートの検査
+  # * Check K.O. State
   #--------------------------------------------------------------------------
   def death_state?
     state?(death_state_id)
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘不能のステート ID を取得
+  # * Get State ID of K.O.
   #--------------------------------------------------------------------------
   def death_state_id
     return 1
   end
   #--------------------------------------------------------------------------
-  # ● 現在のステートをオブジェクトの配列で取得
+  # * Get Current States as an Object Array
   #--------------------------------------------------------------------------
   def states
     @states.collect {|id| $data_states[id] }
   end
   #--------------------------------------------------------------------------
-  # ● 現在のステートをアイコン番号の配列で取得
+  # * Get Current States as an Array of Icon Numbers
   #--------------------------------------------------------------------------
   def state_icons
     icons = states.collect {|state| state.icon_index }
@@ -154,7 +154,7 @@ class Game_BattlerBase
     icons
   end
   #--------------------------------------------------------------------------
-  # ● 現在の強化／弱体をアイコン番号の配列で取得
+  # * Get Current Buffs/Debuffs as an Array of Icon Numbers
   #--------------------------------------------------------------------------
   def buff_icons
     icons = []
@@ -163,7 +163,7 @@ class Game_BattlerBase
     icons
   end
   #--------------------------------------------------------------------------
-  # ● 強化／弱体に対応するアイコン番号を取得
+  # * Get Icon Number Corresponding to Buff/Debuff
   #--------------------------------------------------------------------------
   def buff_icon_index(buff_level, param_id)
     if buff_level > 0
@@ -175,74 +175,74 @@ class Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● 特徴を保持する全オブジェクトの配列取得
+  # * Get Array of All Objects Retaining Features
   #--------------------------------------------------------------------------
   def feature_objects
     states
   end
   #--------------------------------------------------------------------------
-  # ● 全ての特徴オブジェクトの配列取得
+  # * Get Array of All Feature Objects
   #--------------------------------------------------------------------------
   def all_features
     feature_objects.inject([]) {|r, obj| r + obj.features }
   end
   #--------------------------------------------------------------------------
-  # ● 特徴オブジェクトの配列取得（特徴コードを限定）
+  # * Get Feature Object Array (Feature Codes Limited)
   #--------------------------------------------------------------------------
   def features(code)
     all_features.select {|ft| ft.code == code }
   end
   #--------------------------------------------------------------------------
-  # ● 特徴オブジェクトの配列取得（特徴コードとデータ ID を限定）
+  # * Get Feature Object Array (Feature Codes and Data IDs Limited)
   #--------------------------------------------------------------------------
   def features_with_id(code, id)
     all_features.select {|ft| ft.code == code && ft.data_id == id }
   end
   #--------------------------------------------------------------------------
-  # ● 特徴値の総乗計算
+  # * Calculate Complement of Feature Values
   #--------------------------------------------------------------------------
   def features_pi(code, id)
     features_with_id(code, id).inject(1.0) {|r, ft| r *= ft.value }
   end
   #--------------------------------------------------------------------------
-  # ● 特徴値の総和計算（データ ID を指定）
+  # * Calculate Sum of Feature Values (Specify Data ID)
   #--------------------------------------------------------------------------
   def features_sum(code, id)
     features_with_id(code, id).inject(0.0) {|r, ft| r += ft.value }
   end
   #--------------------------------------------------------------------------
-  # ● 特徴値の総和計算（データ ID は非指定）
+  # * Calculate Sum of Feature Values (Data ID Unspecified)
   #--------------------------------------------------------------------------
   def features_sum_all(code)
     features(code).inject(0.0) {|r, ft| r += ft.value }
   end
   #--------------------------------------------------------------------------
-  # ● 特徴の集合和計算
+  # * Calculate Set Sum of Features
   #--------------------------------------------------------------------------
   def features_set(code)
     features(code).inject([]) {|r, ft| r |= [ft.data_id] }
   end
   #--------------------------------------------------------------------------
-  # ● 通常能力値の基本値取得
+  # * Get Base Value of Parameter
   #--------------------------------------------------------------------------
   def param_base(param_id)
     return 0
   end
   #--------------------------------------------------------------------------
-  # ● 通常能力値の加算値取得
+  # * Get Added Value of Parameter
   #--------------------------------------------------------------------------
   def param_plus(param_id)
     @param_plus[param_id]
   end
   #--------------------------------------------------------------------------
-  # ● 通常能力値の最小値取得
+  # * Get Reduced Value of Parameter
   #--------------------------------------------------------------------------
   def param_min(param_id)
     return 0 if param_id == 1  # MMP
     return 1
   end
   #--------------------------------------------------------------------------
-  # ● 通常能力値の最大値取得
+  # * Get Maximum Value of Parameter
   #--------------------------------------------------------------------------
   def param_max(param_id)
     return 999999 if param_id == 0  # MHP
@@ -250,19 +250,19 @@ class Game_BattlerBase
     return 999
   end
   #--------------------------------------------------------------------------
-  # ● 通常能力値の変化率取得
+  # * Get Rate of Parameter Change
   #--------------------------------------------------------------------------
   def param_rate(param_id)
     features_pi(FEATURE_PARAM, param_id)
   end
   #--------------------------------------------------------------------------
-  # ● 通常能力値の強化／弱体による変化率取得
+  # * Get Rate of Change Due to Parameter Buff/Debuff
   #--------------------------------------------------------------------------
   def param_buff_rate(param_id)
     @buffs[param_id] * 0.25 + 1.0
   end
   #--------------------------------------------------------------------------
-  # ● 通常能力値の取得
+  # * Get Parameter
   #--------------------------------------------------------------------------
   def param(param_id)
     value = param_base(param_id) + param_plus(param_id)
@@ -270,210 +270,210 @@ class Game_BattlerBase
     [[value, param_max(param_id)].min, param_min(param_id)].max.to_i
   end
   #--------------------------------------------------------------------------
-  # ● 追加能力値の取得
+  # * Get Ex-Parameter
   #--------------------------------------------------------------------------
   def xparam(xparam_id)
     features_sum(FEATURE_XPARAM, xparam_id)
   end
   #--------------------------------------------------------------------------
-  # ● 特殊能力値の取得
+  # * Get Sp-Parameter
   #--------------------------------------------------------------------------
   def sparam(sparam_id)
     features_pi(FEATURE_SPARAM, sparam_id)
   end
   #--------------------------------------------------------------------------
-  # ● 属性有効度の取得
+  # * Get Element Rate
   #--------------------------------------------------------------------------
   def element_rate(element_id)
     features_pi(FEATURE_ELEMENT_RATE, element_id)
   end
   #--------------------------------------------------------------------------
-  # ● 弱体有効度の取得
+  # * Get Debuff Rate
   #--------------------------------------------------------------------------
   def debuff_rate(param_id)
     features_pi(FEATURE_DEBUFF_RATE, param_id)
   end
   #--------------------------------------------------------------------------
-  # ● ステート有効度の取得
+  # * Get State Rate
   #--------------------------------------------------------------------------
   def state_rate(state_id)
     features_pi(FEATURE_STATE_RATE, state_id)
   end
   #--------------------------------------------------------------------------
-  # ● 無効化するステートの配列を取得
+  # * Get Array of States to Resist
   #--------------------------------------------------------------------------
   def state_resist_set
     features_set(FEATURE_STATE_RESIST)
   end
   #--------------------------------------------------------------------------
-  # ● 無効化されているステートの判定
+  # * Determine if State Is Resisted
   #--------------------------------------------------------------------------
   def state_resist?(state_id)
     state_resist_set.include?(state_id)
   end
   #--------------------------------------------------------------------------
-  # ● 攻撃時属性の取得
+  # * Get Attack Element
   #--------------------------------------------------------------------------
   def atk_elements
     features_set(FEATURE_ATK_ELEMENT)
   end
   #--------------------------------------------------------------------------
-  # ● 攻撃時ステートの取得
+  # * Get Attack State
   #--------------------------------------------------------------------------
   def atk_states
     features_set(FEATURE_ATK_STATE)
   end
   #--------------------------------------------------------------------------
-  # ● 攻撃時ステートの発動率取得
+  # * Get Attack State Invocation Rate
   #--------------------------------------------------------------------------
   def atk_states_rate(state_id)
     features_sum(FEATURE_ATK_STATE, state_id)
   end
   #--------------------------------------------------------------------------
-  # ● 攻撃速度補正の取得
+  # * Get Attack Speed
   #--------------------------------------------------------------------------
   def atk_speed
     features_sum_all(FEATURE_ATK_SPEED)
   end
   #--------------------------------------------------------------------------
-  # ● 攻撃追加回数の取得
+  # * Get Additional Attack Times
   #--------------------------------------------------------------------------
   def atk_times_add
     [features_sum_all(FEATURE_ATK_TIMES), 0].max
   end
   #--------------------------------------------------------------------------
-  # ● 追加スキルタイプの取得
+  # * Get Added Skill Types
   #--------------------------------------------------------------------------
   def added_skill_types
     features_set(FEATURE_STYPE_ADD)
   end
   #--------------------------------------------------------------------------
-  # ● スキルタイプ封印の判定
+  # * Determine if Skill Type Is Disabled
   #--------------------------------------------------------------------------
   def skill_type_sealed?(stype_id)
     features_set(FEATURE_STYPE_SEAL).include?(stype_id)
   end
   #--------------------------------------------------------------------------
-  # ● 追加スキルの取得
+  # * Get Added Skills
   #--------------------------------------------------------------------------
   def added_skills
     features_set(FEATURE_SKILL_ADD)
   end
   #--------------------------------------------------------------------------
-  # ● スキル封印の判定
+  # * Determine if Skill Is Disabled
   #--------------------------------------------------------------------------
   def skill_sealed?(skill_id)
     features_set(FEATURE_SKILL_SEAL).include?(skill_id)
   end
   #--------------------------------------------------------------------------
-  # ● 武器装備可能の判定
+  # * Determine if Weapon Can Be Equipped
   #--------------------------------------------------------------------------
   def equip_wtype_ok?(wtype_id)
     features_set(FEATURE_EQUIP_WTYPE).include?(wtype_id)
   end
   #--------------------------------------------------------------------------
-  # ● 防具装備可能の判定
+  # * Determine if Armor Can Be Equipped
   #--------------------------------------------------------------------------
   def equip_atype_ok?(atype_id)
     features_set(FEATURE_EQUIP_ATYPE).include?(atype_id)
   end
   #--------------------------------------------------------------------------
-  # ● 装備固定の判定
+  # * Determine if Equipment Is Locked
   #--------------------------------------------------------------------------
   def equip_type_fixed?(etype_id)
     features_set(FEATURE_EQUIP_FIX).include?(etype_id)
   end
   #--------------------------------------------------------------------------
-  # ● 装備封印の判定
+  # * Determine if Equipment Is Sealed
   #--------------------------------------------------------------------------
   def equip_type_sealed?(etype_id)
     features_set(FEATURE_EQUIP_SEAL).include?(etype_id)
   end
   #--------------------------------------------------------------------------
-  # ● スロットタイプの取得
+  # * Get Slot Type
   #--------------------------------------------------------------------------
   def slot_type
     features_set(FEATURE_SLOT_TYPE).max || 0
   end
   #--------------------------------------------------------------------------
-  # ● 二刀流の判定
+  # * Determine if Dual Wield
   #--------------------------------------------------------------------------
   def dual_wield?
     slot_type == 1
   end
   #--------------------------------------------------------------------------
-  # ● 行動回数追加確率の配列を取得
+  # * Get Array of Additional Action Time Probabilities
   #--------------------------------------------------------------------------
   def action_plus_set
     features(FEATURE_ACTION_PLUS).collect {|ft| ft.value }
   end
   #--------------------------------------------------------------------------
-  # ● 特殊フラグ判定
+  # * Determine if Special Flag
   #--------------------------------------------------------------------------
   def special_flag(flag_id)
     features(FEATURE_SPECIAL_FLAG).any? {|ft| ft.data_id == flag_id }
   end
   #--------------------------------------------------------------------------
-  # ● 消滅エフェクトの取得
+  # * Get Collapse Effect
   #--------------------------------------------------------------------------
   def collapse_type
     features_set(FEATURE_COLLAPSE_TYPE).max || 0
   end
   #--------------------------------------------------------------------------
-  # ● パーティ能力判定
+  # * Determine Party Ability
   #--------------------------------------------------------------------------
   def party_ability(ability_id)
     features(FEATURE_PARTY_ABILITY).any? {|ft| ft.data_id == ability_id }
   end
   #--------------------------------------------------------------------------
-  # ● 自動戦闘の判定
+  # * Determine if Auto Battle
   #--------------------------------------------------------------------------
   def auto_battle?
     special_flag(FLAG_ID_AUTO_BATTLE)
   end
   #--------------------------------------------------------------------------
-  # ● 防御の判定
+  # * Determine if Guard
   #--------------------------------------------------------------------------
   def guard?
     special_flag(FLAG_ID_GUARD) && movable?
   end
   #--------------------------------------------------------------------------
-  # ● 身代わりの判定
+  # * Determine if Substitute
   #--------------------------------------------------------------------------
   def substitute?
     special_flag(FLAG_ID_SUBSTITUTE) && movable?
   end
   #--------------------------------------------------------------------------
-  # ● TP持ち越しの判定
+  # * Determine if Preserve TP
   #--------------------------------------------------------------------------
   def preserve_tp?
     special_flag(FLAG_ID_PRESERVE_TP)
   end
   #--------------------------------------------------------------------------
-  # ● 能力値の加算
+  # * Increase Parameter
   #--------------------------------------------------------------------------
   def add_param(param_id, value)
     @param_plus[param_id] += value
     refresh
   end
   #--------------------------------------------------------------------------
-  # ● HP の変更
+  # * Change HP
   #--------------------------------------------------------------------------
   def hp=(hp)
     @hp = hp
     refresh
   end
   #--------------------------------------------------------------------------
-  # ● MP の変更
+  # * Change MP
   #--------------------------------------------------------------------------
   def mp=(mp)
     @mp = mp
     refresh
   end
   #--------------------------------------------------------------------------
-  # ● HP の増減（イベント用）
-  #     value        : 増減値
-  #     enable_death : 戦闘不能を許可
+  # * Change HP (for Events)
+  #     value:         Amount of increase/decrease
+  #     enable_death:  Allow knockout
   #--------------------------------------------------------------------------
   def change_hp(value, enable_death)
     if !enable_death && @hp + value <= 0
@@ -483,19 +483,19 @@ class Game_BattlerBase
     end
   end
   #--------------------------------------------------------------------------
-  # ● TP の変更
+  # * Change TP
   #--------------------------------------------------------------------------
   def tp=(tp)
     @tp = [[tp, max_tp].min, 0].max
   end
   #--------------------------------------------------------------------------
-  # ● TP の最大値を取得
+  # * Get Maximum Value of TP
   #--------------------------------------------------------------------------
   def max_tp
     return 100
   end
   #--------------------------------------------------------------------------
-  # ● リフレッシュ
+  # * Refresh
   #--------------------------------------------------------------------------
   def refresh
     state_resist_set.each {|state_id| erase_state(state_id) }
@@ -504,7 +504,7 @@ class Game_BattlerBase
     @hp == 0 ? add_state(death_state_id) : remove_state(death_state_id)
   end
   #--------------------------------------------------------------------------
-  # ● 全回復
+  # * Recover All
   #--------------------------------------------------------------------------
   def recover_all
     clear_states
@@ -512,167 +512,168 @@ class Game_BattlerBase
     @mp = mmp
   end
   #--------------------------------------------------------------------------
-  # ● HP の割合を取得
+  # * Get Percentage of HP
   #--------------------------------------------------------------------------
   def hp_rate
     @hp.to_f / mhp
   end
   #--------------------------------------------------------------------------
-  # ● MP の割合を取得
+  # * Get Percentage of MP
   #--------------------------------------------------------------------------
   def mp_rate
     mmp > 0 ? @mp.to_f / mmp : 0
   end
   #--------------------------------------------------------------------------
-  # ● TP の割合を取得
+  # * Get Percentage of TP
   #--------------------------------------------------------------------------
   def tp_rate
     @tp.to_f / 100
   end
   #--------------------------------------------------------------------------
-  # ● 隠れる
+  # * Hide
   #--------------------------------------------------------------------------
   def hide
     @hidden = true
   end
   #--------------------------------------------------------------------------
-  # ● 現れる
+  # * Appear
   #--------------------------------------------------------------------------
   def appear
     @hidden = false
   end
   #--------------------------------------------------------------------------
-  # ● 隠れ状態取得
+  # * Get Hide State
   #--------------------------------------------------------------------------
   def hidden?
     @hidden
   end
   #--------------------------------------------------------------------------
-  # ● 存在判定
+  # * Determine Existence
   #--------------------------------------------------------------------------
   def exist?
     !hidden?
   end
   #--------------------------------------------------------------------------
-  # ● 戦闘不能判定
+  # * Determine Incapacitation
   #--------------------------------------------------------------------------
   def dead?
     exist? && death_state?
   end
   #--------------------------------------------------------------------------
-  # ● 生存判定
+  # * Determine Survival
   #--------------------------------------------------------------------------
   def alive?
     exist? && !death_state?
   end
   #--------------------------------------------------------------------------
-  # ● 正常判定
+  # * Determine Normality
   #--------------------------------------------------------------------------
   def normal?
     exist? && restriction == 0
   end
   #--------------------------------------------------------------------------
-  # ● コマンド入力可能判定
+  # * Determine if Command is Inputable
   #--------------------------------------------------------------------------
   def inputable?
     normal? && !auto_battle?
   end
   #--------------------------------------------------------------------------
-  # ● 行動可能判定
+  # * Determine if Action is Possible
   #--------------------------------------------------------------------------
   def movable?
     exist? && restriction < 4
   end
   #--------------------------------------------------------------------------
-  # ● 混乱状態判定
+  # * Determine if Character is Confused
   #--------------------------------------------------------------------------
   def confusion?
     exist? && restriction >= 1 && restriction <= 3
   end
   #--------------------------------------------------------------------------
-  # ● 混乱レベル取得
+  # * Get Confusion Level
   #--------------------------------------------------------------------------
   def confusion_level
     confusion? ? restriction : 0
   end
   #--------------------------------------------------------------------------
-  # ● アクターか否かの判定
+  # * Determine if Actor or Not
   #--------------------------------------------------------------------------
   def actor?
     return false
   end
   #--------------------------------------------------------------------------
-  # ● 敵キャラか否かの判定
+  # * Determine if Enemy
   #--------------------------------------------------------------------------
   def enemy?
     return false
   end
   #--------------------------------------------------------------------------
-  # ● ステートの並び替え
-  #    配列 @states の内容を表示優先度の大きい順に並び替える。
+  # * Sorting States
+  #    Sort the content of the @states array, with higher priority states
+  #    coming first.
   #--------------------------------------------------------------------------
   def sort_states
     @states = @states.sort_by {|id| [-$data_states[id].priority, id] }
   end
   #--------------------------------------------------------------------------
-  # ● 制約の取得
-  #    現在付加されているステートから最大の restriction を取得する。
+  # * Get Restriction
+  #    Get the largest restriction from the currently added states.
   #--------------------------------------------------------------------------
   def restriction
     states.collect {|state| state.restriction }.push(0).max
   end
   #--------------------------------------------------------------------------
-  # ● 最重要のステート継続メッセージを取得
+  # * Get Most Important State Continuation Message
   #--------------------------------------------------------------------------
   def most_important_state_text
     states.each {|state| return state.message3 unless state.message3.empty? }
     return ""
   end
   #--------------------------------------------------------------------------
-  # ● スキルの必要武器を装備しているか
+  # * Determine if Skill-Required Weapon Is Equipped
   #--------------------------------------------------------------------------
   def skill_wtype_ok?(skill)
     return true
   end
   #--------------------------------------------------------------------------
-  # ● スキルの消費 MP 計算
+  # * Calculate Skill's MP Cost
   #--------------------------------------------------------------------------
   def skill_mp_cost(skill)
     (skill.mp_cost * mcr).to_i
   end
   #--------------------------------------------------------------------------
-  # ● スキルの消費 TP 計算
+  # * Calculate Skill's TP Cost
   #--------------------------------------------------------------------------
   def skill_tp_cost(skill)
     skill.tp_cost
   end
   #--------------------------------------------------------------------------
-  # ● スキル使用コストの支払い可能判定
+  # * Determine if Cost of Using Skill Can Be Paid
   #--------------------------------------------------------------------------
   def skill_cost_payable?(skill)
     tp >= skill_tp_cost(skill) && mp >= skill_mp_cost(skill)
   end
   #--------------------------------------------------------------------------
-  # ● スキル使用コストの支払い
+  # * Pay Cost of Using Skill
   #--------------------------------------------------------------------------
   def pay_skill_cost(skill)
     self.mp -= skill_mp_cost(skill)
     self.tp -= skill_tp_cost(skill)
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの使用可能時チェック
+  # * Check When Skill/Item Can Be Used
   #--------------------------------------------------------------------------
   def occasion_ok?(item)
     $game_party.in_battle ? item.battle_ok? : item.menu_ok?
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの共通使用可能条件チェック
+  # * Check Common Usability Conditions for Skill/Item
   #--------------------------------------------------------------------------
   def usable_item_conditions_met?(item)
     movable? && occasion_ok?(item)
   end
   #--------------------------------------------------------------------------
-  # ● スキルの使用可能条件チェック
+  # * Check Usability Conditions for Skill
   #--------------------------------------------------------------------------
   def skill_conditions_met?(skill)
     usable_item_conditions_met?(skill) &&
@@ -680,13 +681,13 @@ class Game_BattlerBase
     !skill_sealed?(skill.id) && !skill_type_sealed?(skill.stype_id)
   end
   #--------------------------------------------------------------------------
-  # ● アイテムの使用可能条件チェック
+  # * Check Usability Conditions for Item
   #--------------------------------------------------------------------------
   def item_conditions_met?(item)
     usable_item_conditions_met?(item) && $game_party.has_item?(item)
   end
   #--------------------------------------------------------------------------
-  # ● スキル／アイテムの使用可能判定
+  # * Determine Skill/Item Usability
   #--------------------------------------------------------------------------
   def usable?(item)
     return skill_conditions_met?(item) if item.is_a?(RPG::Skill)
@@ -694,7 +695,7 @@ class Game_BattlerBase
     return false
   end
   #--------------------------------------------------------------------------
-  # ● 装備可能判定
+  # * Determine if Equippable
   #--------------------------------------------------------------------------
   def equippable?(item)
     return false unless item.is_a?(RPG::EquipItem)
@@ -704,25 +705,25 @@ class Game_BattlerBase
     return false
   end
   #--------------------------------------------------------------------------
-  # ● 通常攻撃のスキル ID を取得
+  # * Get Skill ID of Normal Attack
   #--------------------------------------------------------------------------
   def attack_skill_id
     return 1
   end
   #--------------------------------------------------------------------------
-  # ● 防御のスキル ID を取得
+  # * Get Skill ID of Guard
   #--------------------------------------------------------------------------
   def guard_skill_id
     return 2
   end
   #--------------------------------------------------------------------------
-  # ● 通常攻撃の使用可能判定
+  # * Determine Usability of Normal Attack
   #--------------------------------------------------------------------------
   def attack_usable?
     usable?($data_skills[attack_skill_id])
   end
   #--------------------------------------------------------------------------
-  # ● 防御の使用可能判定
+  # * Determine Usability of Guard
   #--------------------------------------------------------------------------
   def guard_usable?
     usable?($data_skills[guard_skill_id])

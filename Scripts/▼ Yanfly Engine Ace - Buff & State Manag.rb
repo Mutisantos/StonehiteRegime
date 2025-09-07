@@ -252,7 +252,7 @@ module YEA
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     SHOW_REMAINING_TURNS = true     # Show the turns remaining?
     TURNS_REMAINING_SIZE = 18       # Font size used for turns remaining.
-    TURNS_REMAINING_Y    = -4       # Adjusts location of the text.
+    TURNS_REMAINING_Y    = 4       # Adjusts location of the text.
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Buff Settings -
