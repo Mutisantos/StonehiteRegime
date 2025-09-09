@@ -110,7 +110,7 @@ module Cirno
       #--------------------------------------------------------------------------
       # Interface Terms in Spanish
       #--------------------------------------------------------------------------
-    elsif LANG == :Spanish
+    elsif LANG == :Spanish || LANG == "ES" || LANG == "Spanish"
       CHOICE_GENERAL_SETTING = "Config. General"
       CHOICE_KEY_SETTING = "Config. de Entrada"
 
@@ -174,7 +174,7 @@ module Cirno
         ["Window Resize", ["1x", "2x", "3x", "4x"]],
         ["Music Volume", :percentage],
         ["Sound Volume", :percentage],
-        ["Language", [:English, :Spanish]],
+        ["Language", ["English", "Spanish"]], 
       ]
     end
     #--------------------------------------------------------------------------
@@ -188,7 +188,7 @@ module Cirno
         "Window Resize" => 1,
         "Music Volume" => 100,
         "Sound Volume" => 100,
-        "Language" => :English, # Default language
+        "Language" => "Spanish", # Default language
       }
     end
     #--------------------------------------------------------------------------

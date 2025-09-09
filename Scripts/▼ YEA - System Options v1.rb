@@ -159,7 +159,7 @@ module YEA
     #--------------------------------------------------------------------------
     CUSTOM_VARIABLES ={
     # -------------------------------------------------------------------------
-    # :variable   => [Switch, Name, Colour1, Colour2, Min, Max,
+    # :variable   => [Switch, Name, Colour1, Colour2, Min, Max,>>
     #                 Help Window Description
     #                ], # Do not remove this.
     # -------------------------------------------------------------------------
@@ -180,6 +180,40 @@ module YEA
     # description that appears above the command window. Note that for the
     # command help descriptions, you may use text codes. Use \n to linebreak.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    LANGUAGE = "Language"
+    LANGUAGE_SPANISH = "Spanish"
+    LANGUAGE_ENGLISH = "English"
+    LANGUAGE_LABEL = "Change the game language."
+    LANGUAGE_RED = "Red Value"
+    LANGUAGE_RED_LABEL = "Change the amount of Red.\nPress SHIFT to change the value in 10."
+    LANGUAGE_GREEN = "Green Value"
+    LANGUAGE_GREEN_LABEL = "Change the amount of Green.\nPress SHIFT to change the value in 10."
+    LANGUAGE_BLUE = "Blue Value"
+    LANGUAGE_BLUE_LABEL = "Change the amount of Blue.\nPress SHIFT to change the value in 10."
+    VOLUME_BGM = "Volume BGM"
+    VOLUME_BGM_LABEL = "Change Background music volume.\nPress SHIFT to change the value in 10."
+    VOLUME_BGS = "Volume BGS"
+    VOLUME_BGS_LABEL = "Change Background sounds volume.\nPress SHIFT to change the value in 10."
+    VOLUME_SFX = "Volume SFX"
+    VOLUME_SFX_LABEL = "Change sound effects volume.\nPress SHIFT to change the value in 10."
+    AUTODASH = "Auto-run"
+    AUTODASH_OFF = "Walk"
+    AUTODASH_ON = "Run"
+    AUTODASH_LABEL = "Enables running by default"
+    INSTANTMSG = "Instant Text"
+    INSTANTMSG_OFF = "Normal"
+    INSTANTMSG_ON = "Instant"
+    INSTANTMSG_LABEL = "Change the speed the text is displayed."
+    ANIMATIONS = "Animations"
+    ANIMATIONS_OFF = "Hide"
+    ANIMATIONS_ON = "Show"
+    ANIMATIONS_LABEL = "Hide or show attack animations."
+    RESOLUTION = "Resolution"
+    RESOLUTON_LABEL = "Modify the Screen Resolution."
+    TO_TITLE = "Return to Main Screen"
+    TO_TITLE_LABEL = "Return to the Main Screen."
+    SHUTDOWN = "Close Game"
+    SHUTDOWN_LABEL = "Stops the game execution."
     COMMAND_VOCAB ={
     # -------------------------------------------------------------------------
     # :command    => [Command Name, Option1, Option2
@@ -191,62 +225,56 @@ module YEA
                      ], # Do not remove this.
                      
     # -------------------------------------------------------------------------
-      :language   => ["Language", "Spanish", "English",
-                      "Change the game language."
+      :language   => [LANGUAGE, LANGUAGE_SPANISH, LANGUAGE_ENGLISH,
+                      LANGUAGE_LABEL
                       ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :window_red => ["Red Value", "None", "None",
-                      "Change the amount of Red.\n" +
-                      "Press SHIFT to change the value in 10."
+      :window_red => [LANGUAGE_RED, "None", "None",
+                      LANGUAGE_RED_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :window_grn => ["Green Value", "None", "None",
-                      "Change the amount of Green.\n" +
-                      "Press SHIFT to change the value in 10."
+      :window_grn => [LANGUAGE_GREEN, "None", "None",
+                      LANGUAGE_GREEN_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :window_blu => ["Blue Value", "None", "None",
-                      "Change the amount of Blue.\n" +
-                      "Press SHIFT to change the value in 10."
+      :window_blu => [LANGUAGE_BLUE, "None", "None",
+                      LANGUAGE_BLUE_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :volume_bgm => ["Volume BGM", 12, 4, # Options 1 & 2 are Gauge Colours.
-                      "Change Background music volume.\n" +
-                      "Press SHIFT to change the value in 10."
+      :volume_bgm => [VOLUME_BGM, 12, 4, # Options 1 & 2 are Gauge Colours.
+                      VOLUME_BGM_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :volume_bgs => ["Volume BGS ", 13, 5, # Options 1 & 2 are Gauge Colours.
-                      "Change Background sounds volume.\n" +
-                      "Press SHIFT to change the value in 10."
+      :volume_bgs => [VOLUME_BGS, 13, 5, # Options 1 & 2 are Gauge Colours.
+                      VOLUME_BGS_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :volume_sfx => ["Volumen SFX ", 14, 6, # Options 1 & 2 are Gauge Colours.
-                      "Change sound effects volume.\n" +
-                      "Press SHIFT to change the value in 10."
+      :volume_sfx => [VOLUME_SFX, 14, 6, # Options 1 & 2 are Gauge Colours.
+                      VOLUME_SFX_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :autodash   => ["Auto-run", "Walk", "Run",
-                      "Enables running by default"
+      :autodash   => [AUTODASH, AUTODASH_OFF, AUTODASH_ON,
+                      AUTODASH_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :resolution   => ["Resolution", "640x480", "1280x832",
-                       "Modify the Screen Resolution."
+      :resolution   => [RESOLUTION, "1x", "2x", "3x", "4x",
+                        RESOLUTON_LABEL
                        ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :instantmsg => ["Instant Text", "Normal", "Instant",
-                      "Change the speed the text is displayed."
+      :instantmsg => [INSTANTMSG, INSTANTMSG_OFF, INSTANTMSG_ON,
+                      INSTANTMSG_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :animations => ["Animations", "Hide", "Show",
-                      "Hide or show attack animations."
+      :animations => [ANIMATIONS, ANIMATIONS_OFF, ANIMATIONS_ON,
+                      ANIMATIONS_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :to_title   => ["Return to Main Screen", "None", "None",
-                      "Return to the Main Screen."
+      :to_title   => [TO_TITLE, "None", "None",
+                      TO_TITLE_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
-      :shutdown   => ["Close Game", "None", "None",
-                      "Stops the game execution."
+      :shutdown   => [SHUTDOWN, "None", "None",
+                      SHUTDOWN_LABEL
                      ], # Do not remove this.
     # -------------------------------------------------------------------------
     } # Do not remove this.
@@ -922,8 +950,6 @@ class Window_SystemOptions < Window_Command
     when :language
         current_case = $game_system.spanish?
         $game_system.set_spanish(value)
-        p(LanguageFileSystem::language)
-        p($game_system.spanish?)
         if $game_system.spanish?
             LanguageFileSystem::set_language(:English)
         else

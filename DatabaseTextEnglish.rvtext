@@ -3967,3 +3967,110 @@ Next Level
 "..."
 </level quotes>
 
+<<constants/Cirno::TitleSettings/SETTINGS_LABEL>>
+Settings
+
+<<constants/Cirno::TitleSettings/CONTROLS_LABEL>>
+Key Bindings
+
+<<constants/YEA::SYSTEM/LANGUAGE>>
+Language
+
+<<constants/YEA::SYSTEM/LANGUAGE_SPANISH>>
+Spanish
+
+<<constants/YEA::SYSTEM/LANGUAGE_ENGLISH>>
+English
+
+<<constants/YEA::SYSTEM/LANGUAGE_LABEL>>
+Change the game language.
+
+<<constants/YEA::SYSTEM/LANGUAGE_RED>>
+Red Value
+
+<<constants/YEA::SYSTEM/LANGUAGE_RED_LABEL>>
+Change the amount of Red.\nPress SHIFT to change the value in 10.
+
+<<constants/YEA::SYSTEM/LANGUAGE_GREEN>>
+Green Value
+
+<<constants/YEA::SYSTEM/LANGUAGE_GREEN_LABEL>>
+Change the amount of Green.\nPress SHIFT to change the value in 10.
+
+<<constants/YEA::SYSTEM/LANGUAGE_BLUE>>
+Blue Value
+
+<<constants/YEA::SYSTEM/LANGUAGE_BLUE_LABEL>>
+Change the amount of Blue.\nPress SHIFT to change the value in 10.
+
+<<constants/YEA::SYSTEM/VOLUME_BGM>>
+Volume BGM
+
+<<constants/YEA::SYSTEM/VOLUME_BGM_LABEL>>
+Change Background music volume.\nPress SHIFT to change the value in 10.
+
+<<constants/YEA::SYSTEM/VOLUME_BGS>>
+Volume BGS
+
+<<constants/YEA::SYSTEM/VOLUME_BGS_LABEL>>
+Change Background sounds volume.\nPress SHIFT to change the value in 10.
+
+<<constants/YEA::SYSTEM/VOLUME_SFX>>
+Volume SFX
+
+<<constants/YEA::SYSTEM/VOLUME_SFX_LABEL>>
+Change sound effects volume.\nPress SHIFT to change the value in 10.
+
+<<constants/YEA::SYSTEM/AUTODASH>>
+Auto-run
+
+<<constants/YEA::SYSTEM/AUTODASH_OFF>>
+Walk
+
+<<constants/YEA::SYSTEM/AUTODASH_ON>>
+Run
+
+<<constants/YEA::SYSTEM/AUTODASH_LABEL>>
+Enables running by default
+
+<<constants/YEA::SYSTEM/INSTANTMSG>>
+Instant Text
+
+<<constants/YEA::SYSTEM/INSTANTMSG_OFF>>
+Normal
+
+<<constants/YEA::SYSTEM/INSTANTMSG_ON>>
+Instant
+
+<<constants/YEA::SYSTEM/INSTANTMSG_LABEL>>
+Change the speed the text is displayed.
+
+<<constants/YEA::SYSTEM/ANIMATIONS>>
+Animations
+
+<<constants/YEA::SYSTEM/ANIMATIONS_OFF>>
+Hide
+
+<<constants/YEA::SYSTEM/ANIMATIONS_ON>>
+Show
+
+<<constants/YEA::SYSTEM/ANIMATIONS_LABEL>>
+Hide or show attack animations.
+
+<<constants/YEA::SYSTEM/RESOLUTION>>
+Resolution
+
+<<constants/YEA::SYSTEM/RESOLUTON_LABEL>>
+Modify the Screen Resolution.
+
+<<constants/YEA::SYSTEM/TO_TITLE>>
+Return to Main Screen
+
+<<constants/YEA::SYSTEM/TO_TITLE_LABEL>>
+Return to the Main Screen.
+
+<<constants/YEA::SYSTEM/SHUTDOWN>>
+Close Game
+
+<<constants/YEA::SYSTEM/SHUTDOWN_LABEL>>
+Stops the game execution.

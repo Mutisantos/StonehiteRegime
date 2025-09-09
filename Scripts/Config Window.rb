@@ -30,7 +30,7 @@ module Cirno
       
       Audio.master_volume_music = read_general_setting("Music Volume").to_i
       Audio.master_volume_sound = read_general_setting("Sound Volume").to_i
-      # LanguageFileSystem::self.language = read_general_setting("Language")
+      # LanguageFileSystem::set_language(read_general_setting("Language"))
     end
       
     def self.write_keyboard_settings
@@ -159,7 +159,7 @@ class Window_ConfigCommand < Window_HorzCommand
   end
 
   def make_command_list
-    add_command(Cirno::ConfigSettings::CHOICE_GENERAL_SETTING, :general)
+    # add_command(Cirno::ConfigSettings::CHOICE_GENERAL_SETTING, :general)
     add_command(Cirno::ConfigSettings::CHOICE_KEY_SETTING, :controls)
   end
 end
@@ -189,7 +189,7 @@ class Window_ConfigGeneral < Window_Selectable
         elsif type == :percentage
           s = s.to_i
         elsif type.is_a?(Array)
-          s = s.to_i
+          s = s.to_s
         end
       end
       @setting_values[flag] = s
@@ -242,15 +242,31 @@ class Window_ConfigGeneral < Window_Selectable
     type = config_data[@index][1]
     if Input.repeat?(:LEFT)
       lrflag = true
-      @setting_values[flag] = (@setting_values[flag] - 1) % type.length
+      if flag == "Window Resize"
+        @setting_values[flag] = (@setting_values[flag].to_i - 1) % type.length
+      elsif flag == "Language"
+        currentLanguage = @setting_values[flag]
+        index = (type.index(currentLanguage) - 1) % type.length
+        @setting_values[flag] = type[index] 
+      end
     elsif Input.repeat?(:RIGHT)
       lrflag = true
-      @setting_values[flag] = (@setting_values[flag] + 1) % type.length
+      if flag == "Window Resize"
+        @setting_values[flag] = (@setting_values[flag].to_i + 1) % type.length
+      elsif flag == "Language"
+        currentLanguage = @setting_values[flag]
+        index = (type.index(currentLanguage) + 1) % type.length
+        @setting_values[flag] = type[index] 
+      end
     end
     if lrflag
       if flag == "Window Resize"
-        t = @setting_values[flag] + 1
+        t = @setting_values[flag].to_i + 1
         Graphics.resize_window(Graphics.width * t, Graphics.height * t)
+      end
+      if flag == "Language"
+        lang = @setting_values[flag]
+        LanguageFileSystem::set_language(lang)
       end
       refresh
     end
@@ -301,7 +317,8 @@ class Window_ConfigGeneral < Window_Selectable
         Cirno::ConfigSettings::GENERAL_SETTING_ON : 
         Cirno::ConfigSettings::GENERAL_SETTING_OFF, 2)
     elsif type.is_a?(Array)
-      draw_text(rect, type[value].to_s, 2)
+      p("flag=#{flag}, value=#{value}, type=#{type}")
+      draw_text(rect, type[value.to_i].to_s, 2)
     else
       draw_text(rect, value.to_s, 2)
     end
@@ -346,10 +363,14 @@ class Window_ConfigGeneral < Window_Selectable
       apply_audio_change
       refresh
     elsif type.is_a?(Array)
-      @setting_values[flag] = (@setting_values[flag] + 1) % type.length
       if flag == "Window Resize"
+        @setting_values[flag] = (@setting_values[flag].to_i + 1) % type.length
         t = @setting_values[flag] + 1
         Graphics.resize_window(Graphics.width * t, Graphics.height * t)
+      elsif flag == "Language"
+        currentLanguage = @setting_values[flag]
+        index = (type.index(currentLanguage) + 1) % type.length
+        @setting_values[flag] = type[index] 
       end
       refresh
     end
@@ -600,41 +621,41 @@ class Scene_Config < Scene_MenuBase
   #--------------------------------------------------------------------------
   def create_windows
     @command_window = Window_ConfigCommand.new
-    @command_window.set_handler(:general, method(:on_general))
+    # @command_window.set_handler(:general, method(:on_general))
     @command_window.set_handler(:controls, method(:on_key))
     @command_window.set_handler(:cancel, method(:return_scene))
     @command_window.activate
   end
   
-  def create_general_window
-    @general_window = Window_ConfigGeneral.new(
-      Graphics.width,
-      Graphics.height - @command_window.height)
-    @general_window.set_handler(:cancel, method(:on_general_return))
-    @general_window.visible = false
-  end
+  # def create_general_window
+  #   @general_window = Window_ConfigGeneral.new(
+  #     Graphics.width,
+  #     Graphics.height - @command_window.height)
+  #   @general_window.set_handler(:cancel, method(:on_general_return))
+  #   @general_window.visible = false
+  # end
   
   def create_key_window
     @key_window = Window_ConfigKeys.new(
       Graphics.width,
       Graphics.height - @command_window.height)
     @key_window.set_handler(:cancel, method(:on_key_return))
-    @key_window.visible = false
+    @key_window.visible = true
   end
   
-  def on_general
-    create_general_window
-    @command_window.deactivate
-    @general_window.activate
-    @general_window.visible = true
-  end
+  # def on_general
+  #   create_general_window
+  #   @command_window.deactivate
+  #   @general_window.activate
+  #   @general_window.visible = true
+  # end
   
-  def on_general_return
-    @general_window.deactivate
-    @general_window.visible = false
-    @general_window = nil
-    @command_window.activate
-  end
+  # def on_general_return
+  #   @general_window.deactivate
+  #   @general_window.visible = false
+  #   @general_window = nil
+  #   @command_window.activate
+  # end
   
   def on_key
     create_key_window
