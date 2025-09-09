@@ -180,7 +180,7 @@ module YEA
     # description that appears above the command window. Note that for the
     # command help descriptions, you may use text codes. Use \n to linebreak.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    LANGUAGE = "Language"
+    LANGUAGE = "Languageeeeeeeeeeeee"
     LANGUAGE_SPANISH = "Spanish"
     LANGUAGE_ENGLISH = "English"
     LANGUAGE_LABEL = "Change the game language."
@@ -225,7 +225,7 @@ module YEA
                      ], # Do not remove this.
                      
     # -------------------------------------------------------------------------
-      :language   => [LANGUAGE, LANGUAGE_SPANISH, LANGUAGE_ENGLISH,
+      :language   => [YEA::SYSTEM::LANGUAGE, LANGUAGE_SPANISH, LANGUAGE_ENGLISH,
                       LANGUAGE_LABEL
                       ], # Do not remove this.
     # -------------------------------------------------------------------------
@@ -941,12 +941,7 @@ class Window_SystemOptions < Window_Command
         $game_system.set_animations(value)
     when :resolution
         current_case = $game_system.enlarge?
-        $game_system.set_enlarge(value)
-        if $game_system.enlarge?
-            Window_Resize.r(1280,832)
-        else
-            Window_Resize.r(640,480)
-        end
+        Graphics.resize_window(Graphics.width * t, Graphics.height * t)
     when :language
         current_case = $game_system.spanish?
         $game_system.set_spanish(value)

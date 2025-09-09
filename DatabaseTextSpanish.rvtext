@@ -3827,104 +3827,104 @@ Configs.
 <<constants/Cirno::TitleSettings/CONTROLS_LABEL>>
 Controles
 
-<<constants/YEA::SYSTEM/LANGUAGE>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:language][0]>>
 Idioma
 
-<<constants/YEA::SYSTEM/LANGUAGE_SPANISH>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:language][1]>>
 Español
 
-<<constants/YEA::SYSTEM/LANGUAGE_ENGLISH>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:language][2]>>
 Inglés
 
-<<constants/YEA::SYSTEM/LANGUAGE_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:language][3]>>
 Cambia el idioma del juego.
 
-<<constants/YEA::SYSTEM/LANGUAGE_RED>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:window_red][0]>>
 Valor Rojo
 
-<<constants/YEA::SYSTEM/LANGUAGE_RED_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:window_red][3]>>
 Cambia la intensidad de Rojo del tema.\nOprime SHIFT para cambiar de 10 en 10.
 
-<<constants/YEA::SYSTEM/LANGUAGE_GREEN>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:window_grn][0]>>
 Valor Verde
 
-<<constants/YEA::SYSTEM/LANGUAGE_GREEN_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:window_grn][3]>>
 Cambia la intensidad de Verde del tema.\nOprime SHIFT para cambiar de 10 en 10.
 
-<<constants/YEA::SYSTEM/LANGUAGE_BLUE>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:window_blu][0]>>
 Valor Azul
 
-<<constants/YEA::SYSTEM/LANGUAGE_BLUE_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:window_blu][3]>>
 Cambia la intensidad de Azul del tema.\nOprime SHIFT para cambiar de 10 en 10.
 
-<<constants/YEA::SYSTEM/VOLUME_BGM>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:volume_bgm][0]>>
 Música
 
-<<constants/YEA::SYSTEM/VOLUME_BGM_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:volume_bgm][3]>>
 Cambia el volumen de la musica de fondo.\nOprime SHIFT para cambiar de 10 en 10.
 
-<<constants/YEA::SYSTEM/VOLUME_BGS>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:volume_bgs][0]>>
 Sonido de Fondo
 
-<<constants/YEA::SYSTEM/VOLUME_BGS_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:volume_bgs][3]>>
 Cambia el volumen del sonido de fondo.\nOprime SHIFT para cambiar de 10 en 10.
 
-<<constants/YEA::SYSTEM/VOLUME_SFX>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:volume_sfx][0]>>
 Efectos de Sonido
 
-<<constants/YEA::SYSTEM/VOLUME_SFX_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:volume_sfx][3]>>
 Cambia el volumen de los efectos de sonido.\nOprime SHIFT para cambiar de 10 en 10.
 
-<<constants/YEA::SYSTEM/AUTODASH>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:autodash][0]>>
 Auto-Correr
 
-<<constants/YEA::SYSTEM/AUTODASH_OFF>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:autodash][1]>>
 Caminar
 
-<<constants/YEA::SYSTEM/AUTODASH_ON>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:autodash][2]>>
 Correr
 
-<<constants/YEA::SYSTEM/AUTODASH_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:autodash][3]>>
 Habilita si el personaje corre por defecto
 
-<<constants/YEA::SYSTEM/INSTANTMSG>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:instantmsg][0]>>
 Texto Instantaneo
 
-<<constants/YEA::SYSTEM/INSTANTMSG_OFF>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:instantmsg][1]>>
 Normal
 
-<<constants/YEA::SYSTEM/INSTANTMSG_ON>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:instantmsg][2]>>
 Instantaneo
 
-<<constants/YEA::SYSTEM/INSTANTMSG_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:instantmsg][3]>>
 Cambia la velocidad en la que el texto es mostrado.
 
-<<constants/YEA::SYSTEM/ANIMATIONS>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:animations][0]>>
 Animaciones
 
-<<constants/YEA::SYSTEM/ANIMATIONS_OFF>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:animations][1]>>
 Ocultar
 
-<<constants/YEA::SYSTEM/ANIMATIONS_ON>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:animations][2]>>
 Mostrar
 
-<<constants/YEA::SYSTEM/ANIMATIONS_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:animations][3]>>
 Muestra u oculta las animaciones en combate.
 
-<<constants/YEA::SYSTEM/RESOLUTION>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:resolution][0]>>
 Resolución
 
-<<constants/YEA::SYSTEM/RESOLUTON_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:resolution][3]>>
 Cambia la proporción de la pantalla se juego.
 
-<<constants/YEA::SYSTEM/TO_TITLE>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:to_title][0]>>
 Volver a la pantalla
 
-<<constants/YEA::SYSTEM/TO_TITLE_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:to_title][3]>>
 Volver al título del juego.
 
-<<constants/YEA::SYSTEM/SHUTDOWN>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:shutdown][0]>>
 Cerrar.
 
-<<constants/YEA::SYSTEM/SHUTDOWN_LABEL>>
+<<variables/YEA::SYSTEM::COMMAND_VOCAB[:shutdown][3]>>
 Salir del juego sin guardar.
