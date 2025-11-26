@@ -444,7 +444,7 @@ class SideView
     when 11 # Dardos Pluma
       return "Dardo Pluma"
     when 12 # Salto Elevado
-      return "Salto invertido"
+      return "Salto Elevado"
       #---Muti
     when 18 # Nado Rapido
       return "NadoRapido"

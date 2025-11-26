@@ -212,7 +212,7 @@ module YEA
     # to use an icon, set the icon to 0.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     HP_COST_COLOUR = 21         # Colour used from "Window" skin.
-    HP_COST_SIZE   = 20         # Font size used for HP costs.
+    HP_COST_SIZE   = 18         # Font size used for HP costs.
     HP_COST_SUFFIX = "%sHP"     # Suffix used for HP costs.
     HP_COST_ICON   = 0          # Icon used for HP costs. Set 0 to disable.
     
@@ -224,7 +224,7 @@ module YEA
     # to use an icon, set the icon to 0.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     MP_COST_COLOUR = 23         # Colour used from "Window" skin. Default: 23
-    MP_COST_SIZE   = 20         # Font size used for MP costs. Default: 24
+    MP_COST_SIZE   = 18         # Font size used for MP costs. Default: 24
     MP_COST_SUFFIX = "%sEP"     # Suffix used for MP costs. No suffix default.
     MP_COST_ICON   = 0          # Icon used for MP costs. Set 0 to disable.
     
@@ -236,7 +236,7 @@ module YEA
     # to use an icon, set the icon to 0.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     TP_COST_COLOUR = 2          # Colour used from "Window" skin. Default: 29
-    TP_COST_SIZE   = 20         # Font size used for TP costs. Default: 24
+    TP_COST_SIZE   = 18         # Font size used for TP costs. Default: 24
     TP_COST_SUFFIX = "%sFP"     # Suffix used for TP costs. No suffix default.
     TP_COST_ICON   = 0          # Icon used for TP costs. Set 0 to disable.
     
@@ -249,7 +249,7 @@ module YEA
     # to use an icon, set the icon to 0.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     GOLD_COST_COLOUR = 6          # Colour used from "Window" skin.
-    GOLD_COST_SIZE   = 20         # Font size used for Gold costs.
+    GOLD_COST_SIZE   = 18         # Font size used for Gold costs.
     GOLD_COST_SUFFIX = "%sGold"   # Suffix used for Gold costs.
     GOLD_COST_ICON   = 0          # Icon used for Gold costs. Set 0 to disable.
     

@@ -522,6 +522,11 @@ class SideView
   def action_play 
     return if @action_data == nil
     action = @action_data[0]
+    unless ["motion", "move", "anime", "loop_end", "n_1"].include?(action)
+      p("-----Action------")
+      p(@action_data)
+      p("-----------------")
+    end
     # Flip
     return mirroring                    if action == "mirror"
     # Afterimage
@@ -552,6 +557,8 @@ class SideView
     return color_effect                 if action == "color"
     # Transition
     return transition                   if action == "ts"
+    # Proportion
+    return proportion_effect            if action == "proportion"
     # Balloon
     return balloon_anime                if action == "balloon"
     # Picture
@@ -949,6 +956,50 @@ class SideView
     $sv_camera.color_set[1] = @action_data[2]
     $sv_camera.color_set[2] = @action_data[2]
   end  
+
+  #--------------------------------------------------------------------------
+  # Modify Sprite proportion and/or dimensions
+  #--------------------------------------------------------------------------
+  def proportion_effect
+    data = @action_data.dup
+    case data[1]
+    when 0,1,2,3,4,5
+      targets = N03.get_targets(data[1], @battler)
+    when 6
+      screen = true
+    when 7
+      targets = [@battler] + @target_battler
+    when 8
+      screen = true
+      targets = $game_troop.members + $game_party.battle_members - [@battler]
+    when 9
+      screen = true
+      targets = $game_troop.members + $game_party.battle_members - [@battler] - @target_battler
+    when 10
+      screen = true
+      targets = $game_troop.members + $game_party.battle_members
+    end
+    
+    return if screen == nil && (targets.nil? || targets.empty?)
+    
+    # Apply to targets if any
+    if targets
+      for target in targets 
+        target.sv.zoom_x = 0.0 + data[2][0] if data[2][0]  # Width scale
+        target.sv.zoom_y = 0.0 + data[2][1] if data[2][1]  # Height scale
+        # target.sv.zoom_time = data[2][2] if data[2][2]  # Transition time
+      end 
+    end
+    
+    # Apply to screen if specified
+    if screen
+      $sv_camera.zoom_x = 0.0 + data[2][0] if data[2][0]
+      $sv_camera.zoom_y = 0.0 + data[2][1] if data[2][1]
+      # $sv_camera.zoom_time = data[2][2] if data[2][2]
+    end
+    
+    @wait = data[2][3] if data[3]  # Wait flag
+  end
   #--------------------------------------------------------------------------
   # ● トランジション
   #--------------------------------------------------------------------------

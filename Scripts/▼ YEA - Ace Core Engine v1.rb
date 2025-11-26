@@ -266,7 +266,7 @@ module YEA
     TRANSPARENCY = 160   # Adjusts transparency of disabled items. Default: 160
     HP_CRISIS = 0.25     # When HP is considered critical. Default: 0.25
     MP_CRISIS = 0.25     # When MP is considered critical. Default: 0.25
-    ITEM_AMOUNT = "×%s"  # The prefix used for item amounts.
+    ITEM_AMOUNT = "x%s"  # The prefix used for item amounts.
     
   end # CORE
 end # YEA

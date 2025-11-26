@@ -162,7 +162,7 @@ Battle_Camera.rb
 Redefining Aliases.rb
 Test Faster Game.rb
 Parch1.rb
-Parch2.rb
+Yanfly Engince Ace - Field State Effects.rb
 Yami PCTB.rb
 Yami_Order_Gauge.rb
 *separator*
@@ -179,7 +179,7 @@ TTM Tinys Travel Map.rb
 TTM Names in Map.rb
 TTM Map Effects.rb
 #TTM Fadein
-TTM Fadein\out.rb
+TTM Fadein/out.rb
 *separator*
 FA Interactive System 2.rb
 Fa Patch.rb
@@ -202,7 +202,7 @@ Fomar ATB + Yanfly.rb
 Testing.rb
 Zeus81's Screen Resolution.rb
 #IBG Flash Screen
-IBG Flash Screen\Skip Title V1.rb
+IBG Flash Screen/Skip Title V1.rb
 MOG - Animated Title A.rb
 Basic Window Resizer v1.rb
 *separator*

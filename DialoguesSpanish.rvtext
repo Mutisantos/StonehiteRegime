@@ -284,7 +284,7 @@ Si
 No
 
 <<003:Flamrose /006:EV006/Page 01/004>>
-You don't have enough money.
+No tienes suficiente dinero
 
 <<003:Flamrose /008:EV008/Page 01/001>>
 ¿Deseas descansar un rato y reponer
@@ -297,7 +297,10 @@ Si
 No
 
 <<003:Flamrose /008:EV008/Page 01/004>>
-You don't have enough money.
+No te alcanza el dinero.
+
+<<003:Flamrose /009:EV009/Page 01/001>>
+No pareces tener ganas de ir al baño. 
 
 <<004:Poblado S/010:EV010/Page 01/001>>
 <<background: dim>>
@@ -2876,7 +2879,7 @@ una nueva historia...\!\}de ser quien se \!encargue de...
 <<background: dim>>
 <<position: top>>
 ¿A quién le importa eso?, Eso es un sueño aburrido.
-\{MIRA, MAIZ. ¡HECTAREAS COMPLETAS DE MAIZ!
+\{MIRA, MAIZ. ¡HECTAREAS LLENAS DE MAIZ!
 \}¿A poco eso no es mucho mejor? \!Hmmm, tantas cosas
 que se pueden hacer con el maiz...
 
@@ -4555,8 +4558,8 @@ Actualizaciones pendientes para ejecución.
 <<055:Mina - Pu/002:EV002/Page 01/006>>
 <<face: FMuti1, 6>>
 \C[14]Muti:\C[0] Parece que el desarrollo de
-inteligencia artificial de Stonehite todavía tiene
-mucho por trabajar...
+inteligencia artificial de Stonehite todavía 
+tiene mucho por trabajar...
 
 <<055:Mina - Pu/002:EV002/Page 01/007>>
 \C[16]Excarmole:\C[0] Se ha producido un error.
@@ -4565,7 +4568,7 @@ mucho por trabajar...
 
 <<055:Mina - Pu/002:EV002/Page 01/008>>
 <<face: FPengralle, 2>>
-\C[23]Pengralle:\C[0]Es difícil procesar el hecho
+\C[23]Pengralle:\C[0]No me creo en serio
 que esta máquina sea la responsable de todo
 este desastre o que haya liderado a los demás
 robots.
@@ -4697,11 +4700,11 @@ los indicadores sean azules.
 
 <<Common Events/016:Timed Izq/Page 01/001>>
 <<background: dim>>
-Oprime ← y → intercaladamente hasta llenar la barra.
+Oprime <- y -> intercaladamente hasta llenar la barra.
 
 <<Common Events/018:Timed Cha/Page 01/001>>
 <<background: dim>>
-Oprime Arriba múltiples veces hasta llenar la barra
+Oprime Arriba |^| múltiples veces hasta llenar la barra
 
 <<Common Events/019:Colored T/Page 01/001>>
 \C[1]Azul
@@ -4763,7 +4766,7 @@ de las manecillas del reloj.
 
 <<Common Events/024:Timed Sta/Page 01/001>>
 <<background: dim>>
-Mantén presionada la tecla → hasta que todos
+Mantén presionada la tecla -> hasta que todos
 los indicadores sean azules.
 
 <<Common Events/025:Timed Cha/Page 01/001>>

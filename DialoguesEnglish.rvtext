@@ -291,6 +291,9 @@ No
 <<003:Flamrose /008:EV008/Page 01/004>>
 You don't have enough money.
 
+<<003:Flamrose /009:EV009/Page 01/001>>
+It doesn't seem like you need to go to the bathroom 
+
 <<004:Poblado S/010:EV010/Page 01/001>>
 <<background: dim>>
 To the Fog Forest
@@ -4678,21 +4681,21 @@ techinique will give you a huge advantage.
 <<Common Events/008:Tutorial /Page 01/003>>
 \C[4]Tzimitl:\C[0] You also have a chance to block
 the attacks of the enemies right before the send the
-blow. Press the Z Key when the enemy blinks, and
+blow. Press the \I[277] Key when the enemy blinks, and
 yo can reduce the damage they can do to you.
 
 <<Common Events/010:Timed Cha/Page 01/001>>
 <<background: dim>>
-Press Z repeatedly until the bar is filled.
+Press \I[277] repeatedly until the bar is filled.
 
 <<Common Events/011:Timed Cha/Page 01/001>>
 <<background: dim>>
-Keep the Z key pressed until all the lights are
+Keep the \I[277] key pressed until all the lights are
 in blue.
 
 <<Common Events/012:Timed Cha/Page 01/001>>
 <<background: dim>>
-Press the X and Z keys alternately until the bar is
+Press the \I[275] and \I[277] keys alternately until the bar is
 filled
 
 <<Common Events/013:Timed Cha/Page 01/001>>
@@ -4702,21 +4705,21 @@ the bar is filled.
 
 <<Common Events/014:Multi Att/Page 01/001>>
 <<background: dim>>
-Press the Z key multiple times
+Press the \I[277] key multiple times
 
 <<Common Events/015:Timed Sta/Page 01/001>>
 <<background: dim>>
-Keep the A key pressed until all the lights are
+Keep the \I[272] key pressed until all the lights are
 in blue.
 
 <<Common Events/016:Timed Izq/Page 01/001>>
 <<background: dim>>
-Press the keyes ← and → alternately until the bar
+Press the keys \I[282] and \I[283] alternately until the bar
 is filled
 
 <<Common Events/018:Timed Cha/Page 01/001>>
 <<background: dim>>
-Press the Up key multiple times until the bar 
+Press the Up key \I[281] multiple times until the bar 
 is filled
 
 <<Common Events/019:Colored T/Page 01/001>>
@@ -4779,7 +4782,7 @@ until the bar is filled.
 
 <<Common Events/024:Timed Sta/Page 01/001>>
 <<background: dim>>
-Keep the → key pressed until all the lights are
+Keep the \I[281] key pressed until all the lights are
 in blue.
 
 <<Common Events/025:Timed Cha/Page 01/001>>
