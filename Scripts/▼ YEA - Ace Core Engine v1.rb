@@ -160,7 +160,7 @@ module YEA
     # adjusted, but scripts provided by non-Yanfly Engine sources may or may
     # not adjust themselves properly.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    RESIZE_WIDTH  = 576
+    RESIZE_WIDTH  = 640
     RESIZE_HEIGHT = 416
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -175,7 +175,7 @@ module YEA
     #     2      30 fps
     #     1      60 fps
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    ANIMATION_RATE = 2
+    ANIMATION_RATE = 1
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Digit Grouping -
