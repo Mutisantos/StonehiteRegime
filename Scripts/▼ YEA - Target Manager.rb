@@ -204,6 +204,8 @@ class RPG::UsableItem < RPG::BaseItem
       when YEA::REGEXP::USABLEITEM::TARGETS
         @random_hits = 0
         case $1
+        when /ANY/i 
+          @scope = :any
         when /EVERYBODY/i
           @scope = :everybody
         when /TARGET ALL FOES/i
@@ -281,6 +283,7 @@ class RPG::UsableItem < RPG::BaseItem
     return true if @scope == :target_random_foes
     return true if @scope == :target_all_allies
     return true if @scope == :target_random_allies
+    return true if @scope == :any
     return rpg_usableitem_need_selection_target
   end
   
@@ -338,6 +341,13 @@ class RPG::UsableItem < RPG::BaseItem
   #--------------------------------------------------------------------------
   def for_random_allies?
     return @scope == :random_allies
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: for_any?
+  #--------------------------------------------------------------------------
+  def for_any?
+    return @scope == :any
   end
   
 end # class RPG::UsableItem
@@ -408,6 +418,16 @@ class Game_Action
       array += Array.new(item.number_of_targets) { friends_unit.random_target }
     elsif item.for_random_allies?
       array += Array.new(item.number_of_targets) { friends_unit.random_target }
+    elsif item.for_any?
+      array |= opponents_unit.alive_members
+      array |= friends_unit.alive_members
+      if item.for_one?
+        if @target_index >= 0 && @target_index < array.size
+          return [array[@target_index]]
+        else
+          return [array.sample]
+        end
+      end
     end
     return array
   end
