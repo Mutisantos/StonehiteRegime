@@ -205,6 +205,7 @@ class RPG::UsableItem < RPG::BaseItem
         @random_hits = 0
         case $1
         when /ANY/i 
+          @original_scope = @scope  # Store original scope before changing
           @scope = :any
         when /EVERYBODY/i
           @scope = :everybody
@@ -250,6 +251,7 @@ class RPG::UsableItem < RPG::BaseItem
   def for_opponent?
     return true if @scope == :target_all_foes
     return true if @scope == :target_random_foes
+    return true if @scope == :any
     return rpg_usableitem_for_opponent_target
   end
   
@@ -262,6 +264,7 @@ class RPG::UsableItem < RPG::BaseItem
     return true if @scope == :target_all_allies
     return true if @scope == :target_random_allies
     return true if @scope == :random_allies
+    return true if @scope == :any
     return rpg_usableitem_for_friend_target
   end
   
@@ -349,6 +352,13 @@ class RPG::UsableItem < RPG::BaseItem
   def for_any?
     return @scope == :any
   end
+
+  #--------------------------------------------------------------------------
+  # new method: for_original_one?
+  #--------------------------------------------------------------------------
+  def for_original_one?
+    return [1, 2].include?(@original_scope)
+  end
   
 end # class RPG::UsableItem
 
@@ -421,12 +431,17 @@ class Game_Action
     elsif item.for_any?
       array |= opponents_unit.alive_members
       array |= friends_unit.alive_members
-      if item.for_one?
-        if @target_index >= 0 && @target_index < array.size
-          return [array[@target_index]]
-        else
-          return [array.sample]
+      if item.for_original_one?
+        # Handle special indexing for :any scope
+        if @target_index >= 1000
+          # Actor selected (1000 + actor_index)
+          actor_index = @target_index - 1000
+          return [friends_unit.members[actor_index]] if actor_index < friends_unit.members.size
+        elsif @target_index >= 0
+          # Enemy selected
+          return [opponents_unit.members[@target_index]] if @target_index < opponents_unit.members.size
         end
+        return [array.sample]
       end
     end
     return array
@@ -469,10 +484,157 @@ class Scene_Battle < Scene_Base
     end
   end
   
+  #--------------------------------------------------------------------------
+  # alias method: on_skill_ok
+  #--------------------------------------------------------------------------
+  if $imported["YEA-BattleEngine"]
+  alias scene_battle_on_skill_ok_any_abe on_skill_ok
+  def on_skill_ok
+    @skill = @skill_window.item
+    $game_temp.battle_aid = @skill
+    BattleManager.actor.input.set_skill(@skill.id)
+    BattleManager.actor.last_skill.object = @skill
+    if @skill.for_any?
+      @skill_window.hide
+      select_any_selection
+    else
+      scene_battle_on_skill_ok_any_abe
+    end
+  end
+  end # $imported["YEA-BattleEngine"]
+  
+  #--------------------------------------------------------------------------
+  # alias method: on_item_ok
+  #--------------------------------------------------------------------------
+  if $imported["YEA-BattleEngine"]
+  alias scene_battle_on_item_ok_any_abe on_item_ok
+  def on_item_ok
+    @item = @item_window.item
+    $game_temp.battle_aid = @item
+    BattleManager.actor.input.set_item(@item.id)
+    if @item.for_any?
+      @item_window.hide
+      select_any_selection
+    else
+      scene_battle_on_item_ok_any_abe
+    end
+    $game_party.last_item.object = @item
+  end
+  end # $imported["YEA-BattleEngine"]
+  
+  #--------------------------------------------------------------------------
+  # new method: select_any_selection
+  #--------------------------------------------------------------------------
+  def select_any_selection
+    # Use enemy selection window but modify it to show both enemies and actors
+    select_enemy_selection
+  end
+  
 end # Scene_Battle
+
+#==============================================================================
+# ■ Window_BattleEnemy
+#==============================================================================
+
+class Window_BattleEnemy < Window_Selectable
+  
+  #--------------------------------------------------------------------------
+  # alias method: refresh
+  #--------------------------------------------------------------------------
+  alias window_battle_enemy_refresh_any refresh
+  def refresh
+    if $game_temp.battle_aid && $game_temp.battle_aid.for_any?
+      refresh_any_targets
+    else
+      window_battle_enemy_refresh_any
+    end
+  end
+  
+  #--------------------------------------------------------------------------
+  # new method: refresh_any_targets
+  #--------------------------------------------------------------------------
+  def refresh_any_targets
+    @data = []
+    @data += $game_troop.alive_members
+    @data += $game_party.alive_members
+    create_contents
+    draw_all_items
+  end
+  
+  #--------------------------------------------------------------------------
+  # alias method: item_max
+  #--------------------------------------------------------------------------
+  alias window_battle_enemy_item_max_any item_max
+  def item_max
+    if $game_temp.battle_aid && $game_temp.battle_aid.for_any?
+      return @data ? @data.size : 0
+    else
+      window_battle_enemy_item_max_any
+    end
+  end
+  
+  #--------------------------------------------------------------------------
+  # alias method: draw_item
+  #--------------------------------------------------------------------------
+  alias window_battle_enemy_draw_item_any draw_item
+  def draw_item(index)
+    if $game_temp.battle_aid && $game_temp.battle_aid.for_any?
+      draw_any_item(index)
+    else
+      window_battle_enemy_draw_item_any(index)
+    end
+  end
+  
+  #--------------------------------------------------------------------------
+  # new method: draw_any_item
+  #--------------------------------------------------------------------------
+  def draw_any_item(index)
+    return unless @data
+    target = @data[index]
+    if target
+      change_color(normal_color)
+      draw_text(item_rect_for_text(index), target.name)
+    end
+  end
+  
+  #--------------------------------------------------------------------------
+  # alias method: enemy
+  #--------------------------------------------------------------------------
+  alias window_battle_enemy_enemy_any enemy
+  def enemy
+    if $game_temp.battle_aid && $game_temp.battle_aid.for_any?
+      return @data ? @data[@index] : nil
+    else
+      window_battle_enemy_enemy_any
+    end
+  end
+  
+  #--------------------------------------------------------------------------
+  # new method: enemy_index
+  #--------------------------------------------------------------------------
+  def enemy_index
+    if $game_temp.battle_aid && $game_temp.battle_aid.for_any?
+      target = enemy
+      return -1 if target.nil?
+      
+      # For enemies, return their index in the troop
+      if target.is_a?(Game_Enemy)
+        return target.index
+      # For actors, we need to return their index with an offset
+      # to distinguish them from enemies
+      elsif target.is_a?(Game_Actor)
+        # Use a special index scheme: 1000 + actor_index
+        # This will be handled in make_custom_targets
+        return 1000 + target.index
+      end
+    else
+      return enemy ? enemy.index : -1
+    end
+  end
+  
+end # Window_BattleEnemy
 
 #==============================================================================
 # 
 # ▼ End of File
-# 
-#==============================================================================
+#

@@ -522,11 +522,11 @@ class SideView
   def action_play 
     return if @action_data == nil
     action = @action_data[0]
-    unless ["motion", "move", "anime", "loop_end", "n_1"].include?(action)
-      p("-----Action------")
-      p(@action_data)
-      p("-----------------")
-    end
+    # unless ["motion", "move", "anime", "loop_end", "n_1"].include?(action)
+    #   p("-----Action------")
+    #   p(@action_data)
+    #   p("-----------------")
+    # end
     # Flip
     return mirroring                    if action == "mirror"
     # Afterimage
