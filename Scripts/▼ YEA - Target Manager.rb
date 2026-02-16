@@ -17,6 +17,7 @@ $imported["YEA-TargetManager"] = true
 # 2012.01.04 - Compatibility Update: Area of Effect
 # 2012.01.02 - Started Script and Finished.
 #            - Compatibility Update: Lunatic Targets
+# 2026.02.13 - Add Any Target Tag compatibility 
 # 
 #==============================================================================
 # ▼ Introduction
@@ -436,10 +437,13 @@ class Game_Action
         if @target_index >= 1000
           # Actor selected (1000 + actor_index)
           actor_index = @target_index - 1000
-          return [friends_unit.members[actor_index]] if actor_index < friends_unit.members.size
+          # Get the actual actor from the friends unit
+          actor = friends_unit.alive_members[actor_index]
+          return [actor] if actor
         elsif @target_index >= 0
           # Enemy selected
-          return [opponents_unit.members[@target_index]] if @target_index < opponents_unit.members.size
+          enemy = opponents_unit.alive_members[@target_index]
+          return [enemy] if enemy
         end
         return [array.sample]
       end
@@ -530,6 +534,24 @@ class Scene_Battle < Scene_Base
     select_enemy_selection
   end
   
+  #--------------------------------------------------------------------------
+  # alias method: on_enemy_ok
+  #--------------------------------------------------------------------------
+  if $imported["YEA-BattleEngine"]
+  alias scene_battle_on_enemy_ok_any on_enemy_ok
+  def on_enemy_ok
+    if $game_temp.battle_aid && $game_temp.battle_aid.for_any?
+      target_index = @enemy_window.enemy_index
+      BattleManager.actor.input.target_index = target_index
+      @enemy_window.hide
+      $game_temp.battle_aid = nil
+      next_command
+    else
+      scene_battle_on_enemy_ok_any
+    end
+  end
+  end # $imported["YEA-BattleEngine"]
+  
 end # Scene_Battle
 
 #==============================================================================
@@ -616,16 +638,11 @@ class Window_BattleEnemy < Window_Selectable
     if $game_temp.battle_aid && $game_temp.battle_aid.for_any?
       target = enemy
       return -1 if target.nil?
-      
-      # For enemies, return their index in the troop
       if target.is_a?(Game_Enemy)
         return target.index
-      # For actors, we need to return their index with an offset
-      # to distinguish them from enemies
       elsif target.is_a?(Game_Actor)
-        # Use a special index scheme: 1000 + actor_index
-        # This will be handled in make_custom_targets
-        return 1000 + target.index
+        actor_position = $game_party.alive_members.index(target)
+        return 1000 + actor_position if actor_position
       end
     else
       return enemy ? enemy.index : -1
