@@ -196,6 +196,7 @@ Config Window Settings.rb
 Config Window.rb
 ConfigTitleWindow.rb
 *separator*
+*separator*
 Main.rb
 Script Exporter.rb
 Fomar ATB + Yanfly.rb
@@ -215,3 +216,4 @@ Basic Window Resizer v1.rb
 *separator*
 *separator*
 *separator*
+Advanced Enemy Targeting System.rb
