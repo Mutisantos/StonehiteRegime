@@ -46,20 +46,26 @@ module EnemyTargeting
     level: 2.0,        # Level multiplier
     hp: 0.1,          # Current HP contribution
     atk: 1.5,         # Attack power contribution
+    mat: 1.2,         # Magic attack contribution
     def: 1.0,         # Defense contribution
     agi: 0.8,         # Agility contribution
-    mat: 1.2,         # Magic attack contribution
     mdf: 0.9,         # Magic defense contribution
   }
   
   # State threat bonuses
   STATE_THREAT_BONUS = {
     # State ID => threat bonus
-    1 => 50,   # Death state
     2 => 30,   # Poison
     3 => 40,   # Paralysis
     4 => 25,   # Blind
     5 => 35,   # Silence
+    9 => 10,   # Defense
+    26 => 50,   # Burned
+    29 => 51,   # Snowed
+    44 => 52,   # Cycloned
+    45 => 53,   # Electrified
+    46 => 54,   # Soaked
+    47 => 55,   # Entangled
     # Add more as needed
   }
   
@@ -71,9 +77,9 @@ module EnemyTargeting
       description: "Targets highest threat character",
       method: :target_aggressive
     },
-    defensive: {
+    opportunistic: {
       description: "Targets healers and support characters first",
-      method: :target_defensive
+      method: :target_opportunistic
     },
     tactical: {
       description: "Uses advanced threat calculation",
@@ -117,56 +123,93 @@ module EnemyTargeting
   }
   
   #--------------------------------------------------------------------------
-  # ● Role Detection Methods
+  # ● Role Detection Methods (Observable Only)
   #--------------------------------------------------------------------------
   module RoleDetection
     def healer?(actor)
       return false unless actor.is_a?(Game_Actor)
-      # Check for healing skills
-      actor.skills.any? { |skill| healing_skill?(skill) }
+      # Only detect based on observed healing actions
+      observed_healing_actions(actor) >= 2
     end
     
     def mage?(actor)
       return false unless actor.is_a?(Game_Actor)
-      # Check for magic skills or equipment
-      magic_skills = actor.skills.count { |skill| magical_skill?(skill) }
-      magic_equipment = actor.weapons.any? { |w| magic_weapon?(w) }
-      magic_skills >= 2 || magic_equipment
+      # Detect based on observed magic usage or visible magic equipment
+      observed_magic_actions(actor) >= 2 || has_visible_magic_equipment?(actor)
     end
     
     def tank?(actor)
       return false unless actor.is_a?(Game_Actor)
-      # High defense or heavy equipment
-      actor.def > 100 || heavy_equipment?(actor)
+      # Detect based on visible high defense or heavy equipment
+      actor.def > 100 || has_visible_heavy_equipment?(actor)
     end
     
     def dps?(actor)
       return false unless actor.is_a?(Game_Actor)
-      # High attack or damage-focused equipment
-      actor.atk > 80 || damage_equipment?(actor)
+      # Detect based on observed damage output or visible weapons
+      observed_damage_output(actor) > 50 || has_visible_damage_equipment?(actor)
+    end
+    
+    # Observable behavior tracking
+    def observed_healing_actions(actor)
+      @battle_observations ||= {}
+      @battle_observations[:healing] ||= {}
+      @battle_observations[:healing][actor.id] ||= 0
+    end
+    
+    def observed_magic_actions(actor)
+      @battle_observations ||= {}
+      @battle_observations[:magic] ||= {}
+      @battle_observations[:magic][actor.id] ||= 0
+    end
+    
+    def observed_damage_output(actor)
+      @battle_observations ||= {}
+      @battle_observations[:damage] ||= {}
+      @battle_observations[:damage][actor.id] ||= 0
+    end
+    
+    def record_healing_action(actor, amount)
+      return unless actor.is_a?(Game_Actor)
+      @battle_observations ||= {}
+      @battle_observations[:healing] ||= {}
+      @battle_observations[:healing][actor.id] ||= 0
+      @battle_observations[:healing][actor.id] += 1
+    end
+    
+    def record_magic_action(actor)
+      return unless actor.is_a?(Game_Actor)
+      @battle_observations ||= {}
+      @battle_observations[:magic] ||= {}
+      @battle_observations[:magic][actor.id] ||= 0
+      @battle_observations[:magic][actor.id] += 1
+    end
+    
+    def record_damage_action(actor, damage)
+      return unless actor.is_a?(Game_Actor)
+      @battle_observations ||= {}
+      @battle_observations[:damage] ||= {}
+      @battle_observations[:damage][actor.id] ||= 0
+      @battle_observations[:damage][actor.id] += damage
     end
     
     private
     
-    def healing_skill?(skill)
-      skill.damage.recover? || skill.scope.between?(7, 9)
+    def has_visible_magic_equipment?(actor)
+      # Only check visible weapons for magic properties
+      actor.weapons.any? { |w| w && w.damage.magical? }
     end
     
-    def magical_skill?(skill)
-      skill.damage.magical?
+    def has_visible_heavy_equipment?(actor)
+      # Check for visible shields and heavy armor
+      shields = actor.armors.select { |a| a && a.etype_id == 1 } # Shield slot
+      heavy_armor = actor.armors.select { |a| a && a.atype_id >= 8 } # Heavy armor types
+      shields.any? || heavy_armor.any?
     end
     
-    def magic_weapon?(weapon)
-      return false unless weapon
-      EQUIPMENT_TYPES[:weapon_magic].include?(weapon.wtype_id)
-    end
-    
-    def heavy_equipment?(actor)
-      actor.armors.any? { |armor| EQUIPMENT_TYPES[:armor_heavy].include?(armor.atype_id) }
-    end
-    
-    def damage_equipment?(actor)
-      actor.weapons.any? { |weapon| EQUIPMENT_TYPES[:weapon_heavy].include?(weapon.wtype_id) }
+    def has_visible_damage_equipment?(actor)
+      # Check for visible weapons with high damage
+      actor.weapons.any? { |w| w && w.atk > 50 }
     end
   end
   
@@ -180,7 +223,7 @@ module EnemyTargeting
     end
     
     # Target healers and support first
-    def target_defensive(enemies)
+    def target_opportunistic(enemies)
       healers = enemies.select { |e| healer?(e) }
       return healers.sample if healers.any?
       
@@ -283,24 +326,10 @@ module EnemyTargeting
     
     def calculate_stats_threat(target)
       threat = 0
-      THREAT_WEIGHTS.each do |stat, weight|
-        case stat
-        when :level
-          threat += target.level * weight
-        when :hp
-          threat += target.hp * weight
-        when :atk
-          threat += target.atk * weight
-        when :def
-          threat += target.def * weight
-        when :agi
-          threat += target.agi * weight
-        when :mat
-          threat += target.mat * weight
-        when :mdf
-          threat += target.mdf * weight
-        end
-      end
+      # Only use observable stats
+      threat += target.hp * THREAT_WEIGHTS[:hp]  # HP is observable
+      threat += target.def * THREAT_WEIGHTS[:def]  # Defense is observable
+      # Level, ATK, MAT, AGI, MDF are NOT directly observable
       threat
     end
     
@@ -539,6 +568,7 @@ class Game_Enemy < Game_Battler
   #--------------------------------------------------------------------------
   alias enemy_targeting_initialize initialize
   alias enemy_targeting_make_actions make_actions
+  alias enemy_targeting_execute_damage execute_damage
   
   #--------------------------------------------------------------------------
   # ● Object Initialization
@@ -546,6 +576,7 @@ class Game_Enemy < Game_Battler
   def initialize(index, enemy_id)
     enemy_targeting_initialize(index, enemy_id)
     initialize_target_memory
+    initialize_observation_system
   end
   
   #--------------------------------------------------------------------------
@@ -554,6 +585,39 @@ class Game_Enemy < Game_Battler
   def make_actions
     enemy_targeting_make_actions
     update_turn_counter
+  end
+  
+  #--------------------------------------------------------------------------
+  # ● Execute Damage (Override to record observations)
+  #--------------------------------------------------------------------------
+  def execute_damage(user)
+    enemy_targeting_execute_damage(user)
+    
+    # Record observations about the attacker
+    if user.is_a?(Game_Actor)
+      record_damage_action(user, @result.hp_damage)
+      
+      # Check if this was a healing action
+      if @result.hp_damage < 0
+        record_healing_action(user, @result.hp_damage.abs)
+      end
+      
+      # Check if this was a magic action
+      if action && action.skill && action.skill.damage.magical?
+        record_magic_action(user)
+      end
+    end
+  end
+  
+  #--------------------------------------------------------------------------
+  # ● Initialize Observation System
+  #--------------------------------------------------------------------------
+  def initialize_observation_system
+    @battle_observations = {
+      healing: {},
+      magic: {},
+      damage: {}
+    }
   end
   
   #--------------------------------------------------------------------------
@@ -567,7 +631,7 @@ class Game_Enemy < Game_Battler
       targets = [select_strategic_target(targets)]
     end
     
-    # Remember the target
+    # Remember target
     remember_target(targets.first) if targets && targets.first
     
     targets
@@ -584,7 +648,7 @@ class Game_Enemy < Game_Battler
       return @last_target
     end
     
-    # Get the targeting method for this enemy type
+    # Get targeting method for this enemy type
     target_type = enemy_type
     method_name = TARGET_TYPES[target_type][:method]
     
@@ -593,6 +657,30 @@ class Game_Enemy < Game_Battler
     else
       default_targets.first
     end
+  end
+  
+  #--------------------------------------------------------------------------
+  # ● Record Damage Action
+  #--------------------------------------------------------------------------
+  def record_damage_action(user, damage)
+    @battle_observations[:damage][user.id] ||= 0
+    @battle_observations[:damage][user.id] += damage
+  end
+  
+  #--------------------------------------------------------------------------
+  # ● Record Healing Action
+  #--------------------------------------------------------------------------
+  def record_healing_action(user, healing)
+    @battle_observations[:healing][user.id] ||= 0
+    @battle_observations[:healing][user.id] += healing
+  end
+  
+  #--------------------------------------------------------------------------
+  # ● Record Magic Action
+  #--------------------------------------------------------------------------
+  def record_magic_action(user)
+    @battle_observations[:magic][user.id] ||= 0
+    @battle_observations[:magic][user.id] += 1
   end
 end
 
