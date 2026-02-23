@@ -350,7 +350,26 @@ class Game_Battler
 
   alias muti_make_damage make_damage_value
   def make_damage_value (user, item)
-    value = item.damage.eval(user, self, $game_variables) + 0.0
+    # Store original MP for percentage-based MP cost skills
+    original_mp = user.instance_variable_get(:@original_mp)
+    original_mmp = user.instance_variable_get(:@original_mmp)
+    
+    # If skill has percentage MP cost, use preserved values
+    if item.is_a?(RPG::Skill) && item.mp_cost_percent > 0 && original_mp && original_mmp
+      # Temporarily restore original MP for damage calculation
+      current_mp = user.mp
+      current_mmp = user.mmp
+      user.instance_variable_set(:@mp, original_mp)
+      user.instance_variable_set(:@mmp, original_mmp)
+      
+      value = item.damage.eval(user, self, $game_variables) + 0.0
+      
+      # Restore current MP values
+      user.instance_variable_set(:@mp, current_mp)
+      user.instance_variable_set(:@mmp, current_mmp)
+    else
+      value = item.damage.eval(user, self, $game_variables) + 0.0
+    end
     value *= item_element_rate(user, item)
     value *= pdr if item.physical?
     value *= mdr if item.magical?
@@ -358,6 +377,10 @@ class Game_Battler
     value = apply_critical(value) if @result.critical
     value = apply_variance(value, item.damage.variance)
     value = apply_guard(value)
+    # Damage calculation debug
+    # p(value)
+    # p($multiplier)
+    # p($game_variables[CommandSkill::DAMAGE_MULTIPLIER])
     value = value * $multiplier * $game_variables[CommandSkill::DAMAGE_MULTIPLIER] 
     if ($game_variables[CommandSkill::DAMAGE_MULTIPLIER] >= 1.0)
       @result.missed = false
@@ -522,6 +545,15 @@ class Scene_Battle
   # ------------------------------------------------- -------------------------
   alias make_skill_action_result_cmd_skill use_item
   def use_item
+    # Store original MP values before cost payment for percentage-based MP cost skills
+    if @subject && @subject.current_action
+      item = @subject.current_action.item
+      if item.is_a?(RPG::Skill) && item.mp_cost_percent > 0
+        @subject.instance_variable_set(:@original_mp, @subject.mp)
+        @subject.instance_variable_set(:@original_mmp, @subject.mmp)
+      end
+    end
+    
     pre_cmd_skill
     make_skill_action_result_cmd_skill # original
     after_cmd_skill
