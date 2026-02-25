@@ -108,6 +108,10 @@ module EnemyTargeting
     strongest_first: {
       description: "Targets highest level character",
       method: :target_strongest_first
+    },
+    revengeful: {
+      description: "Always attacks last character that attacked them",
+      method: :target_revengeful
     }
   }
   
@@ -269,6 +273,12 @@ module EnemyTargeting
     # Target strongest character
     def target_strongest_first(enemies)
       enemies.max_by(&:level)
+    end
+    
+    # Target last attacker (revengeful)
+    def target_revengeful(enemies)
+      return @last_attacker if @last_attacker && @last_attacker.alive? && enemies.include?(@last_attacker)
+      enemies.sample
     end
     
     # Support character detection
@@ -483,6 +493,7 @@ module EnemyTargeting
   module TargetMemory
     def initialize_target_memory
       @last_target = nil
+      @last_attacker = nil
       @target_history = []
       @turn_counter = 0
     end
@@ -596,14 +607,12 @@ class Game_Enemy < Game_Battler
     # Record observations about the attacker
     if user.is_a?(Game_Actor)
       record_damage_action(user, @result.hp_damage)
-      
       # Check if this was a healing action
       if @result.hp_damage < 0
         record_healing_action(user, @result.hp_damage.abs)
       end
-      
       # Check if this was a magic action
-      if action && action.skill && action.skill.damage.magical?
+      if user.current_action && user.current_action.item && user.current_action.item.hit_type == 2
         record_magic_action(user)
       end
     end
@@ -682,6 +691,14 @@ class Game_Enemy < Game_Battler
     @battle_observations[:magic][user.id] ||= 0
     @battle_observations[:magic][user.id] += 1
   end
+  
+  #--------------------------------------------------------------------------
+  # ● Record Attacker
+  #--------------------------------------------------------------------------
+  def record_attacker(attacker)
+    return unless attacker.is_a?(Game_Actor)
+    @last_attacker = attacker
+  end
 end
 
 #==============================================================================
@@ -690,6 +707,23 @@ end
 class Game_Actor < Game_Battler
   # Add role detection methods for actors
   include EnemyTargeting::RoleDetection
+  
+  #--------------------------------------------------------------------------
+  # ● Alias Methods
+  #--------------------------------------------------------------------------
+  alias actor_targeting_execute_damage execute_damage
+  
+  #--------------------------------------------------------------------------
+  # ● Execute Damage (Override to record when actor attacks enemies)
+  #--------------------------------------------------------------------------
+  def execute_damage(target)
+    actor_targeting_execute_damage(target)
+    
+    # Record this actor as attacker for enemy revenge targeting
+    if target.is_a?(Game_Enemy)
+      target.record_attacker(self)
+    end
+  end
 end
 
 #==============================================================================

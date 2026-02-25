@@ -196,6 +196,7 @@ Config Window Settings.rb
 Config Window.rb
 ConfigTitleWindow.rb
 *separator*
+Advanced Enemy Targeting System.rb
 *separator*
 Main.rb
 Script Exporter.rb
@@ -206,14 +207,3 @@ Zeus81's Screen Resolution.rb
 IBG Flash Screen/Skip Title V1.rb
 MOG - Animated Title A.rb
 Basic Window Resizer v1.rb
-*separator*
-*separator*
-*separator*
-*separator*
-*separator*
-*separator*
-*separator*
-*separator*
-*separator*
-*separator*
-Advanced Enemy Targeting System.rb
