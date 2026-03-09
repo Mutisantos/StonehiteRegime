@@ -630,23 +630,6 @@ class Game_Enemy < Game_Battler
   end
   
   #--------------------------------------------------------------------------
-  # ● Make Action Targets (Override)
-  #--------------------------------------------------------------------------
-  def make_action_targets
-    targets = super
-    
-    # Only modify single-target selections
-    if action && action.scope == 1 && targets.is_a?(Array) && targets.size == 1
-      targets = [select_strategic_target(targets)]
-    end
-    
-    # Remember target
-    remember_target(targets.first) if targets && targets.first
-    
-    targets
-  end
-  
-  #--------------------------------------------------------------------------
   # ● Strategic Target Selection
   #--------------------------------------------------------------------------
   def select_strategic_target(default_targets)
@@ -662,9 +645,11 @@ class Game_Enemy < Game_Battler
     method_name = TARGET_TYPES[target_type][:method]
     
     if respond_to?(method_name)
-      send(method_name, enemies)
+      target = send(method_name, enemies)
+      # Ensure we have a valid target
+      target && target.alive? ? target : enemies.sample
     else
-      default_targets.first
+      enemies.sample
     end
   end
   

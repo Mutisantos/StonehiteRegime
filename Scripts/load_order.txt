@@ -152,19 +152,20 @@ Language File System - Text Viewer.rb
 ▼ Yanfly Engine Ace - Passive States v1.rb
 ▼ Yanfly Engine Ace - Equip Dynamic Stat.rb
 ▼ Yanfly Engine Ace - Skill Cost Manager.rb
--Tanketai.rb
-VXAce_SP1.rb
-SideView- Action Setup.rb
-SideView - Battle Setup.rb
-Sideview.rb
-Sprite_Sideview.rb
-Battle_Camera.rb
-Redefining Aliases.rb
-Test Faster Game.rb
-Parch1.rb
-Yanfly Engince Ace - Field State Effects.rb
-Yami PCTB.rb
-Yami_Order_Gauge.rb
+Tanketai Sideview Battle System
+Tanketai Sideview Battle System/-Tanketai.rb
+Tanketai Sideview Battle System/VXAce_SP1.rb
+Tanketai Sideview Battle System/SideView- Action Setup.rb
+Tanketai Sideview Battle System/SideView - Battle Setup.rb
+Tanketai Sideview Battle System/Sideview.rb
+Tanketai Sideview Battle System/Sprite_Sideview.rb
+Tanketai Sideview Battle System/Battle_Camera.rb
+Tanketai Sideview Battle System/Redefining Aliases.rb
+Tanketai Sideview Battle System/Test Faster Game.rb
+Tanketai Sideview Battle System/Parch1.rb
+Tanketai Sideview Battle System/Yanfly Engince Ace - Field State Effects.rb
+Tanketai Sideview Battle System/Yami PCTB.rb
+Tanketai Sideview Battle System/Yami_Order_Gauge.rb
 *separator*
 Day - Night System.rb
 *separator*
@@ -195,9 +196,8 @@ Galv's Move Route Extras.rb
 Config Window Settings.rb
 Config Window.rb
 ConfigTitleWindow.rb
-*separator*
 Advanced Enemy Targeting System.rb
-*separator*
+Enemy Targeting Test.rb
 Main.rb
 Script Exporter.rb
 Fomar ATB + Yanfly.rb
