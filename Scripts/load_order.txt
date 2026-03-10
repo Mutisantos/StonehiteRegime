@@ -197,8 +197,8 @@ Config Window Settings.rb
 Config Window.rb
 ConfigTitleWindow.rb
 Advanced Enemy Targeting System.rb
-Enemy Targeting Test.rb
 Main.rb
+Enemy Targeting Test.rb
 Script Exporter.rb
 Fomar ATB + Yanfly.rb
 Testing.rb

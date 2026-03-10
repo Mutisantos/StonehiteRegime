@@ -685,7 +685,36 @@ class Game_Enemy < Game_Battler
     @last_attacker = attacker
   end
 end
-
+#==============================================================================
+# ■ Game_Action
+#==============================================================================
+class Game_Action
+  alias advanced_targets_for_opponents targets_for_opponents
+  # Add targeting methods for actions
+  def targets_for_opponents
+    if item.for_random?
+      Array.new(item.number_of_targets) { opponents_unit.random_target }
+    elsif item.for_one?
+      num = 1 + (attack? ? subject.atk_times_add.to_i : 0)
+      if @target_index < 0
+        if subject.is_a?(Game_Enemy) && subject.respond_to?(:select_strategic_target)
+          targets = [subject.select_strategic_target(opponents_unit.alive_members)]
+          targets.compact! # Remove nil targets
+          targets = [opponents_unit.random_target] if targets.empty?
+          # Remember the selected target
+          subject.remember_target(targets.first) if targets && targets.first
+          targets * num
+        else
+          [opponents_unit.random_target] * num
+        end
+      else
+        [opponents_unit.smooth_target(@target_index)] * num
+      end
+    else
+      opponents_unit.alive_members
+    end
+  end
+end
 #==============================================================================
 # ■ Game_Actor
 #==============================================================================
@@ -740,3 +769,6 @@ module DataManager
     end
   end
 end
+
+
+

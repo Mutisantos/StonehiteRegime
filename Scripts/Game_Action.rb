@@ -179,17 +179,7 @@ class Game_Action
     elsif item.for_one?
       num = 1 + (attack? ? subject.atk_times_add.to_i : 0)
       if @target_index < 0
-        # Use advanced targeting for enemies if available
-        if subject.is_a?(Game_Enemy) && subject.respond_to?(:select_strategic_target)
-          targets = [subject.select_strategic_target(opponents_unit.alive_members)]
-          targets.compact! # Remove nil targets
-          targets = [opponents_unit.random_target] if targets.empty?
-          # Remember the selected target
-          subject.remember_target(targets.first) if targets && targets.first
-          targets * num
-        else
-          [opponents_unit.random_target] * num
-        end
+        [opponents_unit.random_target] * num
       else
         [opponents_unit.smooth_target(@target_index)] * num
       end
