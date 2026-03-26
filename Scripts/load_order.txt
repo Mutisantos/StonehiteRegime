@@ -207,3 +207,4 @@ Zeus81's Screen Resolution.rb
 IBG Flash Screen/Skip Title V1.rb
 MOG - Animated Title A.rb
 Basic Window Resizer v1.rb
+Enemy Database Debug.rb

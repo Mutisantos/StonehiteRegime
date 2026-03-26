@@ -1,7 +1,6 @@
 #==============================================================================
 # ■ Advanced Enemy Targeting System
 #------------------------------------------------------------------------------
-# Author: Custom Script
 # Version: 1.0
 # 
 # This script provides advanced enemy targeting capabilities including:
@@ -78,7 +77,7 @@ module EnemyTargeting
       method: :target_aggressive
     },
     opportunistic: {
-      description: "Targets healers and support characters first",
+      description: "Targets characters with status ailments",
       method: :target_opportunistic
     },
     tactical: {
@@ -223,17 +222,26 @@ module EnemyTargeting
   module TargetSelection
     # Target highest threat character
     def target_aggressive(enemies)
+      p("evaluating aggressive:" + enemies.max_by { |enemy| calculate_threat_level(enemy) }.to_s)
       enemies.max_by { |enemy| calculate_threat_level(enemy) }
     end
     
-    # Target healers and support first
+    # Target actors with highest ailment-based threat
     def target_opportunistic(enemies)
-      healers = enemies.select { |e| healer?(e) }
-      return healers.sample if healers.any?
+      # Calculate state threat for each enemy
+      enemies_with_threat = enemies.map do |enemy|
+        state_threat = calculate_state_threat(enemy)
+        [enemy, state_threat]
+      end
       
-      supports = enemies.select { |e| support_character?(e) }
-      return supports.sample if supports.any?
+      # Sort by state threat (highest first) and return the top target
+      enemies_with_threat.sort_by! { |enemy, threat| -threat }
       
+      # Return the enemy with highest state threat, or random if no threats
+      highest_threat_enemy = enemies_with_threat.first
+      return highest_threat_enemy[0] if highest_threat_enemy && highest_threat_enemy[1] > 0
+      
+      # Fallback to random targeting if no state threats
       enemies.sample
     end
     
@@ -244,6 +252,7 @@ module EnemyTargeting
     
     # Default random targeting
     def target_random(enemies)
+      p("evaluating random:" + enemies.sample.to_s)
       enemies.sample
     end
     
@@ -267,16 +276,21 @@ module EnemyTargeting
     
     # Target weakest character
     def target_weakest_first(enemies)
+      p("evaluating weakest:" + enemies.min_by(&:hp).to_s)
       enemies.min_by(&:hp)
     end
     
     # Target strongest character
     def target_strongest_first(enemies)
+      p("evaluating strongest:" + enemies.max_by(&:level).to_s)
       enemies.max_by(&:level)
     end
     
     # Target last attacker (revengeful)
     def target_revengeful(enemies)
+      if(@last_attacker)
+        p("evaluating revengeful:" + @last_attacker.name)
+      end
       return @last_attacker if @last_attacker && @last_attacker.alive? && enemies.include?(@last_attacker)
       enemies.sample
     end
@@ -337,8 +351,8 @@ module EnemyTargeting
     def calculate_stats_threat(target)
       threat = 0
       # Only use observable stats
-      threat += target.hp * THREAT_WEIGHTS[:hp]  # HP is observable
-      threat += target.def * THREAT_WEIGHTS[:def]  # Defense is observable
+      threat += target.hp * EnemyTargeting::THREAT_WEIGHTS[:hp]  # HP is observable
+      threat += target.def * EnemyTargeting::THREAT_WEIGHTS[:def]  # Defense is observable
       # Level, ATK, MAT, AGI, MDF are NOT directly observable
       threat
     end
@@ -347,7 +361,7 @@ module EnemyTargeting
       threat = 0
       target.states.each do |state|
         # Base state threat
-        threat += STATE_THREAT_BONUS[state.id] || 0
+        threat += EnemyTargeting::STATE_THREAT_BONUS[state.id] || 0
         
         # Custom state threat from notes
         if state.respond_to?(:target_weight)
@@ -459,7 +473,7 @@ module EnemyTargeting
       
       # State-based weighting
       target.states.each do |state|
-        weight += STATE_THREAT_BONUS[state.id] || 0
+        weight += EnemyTargeting::STATE_THREAT_BONUS[state.id] || 0
         if state.respond_to?(:target_weight)
           weight += state.target_weight
         end
@@ -499,7 +513,7 @@ module EnemyTargeting
     end
     
     def remember_target(target)
-      return unless REMEMBER_TARGETS
+      return unless EnemyTargeting::REMEMBER_TARGETS
       
       @last_target = target
       @target_history << { target: target, turn: @turn_counter }
@@ -509,12 +523,12 @@ module EnemyTargeting
     end
     
     def should_retarget_last?(enemies)
-      return false unless REMEMBER_TARGETS
+      return false unless EnemyTargeting::REMEMBER_TARGETS
       return false unless @last_target
       return false unless @last_target.alive?
       return false unless enemies.include?(@last_target)
       
-      rand < RETARGET_CHANCE
+      rand < EnemyTargeting::RETARGET_CHANCE
     end
     
     def update_turn_counter
@@ -529,20 +543,32 @@ module EnemyTargeting
     def parse_enemy_notes
       return @target_type if @target_type
       
-      notes = enemy.note
-      @target_type = DEFAULT_TARGET_TYPE
+      enemy_obj = enemy
+      p("enemy object: " + enemy_obj.to_s)
+      p("enemy ID: " + enemy_obj.id.to_s) if enemy_obj.respond_to?(:id)
+      
+      notes = enemy_obj.note
+      p("enemy notes: " + notes.to_s)
+      @target_type = EnemyTargeting::DEFAULT_TARGET_TYPE
       
       # Parse target type
       if notes =~ /<target_type:\s*(\w+)>/i
         type = $1.to_sym
-        @target_type = type if TARGET_TYPES.key?(type)
+        p("found target type: " + type.to_s)
+        @target_type = type if EnemyTargeting::TARGET_TYPES.key?(type)
+      else
+        p("no target type tag found in notes")
       end
       
+      p("final target type: " + @target_type.to_s)
       @target_type
     end
     
     def enemy_type
-      parse_enemy_notes
+      p("calling enemy_type for enemy: #{@enemy_id}")
+      result = parse_enemy_notes
+      p("enemy_type returning: " + result.to_s)
+      result
     end
     
     def parse_state_notes(state)
@@ -602,10 +628,11 @@ class Game_Enemy < Game_Battler
   # ● Execute Damage (Override to record observations)
   #--------------------------------------------------------------------------
   def execute_damage(user)
+    p("Enemy #{self.name} attacked by actor #{user.name}")
     enemy_targeting_execute_damage(user)
-    
     # Record observations about the attacker
     if user.is_a?(Game_Actor)
+      self.record_attacker(user)
       record_damage_action(user, @result.hp_damage)
       # Check if this was a healing action
       if @result.hp_damage < 0
@@ -642,7 +669,7 @@ class Game_Enemy < Game_Battler
     
     # Get targeting method for this enemy type
     target_type = enemy_type
-    method_name = TARGET_TYPES[target_type][:method]
+    method_name = EnemyTargeting::TARGET_TYPES[target_type][:method]
     
     if respond_to?(method_name)
       target = send(method_name, enemies)
@@ -729,11 +756,12 @@ class Game_Actor < Game_Battler
   
   #--------------------------------------------------------------------------
   # ● Execute Damage (Override to record when actor attacks enemies)
+  # This method is both called when an actor attacks an enemy and when an enemy attacks an actor
   #--------------------------------------------------------------------------
   def execute_damage(target)
     actor_targeting_execute_damage(target)
-    
     # Record this actor as attacker for enemy revenge targeting
+    p("Actor #{self.name} attacked by enemy #{target.name}")
     if target.is_a?(Game_Enemy)
       target.record_attacker(self)
     end
