@@ -40,6 +40,27 @@ module EnemyTargeting
   REMEMBER_TARGETS = true      # Enable previous target memory
   RETARGET_CHANCE = 0.3        # 30% chance to target same character again
   
+  # Global battle observations for all enemies
+  @@global_battle_observations = {
+    healing: {},
+    magic: {},
+    damage: {}
+  }
+  
+  # Access global observations
+  def self.global_battle_observations
+    @@global_battle_observations
+  end
+  
+  # Clear global observations (call at battle start)
+  def self.clear_global_observations
+    @@global_battle_observations = {
+      healing: {},
+      magic: {},
+      damage: {}
+    }
+  end
+  
   # Threat calculation weights
   THREAT_WEIGHTS = {
     level: 2.0,        # Level multiplier
@@ -155,21 +176,40 @@ module EnemyTargeting
     
     # Observable behavior tracking
     def observed_healing_actions(actor)
-      @battle_observations ||= {}
-      @battle_observations[:healing] ||= {}
-      @battle_observations[:healing][actor.id] ||= 0
+      # Use global observations for enemy access
+      return EnemyTargeting.global_battle_observations[:healing][actor.id] || 0
     end
     
     def observed_magic_actions(actor)
-      @battle_observations ||= {}
-      @battle_observations[:magic] ||= {}
-      @battle_observations[:magic][actor.id] ||= 0
+      # Use global observations for enemy access
+      return EnemyTargeting.global_battle_observations[:magic][actor.id] || 0
     end
     
     def observed_damage_output(actor)
-      @battle_observations ||= {}
-      @battle_observations[:damage] ||= {}
-      @battle_observations[:damage][actor.id] ||= 0
+      # Use global observations for enemy access
+      return EnemyTargeting.global_battle_observations[:damage][actor.id] || 0
+    end
+    
+    # Global observation recording methods
+    def record_global_healing_action(actor, amount)
+      return unless actor.is_a?(Game_Actor)
+      global_obs = EnemyTargeting.global_battle_observations
+      global_obs[:healing][actor.id] ||= 0
+      global_obs[:healing][actor.id] += 1
+    end
+    
+    def record_global_magic_action(actor)
+      return unless actor.is_a?(Game_Actor)
+      global_obs = EnemyTargeting.global_battle_observations
+      global_obs[:magic][actor.id] ||= 0
+      global_obs[:magic][actor.id] += 1
+    end
+    
+    def record_global_damage_action(actor, damage)
+      return unless actor.is_a?(Game_Actor)
+      global_obs = EnemyTargeting.global_battle_observations
+      global_obs[:damage][actor.id] ||= 0
+      global_obs[:damage][actor.id] += damage
     end
     
     def record_healing_action(actor, amount)
@@ -199,20 +239,32 @@ module EnemyTargeting
     private
     
     def has_visible_magic_equipment?(actor)
-      # Only check visible weapons for magic properties
-      actor.weapons.any? { |w| w && w.damage.magical? }
+      # Check if actor has any magic-type weapons
+      actor.weapons.any? { 
+        |w| 
+          w && EnemyTargeting::EQUIPMENT_TYPES[:weapon_magic].include?(w.wtype_id)
+        }
     end
     
     def has_visible_heavy_equipment?(actor)
-      # Check for visible shields and heavy armor
-      shields = actor.armors.select { |a| a && a.etype_id == 1 } # Shield slot
-      heavy_armor = actor.armors.select { |a| a && a.atype_id >= 8 } # Heavy armor types
-      shields.any? || heavy_armor.any?
+      # Check for heavy weapon types and heavy armor types
+      heavy_weapons = actor.weapons.any? { |w| 
+        w && EnemyTargeting::EQUIPMENT_TYPES[:weapon_heavy].include?(w.wtype_id)
+      }
+      heavy_armor = actor.armors.any? { |a| 
+        a && EnemyTargeting::EQUIPMENT_TYPES[:armor_heavy].include?(a.atype_id)
+      }
+      shields = actor.armors.any? { |a| 
+        a && EnemyTargeting::EQUIPMENT_TYPES[:shield].include?(a.etype_id)
+      }
+      heavy_weapons || heavy_armor || shields
     end
     
     def has_visible_damage_equipment?(actor)
-      # Check for visible weapons with high damage
-      actor.weapons.any? { |w| w && w.atk > 50 }
+      # Check if any weapon's attack is 50% higher than actor's base attack
+      actor.weapons.any? { |w| 
+        w && w.atk > (actor.atk * 1.5)
+      }
     end
   end
   
@@ -626,22 +678,22 @@ class Game_Enemy < Game_Battler
   
   #--------------------------------------------------------------------------
   # ● Execute Damage (Override to record observations)
-  #--------------------------------------------------------------------------
+  # This method is called when an Enemy receives an attack
   def execute_damage(user)
-    p("Enemy #{self.name} attacked by actor #{user.name}")
+    p("Enemy #{self.name} targeted by actor #{user.name}")
     enemy_targeting_execute_damage(user)
-    # Record observations about the attacker
+    # Record observations about the attacker globally for all enemies
     if user.is_a?(Game_Actor)
       self.record_attacker(user)
-      record_damage_action(user, @result.hp_damage)
-      # Check if this was a healing action
-      if @result.hp_damage < 0
-        record_healing_action(user, @result.hp_damage.abs)
-      end
+      # Record globally for all enemy access
+      record_global_damage_action(user, @result.hp_damage)
       # Check if this was a magic action
       if user.current_action && user.current_action.item && user.current_action.item.hit_type == 2
-        record_magic_action(user)
+        record_global_magic_action(user)
       end
+      # Also record locally for this enemy's personal observations
+      record_damage_action(user, @result.hp_damage)
+      record_magic_action(user) if user.current_action && user.current_action.item && user.current_action.item.hit_type == 2
     end
   end
   
@@ -755,15 +807,25 @@ class Game_Actor < Game_Battler
   alias actor_targeting_execute_damage execute_damage
   
   #--------------------------------------------------------------------------
-  # ● Execute Damage (Override to record when actor attacks enemies)
-  # This method is both called when an actor attacks an enemy and when an enemy attacks an actor
-  #--------------------------------------------------------------------------
-  def execute_damage(target)
-    actor_targeting_execute_damage(target)
-    # Record this actor as attacker for enemy revenge targeting
-    p("Actor #{self.name} attacked by enemy #{target.name}")
-    if target.is_a?(Game_Enemy)
-      target.record_attacker(self)
+  # ● Execute Damage (Override to record when actors receive damage from other actors)
+  # This method is called when an Actor receives damage/healing from another actor
+  def execute_damage(attacker)
+    actor_targeting_execute_damage(attacker)
+    # Record actor actions globally for enemy observation
+    p("Actor #{self.name} targeted by #{attacker.name}")
+    if(attacker.is_a?(Game_Actor))
+      # Check if this was a healing action
+      if @result.hp_damage < 0
+        record_global_healing_action(attacker, @result.hp_damage.abs)
+      end
+      # Check if this was a magic action
+      if attacker.current_action && attacker.current_action.item && attacker.current_action.item.hit_type == 2
+        record_global_magic_action(attacker)
+      end
+      # Record damage output (negative healing becomes positive damage for tracking)
+      if @result.hp_damage > 0
+        record_global_damage_action(attacker, @result.hp_damage)
+      end
     end
   end
 end
