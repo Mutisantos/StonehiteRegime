@@ -37,8 +37,8 @@ module EnemyTargeting
   DEFAULT_TARGET_TYPE = :random
   
   # Memory system settings
-  REMEMBER_TARGETS = true      # Enable previous target memory
-  RETARGET_CHANCE = 0.3        # 30% chance to target same character again
+  REMEMBER_TARGETS = false      # Enable previous target memory
+  RETARGET_CHANCE = 0.8        # 80% chance to target same character again
   
   # Global battle observations for all enemies
   @@global_battle_observations = {
@@ -139,11 +139,11 @@ module EnemyTargeting
   # ● Equipment Type Detection
   #--------------------------------------------------------------------------
   EQUIPMENT_TYPES = {
-    shield: [1, 2, 3],     # Shield type IDs (adjust to your database)
-    weapon_heavy: [4, 5],  # Heavy weapon types
-    weapon_magic: [6, 7],  # Magic weapon types
-    armor_heavy: [8, 9],   # Heavy armor types
-    armor_light: [10, 11]  # Light armor types
+    protection: [1, 2],     # Shield type IDs (adjust to your database)
+    weapon_heavy: [2, 8, 11, 16, 21],  # Heavy weapon types
+    weapon_magic: [9, 14, 15, 18, 20],  # Magic weapon types
+    armor_heavy: [3, 8, 11],   # Heavy armor types
+    armor_light: [5, 6, 12]  # Light armor types
   }
   
   #--------------------------------------------------------------------------
@@ -153,13 +153,13 @@ module EnemyTargeting
     def healer?(actor)
       return false unless actor.is_a?(Game_Actor)
       # Only detect based on observed healing actions
-      observed_healing_actions(actor) >= 2
+      observed_healing_actions(actor) >= 1
     end
     
     def mage?(actor)
       return false unless actor.is_a?(Game_Actor)
       # Detect based on observed magic usage or visible magic equipment
-      observed_magic_actions(actor) >= 2 || has_visible_magic_equipment?(actor)
+      observed_magic_actions(actor) >= 1 || has_visible_magic_equipment?(actor)
     end
     
     def tank?(actor)
@@ -192,6 +192,7 @@ module EnemyTargeting
     
     # Global observation recording methods
     def record_global_healing_action(actor, amount)
+      p("recording healing action: " + actor.name + " healed " + amount.to_s)
       return unless actor.is_a?(Game_Actor)
       global_obs = EnemyTargeting.global_battle_observations
       global_obs[:healing][actor.id] ||= 0
@@ -255,7 +256,7 @@ module EnemyTargeting
         a && EnemyTargeting::EQUIPMENT_TYPES[:armor_heavy].include?(a.atype_id)
       }
       shields = actor.armors.any? { |a| 
-        a && EnemyTargeting::EQUIPMENT_TYPES[:shield].include?(a.etype_id)
+        a && EnemyTargeting::EQUIPMENT_TYPES[:protection].include?(a.etype_id)
       }
       heavy_weapons || heavy_armor || shields
     end
@@ -274,12 +275,13 @@ module EnemyTargeting
   module TargetSelection
     # Target highest threat character
     def target_aggressive(enemies)
-      p("evaluating aggressive:" + enemies.max_by { |enemy| calculate_threat_level(enemy) }.to_s)
+      p("-------evaluating aggressive:" + enemies.max_by { |enemy| calculate_threat_level(enemy) }.to_s)
       enemies.max_by { |enemy| calculate_threat_level(enemy) }
     end
     
     # Target actors with highest ailment-based threat
     def target_opportunistic(enemies)
+      p("-------evaluating opportunistic")
       # Calculate state threat for each enemy
       enemies_with_threat = enemies.map do |enemy|
         state_threat = calculate_state_threat(enemy)
@@ -299,49 +301,53 @@ module EnemyTargeting
     
     # Advanced tactical targeting
     def target_tactical(enemies)
+      p("-------evaluating tactical")
       weighted_target_selection(enemies)
     end
     
     # Default random targeting
     def target_random(enemies)
-      p("evaluating random:" + enemies.sample.to_s)
+      p("-------evaluating random:" + enemies.sample.to_s)
       enemies.sample
     end
     
     # Always target healers
     def target_healer_focus(enemies)
       healers = enemies.select { |e| healer?(e) }
+      p("-------healers found: " + healers.map(&:name).join(", "))
       healers.any? ? healers.sample : enemies.sample
     end
     
     # Target magic users
     def target_mage_focus(enemies)
       mages = enemies.select { |e| mage?(e) }
+      p("-------mages found: " + mages.map(&:name).join(", "))
       mages.any? ? mages.sample : enemies.sample
     end
     
     # Target tanks
     def target_tank_focus(enemies)
       tanks = enemies.select { |e| tank?(e) }
+      p("-------tanks found: " + tanks.map(&:name).join(", "))
       tanks.any? ? tanks.sample : enemies.sample
     end
     
     # Target weakest character
     def target_weakest_first(enemies)
-      p("evaluating weakest:" + enemies.min_by(&:hp).to_s)
+      p("-------evaluating weakest:" + enemies.min_by(&:hp).name)
       enemies.min_by(&:hp)
     end
     
     # Target strongest character
     def target_strongest_first(enemies)
-      p("evaluating strongest:" + enemies.max_by(&:level).to_s)
+      p("-------evaluating strongest:" + enemies.max_by(&:level).name)
       enemies.max_by(&:level)
     end
     
     # Target last attacker (revengeful)
     def target_revengeful(enemies)
       if(@last_attacker)
-        p("evaluating revengeful:" + @last_attacker.name)
+        p("-------evaluating revengeful:" + @last_attacker.name)
       end
       return @last_attacker if @last_attacker && @last_attacker.alive? && enemies.include?(@last_attacker)
       enemies.sample
@@ -579,7 +585,6 @@ module EnemyTargeting
       return false unless @last_target
       return false unless @last_target.alive?
       return false unless enemies.include?(@last_target)
-      
       rand < EnemyTargeting::RETARGET_CHANCE
     end
     
@@ -596,30 +601,30 @@ module EnemyTargeting
       return @target_type if @target_type
       
       enemy_obj = enemy
-      p("enemy object: " + enemy_obj.to_s)
-      p("enemy ID: " + enemy_obj.id.to_s) if enemy_obj.respond_to?(:id)
+      # p("enemy object: " + enemy_obj.to_s)
+      # p("enemy ID: " + enemy_obj.id.to_s) if enemy_obj.respond_to?(:id)
       
       notes = enemy_obj.note
-      p("enemy notes: " + notes.to_s)
+      # p("enemy notes: " + notes.to_s)
       @target_type = EnemyTargeting::DEFAULT_TARGET_TYPE
       
       # Parse target type
       if notes =~ /<target_type:\s*(\w+)>/i
         type = $1.to_sym
-        p("found target type: " + type.to_s)
+        # p("found target type: " + type.to_s)
         @target_type = type if EnemyTargeting::TARGET_TYPES.key?(type)
       else
-        p("no target type tag found in notes")
+        # p("no target type tag found in notes")
       end
       
-      p("final target type: " + @target_type.to_s)
+      # p("final target type: " + @target_type.to_s)
       @target_type
     end
     
     def enemy_type
-      p("calling enemy_type for enemy: #{@enemy_id}")
+      # p("calling enemy_type for enemy: #{@enemy_id}")
       result = parse_enemy_notes
-      p("enemy_type returning: " + result.to_s)
+      # p("enemy_type returning: " + result.to_s)
       result
     end
     
@@ -675,15 +680,14 @@ class Game_Enemy < Game_Battler
     enemy_targeting_make_actions
     update_turn_counter
   end
-  
   #--------------------------------------------------------------------------
   # ● Execute Damage (Override to record observations)
   # This method is called when an Enemy receives an attack
   def execute_damage(user)
-    p("Enemy #{self.name} targeted by actor #{user.name}")
     enemy_targeting_execute_damage(user)
     # Record observations about the attacker globally for all enemies
     if user.is_a?(Game_Actor)
+      p("Enemy #{self.name} targeted by actor #{user.name}")
       self.record_attacker(user)
       # Record globally for all enemy access
       record_global_damage_action(user, @result.hp_damage)
@@ -760,8 +764,9 @@ class Game_Enemy < Game_Battler
   # ● Record Attacker
   #--------------------------------------------------------------------------
   def record_attacker(attacker)
-    return unless attacker.is_a?(Game_Actor)
-    @last_attacker = attacker
+    if(attacker.is_a?(Game_Actor))
+      @last_attacker = attacker
+    end
   end
 end
 #==============================================================================
@@ -775,17 +780,17 @@ class Game_Action
       Array.new(item.number_of_targets) { opponents_unit.random_target }
     elsif item.for_one?
       num = 1 + (attack? ? subject.atk_times_add.to_i : 0)
-      if @target_index < 0
-        if subject.is_a?(Game_Enemy) && subject.respond_to?(:select_strategic_target)
-          targets = [subject.select_strategic_target(opponents_unit.alive_members)]
-          targets.compact! # Remove nil targets
-          targets = [opponents_unit.random_target] if targets.empty?
-          # Remember the selected target
-          subject.remember_target(targets.first) if targets && targets.first
-          targets * num
-        else
-          [opponents_unit.random_target] * num
-        end
+      # Always use strategic targeting for enemies that support it
+      if subject.is_a?(Game_Enemy) && subject.respond_to?(:select_strategic_target)
+        targets = [subject.select_strategic_target(opponents_unit.alive_members)]
+        targets.compact! # Remove nil targets
+        targets = [opponents_unit.random_target] if targets.empty?
+        # Remember the selected target
+        subject.remember_target(targets.first) if targets && targets.first
+        targets * num
+      elsif @target_index < 0
+        # Fallback for non-enemy battlers or those without strategic targeting
+        [opponents_unit.random_target] * num
       else
         [opponents_unit.smooth_target(@target_index)] * num
       end
@@ -805,26 +810,45 @@ class Game_Actor < Game_Battler
   # ● Alias Methods
   #--------------------------------------------------------------------------
   alias actor_targeting_execute_damage execute_damage
+  alias actor_targeting_make_damage_value make_damage_value
+  
+  # Store damage values before result clearing
+  attr_accessor :last_hp_damage
+  attr_accessor :last_mp_damage
   
   #--------------------------------------------------------------------------
-  # ● Execute Damage (Override to record when actors receive damage from other actors)
+  # ● Make Damage Value (Override to store damage values)
+  #--------------------------------------------------------------------------
+  def make_damage_value(user, item)
+    actor_targeting_make_damage_value(user, item)
+    # Store damage values before they get cleared
+    @last_hp_damage = @result.hp_damage
+    @last_mp_damage = @result.mp_damage
+  end
+  
+  #--------------------------------------------------------------------------
+  # ●# Execute Damage (Override to record when actors receive damage from other actors)
   # This method is called when an Actor receives damage/healing from another actor
   def execute_damage(attacker)
     actor_targeting_execute_damage(attacker)
     # Record actor actions globally for enemy observation
     p("Actor #{self.name} targeted by #{attacker.name}")
     if(attacker.is_a?(Game_Actor))
+      # Use stored damage values since @result.hp_damage may be cleared
+      hp_damage = @last_hp_damage || @result.hp_damage || 0
+      p("Stored damage: #{hp_damage}")
+      
       # Check if this was a healing action
-      if @result.hp_damage < 0
-        record_global_healing_action(attacker, @result.hp_damage.abs)
+      if hp_damage < 0
+        record_global_healing_action(attacker, hp_damage.abs)
       end
       # Check if this was a magic action
       if attacker.current_action && attacker.current_action.item && attacker.current_action.item.hit_type == 2
         record_global_magic_action(attacker)
       end
       # Record damage output (negative healing becomes positive damage for tracking)
-      if @result.hp_damage > 0
-        record_global_damage_action(attacker, @result.hp_damage)
+      if hp_damage > 0
+        record_global_damage_action(attacker, hp_damage)
       end
     end
   end

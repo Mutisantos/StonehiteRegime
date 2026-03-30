@@ -295,7 +295,6 @@ class Sprite_OrderBattler < Sprite_Base
   #--------------------------------------------------------------------------
   def initialize(viewport, battler, battle = :dtb, number = 0)
     super(viewport)
-    p(number)
     @battler = battler
     @battle = battle
     @move_rate_x = 1
