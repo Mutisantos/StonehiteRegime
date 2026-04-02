@@ -226,7 +226,7 @@ module YEA
     FLASH_WHITE_EFFECT = false   # Flash enemy white when it starts an attack.
     SCREEN_SHAKE       = true   # Shake screen in battle?
     SKIP_PARTY_COMMAND = false   # Skips the Fight/Escape menu.
-    AUTO_FAST          = false   # Causes message windows to not wait.
+    AUTO_FAST          = true   # Causes message windows to not wait.
     ENEMY_ATK_ANI      = 36     # Sets default attack animation for enemies.
     
     # If this switch is ON, popups will be hidden. If OFF, the popups will be
@@ -252,8 +252,8 @@ module YEA
     # battle status window, by default, will show the actor's face, HP, MP, TP
     # (if viable), and any inflicted status effects.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    BATTLESTATUS_NAME_FONT_SIZE = 20    # Font size used for name.
-    BATTLESTATUS_TEXT_FONT_SIZE = 16    # Font size used for HP, MP, TP.
+    BATTLESTATUS_NAME_FONT_SIZE = 18    # Font size used for name.
+    BATTLESTATUS_TEXT_FONT_SIZE = 15    # Font size used for HP, MP, TP.
     BATTLESTATUS_NO_ACTION_ICON = 0     # No action icon.
     BATTLESTATUS_HPGAUGE_Y_PLUS = 11    # Y Location buffer used for HP gauge.
     BATTLESTATUS_CENTER_FACES   = false # Center faces for the Battle Status.
