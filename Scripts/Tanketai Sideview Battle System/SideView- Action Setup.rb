@@ -19,7 +19,7 @@ module N03
   # Actor Initial Start Position
   # 　                       1st          2nd          3rd          4th
   #                     X   Y   H    X   Y   H    X   Y   H    X   Y   H
-  ACTOR_POSITION = [[405, 220, 0], [460, 180, 0], [450, 260, 0], [510, 230, 0]]
+  ACTOR_POSITION = [[390, 250, 0], [430, 210, 0], [450, 280, 0], [480, 240, 0]]
   # Wait time after the end of each action in frames
   ACTION_END_WAIT = 20
   # Wait time after the end of each turn in frames

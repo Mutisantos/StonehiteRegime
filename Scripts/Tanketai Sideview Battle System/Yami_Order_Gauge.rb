@@ -73,9 +73,9 @@ module YSA
     # SHOW_DEATH = false
 
     # Coordinate-X of order gauge
-    GAUGE_X = 12
+    GAUGE_X = 500
     # Coordinate-Y of order gauge
-    GAUGE_Y = 120  # Moved up to accommodate vertical layout
+    GAUGE_Y = 60  # Moved up to accommodate vertical layout
 
     # Show Switch. Turn this switch on to show it. If you want to disable, set this
     # to 0.
@@ -297,7 +297,7 @@ class Sprite_OrderBattler < Sprite_Base
     @battler = battler
     @battle = battle
     @move_rate_x = 1
-    @move_rate_y = 1
+    @move_rate_y = 0.1
     @move_x = nil
     @move_y = nil
     @first_time = true
@@ -346,12 +346,6 @@ class Sprite_OrderBattler < Sprite_Base
     icon_index = @battler.actor? ? YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:actor][1] : YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:enemy][1]
     rect = Rect.new(icon_index % 16 * 24, icon_index / 16 * 24, 24, 24)
     bitmap.blt(0, 0, icon_bitmap, rect)
-    #--- Create Current Turn Indicator (position 2 for current battler only) ---
-    if @number == 0 
-      icon_index = @battler.actor? ? YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:actor][2] : YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:enemy][2]
-      rect = Rect.new((icon_index % 16 * 24), icon_index / 16 * 24, 24, 24)
-      bitmap.blt(bitmap.width - 24, 0, icon_bitmap, rect, 120)
-    end
     self.bitmap.dispose if self.bitmap != nil
     self.bitmap = bitmap
     return if @created_icon
@@ -615,6 +609,34 @@ class Scene_Battle < Scene_Base
       order = Sprite_OrderBattler.new(@spriteset.viewportOrder, battler, battle_type)
       @spriteset_order.push(order)
     end
+    
+    # Create static current turn indicator sprite
+    create_static_turn_indicator
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: create_static_turn_indicator
+  #--------------------------------------------------------------------------
+  def create_static_turn_indicator
+    @static_turn_indicator = Sprite.new(@spriteset.viewportOrder)
+    bitmap = Bitmap.new(24, 24)
+    
+    if $imported["YEA-BattleEngine"]
+      icon_bitmap = $game_temp.iconset
+    else
+      icon_bitmap = Cache.system("IconSet")
+    end
+    
+    # Use the actor's turn indicator icon (position 2)
+    icon_index = YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:actor][2]
+    rect = Rect.new(icon_index % 16 * 24, icon_index / 16 * 24, 24, 24)
+    bitmap.blt(0, 0, icon_bitmap, rect, 220)
+    
+    @static_turn_indicator.bitmap = bitmap
+    @static_turn_indicator.x = 12  # Same X as GAUGE_X
+    @static_turn_indicator.y = 60  # Same Y as GAUGE_Y
+    @static_turn_indicator.z = 1001  # Above other sprites
+    @static_turn_indicator.visible = false  # Initially hidden
   end
 
   #--------------------------------------------------------------------------
@@ -642,6 +664,11 @@ class Scene_Battle < Scene_Base
       order.bitmap.dispose
       order.dispose
     end
+    # Dispose static turn indicator
+    if @static_turn_indicator
+      @static_turn_indicator.bitmap.dispose
+      @static_turn_indicator.dispose
+    end
     order_gauge_dispose_spriteset
   end
 
@@ -659,6 +686,10 @@ class Scene_Battle < Scene_Base
     if $imported["YSA-PCTB"]
       type = YSA::PCTB::CTB_MECHANIC[:predict]
     end
+    
+    # Update static turn indicator visibility
+    update_static_turn_indicator
+    
     if @update_ordergauge
       if type && type == 1
         BattleManager.actor.restore_speed
@@ -682,6 +713,66 @@ class Scene_Battle < Scene_Base
     if $game_party.all_dead? || $game_troop.all_dead?
       @spriteset.viewportOrder.ox = Graphics.height if @spriteset.viewportOrder.ox != Graphics.width
       @spriteset.viewportOrder.oy = Graphics.width if @spriteset.viewportOrder.oy != Graphics.height
+    end
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: update_static_turn_indicator
+  #--------------------------------------------------------------------------
+  def update_static_turn_indicator
+    return unless @static_turn_indicator
+    
+    # Show only when there's a current battler and order gauge is visible
+    if BattleManager.action_list_ctb && BattleManager.action_list_ctb[0]
+      current_battler = BattleManager.action_list_ctb[0]
+      
+      # Update icon based on current battler type
+      update_static_indicator_icon(current_battler)
+      
+      # Show/hide based on gauge visibility
+      gauge_visible = (YSA::ORDER_GAUGE::SHOW_SWITCH == 0 || $game_switches[YSA::ORDER_GAUGE::SHOW_SWITCH]) &&
+                      !($game_party.all_dead? || $game_troop.all_dead?)
+      @static_turn_indicator.visible = gauge_visible
+      
+      # Update position to follow current battler's position in queue
+      update_static_indicator_position(current_battler)
+    else
+      @static_turn_indicator.visible = false
+    end
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: update_static_indicator_icon
+  #--------------------------------------------------------------------------
+  def update_static_indicator_icon(battler)
+    # Update icon based on battler type (actor vs enemy)
+    icon_index = battler.actor? ? YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:actor][2] : YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:enemy][2]
+    
+    if $imported["YEA-BattleEngine"]
+      icon_bitmap = $game_temp.iconset
+    else
+      icon_bitmap = Cache.system("IconSet")
+    end
+    
+    rect = Rect.new(icon_index % 16 * 24, icon_index / 16 * 24, 24, 24)
+    @static_turn_indicator.bitmap.clear
+    @static_turn_indicator.bitmap.blt(0, 0, icon_bitmap, rect, 220)
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: update_static_indicator_position
+  #--------------------------------------------------------------------------
+  def update_static_indicator_position(battler)
+    # Position the static indicator at the current battler's queue position
+    # Find the battler's position in the order
+    if BattleManager.btype?(:pctb) && BattleManager.ctb_battlers
+      result = BattleManager.ctb_battlers.select { |b| !b.dead? && !b.hidden? }
+      index = result.index(battler)
+      if index
+        # Use the same vertical positioning logic as other sprites
+        @static_turn_indicator.x = -4 # Offset to the right of the queue
+        @static_turn_indicator.y = 12  # Same Y as current battler
+      end
     end
   end
 
