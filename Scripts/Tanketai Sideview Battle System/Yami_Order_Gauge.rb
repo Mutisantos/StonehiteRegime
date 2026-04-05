@@ -75,7 +75,7 @@ module YSA
     # Coordinate-X of order gauge
     GAUGE_X = 500
     # Coordinate-Y of order gauge
-    GAUGE_Y = 60  # Moved up to accommodate vertical layout
+    GAUGE_Y = 58  # Moved up to accommodate vertical layout
 
     # Show Switch. Turn this switch on to show it. If you want to disable, set this
     # to 0.
@@ -851,6 +851,51 @@ class Scene_Battle < Scene_Base
 
   def process_action_end
     order_gauge_process_action_end
+    for order in @spriteset_order
+      order.make_destination
+    end
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: refresh_order_gauge
+  # Call this method when battlers are added during battle events
+  # Usage: SceneManager.scene.refresh_order_gauge
+  #--------------------------------------------------------------------------
+  def refresh_order_gauge
+    # Dispose existing sprites
+    for order in @spriteset_order
+      order.bitmap.dispose if order.bitmap
+      order.dispose
+    end
+    @spriteset_order.clear
+    
+    # Recreate sprites with current battlers
+    if $imported["YSA-PCTB"] && YSA::PCTB::CTB_MECHANIC[:predict] == 1
+      @active_order_sprite = Sprite_OrderBattler.new(@spriteset.viewportOrder, nil, :pctb2)
+    end
+    if $imported["YSA-PCTB"] && YSA::PCTB::CTB_MECHANIC[:predict] == 2
+      num = YSA::PCTB::CTB_MECHANIC[:pre_turns]
+      i = 0
+      num.times {
+        order = Sprite_OrderBattler.new(@spriteset.viewportOrder, nil, :pctb3, i)
+        @spriteset_order.push(order)
+        i += 1
+      }
+      return
+    end
+    for battler in $game_party.members + $game_troop.members
+      battle_type = :dtb
+      battle_type = :pctb if BattleManager.btype?(:pctb)
+      battle_type = :catb if BattleManager.btype?(:catb)
+      order = Sprite_OrderBattler.new(@spriteset.viewportOrder, battler, battle_type)
+      @spriteset_order.push(order)
+    end
+    
+    # Update order calculations
+    BattleManager.make_action_orders
+    BattleManager.make_ctb_battler_order if BattleManager.btype?(:pctb)
+    
+    # Update sprite positions
     for order in @spriteset_order
       order.make_destination
     end
