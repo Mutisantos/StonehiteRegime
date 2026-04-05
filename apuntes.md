@@ -1,4 +1,4 @@
-# Apuntes de Scripts para mecanicas de combate activo
+# Apuntes de Scripts modificados y añadidos
 
 ----------
 ## SideView- Action Setup
@@ -21,7 +21,12 @@ Se usa If Time Hit para evaluar si no se sobrepaso el timeout del golpe activo, 
 -> Se evita usar "Attack" y en su lugar se llama un evento comun que incrementa el daño entre Solo Start y Solo End
 
 
-### Prueba 1: Simular Ataque Cargado 
+### Advanced Enemy Targeting System 
+Este script se hizo con el proposito de sobreescribir el comportamiento usual de los enemigos, dado que deciden sus accciones de manera aleatoria. A través de este script se permite definir un perfil de comportamiento para los enemigos, permitiendo una experiencia más compleja y estratégica dentro del juego. 
 
-1. Mezclar Scripts con Eventos Comunes?
-2. 
+### Order Gauge - PCTB
+
+Este script, originalmente de Yami, define una sistema que encola las acciones de los combatientes para configurar el orden en el que estos actuan, en lugar de escoger las acciones y esperar a que vayan ocurriendo sino que los turnos se van ejecutando a medida que cada turno avanza. La estructura actual permite mostrar una cola de actores y enemigos, permitiendole al jugador ver quiénes son los proximos en moverse. Sin embargo, la carga de los personajes solo ocurre al inicio del combate, por lo que para que en caso que ingrese un nuevo combatiente en medio de la pelea, se requiere hacer este llamado de script:
+`SceneManager.scene.refresh_order_gauge`
+
+
