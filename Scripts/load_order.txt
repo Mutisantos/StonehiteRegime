@@ -192,6 +192,7 @@ Himeworks Splash Screen Map.rb
 Flee Patch.rb
 Change Graphic by Equipment.rb
 *separator*
+Rhyme Window Descriptor.rb
 Galv's Move Route Extras.rb
 Config Window Settings.rb
 Config Window.rb

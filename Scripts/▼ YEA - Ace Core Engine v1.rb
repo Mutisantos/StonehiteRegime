@@ -191,7 +191,7 @@ module YEA
     # Adjust the default font settings for your game here. The various settings
     # will be explained below.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    FONT_NAME = ["BoldPixels","Consolas","VL Gothic", "Verdana", "Arial"]
+    FONT_NAME = ["homespun","Consolas","VL Gothic", "Verdana", "Arial"]
     # This adjusts the fonts used for your game. If the font at the start of
     # the array doesn't exist on the player's computer, it'll use the next one.
     FONT_SIZE = 18       # Adjusts font size. Default: 24

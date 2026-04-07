@@ -411,6 +411,11 @@ module YEA
     HIDE_DUR  = /<(?:POPUP_HIDE_DUR|popup hide dur|hide dur)>/i
     
   end # STATE
+  module ACTOR
+    
+    BATTLER_ICON = /<(?:BATTLER_ICON|battler icon):[ ]*(\d+)>/i
+    
+  end # ACTOR
   end # REGEXP
 end # YEA
 
@@ -495,7 +500,7 @@ module DataManager
   # new method: load_notetags_abe
   #--------------------------------------------------------------------------
   def self.load_notetags_abe
-    groups = [$data_enemies, $data_states, $data_skills, $data_items]
+    groups = [$data_enemies, $data_states, $data_skills, $data_items, $data_actors]
     for group in groups
       for obj in group
         next if obj.nil?
@@ -610,6 +615,35 @@ class RPG::State < RPG::BaseItem
   end
   
 end # RPG::State
+
+#==============================================================================
+# ¡ RPG::Actor
+#==============================================================================
+
+class RPG::Actor < RPG::BaseItem
+  
+  #--------------------------------------------------------------------------
+  # public instance variables
+  #--------------------------------------------------------------------------
+  attr_accessor :battler_icon
+  
+  #--------------------------------------------------------------------------
+  # common cache: load_notetags_abe
+  #--------------------------------------------------------------------------
+  def load_notetags_abe
+    @battler_icon = 0
+    #---
+    self.note.split(/[\r\n]+/).each { |line|
+      case line
+      #---
+      when YEA::REGEXP::ACTOR::BATTLER_ICON
+        @battler_icon = $1.to_i
+      end
+    } # self.note.split
+    #---
+  end
+  
+end # RPG::Actor
 
 #==============================================================================
 # ¡ BattleManager
@@ -1552,6 +1586,13 @@ class Game_Actor < Game_Battler
   end
   
   #--------------------------------------------------------------------------
+  # new method: battler_icon
+  #--------------------------------------------------------------------------
+  def battler_icon
+    return actor.battler_icon
+  end
+  
+  #--------------------------------------------------------------------------
   # overwrite method: use_sprite?
   #--------------------------------------------------------------------------
   def use_sprite?; return true; end
@@ -1769,6 +1810,13 @@ class Window_BattleStatus < Window_Selectable
   end
   
   #--------------------------------------------------------------------------
+  # overwrite method: window_height
+  #--------------------------------------------------------------------------
+  def window_height
+    return fitting_height(2.25)  # Reduced from 4 to 3 lines (40 pixels less)
+  end
+  
+  #--------------------------------------------------------------------------
   # overwrite method: col_max
   #--------------------------------------------------------------------------
   def col_max; return $game_party.max_battle_members; end
@@ -1802,23 +1850,30 @@ class Window_BattleStatus < Window_Selectable
     actor = battle_members[index]
     rect = item_rect(index)
     return if actor.nil?
-    draw_actor_face(actor, rect.x+2, rect.y+2, actor.alive?)
-    draw_actor_name(actor, rect.x, rect.y, rect.width-8)
+    # Draw battler icon instead of face
+    icon_index = actor.battler_icon
+    if icon_index > 0
+      draw_icon(icon_index, rect.x + 2, rect.y + 2)
+    else
+      # Fallback to face if no icon is set
+      draw_actor_face(actor, rect.x+2, rect.y+2, actor.alive?)
+    end
+    draw_actor_name(actor, rect.x, rect.y, rect.width-4)
     draw_actor_action(actor, rect.x, rect.y)
     draw_actor_icons(actor, rect.x, line_height*1, rect.width)
     gx = YEA::BATTLE::BATTLESTATUS_HPGAUGE_Y_PLUS
     contents.font.size = YEA::BATTLE::BATTLESTATUS_TEXT_FONT_SIZE
-    draw_actor_hp(actor, rect.x+2, line_height*2+gx, rect.width-4)
+    draw_actor_hp(actor, rect.x+2, line_height*0.8, rect.width-4)
     if draw_tp?(actor) && draw_mp?(actor)
       dw = rect.width/2-2
       dw += 1 if $imported["YEA-CoreEngine"] && YEA::CORE::GAUGE_OUTLINE
-      draw_actor_tp(actor, rect.x+2, line_height*3, dw)
+      draw_actor_tp(actor, rect.x+2, line_height*0.8 + gx, dw)
       dw = rect.width - rect.width/2 - 2
-      draw_actor_mp(actor, rect.x+rect.width/2, line_height*3, dw)
+      draw_actor_mp(actor, rect.x+rect.width/2, line_height*0.8 + gx, dw)
     elsif draw_tp?(actor) && !draw_mp?(actor)
-      draw_actor_tp(actor, rect.x+2, line_height*3, rect.width-4)
+      draw_actor_tp(actor, rect.x+2, line_height*0.8 + gx, rect.width-4)
     else
-      draw_actor_mp(actor, rect.x+2, line_height*3, rect.width-4)
+      draw_actor_mp(actor, rect.x+2, line_height*0.8 + gx, rect.width-4)
     end
   end
   
@@ -1828,7 +1883,7 @@ class Window_BattleStatus < Window_Selectable
   def item_rect(index)
     rect = Rect.new
     rect.width = contents.width / $game_party.max_battle_members
-    rect.height = contents.height
+    rect.height = contents.height + 18
     rect.x = index * rect.width
     if YEA::BATTLE::BATTLESTATUS_CENTER_FACES
       rect.x += (contents.width - $game_party.members.size * rect.width) / 2
