@@ -1745,6 +1745,22 @@ class Window_PartyCommand < Window_Command
   end
   
   #--------------------------------------------------------------------------
+  # overwrite method: visible_line_number
+  #--------------------------------------------------------------------------
+  def visible_line_number
+    return 2  # Reduced to prevent overflow
+  end
+  
+  #--------------------------------------------------------------------------
+  # overwrite method: window_height
+  #--------------------------------------------------------------------------
+  def window_height
+    max_height = Graphics.height - 128  # Leave space for other UI elements
+    calculated_height = fitting_height(visible_line_number)
+    return [calculated_height, max_height].min
+  end
+  
+  #--------------------------------------------------------------------------
   # new method: process_dir6
   #--------------------------------------------------------------------------
   def process_dir6
@@ -1760,39 +1776,96 @@ end # Window_PartyCommand
 # ¡ Window_ActorCommand
 #==============================================================================
 
-# class Window_ActorCommand < Window_Command
+class Window_ActorCommand < Window_Command
   
-#   #--------------------------------------------------------------------------
-#   # overwrite method: process_handling
-#   #--------------------------------------------------------------------------
-#   def process_handling
-#     return unless open? && active
-#     return process_dir4 if Input.repeat?(:LEFT)
-#     return process_dir6 if Input.repeat?(:RIGHT)
-#     return super
-#   end
+  #--------------------------------------------------------------------------
+  # overwrite method: process_handling
+  #--------------------------------------------------------------------------
+  def process_handling
+    return unless open? && active
+    return super  # Disabled left/right movement
+  end
   
-#   #--------------------------------------------------------------------------
-#   # new method: process_dir4
-#   #--------------------------------------------------------------------------
-#   def process_dir4
-#     Sound.play_cursor
-#     Input.update
-#     deactivate
-#     call_handler(:cancel)
-#   end
+  #--------------------------------------------------------------------------
+  # overwrite method: visible_line_number
+  #--------------------------------------------------------------------------
+  def visible_line_number
+    return 2  # Reduced to prevent overflow
+  end
   
-#   #--------------------------------------------------------------------------
-#   # new method: process_dir6
-#   #--------------------------------------------------------------------------
-#   def process_dir6
-#     Sound.play_cursor
-#     Input.update
-#     deactivate
-#     call_handler(:dir6)
-#   end
+  #--------------------------------------------------------------------------
+  # overwrite method: window_height
+  #--------------------------------------------------------------------------
+  def window_height
+    max_height = Graphics.height - 128  # Leave space for other UI elements
+    calculated_height = fitting_height(visible_line_number)
+    return [calculated_height, max_height].min
+  end
   
-# end # Window_ActorCommand
+  #--------------------------------------------------------------------------
+  # overwrite method: draw_item
+  #--------------------------------------------------------------------------
+  def draw_item(index)
+    change_color(normal_color)
+    rect = item_rect_for_text(index)
+    
+    # Get command info
+    command = @list[index]
+    return unless command
+    
+    # Draw appropriate icon based on command type
+    icon_index = get_command_icon(command)
+    draw_icon(icon_index, rect.x, rect.y) if icon_index > 0
+    
+    # Draw text with icon offset
+    text_x = icon_index > 0 ? rect.x + 24 : rect.x
+    draw_text(text_x, rect.y, rect.width - 24, line_height, command[:name])
+  end
+  
+  #--------------------------------------------------------------------------
+  # new method: get_command_icon
+  #--------------------------------------------------------------------------
+  def get_command_icon(command)
+    case command[:symbol]
+    when :attack
+      return 181   # Sword icon (typical attack icon)
+    when :skill
+      if command[:ext] == 1
+        return 197 # Special
+      end
+      if command[:ext] == 2
+        return 17 # Melee attack icon
+      end
+      if command[:ext] == 4
+        return 172 # Compose
+      end
+      if command[:ext] == 5
+        return 198 # Technique
+      end
+      if command[:ext] == 6
+        return 199 # Summon
+      end
+      return 220 # Magic/Spell icon
+    when :guard
+      return 18 # Shield/Defense icon
+    when :item
+      return 304 # Item/Potion icon
+    else
+      # For skill type commands, try to get first skill's icon
+      if command[:symbol] == :skill && command[:ext].is_a?(Integer)
+        stype_id = command[:ext]
+        # Find first skill of this type and use its icon
+        @actor.skills.each do |skill|
+          if skill.stype_id == stype_id
+            return skill.icon_index
+          end
+        end
+      end
+      return 0  # No icon
+    end
+  end
+  
+end # Window_ActorCommand
 
 #==============================================================================
 # ¡ Window_BattleStatus
@@ -1813,7 +1886,7 @@ class Window_BattleStatus < Window_Selectable
   # overwrite method: window_height
   #--------------------------------------------------------------------------
   def window_height
-    return fitting_height(2.25)  # Reduced from 4 to 3 lines (40 pixels less)
+    return fitting_height(2.5)  # Reduced from 4 to 3 lines (40 pixels less)
   end
   
   #--------------------------------------------------------------------------
