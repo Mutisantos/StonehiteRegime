@@ -252,10 +252,10 @@ module YEA
     # battle status window, by default, will show the actor's face, HP, MP, TP
     # (if viable), and any inflicted status effects.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    BATTLESTATUS_NAME_FONT_SIZE = 18    # Font size used for name.
-    BATTLESTATUS_TEXT_FONT_SIZE = 15    # Font size used for HP, MP, TP.
+    BATTLESTATUS_NAME_FONT_SIZE = 14    # Font size used for name.
+    BATTLESTATUS_TEXT_FONT_SIZE = 14    # Font size used for HP, MP, TP.
     BATTLESTATUS_NO_ACTION_ICON = 0     # No action icon.
-    BATTLESTATUS_HPGAUGE_Y_PLUS = 11    # Y Location buffer used for HP gauge.
+    BATTLESTATUS_HPGAUGE_Y_PLUS = 6    # Y Location buffer used for HP gauge.
     BATTLESTATUS_CENTER_FACES   = false # Center faces for the Battle Status.
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -316,7 +316,7 @@ module YEA
     
     # This is the default font used for the popups. Adjust them accordingly
     # or even add new ones.
-    DEFAULT = ["Consolas","VL Gothic", "Verdana", "Arial", "Courier"]
+    DEFAULT = ["homespun", "Consolas","VL Gothic", "Verdana", "Arial", "Courier"]
     
     # The following are the various rules that govern the individual popup
     # types that will appear. Adjust them accordingly. Here is a list of what
@@ -1785,19 +1785,26 @@ class Window_ActorCommand < Window_Command
     return unless open? && active
     return super  # Disabled left/right movement
   end
+
+  #--------------------------------------------------------------------------
+  # overwrite method: window_height
+  #--------------------------------------------------------------------------
+  def window_height
+    return fitting_height(3)  # Reduced from 4 to 3 lines (40 pixels less)
+  end
   
   #--------------------------------------------------------------------------
   # overwrite method: visible_line_number
   #--------------------------------------------------------------------------
   def visible_line_number
-    return 2  # Reduced to prevent overflow
+    return 3 # Reduced to prevent overflow
   end
   
   #--------------------------------------------------------------------------
   # overwrite method: window_height
   #--------------------------------------------------------------------------
   def window_height
-    max_height = Graphics.height - 128  # Leave space for other UI elements
+    max_height = Graphics.height + 64  # Leave space for other UI elements
     calculated_height = fitting_height(visible_line_number)
     return [calculated_height, max_height].min
   end
@@ -1818,8 +1825,8 @@ class Window_ActorCommand < Window_Command
     draw_icon(icon_index, rect.x, rect.y) if icon_index > 0
     
     # Draw text with icon offset
-    text_x = icon_index > 0 ? rect.x + 24 : rect.x
-    draw_text(text_x, rect.y, rect.width - 24, line_height, command[:name])
+    text_x = icon_index > 0 ? rect.x + 22 : rect.x
+    draw_text(text_x, rect.y, rect.width - 22, line_height, command[:name])
   end
   
   #--------------------------------------------------------------------------
@@ -1886,7 +1893,7 @@ class Window_BattleStatus < Window_Selectable
   # overwrite method: window_height
   #--------------------------------------------------------------------------
   def window_height
-    return fitting_height(2.5)  # Reduced from 4 to 3 lines (40 pixels less)
+    return fitting_height(3)  # Reduced from 4 to 3 lines (40 pixels less)
   end
   
   #--------------------------------------------------------------------------
@@ -1931,22 +1938,22 @@ class Window_BattleStatus < Window_Selectable
       # Fallback to face if no icon is set
       draw_actor_face(actor, rect.x+2, rect.y+2, actor.alive?)
     end
-    draw_actor_name(actor, rect.x, rect.y, rect.width-4)
+    draw_actor_name(actor, rect.x+2, rect.y, rect.width)
     draw_actor_action(actor, rect.x, rect.y)
-    draw_actor_icons(actor, rect.x, line_height*1, rect.width)
+    draw_actor_icons(actor, rect.x, line_height + 24, rect.width)
     gx = YEA::BATTLE::BATTLESTATUS_HPGAUGE_Y_PLUS
     contents.font.size = YEA::BATTLE::BATTLESTATUS_TEXT_FONT_SIZE
-    draw_actor_hp(actor, rect.x+2, line_height*0.8, rect.width-4)
+    draw_actor_hp(actor, rect.x+2, line_height*0.8 - 6, rect.width-4)
     if draw_tp?(actor) && draw_mp?(actor)
       dw = rect.width/2-2
       dw += 1 if $imported["YEA-CoreEngine"] && YEA::CORE::GAUGE_OUTLINE
-      draw_actor_tp(actor, rect.x+2, line_height*0.8 + gx, dw)
+      draw_actor_tp(actor, rect.x+2, line_height + gx, dw)
       dw = rect.width - rect.width/2 - 2
-      draw_actor_mp(actor, rect.x+rect.width/2, line_height*0.8 + gx, dw)
+      draw_actor_mp(actor, rect.x+rect.width/2, line_height+ gx, dw)
     elsif draw_tp?(actor) && !draw_mp?(actor)
-      draw_actor_tp(actor, rect.x+2, line_height*0.8 + gx, rect.width-4)
+      draw_actor_tp(actor, rect.x+2, line_height + gx, rect.width-4)
     else
-      draw_actor_mp(actor, rect.x+2, line_height*0.8 + gx, rect.width-4)
+      draw_actor_mp(actor, rect.x+2, line_height + gx, rect.width-4)
     end
   end
   
@@ -1956,12 +1963,12 @@ class Window_BattleStatus < Window_Selectable
   def item_rect(index)
     rect = Rect.new
     rect.width = contents.width / $game_party.max_battle_members
-    rect.height = contents.height + 18
+    rect.height = contents.height + 10
     rect.x = index * rect.width
     if YEA::BATTLE::BATTLESTATUS_CENTER_FACES
       rect.x += (contents.width - $game_party.members.size * rect.width) / 2
     end
-    rect.y = 0
+    rect.y = -6
     return rect
   end
   

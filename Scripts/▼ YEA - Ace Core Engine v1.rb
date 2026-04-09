@@ -219,7 +219,7 @@ module YEA
     # of the gauges, too.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     GAUGE_OUTLINE = true
-    GAUGE_HEIGHT = 12
+    GAUGE_HEIGHT = 10
     
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     # - Held L and R Menu Scrolling -
