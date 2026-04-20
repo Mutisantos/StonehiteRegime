@@ -77,7 +77,7 @@
 # interact with bombs like creating a bomb arrow at real time
 #
 # The dynamic light effects allow you to create real lights on event tagged
-# you can set intencity, direction and do a lot of things.
+# you can set intensity, direction and do a lot of things.
 #
 # The dynamic drop allow you to create events to drop items jus by tagging
 # a simple comman.
@@ -393,6 +393,8 @@ module FalInt
   
   # Tone that is defined as normal in your game ( it s the default game tone)
   GameNormalTone = Tone.new(0, 0, 0, 0)
+
+  CustomTone = Tone.new(-60, -60, -60, 10)
   
 #-------------------------------------------------------------------------------
 # * Interactive tool Blade
@@ -476,6 +478,7 @@ module FalInt
   
   # Ligh effects graphic
   LightsGraphic = "$Light_effects"
+  StaticLightsGraph = "$LightFixed_effects"
   
 # Light Effects Actions, write the followings lines on event comment tag 
 # 
@@ -484,7 +487,7 @@ module FalInt
 #                            2 = Down, 4 = LEFT, 6 = RIGHT, 8 = UP
 #                            ex: LIGHT EFFECT DIRECTION = 2
 #
-# LIGHT EFFECT INTENCITY     Put the intencity number you want the light to have
+# LIGHT EFFECT INTENCITY     Put the intensity number you want the light to have
 #                            there are five levels only: choose a value from 
 #                            1 to 5 ex: LIGHT EFFECT INTENCITY 1
 #
@@ -659,6 +662,7 @@ class Spriteset_Map
     case    play.intreserved_tone[0]
     when 1; $game_map.screen.start_tone_change(Tone.new(-130, -130, -130, 10),0)
     when 2; $game_map.screen.start_tone_change(FalInt::GameNormalTone, 0)
+    when 3; $game_map.screen.start_tone_change(FalInt::CustomTone, 0)
     end 
     play.intreserved_tone[1] = $game_map.map_id if play.intreserved_tone[0] != 0
     play.intreserved_tone[1] = nil if play.intreserved_tone[0] == 2
@@ -873,14 +877,14 @@ class Spriteset_Map
     @lighesprites.each {|sprite| sprite.update }
   end
   
-  # ligh effecs creation
+  # light effecs creation
   def create_light_effects
     for event in $game_map.events.values
       direction = event.check_var("LIGHT EFFECT DIRECTION")
       if direction != 0
-        intencity = event.check_var("LIGHT EFFECT INTENCITY")
+        intensity = event.check_var("LIGHT EFFECT INTENCITY")
         @lighesprites.push(Sprite_LightEffec.new(@viewport1, 
-        event, direction, intencity == 0 ? 1 : intencity))
+        event, direction, intensity == 0 ? 1 : intensity))
       end
     end
   end
@@ -919,10 +923,15 @@ end
 
 # Ligh effects sprites
 class Sprite_LightEffec < Sprite
-  def initialize(viewport, character, direction=2, intencity=1)
+  def initialize(viewport, character, direction=2, intensity=1)
     super(viewport)
     @character = character
-    @character_name = FalInt::LightsGraphic
+    if(direction%2 == 0)
+      @character_name = FalInt::LightsGraphic
+    else
+      @character_name = FalInt::StaticLightsGraph
+      direction += 1
+    end
     @direction = direction
     self.blend_type = 1
     self.z = 2 * 100
@@ -930,21 +939,21 @@ class Sprite_LightEffec < Sprite
     self.wave_amp = 3
     self.wave_length = 240
     self.wave_speed = 320
-    setup_intencity(intencity)
+    setup_intensity(intensity)
     update
   end
   
-  def setup_intencity(intencity)
-    case intencity
-    when 1 ; @intencity = [zx = 1,   zy = 1,   sx = 0, sy = 0,   opa = 42]
-    when 2 ; @intencity = [zx = 1.5, zy = 1.5, sx = 0, sy = 30,  opa = 42]
-    when 3 ; @intencity = [zx = 2,   zy = 2,   sx = 0, sy = 60,  opa = 42]
-    when 4 ; @intencity = [zx = 2.5, zy = 2.5, sx = 0, sy = 90,  opa = 42]
-    when 5 ; @intencity = [zx = 3,   zy = 3,   sx = 0, sy = 120, opa = 42]
+  def setup_intensity(intensity)
+    case intensity
+    when 1 ; @intensity = [zx = 1,   zy = 1,   sx = 0, sy = 0,   opa = 70]
+    when 2 ; @intensity = [zx = 1.5, zy = 1.5, sx = 0, sy = 30,  opa = 70]
+    when 3 ; @intensity = [zx = 2,   zy = 2,   sx = 0, sy = 60,  opa = 70]
+    when 4 ; @intensity = [zx = 2.5, zy = 2.5, sx = 0, sy = 90,  opa = 70]
+    when 5 ; @intensity = [zx = 3,   zy = 3,   sx = 0, sy = 120, opa = 70]
     end
-    self.zoom_x  = @intencity[0]
-    self.zoom_y  = @intencity[1]
-    self.opacity = @intencity[4]
+    self.zoom_x  = @intensity[0]
+    self.zoom_y  = @intensity[1]
+    self.opacity = @intensity[4]
   end
   
   def set_character_bitmap
@@ -963,11 +972,11 @@ class Sprite_LightEffec < Sprite
   
   def update_position
     if @character.picked
-      self.x = $game_player.screen_x + @intencity[2]
-      self.y = $game_player.screen_y + @intencity[3]
+      self.x = $game_player.screen_x + @intensity[2]
+      self.y = $game_player.screen_y + @intensity[3]
     else
-      self.x = @character.screen_x      + @intencity[2]
-      self.y = @character.screen_y + 22 + @intencity[3]
+      self.x = @character.screen_x      + @intensity[2]
+      self.y = @character.screen_y + 22 + @intensity[3]
     end
     if @character.is_a?(Game_Event)
       active = @character.check_com("LIGHT EFFECT REQUIRE FLAME")
@@ -2333,6 +2342,11 @@ class Game_Player < Game_Character
   
   def dark_nextmap
     @intreserved_tone[0] = 1
+  end
+
+  def tone_nextmap (r, g, b, gray)
+    CustomTone.set(r, g, b, gray)
+    @intreserved_tone[0] = 3
   end
   
   def normal_nextmap
