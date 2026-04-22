@@ -753,7 +753,7 @@ class Spriteset_Map
   def create_fblight
     return if not @fblight_sprite.nil?
     @fblight_sprite = Sprite_LightEffec.new(@viewport1,
-    $game_player.gamebarrel, 2,  5)
+    $game_player.gamebarrel, 3,  5)
   end
   
   def dispose_fblight
@@ -764,8 +764,7 @@ class Spriteset_Map
   
   def create_fireligh
     return if not @firelight_sprite.nil?
-    @firelight_sprite = Sprite_LightEffec.new(@viewport1,
-    $game_player.gamefire, 2,  2)
+    @firelight_sprite = Sprite_LightEffec.new(@viewport1, $game_player.gamefire, 7,  2)
   end
   
   def dispose_fireligh

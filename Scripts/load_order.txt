@@ -152,6 +152,7 @@ Language File System - Text Viewer.rb
 ▼ Yanfly Engine Ace - Passive States v1.rb
 ▼ Yanfly Engine Ace - Equip Dynamic Stat.rb
 ▼ Yanfly Engine Ace - Skill Cost Manager.rb
+*separator*
 Tanketai Sideview Battle System
 Tanketai Sideview Battle System/-Tanketai.rb
 Tanketai Sideview Battle System/VXAce_SP1.rb
@@ -166,12 +167,12 @@ Tanketai Sideview Battle System/Parch1.rb
 Tanketai Sideview Battle System/Yanfly Engince Ace - Field State Effects.rb
 Tanketai Sideview Battle System/Yami PCTB.rb
 Tanketai Sideview Battle System/Yami_Order_Gauge.rb
-*separator*
 Day - Night System.rb
 *separator*
 V - Basic Module.rb
 V - Followers Control.rb
 V - Followers Options.rb
+V - Basic Animation Settings.rb
 V - Looped Animations.rb
 Active Battle Skill.rb
 Charge Attack Window.rb
