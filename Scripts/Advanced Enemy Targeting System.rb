@@ -1,5 +1,6 @@
 #==============================================================================
-# ■ Advanced Enemy Targeting System
+# Advanced Enemy Targeting System
+# Author: mutisantos
 #------------------------------------------------------------------------------
 # Version: 1.0
 # 
@@ -19,9 +20,15 @@
 # Usage:
 # Add these tags to enemy notes in the database:
 # <target_type: aggressive>  - Targets highest threat
-# <target_type: defensive>  - Targets healers first
+# <target_type: opportunistic>  - Targets characters with status ailments
 # <target_type: tactical>   - Uses advanced threat calculation
 # <target_type: random>     - Default random targeting
+# <target_type: healer_focus>     - Targets party members detected casting healing spells
+# <target_type: tank_focus>       - Targets party members with high defense
+# <target_type: mage_focus>     - Targets party members with high damage output
+# <target_type: weakest_first>     - Targets party members with lowest HP
+# <target_type: strongest_first>     - Targets party members with highest HP
+# <target_type: revengeful>     - Targets party members who attacked this enemy recently
 #
 # Add these tags to state notes:
 # <target_weight: 50>       - Increases targeting priority
