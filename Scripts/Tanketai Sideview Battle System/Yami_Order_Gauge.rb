@@ -785,6 +785,9 @@ class Scene_Battle < Scene_Base
     order_gauge_update
     #return if YSA::PCTB::CTB_MECHANIC[:predict] == 2
     if @actor_command_window.active
+      if BattleManager.actor.input == nil
+        return
+      end
       if @actor_command_window.current_symbol == :attack && !BattleManager.actor.input.attack?
         BattleManager.actor.input.set_attack if BattleManager.actor.usable?($data_skills[BattleManager.actor.attack_skill_id])
         @update_ordergauge = true

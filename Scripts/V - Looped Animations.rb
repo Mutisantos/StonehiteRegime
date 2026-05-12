@@ -621,29 +621,39 @@ class Sprite_Base < Sprite
     else
       update_animation_origin(animation)
     end
-    animation.map_x = charset? ? $game_map.display_x : 0
-    animation.map_y = charset? ? $game_map.display_y : 0
+    # Only set map_x/map_y if the animation object supports it (Victor Engine)
+    if animation.respond_to?(:map_x=)
+      animation.map_x = charset? ? $game_map.display_x : 0
+      animation.map_y = charset? ? $game_map.display_y : 0
+    end
   end
   #--------------------------------------------------------------------------
   # * New method: update_animation_screen
   #--------------------------------------------------------------------------
   def update_animation_screen(animation)
-    if viewport == nil
-      animation.ox = Graphics.width  / 2
-      animation.oy = Graphics.height / 2
-    else
-      animation.ox = viewport.rect.width  / 2
-      animation.oy = viewport.rect.height / 2
+    # Only set ox/oy if the animation object supports it (Victor Engine)
+    if animation.respond_to?(:ox=)
+      if viewport == nil
+        animation.ox = Graphics.width  / 2
+        animation.oy = Graphics.height / 2
+      else
+        animation.ox = viewport.rect.width  / 2
+        animation.oy = viewport.rect.height / 2
+      end
     end
   end
   #--------------------------------------------------------------------------
   # * New method: update_animation_origin
   #--------------------------------------------------------------------------
   def update_animation_origin(animation)
-    animation.ox  = x - ox + width  / 2
-    animation.oy  = y - oy + height / 2
-    animation.oy -= height / 2 if animation.position == 0
-    animation.oy += height / 2 if animation.position == 2
+    # Only set ox/oy if the animation object supports it (Victor Engine)
+    if animation.respond_to?(:ox=)
+      animation.ox  = x - ox + width  / 2
+      animation.oy  = y - oy + height / 2
+      animation.oy -= height / 2 if animation.position == 0
+      animation.oy += height / 2 if animation.position == 2
+    end
+    # For Tanketai system, let it handle positioning internally
   end
   #--------------------------------------------------------------------------
   # * New method: dispose_loop_anim

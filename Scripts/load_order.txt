@@ -172,8 +172,6 @@ Day - Night System.rb
 V - Basic Module.rb
 V - Followers Control.rb
 V - Followers Options.rb
-V - Basic Animation Settings.rb
-V - Looped Animations.rb
 Active Battle Skill.rb
 Charge Attack Window.rb
 *separator*
@@ -208,3 +206,6 @@ Zeus81's Screen Resolution.rb
 IBG Flash Screen/Skip Title V1.rb
 MOG - Animated Title A.rb
 Basic Window Resizer v1.rb
+*separator*
+V - Basic Animation Settings.rb
+V - Looped Animations.rb

@@ -211,7 +211,11 @@ class Sprite_Base < Sprite
   # * Overwrite method: animation?
   #--------------------------------------------------------------------------
   def animation?
-    !@animation.values.compact.empty?
+    if @animation.is_a?(Hash)
+      !@animation.values.compact.empty?
+    else
+      !@animation.nil?
+    end
   end
   #--------------------------------------------------------------------------
   # * Overwrite method: start_animation
@@ -235,17 +239,25 @@ class Sprite_Base < Sprite
     anim1_hue  = animation.animation1_hue
     anim2_name = animation.animation2_name
     anim2_hue  = animation.animation2_hue
-    animation.bitmap1 = Cache.animation(anim1_name, anim1_hue)
-    animation.bitmap2 = Cache.animation(anim2_name, anim2_hue)
-    if @@_reference_count.include?(animation.bitmap1)
-      @@_reference_count[animation.bitmap1] += 1
+    
+    # Handle both Victor Engine Game_Animation wrapper and raw RPG::Animation
+    if animation.respond_to?(:bitmap1=)
+      # Victor Engine system
+      animation.bitmap1 = Cache.animation(anim1_name, anim1_hue)
+      animation.bitmap2 = Cache.animation(anim2_name, anim2_hue)
+      if @@_reference_count.include?(animation.bitmap1)
+        @@_reference_count[animation.bitmap1] += 1
+      else
+        @@_reference_count[animation.bitmap1] = 1
+      end
+      if @@_reference_count.include?(animation.bitmap2)
+        @@_reference_count[animation.bitmap2] += 1
+      else
+        @@_reference_count[animation.bitmap2] = 1
+      end
     else
-      @@_reference_count[animation.bitmap1] = 1
-    end
-    if @@_reference_count.include?(animation.bitmap2)
-      @@_reference_count[animation.bitmap2] += 1
-    else
-      @@_reference_count[animation.bitmap2] = 1
+      # Tanketai system - let it handle bitmap loading
+      return
     end
     Graphics.frame_reset
   end
@@ -253,15 +265,22 @@ class Sprite_Base < Sprite
   # * Overwrite method: make_animation_sprites
   #--------------------------------------------------------------------------
   def make_animation_sprites
-    animation.duplicated  = @@multi_ani_checker.include?(animation.data)
-    if @use_sprite && !(animation.duplicated  && animation.position == 3)
-      16.times do
-        sprite = ::Sprite.new(viewport)
-        sprite.visible = false
-        animation.sprites.push(sprite)
+    # Handle both Victor Engine Game_Animation wrapper and raw RPG::Animation
+    if animation.respond_to?(:duplicated=)
+      # Victor Engine system
+      animation.duplicated  = @@multi_ani_checker.include?(animation.data)
+      if @use_sprite && !(animation.duplicated  && animation.position == 3)
+        16.times do
+          sprite = ::Sprite.new(viewport)
+          sprite.visible = false
+          animation.sprites.push(sprite)
+        end
       end
+      @@multi_ani_checker.push(animation.data) if !animation.duplicated
+    else
+      # Tanketai system - let it handle sprite creation
+      return
     end
-    @@multi_ani_checker.push(animation.data) if !animation.duplicated
   end
   #--------------------------------------------------------------------------
   # * Overwrite method: set_animation_origin
@@ -272,8 +291,11 @@ class Sprite_Base < Sprite
     else
       update_animation_origin(animation)
     end
-    animation.map_x = charset? ? $game_map.display_x : 0
-    animation.map_y = charset? ? $game_map.display_y : 0
+    # Only set map_x/map_y if the animation object supports it (Victor Engine)
+    if animation.respond_to?(:map_x=)
+      animation.map_x = charset? ? $game_map.display_x : 0
+      animation.map_y = charset? ? $game_map.display_y : 0
+    end
   end
   #--------------------------------------------------------------------------
   # * Overwrite method: animation_set_sprites
@@ -297,13 +319,23 @@ class Sprite_Base < Sprite
   # * Overwrite method: update_animation
   #--------------------------------------------------------------------------
   def update_animation
-    @animation.keys.each {|index| update_animations(index) }
+    if @animation.is_a?(Hash)
+      @animation.keys.each {|index| update_animations(index) }
+    else
+      # Let Tanketai system handle it
+      update_animation_sprite_base_n03 if respond_to?(:update_animation_sprite_base_n03)
+    end
   end
   #--------------------------------------------------------------------------
   # * Overwrite method: dispose_animation
   #--------------------------------------------------------------------------
   def dispose_animation
-    @animation.keys.each {|index| dispose_animations(index) }
+    if @animation.is_a?(Hash)
+      @animation.keys.each {|index| dispose_animations(index) }
+    else
+      # Let Tanketai system handle it
+      dispose_animation_sprite_base_n03 if respond_to?(:dispose_animation_sprite_base_n03)
+    end
   end  
   #--------------------------------------------------------------------------
   # * New method: user
@@ -315,7 +347,12 @@ class Sprite_Base < Sprite
   # * New method: animation
   #--------------------------------------------------------------------------
   def animation
-    @animation[@anim_index]
+    # Handle both Victor Engine hash-based and Tanketai object-based systems
+    if @animation.is_a?(Hash)
+      @animation[@anim_index]
+    else
+      @animation
+    end
   end
   #--------------------------------------------------------------------------
   # * New method: charset?
