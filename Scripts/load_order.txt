@@ -161,12 +161,12 @@ Tanketai Sideview Battle System/SideView - Battle Setup.rb
 Tanketai Sideview Battle System/Sideview.rb
 Tanketai Sideview Battle System/Sprite_Sideview.rb
 Tanketai Sideview Battle System/Battle_Camera.rb
-Tanketai Sideview Battle System/Redefining Aliases.rb
 Tanketai Sideview Battle System/Test Faster Game.rb
 Tanketai Sideview Battle System/Parch1.rb
 Tanketai Sideview Battle System/Yanfly Engince Ace - Field State Effects.rb
 Tanketai Sideview Battle System/Yami PCTB.rb
 Tanketai Sideview Battle System/Yami_Order_Gauge.rb
+Tanketai Sideview Battle System/Redefining Aliases.rb
 Day - Night System.rb
 *separator*
 V - Basic Module.rb
@@ -175,6 +175,7 @@ V - Followers Options.rb
 Active Battle Skill.rb
 Charge Attack Window.rb
 *separator*
+V - Looped Animations (Script Call).rb
 TTM Tinys Travel Map.rb
 TTM Names in Map.rb
 TTM Map Effects.rb
