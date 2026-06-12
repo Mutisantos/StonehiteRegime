@@ -783,7 +783,7 @@ class Scene_Battle < Scene_Base
 
   def update
     order_gauge_update
-    #return if YSA::PCTB::CTB_MECHANIC[:predict] == 2
+    return if YSA::PCTB::CTB_MECHANIC[:predict] == 2
     if @actor_command_window.active
       if BattleManager.actor.input == nil
         return

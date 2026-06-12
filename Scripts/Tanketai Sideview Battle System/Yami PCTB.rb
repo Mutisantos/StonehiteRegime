@@ -105,7 +105,7 @@ module YSA
       # Type 1: Show Battlers Order and Re-order when active battler chooses
       # an action.
       # Type 2: Show Battlers Order in X Turns (FFX Style).
-      :predict => 0,
+      :predict => 2,
       :pre_turns => 5,
     } # Do not remove this.
 
