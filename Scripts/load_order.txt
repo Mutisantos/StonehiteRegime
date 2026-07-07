@@ -165,6 +165,8 @@ Tanketai Sideview Battle System/Test Faster Game.rb
 Tanketai Sideview Battle System/Parch1.rb
 Tanketai Sideview Battle System/Yanfly Engince Ace - Field State Effects.rb
 Tanketai Sideview Battle System/Redefining Aliases.rb
+Tanketai Sideview Battle System/Yami PCTB.rb
+Tanketai Sideview Battle System/Yami_Order_Gauge.rb
 Day - Night System.rb
 *separator*
 V - Basic Module.rb
@@ -209,5 +211,3 @@ V - Basic Animation Settings.rb
 V - Looped Animations.rb
 Advanced Enemy Skill System.rb
 V - Looped Animations (Script Call).rb
-Tanketai Sideview Battle System/Yami PCTB.rb
-Tanketai Sideview Battle System/Yami_Order_Gauge.rb

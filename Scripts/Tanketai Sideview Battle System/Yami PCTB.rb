@@ -98,14 +98,14 @@ module YSA
       :threshold_min => 800,
       :threshold_rate => 4.0,
       # Ticks per turn
-      :turn_ctr => 16,
+      :turn_ctr => 32,
       :wait_after_turn => 5, # Frames
       # Predict Type
       # Type 0: Show Battlers Order only.
       # Type 1: Show Battlers Order and Re-order when active battler chooses
       # an action.
       # Type 2: Show Battlers Order in X Turns (FFX Style).
-      :predict => 2,
+      :predict => 0,
       :pre_turns => 5,
     } # Do not remove this.
 
@@ -811,7 +811,9 @@ class Scene_Battle < Scene_Base
   def execute_action
     scene_battle_execute_action_pctb
     unless BattleManager.action_forced?
-      @subject.last_obj = @subject.current_action.item unless @subject.last_obj
+      if (@subject.current_action != nil)
+        @subject.last_obj = @subject.current_action.item unless @subject.last_obj
+      end
     end
   end
 

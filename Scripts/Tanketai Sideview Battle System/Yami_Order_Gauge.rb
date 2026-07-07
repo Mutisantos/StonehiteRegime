@@ -73,9 +73,9 @@ module YSA
     # SHOW_DEATH = false
 
     # Coordinate-X of order gauge
-    GAUGE_X = 500
+    GAUGE_X = 382
     # Coordinate-Y of order gauge
-    GAUGE_Y = 58  # Moved up to accommodate vertical layout
+    GAUGE_Y = 50
 
     # Show Switch. Turn this switch on to show it. If you want to disable, set this
     # to 0.
@@ -294,10 +294,11 @@ class Sprite_OrderBattler < Sprite_Base
   #--------------------------------------------------------------------------
   def initialize(viewport, battler, battle = :dtb, number = 0)
     super(viewport)
+    p(number)
     @battler = battler
     @battle = battle
     @move_rate_x = 1
-    @move_rate_y = 0.1
+    @move_rate_y = 1
     @move_x = nil
     @move_y = nil
     @first_time = true
@@ -330,7 +331,7 @@ class Sprite_OrderBattler < Sprite_Base
     else
       icon_bitmap = Cache.system("IconSet")
     end
-    #--- Create Battler Background (position 0) ---
+    #--- Create Battler Background ---
     icon_index = @battler.actor? ? YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:actor][0] : YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:enemy][0]
     rect = Rect.new(icon_index % 16 * 24, icon_index / 16 * 24, 24, 24)
     bitmap.blt(0, 0, icon_bitmap, rect)
@@ -342,18 +343,19 @@ class Sprite_OrderBattler < Sprite_Base
     temp_bitmap.hue_change(@battler.battler_icon_hue) if @battler.battler_icon_hue
     bitmap.blt(0, 0, temp_bitmap, Rect.new(0, 0, 24, 24))
     temp_bitmap.dispose
-    #--- Create Battler Border (position 1) ---
+    #--- Create Battler Border ---
     icon_index = @battler.actor? ? YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:actor][1] : YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:enemy][1]
     rect = Rect.new(icon_index % 16 * 24, icon_index / 16 * 24, 24, 24)
     bitmap.blt(0, 0, icon_bitmap, rect)
+    #---
     self.bitmap.dispose if self.bitmap != nil
     self.bitmap = bitmap
     return if @created_icon
     @created_icon = true
     self.ox = 12; self.oy = 12
     self.x = 24 if @battle != :pctb2 && @battle != :pctb3
-    self.y = 24  # Start at top for vertical layout
-    self.z = 1
+    self.y = 24
+    self.z = 8000
   end
 
   #--------------------------------------------------------------------------
@@ -386,56 +388,55 @@ class Sprite_OrderBattler < Sprite_Base
   # update_dtb_style
   #--------------------------------------------------------------------------
   def update_dtb_style
+    #---
     actor_window = SceneManager.scene.actor_window
     enemy_window = SceneManager.scene.enemy_window
     if actor_window.active
       if $game_party.members[actor_window.index] == @battler
-        @move_x = 12  # HIGHLIGHTED: Move left when targeted
+        @move_y = 12
       else
-        @move_x = 24  # NORMAL: Default X position
+        @move_y = 24
       end
     end
     if enemy_window.active
       if $game_troop.members[enemy_window.index] == @battler
-        @move_x = 12  # HIGHLIGHTED: Move left when targeted
+        @move_y = 12
       else
-        @move_x = 24  # NORMAL: Default X position
+        @move_y = 24
       end
     end
     if !actor_window.active && !enemy_window.active
-      @move_x = 24  # NORMAL: No targeting active
+      @move_y = 24
     end
     #---
     return if !@move_x && !@move_y
     if @battler.hidden? || (!@show_dead && @battler.dead?)
       self.opacity -= 20
     end
-    # VERTICAL MOVEMENT: Handle Y-axis animation
-    if self.y != @move_y && @move_y
-      if @move_y > self.y
-        @move_x = 30  # Moving down: Adjust X slightly
-      elsif @move_y < self.y
-        @move_x = 16  # Moving up: Adjust X slightly
-      else
-        @move_x = 20  # Same position: Center X
-      end
-      self.z = (@move_y < self.y) ? 7500 : 8500  # Z-order based on vertical direction
-      if @move_y >= self.y
-        self.y += [@move_rate_y, @move_y - self.y].min  # Move down
-      else
-        self.y -= [@move_rate_y, -@move_y + self.y].min  # Move up
-      end
-    end
-    # HORIZONTAL MOVEMENT: Handle targeting feedback
     if self.x != @move_x && @move_x
-      self.x += (self.x > @move_x) ? -@move_rate_x : @move_rate_x
+      if @move_x > self.x
+        @move_y = 30
+      elsif @move_x < self.x
+        @move_y = 16
+      else
+        @move_y = 20
+      end
+      self.z = (@move_x < self.x) ? 7500 : 8500
+      if @move_x >= self.x
+        self.x += [@move_rate_x, @move_x - self.x].min
+      else
+        self.x -= [@move_rate_x, -@move_x + self.x].min
+      end
     end
-    if self.y == @move_y && @move_y
-      @first_time = false if @first_time
-      @move_y = nil
+    if self.y != @move_y && @move_y
+      self.y += (self.y > @move_y) ? -@move_rate_y : @move_rate_y
     end
     if self.x == @move_x && @move_x
+      @first_time = false if @first_time
       @move_x = nil
+    end
+    if self.y == @move_y && @move_y
+      @move_y = nil
     end
   end
 
@@ -474,19 +475,13 @@ class Sprite_OrderBattler < Sprite_Base
     end
     #---
     index = result.index(@battler).to_i
-    # VERTICAL LAYOUT: Stack icons vertically with 24px spacing
-    # FLIPPED ORDER: Current battler on top (index 0), last on bottom
-    total_battlers = result.size
-    flipped_index = (total_battlers - 1) - index
-    @move_y = 24 + flipped_index * 24
-    @move_x = 24  # Fixed X position for all icons
-    
+    @move_x = 24 + index * 24
     if BattleManager.in_turn?
-      @move_x += 6 if action.include?(@battler)           # Active battler offset
-      @move_x += 6 if (index + 1 == result.size) and action.size > 1  # Last battler offset
+      @move_x += 6 if action.include?(@battler)
+      @move_x += 6 if (index + 1 == result.size) and action.size > 1
     end
     den = @first_time ? 12 : 24
-    @move_rate_y = [((@move_y - self.y) / den).abs, 1].max
+    @move_rate_x = [((@move_x - self.x) / den).abs, 1].max
   end
 
   #--------------------------------------------------------------------------
@@ -510,32 +505,20 @@ class Sprite_OrderBattler < Sprite_Base
     end
     #---
     index = result.index(@battler).to_i
-    # VERTICAL LAYOUT: Stack icons vertically with 24px spacing
-    # FLIPPED ORDER: Current battler on top (index 0), last on bottom
-    total_battlers = result.size
-    flipped_index = (total_battlers - 1) - index
-    @move_y = 24 + flipped_index * 24
-    @move_x = 24  # Fixed X position for all icons
+    @move_x = 24 + index * 24
     den = @first_time ? 12 : 24
-    @move_rate_y = [((@move_y - self.y) / den).abs, 1].max
+    @move_rate_x = [((@move_x - self.x) / den).abs, 1].max
   end
 
   #--------------------------------------------------------------------------
   # make_pctb2_image
-  # This method renders the battler's position in the PCTB2 mechanic.
-  # @number Attribute determines the battler's position in the array, used to locate the bitmap.
   #--------------------------------------------------------------------------
   def make_pctb2_image
     return unless BattleManager.ctb_battlers
     num = YSA::PCTB::CTB_MECHANIC[:pre_turns] - 1
     array = BattleManager.ctb_battlers
     self.battler = array[@number]
-    # FLIPPED ORDER: Current battler on top (index 0), last on bottom
-    self.y = 24 + @number * 24  # Simple vertical stacking
-    if @number == 0
-      # Current battler indicator - use position 2 for current battler only
-      self.x = 12
-    end
+    self.x = 24 + (num - @number) * 24
   end
 end # Sprite_OrderBattler
 
@@ -609,34 +592,6 @@ class Scene_Battle < Scene_Base
       order = Sprite_OrderBattler.new(@spriteset.viewportOrder, battler, battle_type)
       @spriteset_order.push(order)
     end
-    
-    # Create static current turn indicator sprite
-    create_static_turn_indicator
-  end
-
-  #--------------------------------------------------------------------------
-  # new method: create_static_turn_indicator
-  #--------------------------------------------------------------------------
-  def create_static_turn_indicator
-    @static_turn_indicator = Sprite.new(@spriteset.viewportOrder)
-    bitmap = Bitmap.new(24, 24)
-    
-    if $imported["YEA-BattleEngine"]
-      icon_bitmap = $game_temp.iconset
-    else
-      icon_bitmap = Cache.system("IconSet")
-    end
-    
-    # Use the actor's turn indicator icon (position 2)
-    icon_index = YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:actor][2]
-    rect = Rect.new(icon_index % 16 * 24, icon_index / 16 * 24, 24, 24)
-    bitmap.blt(0, 0, icon_bitmap, rect, 220)
-    
-    @static_turn_indicator.bitmap = bitmap
-    @static_turn_indicator.x = 12  # Same X as GAUGE_X
-    @static_turn_indicator.y = 60  # Same Y as GAUGE_Y
-    @static_turn_indicator.z = 1001  # Above other sprites
-    @static_turn_indicator.visible = false  # Initially hidden
   end
 
   #--------------------------------------------------------------------------
@@ -664,11 +619,6 @@ class Scene_Battle < Scene_Base
       order.bitmap.dispose
       order.dispose
     end
-    # Dispose static turn indicator
-    if @static_turn_indicator
-      @static_turn_indicator.bitmap.dispose
-      @static_turn_indicator.dispose
-    end
     order_gauge_dispose_spriteset
   end
 
@@ -686,10 +636,6 @@ class Scene_Battle < Scene_Base
     if $imported["YSA-PCTB"]
       type = YSA::PCTB::CTB_MECHANIC[:predict]
     end
-    
-    # Update static turn indicator visibility
-    update_static_turn_indicator
-    
     if @update_ordergauge
       if type && type == 1
         BattleManager.actor.restore_speed
@@ -717,78 +663,15 @@ class Scene_Battle < Scene_Base
   end
 
   #--------------------------------------------------------------------------
-  # new method: update_static_turn_indicator
-  #--------------------------------------------------------------------------
-  def update_static_turn_indicator
-    return unless @static_turn_indicator
-    
-    # Show only when there's a current battler and order gauge is visible
-    if BattleManager.action_list_ctb && BattleManager.action_list_ctb[0]
-      current_battler = BattleManager.action_list_ctb[0]
-      
-      # Update icon based on current battler type
-      update_static_indicator_icon(current_battler)
-      
-      # Show/hide based on gauge visibility
-      gauge_visible = (YSA::ORDER_GAUGE::SHOW_SWITCH == 0 || $game_switches[YSA::ORDER_GAUGE::SHOW_SWITCH]) &&
-                      !($game_party.all_dead? || $game_troop.all_dead?)
-      @static_turn_indicator.visible = gauge_visible
-      
-      # Update position to follow current battler's position in queue
-      update_static_indicator_position(current_battler)
-    else
-      @static_turn_indicator.visible = false
-    end
-  end
-
-  #--------------------------------------------------------------------------
-  # new method: update_static_indicator_icon
-  #--------------------------------------------------------------------------
-  def update_static_indicator_icon(battler)
-    # Update icon based on battler type (actor vs enemy)
-    icon_index = battler.actor? ? YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:actor][2] : YSA::ORDER_GAUGE::BATTLER_ICON_BORDERS[:enemy][2]
-    
-    if $imported["YEA-BattleEngine"]
-      icon_bitmap = $game_temp.iconset
-    else
-      icon_bitmap = Cache.system("IconSet")
-    end
-    
-    rect = Rect.new(icon_index % 16 * 24, icon_index / 16 * 24, 24, 24)
-    @static_turn_indicator.bitmap.clear
-    @static_turn_indicator.bitmap.blt(0, 0, icon_bitmap, rect, 220)
-  end
-
-  #--------------------------------------------------------------------------
-  # new method: update_static_indicator_position
-  #--------------------------------------------------------------------------
-  def update_static_indicator_position(battler)
-    # Position the static indicator at the current battler's queue position
-    # Find the battler's position in the order
-    if BattleManager.btype?(:pctb) && BattleManager.ctb_battlers
-      result = BattleManager.ctb_battlers.select { |b| !b.dead? && !b.hidden? }
-      index = result.index(battler)
-      if index
-        # Use the same vertical positioning logic as other sprites
-        @static_turn_indicator.x = -4 # Offset to the right of the queue
-        @static_turn_indicator.y = 12  # Same Y as current battler
-      end
-    end
-  end
-
-  #--------------------------------------------------------------------------
   # alias method: update
   #--------------------------------------------------------------------------
   alias order_gauge_update update
 
   def update
     order_gauge_update
-    return if YSA::PCTB::CTB_MECHANIC[:predict] == 2
+    #return if YSA::PCTB::CTB_MECHANIC[:predict] == 2
     if @actor_command_window.active
-      if BattleManager.actor.input == nil
-        return
-      end
-      if @actor_command_window.current_symbol == :attack && !BattleManager.actor.input.attack?
+      if @actor_command_window.current_symbol == :attack && BattleManager.actor.input != nil && !BattleManager.actor.input.attack?
         BattleManager.actor.input.set_attack if BattleManager.actor.usable?($data_skills[BattleManager.actor.attack_skill_id])
         @update_ordergauge = true
       end
@@ -858,7 +741,7 @@ class Scene_Battle < Scene_Base
       order.make_destination
     end
   end
-
+  
   #--------------------------------------------------------------------------
   # new method: refresh_order_gauge
   # Call this method when battlers are added during battle events

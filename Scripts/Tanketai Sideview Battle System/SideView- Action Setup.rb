@@ -1488,7 +1488,7 @@ module N03
                 'Afterimage ON',
                 'Skill Anim',
                 'Slammed',
-                'Squash',
+                'Squash Target',
                 '20',
                 'Medium Shake',
                 'One Step After Jump',
