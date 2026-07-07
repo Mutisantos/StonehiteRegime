@@ -514,6 +514,8 @@ class SideView
       return "Dim Attack"
     when 136 #System
       return "Air Attack"
+    when 144 #Enter
+      return "Appear Self"
     when 194 #Impacto Paleoceno
       return "Placaje"
     when 195 #Taladro Radiactivo

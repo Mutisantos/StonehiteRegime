@@ -1274,7 +1274,8 @@ module N03
     'Victory Backward Somersault' => ['Erase Battle Anim', 'Rotate Right Once', 'Victory Jump', 'Fist Limit',
                                       'Thrust Fist Weapon', 'Fist Exclude', 'Wpn Swing R', '200'],
     'Victory Back Pose' => ['Erase Battle Anim', 'Back Wpn Swing', '200'],
-    'Flash Self' => ['anime_me(119)', '20'],
+    'Flash Self' => ['Small Jump','Small Jump','anime_me(119)', '20'],
+    'Appear Self' => ['Afterimage ON','Fast Spin', 'Afterimage OFF'],
     # Where the action starts and finishes. Tilt a hint of the timed hit
     'Timer Hit Init' => ['anime_me(111,false)',
                          'Timer Hit Starter',
@@ -1282,7 +1283,7 @@ module N03
                          'Timer Hit Flow',
                          'Enemy Limit',
                          'Timer Block Flow'],
-    'Block Timed' => ['Reduce Damage Multiplier', "target('Weapon Block')"],
+    'Block Timed' => ['Reduce Damage Multiplier', "target('Weapon Block')", 'Coordinate Reset Fast'],
     'Self Spin' => ['Front Rotate', '15', 'Left Rotate', '15', 'Back Rotate', '15', 'Right Rotate', '15'],
     'Fast Spin' => ['Left Rotate', '3', 'Front Rotate', '3', 'Right Rotate', '3', 'Back Rotate', '3'],
 
@@ -1487,7 +1488,7 @@ module N03
                 'Afterimage ON',
                 'Skill Anim',
                 'Slammed',
-                'Squash',
+                'Squash Target',
                 '20',
                 'Medium Shake',
                 'One Step After Jump',

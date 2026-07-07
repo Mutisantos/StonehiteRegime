@@ -161,10 +161,10 @@ Tanketai Sideview Battle System/SideView - Battle Setup.rb
 Tanketai Sideview Battle System/Sideview.rb
 Tanketai Sideview Battle System/Sprite_Sideview.rb
 Tanketai Sideview Battle System/Battle_Camera.rb
-Tanketai Sideview Battle System/Redefining Aliases.rb
 Tanketai Sideview Battle System/Test Faster Game.rb
 Tanketai Sideview Battle System/Parch1.rb
 Tanketai Sideview Battle System/Yanfly Engince Ace - Field State Effects.rb
+Tanketai Sideview Battle System/Redefining Aliases.rb
 Tanketai Sideview Battle System/Yami PCTB.rb
 Tanketai Sideview Battle System/Yami_Order_Gauge.rb
 Day - Night System.rb
@@ -209,3 +209,5 @@ Basic Window Resizer v1.rb
 *separator*
 V - Basic Animation Settings.rb
 V - Looped Animations.rb
+Advanced Enemy Skill System.rb
+V - Looped Animations (Script Call).rb

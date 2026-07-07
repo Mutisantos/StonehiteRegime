@@ -98,7 +98,7 @@ module YSA
       :threshold_min => 800,
       :threshold_rate => 4.0,
       # Ticks per turn
-      :turn_ctr => 16,
+      :turn_ctr => 32,
       :wait_after_turn => 5, # Frames
       # Predict Type
       # Type 0: Show Battlers Order only.
@@ -811,7 +811,9 @@ class Scene_Battle < Scene_Base
   def execute_action
     scene_battle_execute_action_pctb
     unless BattleManager.action_forced?
-      @subject.last_obj = @subject.current_action.item unless @subject.last_obj
+      if (@subject.current_action != nil)
+        @subject.last_obj = @subject.current_action.item unless @subject.last_obj
+      end
     end
   end
 
