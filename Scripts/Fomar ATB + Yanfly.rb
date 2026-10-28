@@ -39,9 +39,9 @@ module CBS
   # If ATB is set to false then the bars won't appear and
   # the pauses where the bars would be filling up are removed
   # effectively turning this into a CTB system
-  ATB = false
-  SAMINA_GAUGE_NAME = "SPD"
-  ENABLE_PASSING = true
+  ATB = true
+  STAMINA_GAUGE_NAME = "SPD"
+  ENABLE_PASSING = false
   PASSING_COST = 200
 
   # If TURN_LENGTH is set to 0 then a turn length will be 
@@ -55,7 +55,7 @@ module CBS
   # the percentage you set.
   # If reset stamina is set to false then this just
   # affects enemies.
-  STAMINA_START_PERCENT = 20
+  STAMINA_START_PERCENT = 50
 
   # Default skill cost
   # If you want to customise skill costs do it like this
@@ -65,7 +65,7 @@ module CBS
   # Attack
   SKILL_COST[1] = 1000
   # Guard
-  SKILL_COST[2] = 500
+  SKILL_COST[2] = 1000
   # Nado Rapido
   SKILL_COST[18] = 750
   ITEM_COST = 1000
@@ -553,6 +553,6 @@ class Window_BattleStatus < Window_Selectable
     draw_gauge(dx, dy, width, actor.stamina_rate, text_color(CBS.stamina_colors(actor)[2]),text_color(CBS.stamina_colors(actor)[1]))
     change_color(system_color)
     cy = (Font.default_size - contents.font.size) / 2 + 1
-    draw_text(dx+2, dy+cy, 30, line_height, CBS::SAMINA_GAUGE_NAME)
+    draw_text(dx+2, dy+cy, 30, line_height, CBS::STAMINA_GAUGE_NAME)
   end
 end

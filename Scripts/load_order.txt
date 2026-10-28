@@ -165,10 +165,10 @@ Tanketai Sideview Battle System/Test Faster Game.rb
 Tanketai Sideview Battle System/Parch1.rb
 Tanketai Sideview Battle System/Yanfly Engince Ace - Field State Effects.rb
 Tanketai Sideview Battle System/Redefining Aliases.rb
-Tanketai Sideview Battle System/Yami PCTB.rb
-Tanketai Sideview Battle System/Yami_Order_Gauge.rb
 Day - Night System.rb
 *separator*
+Yami PCTB.rb
+Yami_Order_Gauge.rb
 V - Basic Module.rb
 V - Followers Control.rb
 V - Followers Options.rb
@@ -199,7 +199,6 @@ ConfigTitleWindow.rb
 Advanced Enemy Targeting System.rb
 Main.rb
 Script Exporter.rb
-Fomar ATB + Yanfly.rb
 Testing.rb
 Zeus81's Screen Resolution.rb
 #IBG Flash Screen
@@ -207,6 +206,8 @@ IBG Flash Screen/Skip Title V1.rb
 MOG - Animated Title A.rb
 Basic Window Resizer v1.rb
 *separator*
+Fomar ATB + Yanfly.rb
+CATB.rb
 V - Basic Animation Settings.rb
 V - Looped Animations.rb
 Advanced Enemy Skill System.rb

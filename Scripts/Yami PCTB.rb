@@ -119,7 +119,7 @@ module YSA
       # Initialize speed
       :initial => 0.10,
       :surprise => 0.75,
-      :random_rate => 8.0, # Multiply with AGI.
+      :random_rate => 0.0, # Multiply with AGI.
       # Charging Term
       :charge_text => "%s is charging %s!",
       :charge_text_dur => 4,
@@ -612,12 +612,25 @@ class Game_Battler < Game_BattlerBase
   end
 
   #--------------------------------------------------------------------------
+  # overwrite method: on_turn_end
+  #--------------------------------------------------------------------------
+  def on_turn_end
+    @result.clear
+    # regenerate_all removed - handled in on_action_end
+    update_state_turns
+    update_buff_turns
+    remove_states_auto(2)
+  end
+
+  #--------------------------------------------------------------------------
   # alias method: on_action_end
+  # overrides so HP/TP/MG regen is applied at end of action
   #--------------------------------------------------------------------------
   alias pctb_on_action_end on_action_end
 
   def on_action_end
     pctb_on_action_end
+    regenerate_all
     update_state_actions
   end
 

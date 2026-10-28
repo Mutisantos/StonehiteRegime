@@ -494,11 +494,12 @@ class Window_StatusItem < Window_Base
     dy = line_height / 2
     draw_actor_level(dx, line_height*1+dy, contents.width/2 - 24)
     draw_actor_param(0, dx, line_height*2+dy, contents.width/2 - 24)
-    draw_actor_param(1, dx, line_height*3+dy, contents.width/2 - 24)
+    draw_actor_param(1, dx, line_height*3+dy, contents.width/4 - 12)
     draw_actor_param(2, dx, line_height*4+dy, contents.width/4 - 12)
     draw_actor_param(4, dx, line_height*5+dy, contents.width/4 - 12)
     draw_actor_param(6, dx, line_height*6+dy, contents.width/4 - 12)
     dx += contents.width/4 - 12
+    draw_actor_xparam(8, dx, line_height*3+dy, contents.width/4 - 12)
     draw_actor_param(3, dx, line_height*4+dy, contents.width/4 - 12)
     draw_actor_param(5, dx, line_height*5+dy, contents.width/4 - 12)
     draw_actor_param(7, dx, line_height*6+dy, contents.width/4 - 12)
@@ -528,6 +529,26 @@ class Window_StatusItem < Window_Base
     draw_text(dx+4, dy, dw-8, line_height, Vocab::param(param_id))
     change_color(normal_color)
     draw_text(dx+4, dy, dw-8, line_height, @actor.param(param_id).group, 2)
+  end
+
+  #--------------------------------------------------------------------------
+  # draw_actor_xparam
+  #--------------------------------------------------------------------------
+  def draw_actor_xparam(xparam_id, dx, dy, dw)
+    colour = Color.new(0, 0, 0, translucent_alpha/2)
+    rect = Rect.new(dx+1, dy+1, dw-2, line_height-2)
+    contents.fill_rect(rect, colour)
+    change_color(system_color)
+    xparam_name = case xparam_id
+                  when 7 then "HP Regen"
+                  when 8 then "MP Regen"
+                  when 9 then "TP Regen"
+                  else "XParam #{xparam_id}"
+                  end
+    draw_text(dx+4, dy, dw-8, line_height, xparam_name)
+    change_color(normal_color)
+    value = sprintf("%.1f%%", @actor.xparam(xparam_id) * 100)
+    draw_text(dx+4, dy, dw-8, line_height, value, 2)
   end
   
   #--------------------------------------------------------------------------
