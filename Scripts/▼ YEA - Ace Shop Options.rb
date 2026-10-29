@@ -119,7 +119,7 @@ module YEA
     # The shop data window displays information about the item in detail.
     # Adjust the settings below to change the way the data window appears.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    STATUS_FONT_SIZE = 20       # Font size used for data window.
+    STATUS_FONT_SIZE = 16       # Font size used for data window.
     MAX_ICONS_DRAWN  = 10       # Maximum number of icons drawn for states.
     # The following adjusts the vocabulary used for the data window. Each
     # of the vocabulary settings are self explanatory.

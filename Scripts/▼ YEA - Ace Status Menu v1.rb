@@ -831,16 +831,16 @@ class Window_StatusItem < Window_Base
       colour = Color.new(0, 0, 0, translucent_alpha/2)
       rect = Rect.new(dx+1, dy+1, dw - 2, line_height - 2)
       contents.fill_rect(rect, colour)
-      size = $imported["YEA-AceEquipEngine"] ? YEA::EQUIP::STATUS_FONT_SIZE : 20
+      size = $imported["YEA-AceEquipEngine"] ? YEA::EQUIP::STATUS_FONT_SIZE : 16
       contents.font.size = size
       change_color(system_color)
       draw_text(dx+4, dy, dw, line_height, Vocab::param(param_id))
       change_color(normal_color)
       dwa = (Graphics.width * 2 / 5 - 2) / 2
-      draw_text(dx, dy, dwa, line_height, @actor.param(param_id).group, 2)
+      draw_text(dx+52, dy, dwa, line_height, @actor.param(param_id).group, 2)
       reset_font_settings
       change_color(system_color)
-      draw_text(dx + dwa, dy, 22, line_height, "→", 1)
+      draw_text(dx + dwa, dy, 22, line_height, "->", 1)
       param_id += 1
       dy += line_height
       break if dy + line_height > contents.height

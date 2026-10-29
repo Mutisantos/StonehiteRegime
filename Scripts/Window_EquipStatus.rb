@@ -84,7 +84,7 @@ class Window_EquipStatus < Window_Base
   #--------------------------------------------------------------------------
   def draw_right_arrow(x, y)
     change_color(system_color)
-    draw_text(x, y, 22, line_height, "→", 1)
+    draw_text(x, y, 22, line_height, "->", 1)
   end
   #--------------------------------------------------------------------------
   # ● 装備変更後の能力値を描画

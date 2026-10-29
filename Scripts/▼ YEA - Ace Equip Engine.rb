@@ -769,9 +769,9 @@ class Window_EquipStatus < Window_Base
   def draw_item(dx, dy, param_id)
     draw_background_colour(dx, dy)
     draw_param_name(dx + 4, dy, param_id)
-    draw_current_param(dx + 4, dy, param_id) if @actor
-    drx = (contents.width + 22) / 2
-    draw_right_arrow(drx, dy)
+    draw_current_param(dx + 74, dy, param_id) if @actor
+    drx = (contents.width + 72) / 2
+    draw_right_arrow(drx, dy) if @temp_actor
     draw_new_param(drx + 22, dy, param_id) if @temp_actor
     reset_font_settings
   end
@@ -799,7 +799,7 @@ class Window_EquipStatus < Window_Base
   #--------------------------------------------------------------------------
   def draw_current_param(dx, dy, param_id)
     change_color(normal_color)
-    dw = (contents.width + 22) / 2
+    dw = (contents.width + 72) / 2
     draw_text(0, dy, dw, line_height, @actor.param(param_id).group, 2)
     reset_font_settings
   end
