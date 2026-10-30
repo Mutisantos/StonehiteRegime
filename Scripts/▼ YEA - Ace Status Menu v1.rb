@@ -840,7 +840,7 @@ class Window_StatusItem < Window_Base
       draw_text(dx+52, dy, dwa, line_height, @actor.param(param_id).group, 2)
       reset_font_settings
       change_color(system_color)
-      draw_text(dx + dwa, dy, 22, line_height, "->", 1)
+      draw_text(dx + dwa + 5, dy, 22, line_height, "->", 1)
       param_id += 1
       dy += line_height
       break if dy + line_height > contents.height

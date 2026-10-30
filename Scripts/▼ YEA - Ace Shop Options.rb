@@ -119,7 +119,7 @@ module YEA
     # The shop data window displays information about the item in detail.
     # Adjust the settings below to change the way the data window appears.
     #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-    STATUS_FONT_SIZE = 16       # Font size used for data window.
+    STATUS_FONT_SIZE = 15       # Font size used for data window.
     MAX_ICONS_DRAWN  = 10       # Maximum number of icons drawn for states.
     # The following adjusts the vocabulary used for the data window. Each
     # of the vocabulary settings are self explanatory.
@@ -711,7 +711,7 @@ class Window_ShopData < Window_Base
   # initialize
   #--------------------------------------------------------------------------
   def initialize(dx, dy, item_window)
-    super(dx, dy, Graphics.width - dx, fitting_height(4))
+    super(dx, dy, Graphics.width - dx, fitting_height(6))
     @item_window = item_window
     @item = nil
     refresh
@@ -806,11 +806,13 @@ class Window_ShopData < Window_Base
     return unless @item.is_a?(RPG::Weapon) || @item.is_a?(RPG::Armor)
     dx = 96; dy = 0
     dw = (contents.width - 96) / 2
+    height = line_height - 4
     for i in 0...8
       draw_equip_param(i, dx, dy, dw)
       dx = dx >= 96 + dw ? 96 : 96 + dw
-      dy += line_height if dx == 96
+      dy += height if dx == 96
     end
+    draw_equip_xparam(8, 96, dy, dw)
   end
   
   #--------------------------------------------------------------------------
@@ -827,6 +829,31 @@ class Window_ShopData < Window_Base
     end
   end
   
+  #--------------------------------------------------------------------------
+  # draw_equip_xparam
+  #--------------------------------------------------------------------------
+  def draw_equip_xparam(xparam_id, dx, dy, dw)
+    draw_background_box(dx, dy, dw)
+    change_color(system_color)
+    xparam_name = case xparam_id
+                  when 8 then "MP Regen"
+                  else "XParam #{xparam_id}"
+                  end
+    draw_text(dx+4, dy, dw-8, line_height, xparam_name)
+    
+    value = 0
+    @item.features.each do |feature|
+      if feature.code == 22 && feature.data_id == xparam_id  # 22 = FEATURE_XPARAM
+        value += feature.value
+      end
+    end
+    
+    change_color(param_change_color(value), value != 0)
+    text = sprintf("%.1f%%", value * 100)
+    text = "+" + text if value > 0
+    draw_text(dx+4, dy, dw-8, line_height, text, 2)
+  end
+
   #--------------------------------------------------------------------------
   # draw_percentage_param
   #--------------------------------------------------------------------------

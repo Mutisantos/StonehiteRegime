@@ -753,14 +753,16 @@ class Window_EquipStatus < Window_Base
   #--------------------------------------------------------------------------
   # overwrite method: window_width
   #--------------------------------------------------------------------------
-  def window_width; return Graphics.width * 2 / 5; end
+  def window_width; return (Graphics.width * 2 / 5) + 15; end
   
   #--------------------------------------------------------------------------
   # overwrite method: refresh
   #--------------------------------------------------------------------------
   def refresh
     contents.clear
-    8.times {|i| draw_item(0, line_height * i, i) }
+    height = line_height - 2
+    8.times {|i| draw_item(0, height * i, i) }
+    draw_xparam_item(0, height * 8, 8)  
   end
   
   #--------------------------------------------------------------------------
@@ -792,6 +794,56 @@ class Window_EquipStatus < Window_Base
     contents.font.size = YEA::EQUIP::STATUS_FONT_SIZE
     change_color(system_color)
     draw_text(dx, dy, contents.width, line_height, Vocab::param(param_id))
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: draw_xparam_item
+  #--------------------------------------------------------------------------
+  def draw_xparam_item(dx, dy, xparam_id)
+    draw_background_colour(dx, dy)
+    draw_xparam_name(dx + 4, dy, xparam_id)
+    draw_current_xparam(dx + 74, dy, xparam_id) if @actor
+    drx = (contents.width + 72) / 2
+    draw_new_xparam(drx + 22, dy, xparam_id) if @temp_actor
+    draw_right_arrow(drx, dy) if @temp_actor
+    reset_font_settings
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: draw_xparam_name
+  #--------------------------------------------------------------------------
+  def draw_xparam_name(dx, dy, xparam_id)
+    contents.font.size = YEA::EQUIP::STATUS_FONT_SIZE
+    change_color(system_color)
+    xparam_name = case xparam_id
+                  when 8 then "MP Regen"
+                  else "XParam #{xparam_id}"
+                  end
+    draw_text(dx, dy, contents.width, line_height, xparam_name)
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: draw_current_xparam
+  #--------------------------------------------------------------------------
+  def draw_current_xparam(dx, dy, xparam_id)
+    contents.font.size = YEA::EQUIP::STATUS_FONT_SIZE - 3
+    change_color(normal_color)
+    dw = (contents.width + 72) / 2
+    value = @actor.xparam(xparam_id) * 100
+    draw_text(0, dy, dw, line_height, sprintf("%.1f%%", value), 2)
+    reset_font_settings
+  end
+
+  #--------------------------------------------------------------------------
+  # new method: draw_new_xparam
+  #--------------------------------------------------------------------------
+  def draw_new_xparam(dx, dy, xparam_id)
+    contents.font.size = YEA::EQUIP::STATUS_FONT_SIZE - 3
+    new_value = @temp_actor.xparam(xparam_id) * 100
+    old_value = @actor.xparam(xparam_id) * 100
+    change_color(param_change_color(new_value - old_value))
+    draw_text(0, dy, contents.width-4, line_height, sprintf("%.1f%%", new_value), 2)
+    reset_font_settings
   end
   
   #--------------------------------------------------------------------------
@@ -1157,7 +1209,7 @@ class Scene_Equip < Scene_MenuBase
   # overwrite method: create_status_window
   #--------------------------------------------------------------------------
   def create_status_window
-    wx = Graphics.width - (Graphics.width * 2 / 5)
+    wx = Graphics.width - (Graphics.width * 2 / 5) - 15
     wy = @help_window.height + 120
     @status_window = Window_EquipStatus.new(wx, wy)
     @status_window.viewport = @viewport
